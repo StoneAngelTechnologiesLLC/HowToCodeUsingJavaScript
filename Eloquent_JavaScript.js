@@ -1,10 +1,25 @@
-//1 Values, Types, and Operators
+//Writen by John Joseph Pietrangelo III
+
+function space()
+{
+ console.log("");
+}
+var spacer = function()
+{
+    space();
+    console.log("---------------------------------------------------------------------------");
+    space();
+};
+
+console.log("Values, Types, and Operators");
+spacer();
+
+//                              *** 1 Values, Types, and Operators ***
 
 /*
- Inside the computer’s world, there is only data.
+ Inside the computer's mind, there is only data.
 
- All this data is stored as long sequences of bits and is thus
- fundamentally alike.
+ All this data is stored as long sequences of bits and in this sence*, fundamentally alike.
 
  Bits are any kind of two-valued things, usually described as zeros and
  ones. Inside the computer, they take forms such as a high or low electrical
@@ -94,8 +109,8 @@
 
  The next basic data type is the string. Strings are used to represent
  text. They are written by enclosing their content in quotes.
- " Patch my boat with c h e w i n g gum "
- ' M o n k e y s wave goodbye '
+ " Patch my boat with chewing gum "
+ ' Monkeys wave goodbye '
  Both single and double quotes can be used to mark strings as long as
  the quotes at the start and the end of the string match.
 
@@ -115,40 +130,63 @@
  This is how the string “A newline character is written like
  "\n".” can be expressed:
  */
-console.log("A new line character is written like \" \\n \" ");
-console.log("\tThis is the 1st line \n\tThis is the 2nd line.");
-//A newline character is written like "\n".
 
+console.log("A new line character is written like \" \\n \".\n");
+
+//A newline character is written like "\n".
+console.log("\tThis is the 1st line.\nThis is the 2nd line.\n");
 
 /*
  The following line will produce the string "concatenate":
  */
 
- console.log("con" + "cat" + "e" + "nate");
+console.log("con" + "cat" + "e" + "nate");
+spacer();
 
-//Unary operators:
+//                  *** Unary Operators ***
 
 /*Not all operators are symbols. Some are written as words. One example
 is the 'typeof' operator, which produces a string value naming the type of
 the value you give it.*/
+console.log("\t\t*** Unary Operators ***");
+spacer();
 
-var x = 100;
-var y = "Hello";
-console.log(typeof x); // number
+var a = 100;
+var b = "Hello";
+var c = true;
+var d = [1,2,3];
+var e = {name: "John Pietrangelo", degrees:["CIS","SOS"]};
+//------------------------------------------------------------
 
-console.log(typeof y); // string
+console.log(a + "* is a '" + typeof a + "' data-type!"); // number
+space();
 
+console.log(b + "* is a '" + typeof b + "' data-type!"); // number
+space();
+
+console.log(c + "* is a '" + typeof c + "' data-type!"); // number
+space();
+
+console.log(d + "* is a '" + typeof d + "' data-type!  Arrays Are types of objects!!"); // number
+space();
+
+console.log(JSON.stringify(e) + "* is a '" + typeof e+ "' data-type!"); // number
+space();
 /*
- The other operators we saw all operated on two values, but typeof takes
- only one. Operators that use two values are called binary operators,
- while those that take one are called unary operators. The minus operator
- can be used both as a binary operator and as a unary operator.
+ The other operators we saw all operated on two values, but 'typeof' takes
+ only one.
+
+ Operators that use two values are called 'binary operators',
+ while those that take one are called 'unary operators'.
+
+ The minus operator can be used both as a binary operator and as a unary operator.
  */
 
-console.log(-(10 - 2));
-// -8
+console.log(-(10 - 2)); // -8
 
+space();
 /*
+
  Boolean values:
 
  Often, you will need a value that simply distinguishes between two possibilities,
@@ -159,9 +197,11 @@ console.log(-(10 - 2));
 
  Here is one way to produce Boolean values:
  */
-console.log(3 > 2);  //true
-console.log(3 < 2);  //false
+console.log("3 is greater than 2.", 3 > 2);  //true
+space();
 
+console.log("3 is less than 2.", 3 < 2);  //false
+space();
 /*
  The > and < signs are the traditional symbols for “is greater than” and
  “is less than”, respectively. They are binary operators. Applying them
@@ -169,9 +209,11 @@ console.log(3 < 2);  //false
  case.
  Strings can be compared in the same way.
  */
-console.log("god" > "dog"); // true
-console.log("God" > "dog"); // false
+console.log("the 1st index value \'g\' in god is greater than the 1st index value \'d\' in dog:", "god" > "dog"); // true
+space();
 
+console.log("the 1st index value \'G\' in god is greater than the 1st index value \'d\' in dog:", "God" > "dog"); // false
+space();
 /*
  The way strings are ordered is more or less alphabetic: uppercase letters
  are always “LESS” than lowercase ones, so "Z" < "a" is true, and nonalphabetic
@@ -186,68 +228,103 @@ console.log("God" > "dog"); // false
  Other similar operators are >= (greater than or equal to), <= (less than
  or equal to), == (equal to), and != (not equal to).
  */
-console.log("itch" != "scratch"); // true
-
+console.log("\'itch\' dose not equal \'scratch\':", "itch" != "scratch"); // true
+space();
 /*
  There is only one value in JavaScript that is not equal to itself, and that
  is NaN, which stands for “not a number”.
+
  NaN is supposed to denote the result of a nonsensical computation, and as
  such, it isn’t equal to the result of any other nonsensical computations.
  */
 
-console.log("hi" == "hi"); //true
-console.log(4 == 4); //true
-console.log(NaN == NaN); //false
+console.log("\'hi\' equals \'hi\'", "hi" == "hi"); //true
+space();
 
+console.log("\"4\" equals \"4\"", 4 == 4); //true
+space();
+
+console.log("\"NaN\" equals \"NaN\"", NaN == NaN); //false
+space();
 
 /*
  Logical operators:
 
  There are also some operations that can be applied to Boolean values
- themselves. JavaScript supports three logical operators: and, or, and
- not. These can be used to “reason” about Booleans.
- The && operator represents logical and. It is a binary operator, and its
- result is true only if both the values given to it are true.
+ themselves.
+
+ JavaScript supports three logical operators: and, or, and not. These can be used to “reason” about Booleans.
+
+ The '&&' operator represents a logical 'and'. It is a 'binary operator', and its
+ result is 'true' only if both the values given to it are 'true'.
  */
 console.log(false && false); //false
-console.log(true && false); //false
-console.log(true && true); //true
+space();
 
+console.log(false && true); //false
+space();
+
+console.log(true && false); //false
+space();
+
+console.log(true && true); //true
+space();
 /*
  The || operator denotes logical order. It produces true if either of the values
  given to it is true.
  */
 
 console.log(true || true); //true
+space();
+
 console.log(true || false); //true
+space();
+
+console.log(false || true); //true
+space();
 console.log(false || false); //false
+space();
 
 /*
- Not is written as an exclamation mark (!). It is a unary operator that
- flips the value given to it—!true produces false and !false gives true.
+ 'Not' is written as an exclamation mark '!'.
+
+ It is a unary operator that flips the value given to it
+
+ !true produces 'false' and !false produces 'true'.
+
  When mixing these Boolean operators with arithmetic and other operators,
- it is not always obvious when parentheses are needed. In practice,
- you can usually get by with knowing that of the operators we have seen
- so far, || has the lowest precedence, then comes &&, then the comparison
- operators (>, ==, and so on), and then the rest. This order has been
- chosen such that, in typical expressions like the following one, as few
- parentheses as possible are necessary:
+ it is not always obvious when parentheses are needed.
+
+ In practice, you can usually get by with knowing that of the operators we have seen so far.
+
+ || has the lowest precedence, then comes &&, then the comparison operators (>, ==, and so on), and then the rest.
+
+ This order has been chosen so that, in typical expressions like the following one, there are as few
+ parentheses as possible:
  */
 
-console.log(1 + 1 == 2 && 10*10 > 50); //true
+console.log('1 + 1 equals 2 and 10 * 10 is greater than 50.', 1 + 1 == 2 && 10*10 > 50); //true
+space();
 
 /*
  The last logical operator I will discuss is not unary, not binary, but
  ternary, operating on three values. It is written with a question mark
  and a colon, like this:
  */
-var pickerSetTrue = "picks 1st variable";
-var pickerSetFalse = "picks 2nd variable";
-console.log(true ? 1 : 2); // 1
-console.log(false ? 1 : 2); // 2
-console.log(true ? pickerSetTrue : pickerSetFalse); //picks 1st variable
-console.log(false ? pickerSetTrue : pickerSetFalse);//picks 2nd variable
+var pickerSetToTrue = "1st option is chosen";
+var pickerSetToFalse = "2nd option is chosen";
 
+console.log(true ? 1 : 2); // 1
+space();
+
+console.log(false ? 1 : 2); // 2
+space();
+
+console.log("When value is true:",true ? pickerSetToTrue : pickerSetToFalse); //1st option is chosen
+space();
+
+console.log("When value is false:",false ? pickerSetToTrue : pickerSetToFalse);//2nd option is chosen
+space();
 /*
  This one is called the conditional operator (or sometimes just ternary
  operator since it is the only such operator in the language). The value
@@ -285,10 +362,19 @@ console.log(false ? pickerSetTrue : pickerSetFalse);//picks 2nd variable
  This is nicely demonstrated by the following expressions:
  */
 console.log(8 * null); // 0
+space();
+
 console.log('5' - 3); // 2
+space();
+
 console.log('5' + 3); // 53
+space();
+
 console.log('five' * 3); // NaN
+space();
+
 console.log(false == 0); // true
+space();
 
 /*
  When an operator is applied to the “wrong” type of value, JavaScript will
@@ -316,9 +402,13 @@ console.log(false == 0); // true
  true only if both sides are one of null or undefined.
  */
 console.log(null == undefined); // true
-console.log(null == 0); // false
-console.log(undefined == 0); //false
+space();
 
+console.log(null == 0); // false
+space();
+
+console.log(undefined == 0); //false
+space();
 /*
 That last piece of behavior is often useful. When you want to test
 whether a value has a real value instead of null or undefined, you can 20
@@ -355,16 +445,20 @@ simply compare it to null with the == (or !=) operator
  something analogous for values of other types.
 */
 console.log(null || 'user'); //user
-console.log('dog' || 'god'); //dog
+space();
 
+console.log('dog' || 'god'); //dog
+space();
 /*
  The && operator works similarly, but the other way around. When the
  value to its left is something that converts to false, it returns that value,
  and otherwise it returns the value on its right.
  */
 console.log(null && 'user'); //null
-console.log('dog' && 'god'); //god
+space();
 
+console.log('dog' && 'god'); //god
+space();
 /*
  Another important property of these two operators is that the expression
  to their right is evaluated only when necessary. In the case of true
@@ -416,8 +510,10 @@ console.log('dog' && 'god'); //god
  */
 
 console.log(1);  // 1
-console.log(!false); // true
+space();
 
+console.log(!false); // true
+space();
 /*
  These changes
  are called side effects. The statements in the previous example just
@@ -440,8 +536,10 @@ console.log(!false); // true
  provides a thing called a variable.
  */
 var number1 = 5 * 5;
-console.log(number1);
+space();
 
+console.log(number1);
+space();
 /*
  The special word (keyword)
  var indicates that this sentence is going to define a variable. It is
@@ -454,8 +552,9 @@ console.log(number1);
  */
 
 var five = 10;
-console.log( five * five); // 100
 
+console.log( five * five); // 100
+space();
 /*
  Variable names can be any word that isn’t a reserved word (such as
  var). They may not include spaces. Digits can be part of variable
@@ -469,10 +568,14 @@ console.log( five * five); // 100
  point to a new one.
  */
 var mood = "light";
-console.log(mood); // light
-mood = 'dark';
-console.log(mood);// dark
 
+console.log(mood); // light
+space();
+
+mood = 'dark';
+
+console.log(mood);// dark
+space();
 /*
  To remember the number of dollars that John
  still owes you, you create a variable. And then when he pays back $35,
@@ -480,22 +583,30 @@ console.log(mood);// dark
  */
 
 var JohnsDebit = 40000;
-JohnsDebit = JohnsDebit - 1000;
-console.log(JohnsDebit); // 39000
 
+JohnsDebit = JohnsDebit - 1000;
+
+console.log(JohnsDebit); // 39000
+space();
 /*
  When you define a variable without giving it a value, the tentacle has
- nothing to grasp, so it ends in thin air. If you ask for the value of an
- empty variable, you’ll get the value undefined.
- A single var statement may define multiple variables. The definitions
- must be separated by commas.
+ nothing to grasp, so it ends in thin air.
+
+ If you ask for the value of an empty variable, you’ll get the value undefined.
+
+ A single var statement may define multiple variables.
+
+ The definitions must be separated by commas.
  */
 var one;
+
 console.log(one); // undifined
+space();
 
 var three = 3, four = 4;
-console.log(three + four); // 7
 
+console.log(three + four); // 7
+space();
 /*
  Keywords and reserved words
 
@@ -560,7 +671,8 @@ different types of arguments.
     */
 var x = 30;
 
-console.log("The value of 'x' is", x);
+console.log("The value of 'x' is", x); // The value of 'x' is 30;
+space();
 
 /*
  Return values:
@@ -571,6 +683,7 @@ console.log("The value of 'x' is", x);
  */
 
 console.log(Math.max(17,20,100)); //100
+space();
 /*
 When a function produces a value, it is said to return that value. Anything
 that produces a value, is an EXPRESSION in JavaScript, which means
@@ -579,8 +692,8 @@ function calls can be used within larger expressions (Nested Functions).
 
  a call to Math.min, which is the opposite of Math.max, is used as an input to the plus operator:
     */
-console.log(Math.min(4,-50) + 100); // -50
-
+console.log(Math.min(4,-50,100)); // -50
+space();
 /*
  prompt and confirm:
 
@@ -698,6 +811,7 @@ else
  Consider a program that prints all even numbers from 0 to 12. One way
  to write this is as follows:
  */
+
 console.log(0);
 console.log(2);
 console.log(4);
@@ -718,6 +832,7 @@ while(num <= 12)
     console.log(num);
     num = num + 2;
 }
+space();
 /*
  A statement starting with the keyword while creates a loop. The word
  while is followed by an expression in parentheses and then a statement,
@@ -738,22 +853,25 @@ while(num <= 12)
  */
 var result = 1;
 var counter = 0;
+
 while(counter < 10)
 {
     result = result *5;
     counter++;
 }
 console.log(result);//1024 2^10
+space();
 
 result = 1;
 counter = 0;
+
 while(counter < 10)
 {
     result = result * 2;
     counter++;
 }
 console.log(result);//1024 2^10
-
+space();
 /*
  The counter could also start at 1 and check for <= 10, but, for reasons
  that will become apparent in Chapter 4, it is a good idea to get used to
@@ -793,11 +911,13 @@ console.log(yourName);
  */
 for(var num = 0; num <= 12; num = num + 2)
     console.log(num);
+space();
 
-for(var i = 0; i<= 12; i +=2)
+for(var i = 0; i <= 12; i += 2)
 {
     console.log(i);
 }
+space();
 /*
  The parentheses after a for keyword must contain two semicolons. The
  part before the first semicolon initializes the loop, usually by defining
@@ -808,11 +928,13 @@ for(var i = 0; i<= 12; i +=2)
 
  Here is the code that computes 2^10, using for instead of while:
  */
-var result = 1;
+result = 1;
 
 for(var i = 0; i < 10; i++)
   result= result * 2;
+
 console.log(result);
+space();
 
 result = 1;
 
@@ -820,7 +942,9 @@ for(var i = 0; i < 10; i++)
 {
     result = result * 2;
 }
+
 console.log(result);
+space();
 /*
  Note that even though no block is opened with a {, the statement in the
  loop is still indented two spaces to make it clear that it “belongs” to the
@@ -846,7 +970,7 @@ for(var current = 15; ; current++)
     }
 }
 console.log(current); // 21
-
+space();
 /*
  Using the remainder (%) operator is an easy way to test whether a number
  is divisible by another number. If it is, the remainder of their division is
@@ -884,6 +1008,8 @@ counter += 1;
  */
 for(var i = 0; i <= 12; i +=2)
   console.log(i)
+
+space();
 /*
 As previously shown, For counter += 1 and counter -= 1, there are even shorter equivalents: counter
  ++ and counter--.
@@ -894,26 +1020,20 @@ As previously shown, For counter += 1 and counter -= 1, there are even shorter e
 
  It is common for code to look like this
  */
-var action1 = function () {
-
-};
-var action2 = function () {
-
-};
-var action3 = function () {
-
-};
-var defaultAction = function ()
-{
- console.log("Default action taken")
-};
-
+var action1 = function(){};
+var action2 = function(){};
+var action3 = function(){};
+var defaultAction = function(){console.log("Default action taken")};
 var variable = 'x';
 
-if(variable == "value1") action1();
-else if(variable == "value2") action2();
-else if(variable == "value3") action3();
-else defaultAction();
+if(variable == "value1")
+    action1();
+else if(variable == "value2")
+    action2();
+else if(variable == "value3")
+    action3();
+else
+    defaultAction();
 
 switch (variable)
 {
@@ -927,7 +1047,7 @@ switch (variable)
         defaultAction();
         break;
 }
-
+space();
 /*
  There is a construct called switch that is intended to solve such a “dispatch”
  in a more direct way. Unfortunately, the syntax JavaScript uses
@@ -972,20 +1092,25 @@ switch (variable)
  #######
  */
 var row = "";
+
 for(var i =0; i < 7; i++)
 {
     row = row+"#";
     console.log(row)
 }
+space();
 
 row = "";
+
 while(row.length < 7)
 {
     row = row+"#";
     console.log(row);
 }
+space();
 
 row = "";
+
 do
 {
     row = row+"#";
@@ -993,6 +1118,7 @@ do
 
 }while(row.length < 7);
 
+space();
 /*
  FizzBuzz
  Write a program that uses console.log to print all the numbers from 1
@@ -1028,7 +1154,7 @@ while(number <= 100)
     }
     number += 1;
 }
-
+space();
 /*
  Chess board
  Write a program that creates a string that represents an 8x8 grid, using
@@ -1079,10 +1205,10 @@ while(row < size *.5)
     }
 }
 console.log(board);
-
-                    //      FUNCTIONS !!!
+space();
+                    //      *** FUNCTIONS ***
 /*
- Defining a function
+                            Defining a function
 
  A function definition is just a regular variable definition where the value
  given to the variable happens to be a function. For example, the following
@@ -1096,7 +1222,7 @@ var square = function (x)
 };
 
 console.log(square(12)); // 144
-
+space();
 /*
  A function is created by an expression that starts with the keyword
  function. Functions have a set of parameters (in this case, only x).
@@ -1114,6 +1240,7 @@ var noise = function ()
     console.log("Hurray!");
 };
 noise(); // Hurray!
+space();
 
 var power = function (base,exponent)
 {
@@ -1126,6 +1253,7 @@ var power = function (base,exponent)
 };
 
 console.log(power(10,5)); //100,000
+space();
 
 /*
  Some functions produce a value, such as power and square, and some don’t,
@@ -1184,10 +1312,12 @@ console.log(x); // inside f2
  For example, this rather nonsensical function has two functions inside
  of it:
  */
+space();
 
-var landscape = function ()
+var landscape = function()
 {
     var result = "";
+
     var flat = function (size)
     {
         for(var i = 0; i < size; i++)
@@ -1195,15 +1325,19 @@ var landscape = function ()
             result += "_";
         }
     };
+
     var mountain = function (size)
     {
-     result += "/";
-     for(var i = 0; i < size; i++)
-     {
-         result += "'";
-     }
+        result += "/";
+
+        for(var i = 0; i < size; i++)
+        {
+            result += "'";
+        }
+
         result += "\\";
     };
+
     flat(2);
     mountain(4);
     flat(1);
@@ -1213,6 +1347,7 @@ var landscape = function ()
     flat(1);
     return result;
 };
+
 console.log(landscape());
 
 /*
@@ -1225,18 +1360,22 @@ function square(x)
 {
     return x*x;
 }
-console.log(square(5));
 
+console.log(square(5)); // 25
+space();
 /*
  This is a function declaration. The statement defines the variable square
  and points it at the given function. So far so good. There is one subtlety
  with this form of function definition, however.
  */
 console.log("The future says:",future());
+space();
+
 function future()
 {
     return "We still have no flying cars.";
 }
+
 /*
  This code works, even though the function is defined below the code
  that uses it. This is because function declarations are not part of the
@@ -1288,8 +1427,10 @@ function squarePower(base,exponent)
     return result;
 }
 console.log(squarePower(5));//25
-console.log(squarePower(10,3));//1000
+space();
 
+console.log(squarePower(10,3));//1000
+space();
 /*
  This feature—being able to reference a specific instance of local variables
  in an enclosing function—is called closure. A function that “closes
@@ -1303,27 +1444,29 @@ console.log(squarePower(10,3));//1000
 function wrapValue(x)
 {
     var local = x;
-    return function ()
-    {
-     return local;
-    }
+
+    return function(){return local;}
 }
+
 var wrap1 = wrapValue(1);
+
 var wrap2 = wrapValue(2);
 
 console.log(wrap1()); //1
+space();
+
 console.log(wrap2()); //2
+space();
 
 function multiplier(factor)
 {
-    return function (number)
-    {
-        return number * factor;
-    };
+    return function(number){return number * factor;};
 }
-var twice = multiplier(2);
-console.log(twice(5)); //10
 
+var twice = multiplier(2);
+
+console.log(twice(5)); //10
+space();
 /*
  The explicit localVariable from the wrapValue example isn’t needed since
  a parameter is itself a local variable.
@@ -1351,9 +1494,12 @@ function powerR(base,exponent)
         return base * powerR(base,exponent -1);
     }
 }
-console.log(powerR(5));
-console.log(powerR(2,3));
 
+console.log(powerR(5));
+space();
+
+console.log(powerR(2,3));
+space();
 /*
  But recursion is not always just a less-efficient alternative to looping.
  Some problems are much easier to solve with recursion than with
@@ -1384,10 +1530,11 @@ function  findSolution(target)
     }
     return find(1,"1");
 }
-console.log(findSolution(18));
 
+console.log(findSolution(18));
+space();
 /*
- Growing functions
+                            *** Growing functions ***
 
  There are two natural ways for functions to be introduced into programs.
 
@@ -1432,7 +1579,7 @@ function farmInventory(cows,chickens)
     console.log(chickenString + " Chickens");
 }
 farmInventory(25,9);
-
+space();
 /*
  Adding .length after a string value will give us the length of that string.
  Thus, the while loops keep adding zeros in front of the number strings
@@ -1462,7 +1609,9 @@ function printFarmInventory(cows,chickens,pigs)
     zeroPaddingWithLabel(chickens,"Chickens");
     zeroPaddingWithLabel(pigs, "Pigs");
 }
+
 printFarmInventory(25,9,101);
+space();
 
 function zeroPadding(number,width)
 {
@@ -1482,9 +1631,9 @@ function printFarmInventoryV2(cows,chickens,pigs)
 }
 
 printFarmInventoryV2(8,45,123);
-
+space();
 /*
- Exercises
+                                        *** Exercises ***
 
  Minimum:
  The previous chapter introduced the standard function Math.min that returns
@@ -1505,8 +1654,10 @@ function minValue(valueA, valueB)
 }
 
 console.log(minValue("art","Zebra")); // Zebra (Because uppercase has smaller value than lowercase)
-console.log(minValue(25,10));  // 10
+space();
 
+console.log(minValue(25,10));  // 10
+space();
 /*
  Recursion:
  We’ve seen that % (the remainder operator) can be used to test whether
@@ -1548,10 +1699,18 @@ function isEven(testNumber)
             console.log(oddString);
     }
 }
+
 isEven(-5);
+space();
+
 isEven(5);
+space();
+
 isEven(-4);
+space();
+
 isEven(4);
+space();
 /*
  Bean counting
 
@@ -1580,6 +1739,7 @@ function countBs(word)
 }
 
 console.log(countBs("BoBby")); // 2
+space();
 /*
  Next, write a function called countChar that behaves like countBs, except
  it takes a second argument that indicates the character that is to be
@@ -1654,10 +1814,15 @@ console.log(countChar("Mississippi River","p","e"));
  */
 
 var listOfNumbers = [1,33,6,26,89];
-console.log(listOfNumbers[2]); // 6
-console.log(listOfNumbers["length"]); // 5
-console.log(listOfNumbers.length);  // 5
 
+console.log(listOfNumbers[2]); // 6
+space();
+
+console.log(listOfNumbers["length"]); // 5
+space();
+
+console.log(listOfNumbers.length);  // 5
+space();
 /*
  Methods
  Both string and array objects contain, in addition to the length property,
@@ -1665,10 +1830,15 @@ console.log(listOfNumbers.length);  // 5
  */
 
 var word = "Snap";
-console.log(typeof word.toUpperCase); // function
-console.log(typeof word.toUpperCase()); // string
-console.log(word.toUpperCase()); // SNAP
 
+console.log(typeof word.toUpperCase); // function  **What it is
+space();
+
+console.log(typeof word.toUpperCase()); // string  **What it produces
+space();
+
+console.log(word.toUpperCase()); // SNAP  **The product
+space();
 /*
  Every string has a toUpperCase property. When called, it will return a
  copy of the string, in which all letters have been converted to uppercase.
@@ -1684,13 +1854,21 @@ console.log(word.toUpperCase()); // SNAP
  */
 
 var mack = [];
+
 mack.push("Mack");
 mack.push("the","knife");
-console.log(mack); // ['Mack', 'the', 'knife']
-console.log(mack.join(" ")); // Mack the knife
-console.log(mack.pop()); // knife
-console.log(mack); // ['Mack', 'the']
 
+console.log(mack); // ['Mack', 'the', 'knife']
+space();
+
+console.log(mack.join(" ")); // Mack the knife
+space();
+
+console.log(mack.pop()); // knife
+space();
+
+console.log(mack); // ['Mack', 'the']
+space();
 /*
  The push method can be used to add values to the end of an array. The
  pop method does the opposite: it removes the value at the end of the
@@ -1701,7 +1879,7 @@ console.log(mack); // ['Mack', 'the']
 
 
 /*
-                            Objects
+                            *** Objects ***
 
  A set of daily log entries can be represented as
  an array. But the entries do not consist of just a number or a string—
@@ -1721,10 +1899,15 @@ var day1 =
     };
 
 console.log(day1.squirrel); // false
-console.log(day1.wolf); // undefined
-day1.wolf = false;
-console.log(day1.wolf); // false
+space();
 
+console.log(day1.wolf); // undefined
+space();
+
+day1.wolf = false;
+
+console.log(day1.wolf); // false
+space();
 /*
  Inside the curly braces, we can give a list of properties separated by
  commas.
@@ -1766,21 +1949,26 @@ var description =
  remove the named property from the object. This is not a common thing
  to do, but it is possible.
  */
-var anObject =
-    {
-        left: 1,
-        right: 2,
-    };
-console.log(anObject.left); // 1
-delete anObject.left;
-console.log(anObject.left); // undefined
-console.log("left" in anObject); // false
-console.log("right" in anObject); // true
+var anObject = {left: 1, right: 2,};
 
+console.log(anObject.left); // 1
+space();
+
+delete anObject.left;  // Deletes property 'left', not just its value.
+
+console.log(anObject.left); // undefined
+space();
+
+console.log("left" in anObject); // false
+space();
+
+console.log("right" in anObject); // true
+space();
 /*
- The binary in operator, when applied to a string and an object, returns a
- Boolean value that indicates whether that object has that property. The
- difference between setting a property to undefined and actually deleting it
+ The binary 'in' operator, when applied to a string and an object, returns a
+ Boolean value that indicates whether that object has that property.
+
+ The difference between setting a property to undefined and actually deleting it
  is that, in the first case, the object still has the property (it just doesn’t
  have a very interesting value), whereas in the second case the property
  is no longer present and in will return false.
@@ -1796,10 +1984,11 @@ console.log("right" in anObject); // true
  */
 
 var nums = [1,2];
-console.log(typeof nums); // object
+
+console.log(typeof nums); // object **Arrays are a type of object.
 
 /*
- Mutability
+                            *** Mutability ***
 
  We’ve seen that object values can be modified. The types of values
  discussed in earlier chapters, such as numbers, strings, and Booleans,
@@ -1820,12 +2009,20 @@ var object2 = object1;
 var object3 = {value: 10};
 
 console.log(object1 == object2);// true
-console.log(object1 == object3);// false
-object1.value = 20;
-console.log(object2.value);// 20
-object2["value"] = 30;
-console.log(object1.value)// 30
+space();
 
+console.log(object1 == object3);// false
+space();
+
+object1.value = 20;
+
+console.log(object2.value);// 20
+space();
+
+object2["value"] = 30;
+
+console.log(object1.value);// 30
+space();
 /*
  Represent Jacques’ journal as an array of objects.
  */
@@ -1855,7 +2052,10 @@ addEntry(["work","ice cream","brushed teeth"],false);
 
 
 var Journal = [
-    {"events":["carrot","exercise","weekend"],"squirrel":false},
+    {
+        "events":["carrot","exercise","weekend"],
+        "squirrel":false
+    },
     {"events":["bread","pudding","brushed teeth","weekend","touched tree"],"squirrel":false},
     {"events":["carrot","nachos","brushed teeth","cycling","weekend"],"squirrel":false}, // false no pizza
     {"events":["brussel sprouts","ice cream","brushed teeth","computer","weekend"],"squirrel":false},
@@ -1991,7 +2191,7 @@ function phi(table)
 //table[3] = var1(transformation) = true & var2(event) = true
 
 console.log(phi([76,9,4,1]));
-
+space();
 /*
  Jacques kept his journal for three months.
  It is stored in the JOURNAL variable.
@@ -2046,8 +2246,10 @@ function tableFor(event,journal)
 }
 
 console.log(tableFor("pizza",Journal)); // [ 76, 9, 4, 1 ]
-console.log(phi(tableFor("pizza",Journal))); // 0.06859943405700345
+space();
 
+console.log(phi(tableFor("pizza",Journal))); // 0.06859943405700345
+space();
 /*
  We now have the tools we need to compute individual correlations.
  The only step remaining is to find a correlation for every type of event
@@ -2056,7 +2258,7 @@ console.log(phi(tableFor("pizza",Journal))); // 0.06859943405700345
  */
 
 /*
-                                Objects as maps
+                                *** Objects as maps ***
 
  One possible way is to store all the correlations in an array, using objects
  with name and value properties. But that makes looking up the correlation
@@ -2070,20 +2272,21 @@ console.log(phi(tableFor("pizza",Journal))); // 0.06859943405700345
  exists.
  */
 
-var map = {};
+var map1 = {};
+
 function storePhi(event,phi)
 {
-  map[event]= phi;
+  map1[event]= phi;
 }
 
 storePhi("pizza", 0.069);
 storePhi("touched tree", -0.081);
 
-console.log("pizza" in map);
-// true
-console.log(map["touched tree"]);
-// -0.81
+console.log("pizza" in map1);  // true
+space();
 
+console.log(map1["touched tree"]);  // -0.81
+space();
 
 /*
  What if we want to find all the events for which we have stored a
@@ -2093,10 +2296,11 @@ console.log(map["touched tree"]);
  an object. It looks a little like a normal for loop but distinguishes itself
  by the use of the word 'in'.
  */
-for(var event in map)
+for(var event in map1)
 {
-    console.log("The correlation for '" + event + "' is " + map[event]);
+    console.log("The correlation for '" + event + "' is " + map1[event]);
 }
+space();
 
 /*
  The final analysis
@@ -2131,9 +2335,11 @@ function gatherCorrelations(journal)
 var correlations = gatherCorrelations(Journal);
 
 console.log(correlations.pizza);
+space();
 
 for(var event in correlations)
-    console.log(event + ": " + correlations[event])
+    console.log(event + ": " + correlations[event]);
+
 
 /*
  Most correlations seem to lie close to zero. Eating carrots, bread, or
@@ -2141,7 +2347,10 @@ for(var event in correlations)
  to occur somewhat more often on weekends, however. Let’s filter the
  results to show only correlations greater than 0.1 or less than -0.1.
  */
-console.log("\n-----------------------------------------------------\n");
+space();
+console.log("-----------------------------------------------------");
+space();
+
 for(var event in correlations)
 {
     var correlation = correlations[event];
@@ -2149,7 +2358,7 @@ for(var event in correlations)
     if(correlation > 0.1 || correlation < -0.1)
         console.log(event + ": " + correlation);
 }
-
+space();
 /*
  A-ha! There are two factors whose correlation is clearly stronger than
  the others. Eating peanuts has a strong positive effect on the chance
@@ -2164,10 +2373,12 @@ for(var i = 0; i < Journal.length; i++) {
     if (hasEvent("peanuts", entry) && !hasEvent("brushed teeth", entry))
         entry.events.push("peanut teeth");
 }
+space();
+console.log("-----------------------------------------------------");
+space();
 
-console.log("\n-----------------------------------------------------\n");
 console.log(phi(tableFor("peanut teeth", Journal)));
-
+space();
 /*
  More generally useful array methods.
  We saw push and pop, which add and remove elements at the end of
@@ -2202,10 +2413,15 @@ RememberToDo("shower");
 RememberToDo("eat");
 
 console.log(WhatIsNext()); // brush teeth
-console.log(WhatIsNext()); // shower
-UrgentToDo("Call Z");
-console.log(WhatIsNext()); // Call Z
+space();
 
+console.log(WhatIsNext()); // shower
+space();
+
+UrgentToDo("Call Z");
+
+console.log(WhatIsNext()); // Call Z
+space();
 /*
  The previous program manages lists of tasks. You add tasks to the
  end of the list by calling rememberTo("eat"), and when you’re ready to do
@@ -2224,13 +2440,25 @@ console.log(WhatIsNext()); // Call Z
 
 var words = ["the","cat","in","the","hat"];
 var numbers = [9,8,9,6,9];
-console.log(words.indexOf("dog")); // -1
-console.log(words.indexOf("the")); // 0
-console.log(words.lastIndexOf("the")); // 3
-console.log(numbers.indexOf(9)); // 0
-console.log(numbers.indexOf(9,1)); // searching from index 1: // 2
-console.log(numbers.lastIndexOf(9)); // 4
 
+
+console.log(words.indexOf("dog")); // -1
+space();
+
+console.log(words.indexOf("the")); // 0
+space();
+
+console.log(words.lastIndexOf("the")); // 3
+space();
+
+console.log(numbers.indexOf(9)); // 0
+space();
+
+console.log(numbers.indexOf(9,1)); // searching from index 1: // 2
+space();
+
+console.log(numbers.lastIndexOf(9)); // 4
+space();
 /*
  Another fundamental method is slice, which takes a start index and
  an end index and returns an array that has only the elements between
@@ -2244,8 +2472,10 @@ console.log(numbers.lastIndexOf(9)); // 4
 numbers = [5,6,7,8,9,10];
 
 console.log(numbers.slice(1,3)); // [ 6, 7 ]
-console.log(numbers.slice(2)); // [ 7, 8, 9, 10 ]
+space();
 
+console.log(numbers.slice(2)); // [ 7, 8, 9, 10 ]
+space();
 /*
  The concat method can be used to glue arrays together, similar to what
  the + operator does for strings. The following example shows both concat
@@ -2253,16 +2483,18 @@ console.log(numbers.slice(2)); // [ 7, 8, 9, 10 ]
  array that is a copy of the original array with the element at the given
  index removed.
  */
-var sentance = ["Is this","the very","last","first","time?"];
+var sentenceArray = ["Is this","the very","last","first","time?"];
 
 function  Remove(array,index)
 {
-   return array.slice(0,index).concat(array.slice(index + 1));
+   return array.slice(0, index).concat(array.slice(index + 1));
 }
 
-console.log(Remove(sentance,2)); // [ 'Is this', 'the very', 'first', 'time?' ]
-console.log(Remove(sentance,3)); // [ 'Is this', 'the very', 'last', 'time?' ]
+console.log(Remove(sentenceArray,2)); // [ 'Is this', 'the very', 'first', 'time?' ]
+space();
 
+console.log(Remove(sentenceArray,3)); // [ 'Is this', 'the very', 'last', 'time?' ]
+space();
 /*
                         Strings and their properties
  We can read properties like length and toUpperCase from string values. But
@@ -2272,8 +2504,9 @@ console.log(Remove(sentance,3)); // [ 'Is this', 'the very', 'last', 'time?' ]
 var aString = "Hello buddy";
 
 aString.myProperty = "value";
-console.log(aString.myProperty); // undefined
 
+console.log(aString.myProperty); // undefined
+space();
 /*
  Values of type string, number, and Boolean are not objects, and though
  the language doesn’t complain if you try to set new properties on them,
@@ -2286,12 +2519,2040 @@ console.log(aString.myProperty); // undefined
  indexOf, which resemble the array methods of the same name.
  */
 
-var fruit = "coconutso";
-console.log(fruit.slice(4,7)); // nut
-console.log(fruit.slice(0,4)); // Coco
-console.log(fruit.indexOf("o")); // 1
-console.log(fruit.lastIndexOf("o")); // 8
-console.log(fruit.indexOf("o",2)); // 3
+var fruitString = "coconutso";
+
+console.log(fruitString.slice(4,7)); // nut
+space();
+
+console.log(fruitString.slice(0,4)); // Coco
+space();
+
+console.log(fruitString.indexOf("o")); // 1
+space();
+
+console.log(fruitString.lastIndexOf("o")); // 8
+space();
+
+console.log(fruitString.indexOf("o",2)); // 3
+space();
+
+/*
+ One difference is that a string’s indexOf can take a string containing more
+ than one character, whereas the corresponding array method looks only
+ for a single element.
+ */
+
+var numListString = "One, two, three!";
+
+console.log(numListString.indexOf("ee")); //13
+space();
+/*
+ The trim method removes whitespace (spaces, newlines, tabs, and similar
+ characters) from the start and end of a string.
+ */
+
+var dirtyString ="\tAsk yourself, do I feel lucky? Well do you, punk?!\n";
+
+console.log(dirtyString);
+space();
+
+console.log(dirtyString.trim());
+space();
+/*
+ We have already seen the string type’s 'length' property. Accessing the
+ individual characters in a string can be done with the 'charAt' method but
+ also by simply reading numeric properties, like you’d do for an array.
+ */
+
+var alphaString = "abc";
+
+console.log(alphaString.length); // 3
+space();
+
+console.log(alphaString.indexOf("a")); // 0
+space();
+
+console.log(alphaString.charAt(0)); // a
+space();
+
+console.log(alphaString[0]); // a
+space();
+
+/*
+                        *** The arguments object ***
+
+ Whenever a function is called, a special variable named arguments is added
+ to the environment in which the function body runs. This variable refers
+ to an object that holds all of the arguments passed to the function.
+ Remember that in JavaScript you are allowed to pass more (or fewer)
+ arguments to a function than the number of parameters the function
+ itself declares.
+ */
+function Arguments(a,b,c)
+{
+    console.log("this is ok.");
+}
+function NoArguments()
+{
+    console.log("this is ok.");
+}
+
+Arguments();  // this is ok.
+space();
+
+NoArguments(1,2,3); // this is ok.
+space();
+/*
+ The 'arguments' object has a 'length' property that tells us the 'number of
+ arguments' that were really passed to the function. It also has a property
+ for each argument, named '0, 1, 2,' and so on.
+
+ If that sounds a lot like an array to you, you’re right, it is a lot like an
+ array. But this object, unfortunately, does not have any array methods
+ (like slice or indexOf), so it is a little harder to use than a real array.
+ */
+
+function  ArgumentCounter()
+{
+    console.log("You gave me", arguments.length, "arguments.");
+    console.log("You gave me " + arguments.length + " arguments.");
+}
+
+ArgumentCounter("Alpha", 2, NoArguments(), alphaString, sentenceArray );
+space();
+// You gave me 5 arguments.
+// You gave me 5 arguments.
+
+/*
+ Some functions can take any number of arguments, like console.log.
+ These typically loop over the values in their arguments object. They can
+ be used to create very pleasant interfaces. For example, remember how
+ we created the entries to Jacques’ journal?
+ */
+
+function AddJournalEntry(events,transformation)
+{
+    Journal.push({events: events, squirrel: transformation} );
+}
+
+AddJournalEntry(["work","gym","sleep"],false);
+space();
+/*
+ Since he is going to be calling this function a lot, we could create an
+ alternative that is easier to call.
+ */
+
+/*
+ This version reads its first argument (squirrel) in the normal way and
+ then goes over the rest of the arguments (the loop starts at index 1,
+ skipping the first) to gather them into an array.
+ */
+AddEntryToJournal(false, "sleep", "beans", "running");
+
+function AddEntryToJournal(squirrel)
+{
+    var entry = {events: [], squirrel: squirrel};
+    for(var i = 1; i < arguments.length; i++)
+        entry.events.push(arguments[i]);
+    Journal.push(entry);
+}
+
+/*
+                                    The Math object
+
+ As we’ve seen, Math is a grab-bag of number-related utility functions,
+ such as Math.max (maximum), Math.min (minimum), and Math.sqrt (square
+ root).
+
+ The Math object is used simply as a container to group a bunch of related functionality.
+
+ There is only one Math object, and it is almost never useful as a value.
+
+ Rather, it provides a namespace so that all these functions
+ and values do not have to be global variables.
+
+ Having too many global variables “pollutes” the namespace.
+
+ The more names that have been taken, the more likely you are to accidentally overwrite the value of some variable.
+
+ For example, it’s possible that you’ll want to name something 'max', in one of your programs.
+
+ Since JavaScript’s built-in 'max' function is tucked safely inside the 'Math' object,
+ we don’t have to worry about overwriting it.
+
+ Many languages will stop you, or at least warn you, when you are
+ defining a variable with a name that is already taken. ***JavaScript does neither, so be careful.***
+
+                        *** If you need to do trigonometry, Math can help. ***
+
+ It contains cos (cosine), sin (sine), and tan (tangent), as well as their
+ inverse functions, acos, asin, and atan, respectively.
+
+ The number 'pi' or at least the closest approximation that fits in a JavaScript number—is
+ available as Math.PI. (There is an old programming tradition of writing the names of constant values in all caps.)
+
+ */
+
+function randomPointOnACircle(radius)
+{
+    var angle = Math.random() * 2 * Math.PI;
+    return {x: radius * Math.cos(angle), y: radius * Math.sin(angle)}
+}
+
+console.log(randomPointOnACircle(2)); // { x: -1.3065238835706443, y: 1.5142639603647317 }
+space();
+/*
+ Math.random. This is a function that returns a
+ new pseudorandom number between zero (inclusive) and one (exclusive)
+ every time you call it.
+ */
+
+console.log(Math.random());
+space();
+
+console.log(Math.random());
+space();
+/*
+ Though computers are deterministic machines—they always react the
+ same way if given the same input—it is possible to have them produce
+ numbers that appear random.
+
+ To do this, the machine keeps a number
+ (or a bunch of numbers) in its internal state. Then, every time a
+ random number is requested, it performs some complicated deterministic
+ computations on this internal state and returns part of the result of
+ those computations.
+
+ The machine also uses the outcome to change its
+ own internal state so that the next “random” number produced will be
+ different.
+
+ If we want a whole random number instead of a fractional one, we can
+ use Math.floor (which rounds down to the nearest whole number) on the
+ result of Math.random.
+ */
+
+console.log(Math.floor(Math.random() * 10));
+space();
+
+console.log(Math.floor(Math.random() * 10));
+space();
+
+console.log(Math.floor(Math.random() * 10));
+space();
+
+console.log(Math.floor(Math.random() * 10));
+space();
+/*
+ Multiplying the random number by 10 gives us a number greater than
+ or equal to zero, and below 10. Since Math.floor rounds down, this expression
+ will produce, with equal chance, any number from 0 through 9.
+
+ There are also the functions Math.ceil (for “ceiling”, which rounds up
+ to a whole number) and Math.round (to the nearest whole number).
+ */
+
+console.log(Math.ceil(Math.random() * 10 ));
+space();
+
+console.log(Math.round(Math.random() * 10));
+space();
+/*
+                                        The global object
+
+ The global scope, the space in which global variables live, can also be
+ approached as an object in JavaScript.
+
+ Each global variable is present as a property of this object.
+
+ In browsers, the global scope object is stored in the 'window' variable.
+ */
+
+var myVar = 10;
+
+//console.log(window.myVar); // 10
+//console.log("myVar" in window); //true
+
+/*
+                               *** Summary ***
+
+ Objects and arrays (which are a specific kind of object) provide ways
+ to group several values into a single value.
+
+ Conceptually, this allows us to put a bunch of related things in a bag and
+ run around with the bag, instead of trying to wrap our arms around all of the
+ individual things and trying to hold on to them separately.
+
+ Most values in JavaScript have properties, the exceptions being null
+ and undefined.
+
+ Properties are accessed using value.propName or value["
+ propName"].
+
+ Objects tend to use names for their properties and store
+ more or less a fixed set of them.
+
+ Arrays, on the other hand, usually contain
+ varying numbers of conceptually identical values and use numbers
+ (starting from 0) as the names of their properties.
+
+ There are some named properties in arrays, such as length and a number
+ of methods.
+
+ Methods are functions that live in properties and (usually)
+ act on the value they are a property of.
+
+ Objects can also serve as maps, associating values with names.
+
+ The 'in' operator can be used to find out whether an 'object' contains a 'property'
+ with a 'given name'.
+
+ The same keyword can also be used in a for loop
+ (for ('var name' in 'object')) to loop over an object’s properties.
+ */
+
+/*
+                                                    *** Exercises ***
+ The sum of a range:
+
+ The introduction of this book alluded to the following as a nice way to
+ compute the sum of a range of numbers: c o n s o l e . log ( sum ( range (1 , 10) ) ) ;
+
+ Write a range function that takes two arguments, start and end, and
+ returns an array containing all the numbers from start up to (and including)
+ end.
+
+ Next, write a sum function that takes an array of numbers and returns
+ the sum of these numbers.
+
+ Run the previous program and see whether
+ it does indeed return 55.
+
+ As a bonus assignment, modify your range function to take an optional
+ third argument that indicates the “step” value used to build up the
+ array.
+
+ If no step is given, the array elements go up by increments of
+ one, corresponding to the old behavior.
+
+ The function call range(1, 10, 2)
+ should return [1, 3, 5, 7, 9].
+
+ Make sure it also works with negative step
+ values so that range(5, 2, -1) produces [5, 4, 3, 2].
+ */
+
+function rangeArray(beginning,end,step)
+{
+    var numbersArray = [];
+    var message = "";
+
+    if (beginning <= end )
+    {
+        while (beginning <= end)
+        {
+            numbersArray.push(beginning);
+            if (step > 0)
+            {
+                beginning += step;
+            }
+            else if(step < 0)
+            {
+                 message = "If beginning number is less than ending number.\nStep must be 0 or a positive number";
+                 beginning = end + 1;
+            }
+        else
+            {
+                beginning++;
+            }
+        }
+    }
+    else
+    {
+        while (beginning >= end)
+        {
+            numbersArray.push(beginning);
+
+            if (step < 0)
+            {
+                beginning += step;
+            }
+            else if(step > 0)
+            {
+                message = "If beginning number is greater than ending number.\nStep must be 0 or a negative number.";
+                beginning = end -1;
+            }
+            else
+            {
+                beginning--;
+            }
+        }
+    }
+    if(message != "")
+    {
+        return message;
+    }
+    else
+    {
+        return numbersArray;
+    }
+}
+
+console.log(rangeArray(1,10)); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+space();
+
+console.log(rangeArray(1,10,2)); // [ 1, 3, 5, 7, 9, ]
+space();
+
+console.log(rangeArray(1,10,-2)); // If beginning number is less than ending number.
+                                  // Step must be 0 or a positive number.
+space();
+
+console.log(rangeArray(5,50,5)); // [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ]
+space();
+
+console.log(rangeArray(50,5,-5)); // [ 50, 45, .... , 5 ]
+space();
+
+console.log(rangeArray(50,5,5)); // If beginning number is greater than ending number.
+                                 // Step must be 0 or a negative number.
+space();
+
+
+function sumOfArray(numberArray)
+{
+    var message = "";
+    var sum = 0;
+    for(var i = 0; i < numberArray.length; i++)
+    {
+            sum += numberArray[i];
+    }
+    if(isNaN(sum))
+    {
+        message = numberArray;
+        return message;
+    }
+    else
+    {
+        return sum;
+    }
+}
+
+console.log(sumOfArray(rangeArray(1,10))); // 55
+space();
+
+console.log(sumOfArray(rangeArray(1,10,2))); // 25
+space();
+
+console.log(sumOfArray(rangeArray(1,10,-2))); // If beginning number is less than ending number.
+                                              // Step must be 0 or a positive number.
+space();
+
+console.log(sumOfArray(rangeArray(5,50,5))); // 275
+space();
+
+console.log(sumOfArray(rangeArray(50,5,-5))); // 275
+space();
+
+console.log(sumOfArray(rangeArray(50,5,5))); // If beginning number is greater than ending number.
+                                             // Step must be 0 or a negative number.
+space();
+/*
+                                *** Reversing an array ***
+
+ Arrays have a method 'reverse', which changes the array by inverting the
+ order in which its elements appear.
+
+ For this exercise, write two functions, reverseArray and reverseArrayInPlace.
+
+ The first, reverseArray, takes an array as argument and produces a
+ new array that has the same elements in the inverse order.
+
+ The second, reverseArrayInPlace, does what the reverse method does:
+ it modifies the array given as argument in order to reverse
+ its elements.
+
+ Neither may use the standard reverse method.
+
+ Thinking back to the notes about side effects and pure functions in
+ the previous chapter, which variant do you expect to be useful in more
+ situations? Which one is more efficient?
+ */
+
+var myArray = [0,1,2,3,4,5];
+
+function reverseArray(array)
+{
+    var reverseArray = [];
+    for(var i = 0; i < array.length; i++)
+    {
+        reverseArray.unshift(array[i]);
+    }
+  console.log(reverseArray);
+}
+
+
+function reverseArrayInPlace(array)
+{
+    var reverseArray = [];
+    for(var i = 0; i <= array.length;)
+    {
+        reverseArray.push(array.pop());
+        if(array.length == 0)
+            i++;
+    }
+    myArray = reverseArray;
+    console.log(reverseArray);
+}
+
+reverseArray(myArray);
+console.log(myArray);
+space();
+
+reverseArrayInPlace(myArray);
+console.log(myArray);
+space();
+/*
+                                        A list
+
+ Objects, as generic blobs of values, can be used to build all sorts of data
+ structures. A common data structure is the list (not to be confused with
+ the array). A list is a nested set of objects, with the first object holding
+ a reference to the second, the second to the third, and so on.
+ */
+var list = {value: 1, reference: {value: 2, reference:{value: 3, reference: null}}};
+/*
+ A nice thing about lists is that they can share parts of their structure.
+ For example, if I create two new values {value: 0, rest: list} and {value:
+ -1, rest: list} (with list referring to the variable defined earlier),
+ they are both independent lists, but they share the structure that makes up
+ their last three elements. In addition, the original list is also still a valid
+ three-element list.
+
+ Write a function arrayToList that builds up a data structure like the
+ previous one when given [1, 2, 3] as argument.
+*/
+ function arrayToList(array)
+ {
+    var list = null;
+    for (var i = array.length - 1; i >= 0; i--)
+    {
+        list = {value: array[i], reference: list};
+    }
+    return list;
+ }
+ /*
+ Write a listToArray function that produces an array from a list.
+ */
+ function listToArray(list)
+ {
+    var array = [];
+    for (var node = list; node; node = node.reference)
+        array.push(node.value);
+    return array;
+}
+ /*
+ Write a helper function 'prepend', which takes an element and a list and creates a new
+ list that adds the element to the front of the input list,
+*/
+ function prepend(value, list)
+ {
+     return {value: value, reference: list};
+ }
+ /*
+ Write a helper function 'nth', which takes a list and a number and
+ returns the element at the given position
+ in the list, or undefined when there is no such element.
+ If you haven’t already, also write a recursive version of nth.
+ */
+function nth(list, n) {
+    if (!list)
+    {
+        return undefined;
+    }
+    else if (n == 0)
+    {
+        return list.value;
+    }
+    else
+    {
+        return nth(list.reference, n - 1);
+    }
+}
+var theArray = [1,2,3];
+
+console.log(arrayToList(theArray));
+space();
+
+console.log(listToArray(arrayToList(theArray)));
+space();
+
+console.log(prepend(1,prepend(2,null)));
+space();
+
+console.log(nth(arrayToList([1,2,3]),2));
+space();
+/*
+                        Deep comparison
+ The == operator compares objects by identity. But sometimes, you would
+ prefer to compare the values of their actual properties.
+
+ Write a function, deepEqual, that takes two values and returns true only
+ if they are the same value or are objects with the same properties whose
+ values are also equal when compared with a recursive call to deepEqual.
+
+ To find out whether to compare two things by identity (use the ===
+ operator for that) or by looking at their properties, you can use the
+ typeof operator.
+
+ If it produces "object" for both values, you should do a
+ deep comparison. But you have to take one silly exception into account:
+ by a historical accident, typeof null also produces "object".
+ */
+var obj = {here: {is: "an"}, object: 2};
+var obj2 = obj;
+
+function deepEqual(a, b)
+{
+
+
+    if (a === b)
+    {
+        return true;
+    }
+
+    if (a == null || typeof a != "object" || b == null || typeof b != "object")
+    {
+        return false;
+    }
+    var propsInA = 0;
+    var propsInB = 0;
+    for (var prop in a)
+    {
+        propsInA += 1;
+    }
+
+    for (prop in b)
+    {
+        propsInB += 1;
+
+        if (!(prop in a) || !deepEqual(a[prop], b[prop]))
+        {
+            return false;
+        }
+    }
+    return propsInA == propsInB;
+}
 
 
 
+console.log(deepEqual(2,2)); // true
+space();
+
+console.log(deepEqual(2,"2"));  // false
+space();
+
+console.log(deepEqual(obj, obj2));  // → true
+space();
+
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));  // → true
+space();
+
+console.log(deepEqual(obj, {here: {is: 1}, object: 2}));  // → false
+space();
+
+console.log(deepEqual(obj, {here: {is: "an"}, object: "2"})); // false
+space();
+
+/*
+                            *** Higher-Order Functions ***
+
+ A large program is a costly program, and not just because of the time it
+ takes to build. Size almost always involves complexity, and complexity
+ confuses programmers. Confused programmers, in turn, tend to introduce
+ mistakes (bugs) into programs. A large program also provides a lot
+ of space for these bugs to hide, making them hard to find.
+ Let’s briefly go back to the final two example programs in the introduction.
+ The first is self-contained and six lines long.
+ */
+
+var total = 0;
+var count = 0;
+
+while( count <= 10)
+{
+    total += count;
+    count += 1;
+}
+
+console.log('The sum of 1 through 10 is:',total);
+space();
+/*
+ The second relies on two external functions and is one line long.
+ */
+
+function range(x,y) {
+    {
+        var range = [];
+        if (x < y) {
+            while (x <= y) {
+                range.push(x);
+                x += 1;
+            }
+        }
+        else if (x > y) {
+            while (x >= y) {
+                range.push(x);
+                x -= 1;
+            }
+        }
+        else {
+            range.push(0);
+        }
+        return range;
+    }
+
+    function sum(numbers) {
+        var total = 0;
+
+        for (var i = 0; i < numbers.length; i++) {
+            total += numbers[i];
+        }
+        return total;
+    }
+
+    console.log(range(6, 3)); // [ 6, 5, 4 ,3, ]
+    space();
+
+    console.log(sum(range(1, 10))); // 55
+    space();
+
+    console.log(sum(range(10, 1))); // 55
+    space();
+    /*
+     Which one is more likely to contain a bug?
+
+     If we count the size of the definitions of sum and range, the second
+     program is also big—even bigger than the first. But still, I’d argue that
+     it is more likely to be correct.
+
+     It is more likely to be correct because the solution is expressed in a
+     vocabulary that corresponds to the problem being solved. Summing a
+     range of numbers isn’t about loops and counters. It is about ranges and
+     sums.
+
+     The definitions of this vocabulary (the functions sum and range) will still
+     involve loops, counters, and other incidental details. But because they
+     are expressing simpler concepts than the program as a whole, they are
+     easier to get right.
+     */
+
+    /*
+     *** Abstraction ***
+
+     In the context of programming, these kinds of vocabularies are usually
+     called abstractions.
+
+     Abstractions hide details and give us the ability to
+     talk about problems at a higher (or more abstract) level.
+
+     As an analogy, compare these two recipes for pea soup:
+
+     Put 1 cup of dried peas per person into a container.
+     Add water until the peas are well covered.
+     Leave the peas in water for at least 12 hours.
+     Take the peas out of the water and put them in a cooking pan.
+     Add 4 cups of water per person.
+     Cover the pan and keep the peas simmering for two hours.
+     Take half an onion per person.
+     Cut it into pieces with a knife.
+     Add it to the peas.
+     Take a stalk of celery per person.
+     Cut it into pieces with a knife.
+     Add it to the peas.
+     Take a carrot per person.
+     Cut it into pieces with a knife!
+     Add it to the peas.
+     Cook for 10 more minutes.
+
+     And the second recipe:
+
+     Per person: 1 cup dried split peas, half a chopped onion, a stalk of celery, and a carrot.
+     Soak peas for 12 hours.
+     Simmer for 2 hours in 4 cups of water(per person).
+     Chop and add vegetables.
+     Cook for 10 more minutes.
+
+     The second is shorter and easier to interpret. But you do need to
+     understand a few more cooking-related words—soak, simmer, chop, and, I guess, vegetable.
+     When programming, we can’t rely on all the words we need to be waiting for us in the dictionary.
+
+     Thus, you might fall into the pattern of the first recipe—work out the precise steps the computer has to perform,
+     one by one, blind to the higher-level concepts that they express.
+
+     It has to become second nature, for a programmer, to notice when a
+     concept is begging to be abstracted into a new word.
+
+
+     */
+    var array = [1, 2, 3];
+    /*
+     *** Abstracting array traversal ***
+
+     Plain functions, as we’ve seen them so far, are a good way to build
+     abstractions. But sometimes they fall short.
+     In the previous chapter, this type of for loop made several appearances:
+     */
+
+
+    for (i = 0; i < array.length; i++) {
+        current = array[i];
+        console.log(current);
+    }
+    space();
+    /*
+     It’s trying to say, “For each element in the array, log it to the console”.
+
+     But it uses a roundabout way that involves a counter variable i, a check
+     against the array’s length, and an extra variable declaration to pick out
+     the current element.
+
+     Apart from being a bit of an eyesore, this provides a lot of space for potential mistakes.
+
+     We might accidentally reuse the i variable, misspell length as lenght, confuse the i and current variables, ect.
+
+     So let’s try to abstract this into a function. Can you think of a way?
+
+     Well, it’s easy to write a function that goes over an array and calls
+     console.log on every element.
+     */
+
+    function logEach(array) {
+        for (var i = 0; i < array.length; i++) {
+            console.log(array[i]);
+        }
+    }
+
+    logEach(array); // 123
+    space();
+    /*
+     But what if we want to do something other than logging the elements?
+     Since “doing something” can be represented as a function and functions
+     are just values, we can pass our action as a function value.
+     */
+
+    function forEach(array, action) {
+        for (var i = 0; i < array.length; i++) {
+            action(array[i]);
+        }
+    }
+
+    forEach(array, console.log); // 123
+    space();
+    /*
+     (In some browsers, calling console.log in this way does not work. You
+     can use alert instead of console.log if this example fails to work.)
+     Often, you don’t pass a predefined function to forEach but create a
+     function value on the spot instead.
+     */
+
+    var sum = 0;
+
+    forEach(array, function (number) {
+        sum += number;
+    });
+
+    console.log(sum);
+    space();
+    /*
+     This looks quite a lot like the classical for loop, with its body written as
+     a block below it. However, now the body is inside the function value, as
+     well as inside the parentheses of the call to forEach. This is why it has to
+     be closed with the closing brace and closing parenthesis.
+
+     Using this pattern, we can specify a variable name for the 'current
+     element' (number), rather than having to pick it out of the array manually.
+     In fact, we don’t need to write forEach ourselves. It is available as a
+     standard method on arrays. Since the array is already provided as the
+     thing the method acts on, forEach takes only one required argument: the
+     function to be executed for each element.
+     To illustrate how helpful this is, let’s look back at a function from the
+     previous chapter. It contains two array-traversing loops.
+     */
+
+    function gatherCorrelations(journal) {
+        var pastHistory = {};
+
+        for (var entry = 0; entry < journal.length; entry++) {
+            var events = journal[entry].events;
+
+            for (var i = 0; i < events.length; i++) {
+                var event = events[i];
+
+                if (!(event in pastHistory)) {
+                    pastHistory[event] = phi(tableFor(event, journal));
+                }
+            }
+        }
+        return pastHistory;
+    }
+
+    /*
+     Working with forEach makes it slightly shorter and quite a bit cleaner.
+     */
+
+    function gatherCorrelations(journal) {
+        var pastHistory = {};
+
+        journal.forEach(function (entry) {
+            entry.events.forEach(function (event) {
+                if (!(event in pastHistory)) {
+                    pastHistory[event] = phi(tableFor(event, journal))
+                }
+            });
+        });
+        return pastHistory;
+    }
+
+    spacer();
+    /*
+     Higher-order functions
+
+     Functions that operate on other functions, either by taking them as
+     arguments or by returning them, are called higher-order functions.
+
+     If you have already accepted the fact that functions are regular values, there
+     is nothing particularly remarkable about the fact that such functions
+     exist.
+
+     The term comes from mathematics, where the distinction between
+     functions and other values is taken more seriously.
+
+     Higher-order functions allow us to abstract over actions, not just values.
+
+     They come in several forms. For example, you can have functions
+     that create new functions.
+     */
+
+    function greaterThan(x) {
+        return function (y) {
+            return y > x;
+        };
+    }
+
+    var greaterThan10 = greaterThan(10); // This var will hold '10', a 'Constant variable', for the function's 'x' parameter.
+
+    console.log(greaterThan10(11));  // The argument '11' fills the 'return' function's parameter. in this case returning 'true'.
+
+    console.log(greaterThan10(9)); // false
+    space();
+    /*
+     And you can have functions that change other functions.
+     */
+
+    function noisy(f) {
+        return function (arg) {
+            console.log("Calling with", arg);
+            var value = f(arg);
+            console.log("Call with", arg, "- got", value);
+            return value;
+        };
+    }
+
+    noisy(Boolean)(0); // False
+    space();
+
+    noisy(Boolean)(1); // True
+    space();
+
+    noisy(Boolean)(2); // True
+    space();
+
+    noisy(Boolean)(3); // True
+    space();
+
+    noisy(Boolean)(-1); // True
+    space();
+
+    noisy(Boolean)("x"); // True
+    space();
+    /*
+     You can even write functions that provide new types of control flow.
+     */
+
+    function unless(test, then) {
+        if (!(test)) {
+            then();
+        }
+    }
+
+    function repeat(times, body) {
+        for (var i = 0; i < times; i++) {
+            body(i);
+        }
+    }
+
+    //------------------------------------------------------------------------------------
+
+    repeat(3, function (n) {
+        unless(n % 2, function () {
+            console.log(n, "is even.");
+        });
+    });
+// ! 0 is even
+// ! 2 is even
+
+    /*
+     The lexical scoping rules that we discussed in Chapter 3 work to our advantage
+     when using functions in this way.
+
+     In the previous example, the 'n' variable is a parameter to the outer function.
+
+     Because the inner function lives inside the environment of the outer one, it can use 'n'.
+
+     The bodies of such inner functions can access the variables around them.
+
+     They can play a role similar to the {} blocks used in regular loops and conditional
+     statements.
+
+     An important difference is that variables declared inside
+     inner functions do not end up in the environment of the outer function.
+
+     And that is usually a good thing.
+     */
+
+    /*
+     Passing along arguments
+
+     The noisy function defined earlier, which wraps its argument in another
+     function, has a rather serious deficit.
+     */
+    /*
+     function noisy(f)
+     {
+     return function(arg)
+     {
+     console.log("Calling with", arg);
+     var value = f(arg);
+     console.log("Call with", arg, "- got", value);
+     return value;
+     };
+     }
+     */
+    /*
+     If 'f' takes more than one parameter, it gets only the first one.
+
+     We could add a bunch of arguments to the inner function (arg1, arg2, and so on)
+     and pass them all to f, but it is not clear how many would be enough.
+
+     This solution would also deprive 'f' of the information in arguments.length.
+
+     Since we’d always pass the same number of arguments, it wouldn’t know
+     how many arguments were originally given.
+
+     For these kinds of situations, 'JavaScript functions' have an 'apply' method.
+
+     You pass it an array (or array-like object) of arguments, and it will call
+     the function with those arguments.
+     */
+
+    function transparentWrapping(f) {
+        return function () {
+            return f.apply(null, arguments);
+        };
+    }
+
+    /*
+     The above is a useless function, but it shows the pattern we are interested in—
+     the function it returns passes all of the given arguments, and only those
+     arguments, to f. It does this by passing its own arguments object to apply.
+     The first argument to apply, for which we are passing null here, can be
+     used to simulate a method call. We will come back to that in the next
+     chapter.
+     */
+
+    /*
+     *** JSON ***
+
+     Higher-order functions that somehow apply a function to the elements of an array are widely used in JavaScript.
+
+     The 'forEach' method is the most primitive such function.
+
+     There are a number of other variants available as methods on arrays.
+
+     To familiarize ourselves with them, let’s play around with another data set.
+
+     A few years ago, someone crawled through a lot of archives and put
+     together a book on the history of the family name (Haverbeke—meaning Oatbrook).
+
+     For my amusement, I extracted the information on the ancestor tree and put it
+     into a computer-readable format.
+
+     The file I created looks something like this:
+
+     [
+     {
+     "name": "Emma de Franco",
+     "sex": "female",
+     "born": 1876,
+     "died": 1956,
+     "father": "John Doe",
+     "mother": "Jane Doe"
+     },
+     {
+     "name": "John de Franco",
+     "sex": "male",
+     "born": 1878,
+     "died": 1976,
+     "father": "John Doe",
+     "mother": "Jane Doe",
+     }
+     ]
+     */
+    /*
+     This format is called JSON (pronounced “Jason”), which stands for
+     "JavaScript Object Notation".
+
+     It is widely used as a 'data storage' and 'communication format' on the Web.
+
+     ----------------------------------------------------------------------------------------------------------------------
+
+     JSON is similar to JavaScript’s way of writing arrays and objects, with a few restrictions......
+
+     All property names have to be surrounded by double quotes, and only simple data expressions are allowed!
+
+     NO function calls, variables, or anything that involves actual computation!
+
+     Comments are not allowed in JSON.***
+
+     JavaScript gives us functions: 'JSON.stringify' and 'JSON.parse'.
+
+     The above functions convert data 'to' and 'from' the JSON format, respectively.
+
+     The first takes a JavaScript value and returns a 'JSON-encoded string'.
+
+     The second takes such a string and converts it to the value it encodes.
+     */
+    space();
+
+    var objectMe = {
+        name: "John Pietrangelo",
+        born: 1980,
+        degree: ["Computer Information Systems", "Business Sustainability"]
+    };
+    console.log(objectMe);
+
+    var stringMe = JSON.stringify(objectMe);
+    console.log(stringMe); // {"name":"John Doe","born": 1980}
+    space();
+
+    console.log(JSON.parse(stringMe).born); // 1980
+    spacer();
+
+    var ANCESTRY_FILE_TO_STRING = JSON.stringify([
+        {
+            "name": "Carolus Haverbeke",
+            "sex": "m",
+            "born": 1832,
+            "died": 1905,
+            "father": "Carel Haverbeke",
+            "mother": "Maria van Brussel"
+        },
+        {
+            "name": "Emma de Milliano",
+            "sex": "f",
+            "born": 1876,
+            "died": 1956,
+            "father": "Petrus de Milliano",
+            "mother": "Sophia van Damme"
+        },
+        {
+            "name": "Maria de Rycke",
+            "sex": "f",
+            "born": 1683,
+            "died": 1724,
+            "father": "Frederik de Rycke",
+            "mother": "Laurentia van Vlaenderen"
+        },
+        {
+            "name": "Jan van Brussel",
+            "sex": "m",
+            "born": 1714,
+            "died": 1748,
+            "father": "Jacobus van Brussel",
+            "mother": "Joanna van Rooten"
+        },
+        {
+            "name": "Philibert Haverbeke",
+            "sex": "m",
+            "born": 1907,
+            "died": 1997,
+            "father": "Emile Haverbeke",
+            "mother": "Emma de Milliano"
+        },
+        {
+            "name": "Jan Frans van Brussel",
+            "sex": "m",
+            "born": 1761,
+            "died": 1833,
+            "father": "Jacobus Bernardus van Brussel",
+            "mother": null
+        },
+        {
+            "name": "Pauwels van Haverbeke",
+            "sex": "m",
+            "born": 1535,
+            "died": 1582,
+            "father": "N. van Haverbeke",
+            "mother": null
+        },
+        {
+            "name": "Clara Aernoudts",
+            "sex": "f",
+            "born": 1918,
+            "died": 2012,
+            "father": "Henry Aernoudts",
+            "mother": "Sidonie Coene"
+        },
+        {
+            "name": "Emile Haverbeke",
+            "sex": "m",
+            "born": 1877,
+            "died": 1968,
+            "father": "Carolus Haverbeke",
+            "mother": "Maria Sturm"
+        },
+        {
+            "name": "Lieven de Causmaecker",
+            "sex": "m",
+            "born": 1696,
+            "died": 1724,
+            "father": "Carel de Causmaecker",
+            "mother": "Joanna Claes"
+        },
+        {
+            "name": "Pieter Haverbeke",
+            "sex": "m",
+            "born": 1602,
+            "died": 1642,
+            "father": "Lieven van Haverbeke",
+            "mother": null
+        },
+        {
+            "name": "Livina Haverbeke",
+            "sex": "f",
+            "born": 1692,
+            "died": 1743,
+            "father": "Daniel Haverbeke",
+            "mother": "Joanna de Pape"
+        },
+        {
+            "name": "Pieter Bernard Haverbeke",
+            "sex": "m",
+            "born": 1695,
+            "died": 1762,
+            "father": "Willem Haverbeke",
+            "mother": "Petronella Wauters"
+        },
+        {
+            "name": "Lieven van Haverbeke",
+            "sex": "m",
+            "born": 1570,
+            "died": 1636,
+            "father": "Pauwels van Haverbeke",
+            "mother": "Lievijne Jans"
+        },
+        {
+            "name": "Joanna de Causmaecker",
+            "sex": "f",
+            "born": 1762,
+            "died": 1807,
+            "father": "Bernardus de Causmaecker",
+            "mother": null
+        },
+        {
+            "name": "Willem Haverbeke",
+            "sex": "m",
+            "born": 1668,
+            "died": 1731,
+            "father": "Lieven Haverbeke",
+            "mother": "Elisabeth Hercke"
+        },
+        {
+            "name": "Pieter Antone Haverbeke",
+            "sex": "m",
+            "born": 1753,
+            "died": 1798,
+            "father": "Jan Francies Haverbeke",
+            "mother": "Petronella de Decker"
+        },
+        {
+            "name": "Maria van Brussel",
+            "sex": "f",
+            "born": 1801,
+            "died": 1834,
+            "father": "Jan Frans van Brussel",
+            "mother": "Joanna de Causmaecker"
+        },
+        {
+            "name": "Angela Haverbeke",
+            "sex": "f",
+            "born": 1728,
+            "died": 1734,
+            "father": "Pieter Bernard Haverbeke",
+            "mother": "Livina de Vrieze"
+        },
+        {
+            "name": "Elisabeth Haverbeke",
+            "sex": "f",
+            "born": 1711,
+            "died": 1754,
+            "father": "Jan Haverbeke",
+            "mother": "Maria de Rycke"
+        },
+        {"name": "Lievijne Jans", "sex": "f", "born": 1542, "died": 1582, "father": null, "mother": null},
+        {
+            "name": "Bernardus de Causmaecker",
+            "sex": "m",
+            "born": 1721,
+            "died": 1789,
+            "father": "Lieven de Causmaecker",
+            "mother": "Livina Haverbeke"
+        },
+        {
+            "name": "Jacoba Lammens",
+            "sex": "f",
+            "born": 1699,
+            "died": 1740,
+            "father": "Lieven Lammens",
+            "mother": "Livina de Vrieze"
+        },
+        {
+            "name": "Pieter de Decker",
+            "sex": "m",
+            "born": 1705,
+            "died": 1780,
+            "father": "Joos de Decker",
+            "mother": "Petronella van de Steene"
+        },
+        {
+            "name": "Joanna de Pape",
+            "sex": "f",
+            "born": 1654,
+            "died": 1723,
+            "father": "Vincent de Pape",
+            "mother": "Petronella Wauters"
+        },
+        {
+            "name": "Daniel Haverbeke",
+            "sex": "m",
+            "born": 1652,
+            "died": 1723,
+            "father": "Lieven Haverbeke",
+            "mother": "Elisabeth Hercke"
+        },
+        {
+            "name": "Lieven Haverbeke",
+            "sex": "m",
+            "born": 1631,
+            "died": 1676,
+            "father": "Pieter Haverbeke",
+            "mother": "Anna van Hecke"
+        },
+        {
+            "name": "Martina de Pape",
+            "sex": "f",
+            "born": 1666,
+            "died": 1727,
+            "father": "Vincent de Pape",
+            "mother": "Petronella Wauters"
+        },
+        {
+            "name": "Jan Francies Haverbeke",
+            "sex": "m",
+            "born": 1725,
+            "died": 1779,
+            "father": "Pieter Bernard Haverbeke",
+            "mother": "Livina de Vrieze"
+        },
+        {
+            "name": "Maria Haverbeke",
+            "sex": "m",
+            "born": 1905,
+            "died": 1997,
+            "father": "Emile Haverbeke",
+            "mother": "Emma de Milliano"
+        },
+        {
+            "name": "Petronella de Decker",
+            "sex": "f",
+            "born": 1731,
+            "died": 1781,
+            "father": "Pieter de Decker",
+            "mother": "Livina Haverbeke"
+        },
+        {
+            "name": "Livina Sierens",
+            "sex": "f",
+            "born": 1761,
+            "died": 1826,
+            "father": "Jan Sierens",
+            "mother": "Maria van Waes"
+        },
+        {
+            "name": "Laurentia Haverbeke",
+            "sex": "f",
+            "born": 1710,
+            "died": 1786,
+            "father": "Jan Haverbeke",
+            "mother": "Maria de Rycke"
+        },
+        {
+            "name": "Carel Haverbeke",
+            "sex": "m",
+            "born": 1796,
+            "died": 1837,
+            "father": "Pieter Antone Haverbeke",
+            "mother": "Livina Sierens"
+        },
+        {
+            "name": "Elisabeth Hercke",
+            "sex": "f",
+            "born": 1632,
+            "died": 1674,
+            "father": "Willem Hercke",
+            "mother": "Margriet de Brabander"
+        },
+        {
+            "name": "Jan Haverbeke",
+            "sex": "m",
+            "born": 1671,
+            "died": 1731,
+            "father": "Lieven Haverbeke",
+            "mother": "Elisabeth Hercke"
+        },
+        {
+            "name": "Anna van Hecke",
+            "sex": "f",
+            "born": 1607,
+            "died": 1670,
+            "father": "Paschasius van Hecke",
+            "mother": "Martijntken Beelaert"
+        },
+        {
+            "name": "Maria Sturm",
+            "sex": "f",
+            "born": 1835,
+            "died": 1917,
+            "father": "Charles Sturm",
+            "mother": "Seraphina Spelier"
+        },
+        {
+            "name": "Jacobus Bernardus van Brussel",
+            "sex": "m",
+            "born": 1736,
+            "died": 1809,
+            "father": "Jan van Brussel",
+            "mother": "Elisabeth Haverbeke"
+        }
+    ]);
+
+    console.log("One continual JSON-encoded string.\n\n", ANCESTRY_FILE_TO_STRING); //One continual JSON-encoded string.
+
+    /*
+     Let’s decode it and see
+     how many people it contains.
+     */
+
+// To convert string into a JSON object.
+    var arrayAncestors = JSON.parse(ANCESTRY_FILE_TO_STRING);
+
+    console.log("An Array of objects is constructed.\n **When written to console, each value pair is on it's own line.\n\n", ancestorArray); //An Array of objects is constructed. **When written to console, each value pair is on it's own line.
+
+    spacer();
+
+    console.log("I have", arrayAncestors.length, "ancestors!"); // I have 39 ancestors!
+
+    /*
+     ***Filtering an array***
+
+     To find the people in the ancestry data set who were 25 years of age or younger in 1925,
+     the following function might be helpful.
+     It filters out the elements in an array that don’t pass a test.
+
+     */
+
+    function filter(array, test) {
+        var passedTest = [];
+
+        for (var i = 0; i < array.length; i++) {
+            if (test(array[i])) {
+                passedTest.push(array[i]);
+            }
+        }
+        return passedTest;
+    }
+
+    spacer();
+
+    console.log("people in the ancestry data set who were 25 years of age or younger in 1925:\n\n",
+        filter(arrayAncestors, function (person) {
+                return person.born > 1899 && person.born < 1926;
+            }
+        )
+    );
+    spacer();
+    /*
+     This uses the argument named 'test', a function value, to fill in a “gap”
+     in the computation for desired output result.
+
+     The 'test' function is called for 'each element', and its
+     'return' value determines whether an 'element' is included in the returned 'array'.
+
+     Three people in the file were alive and young in 1925 were: my grandfather,
+     grandmother, and great-aunt.
+
+     Note how the 'filter' function, rather than deleting elements from the
+     existing array, built up a new array with only the elements that pass
+     the test.
+
+     This function is pure, it does not modify the array it is given.
+
+     Like 'forEach', 'filter' is also a standard method on arrays.
+
+     The previous example defined the function, in order to show what it does internally.
+
+     From now on, we’ll use it like this instead:
+     */
+
+    console.log("The result of filtering an ancestor from myAncestors Array-object.\n\n",
+        arrayAncestors.filter(function (person) {
+            return person.father == "Carel Haverbeke"
+        })
+    );
+
+    spacer();
+
+    /*
+     *** Transforming with map ***
+
+     Say we have an array of objects representing people, produced by filtering
+     the ancestry array.
+
+     we would like to extract an array of the names from it, which will make it easier to read.
+
+     The 'map' method transforms an array, by applying a function to all of its
+     elements and building a new array from the returned values.
+
+     The new array will have the same length as the input array, but its content will
+     have been “mapped” to a new form by the function.
+
+     .
+     */
+// Variable to store an array of ancestors who lived for over 90 years:
+    var arrayLivedToBeOver90 = arrayAncestors.filter(function (person) {
+        return person.died - person.born > 90;
+    });
+
+    console.log("Ancestors who lived to be over 90 years old:\n\n", arrayLivedToBeOver90);
+
+
+// **Utility function**
+// To create a 'new' array of 'names' extracted from the 'name' properties,
+// of the array of objects, held in the argument's array.
+
+    function map(array, testFunction) {
+        var arrayNamesOfAncestorsWhoDiedAtOldAge = [];
+        for (var i = 0; i < array.length; i++) {
+            arrayNamesOfAncestorsWhoDiedAtOldAge.push(testFunction(array[i]));
+        }
+        return arrayNamesOfAncestorsWhoDiedAtOldAge;
+    }
+
+    spacer();
+
+    console.log(map(arrayLivedToBeOver90, function (person) {
+            return person.name;
+        }
+        )
+    );
+
+
+    /*
+     Interestingly, the people who lived to at least 90 years of age are the
+     same three people who we saw before—the people who were young in
+     the 1920s.
+
+     Which happens to be the most recent generation in my data
+     set. I guess medicine has come a long way.
+     Like forEach and filter, map is also a standard method on arrays.
+     */
+
+    console.log("------------------------------------------------------------------------------------------");
+    space();
+
+    console.log(arrayLivedToBeOver90.map(function (person) {
+            return person.name;
+        })
+    );
+
+    space();
+
+    console.log(arrayAncestors.filter(function (person) {
+        return person.died - person.born > 90;
+    }).map(function (person) {
+        return person.name;
+    }));
+
+    space();
+    console.log("------------------------------------------------------------------------------------------");
+    space();
+
+    /*
+     *** Summarizing with reduce ***
+
+     Another common pattern of computation on arrays is computing a single value from them.
+
+     Our recurring example, summing a collection of numbers, is an instance of this.
+
+     Another example would be finding the person with the earliest year of birth in the data set.
+
+     The higher-order operation that represents this pattern is called 'reduce'(or sometimes fold).
+
+     You can think of it as folding up the array, one element at a time.
+
+     When summing numbers, you’d start with the number
+     zero and, for each element, combine it with the current sum by adding
+     the two.
+
+     The parameters to the reduce function are, apart from the array, a combining
+     function and a start value.
+
+     This function is a little less straightforward
+     than filter and map, so pay close attention.
+     */
+    var numArrayForReduceExample = [1, 2, 3, 4];
+
+    function reduce(array, combine, start) {
+        var total = start;
+        for (var i = 0; i < array.length; i++) {
+            total = combine(total, array[i])
+        }
+        return total;
+    }
+
+    console.log(reduce(numArrayForReduceExample, function (a, b) {
+        return a + b
+    }, 0));
+
+    space();
+    /*
+     The standard array method reduce, which of course corresponds to this
+     function, has an added convenience. If your array contains at least one
+     element, you are allowed to leave off the 'start' argument(3rd). The method
+     will take the first element of the array as its start value and start reducing
+     at the second element.
+     To use reduce to find my most ancient known ancestor, we can write
+     something like this:
+     */
+    console.log(myAncestors.reduce(function (oldestAncestor, currentAncestor) {
+        if (currentAncestor.born < oldestAncestor.born) {
+            return currentAncestor;
+        }
+        else {
+            return oldestAncestor;
+        }
+    }));
+    /*
+     *** Composability ***
+
+     Consider how we would have written the previous example (finding the
+     person with the earliest year of birth) without higher-order functions.
+     The code is not that much worse.
+     */
+    space();
+
+    var earlistBirth = myAncestors[0];
+
+    for (var i = 0; i < myAncestors.length; i++) {
+        var ancestorInQue = myAncestors[i];
+
+        if (ancestorInQue.born < earlistBirth.born) {
+            earlistBirth = ancestorInQue;
+        }
+    }
+
+    console.log(earlistBirth);
+    space();
+    /*
+     There are a few more variables, and the program is two lines longer but
+     still quite easy to understand.
+
+     Higher-order functions start to shine when you need to compose functions.
+
+     As an example, let’s write code that finds the average age for men
+     and for women in the data set.
+     */
+    function average(array) {
+        function plus(a, b) {
+            return a + b;
+        }
+
+        return array.reduce(plus) / array.length;
+    }
+
+    function age(p) {
+        return p.died - p.born;
+    }
+
+    function male(p) {
+        return p.sex == "m";
+    }
+
+    function female(p) {
+        return p.sex == "f";
+    }
+
+    console.log("The average lifespan for my male ancestors is:", Math.round(average(myAncestors.filter(male).map(age))));
+
+    space();
+
+    console.log("The average lifespan for my female ancestors is:", Math.round(average(myAncestors.filter(female).map(age))));
+    /*
+     (It’s a bit silly that we have to define plus as a function, but operators
+     in JavaScript, unlike functions, are not values, so you can’t pass them
+     as arguments.)
+     Instead of tangling the logic into a big loop, it is neatly composed into
+     the concepts we are interested in—determining sex, computing age, and
+     averaging numbers. We can apply these one by one to get the result we
+     are looking for.
+     This is fabulous for writing clear code. Unfortunately, this clarity
+     comes at a cost.
+     */
+
+    /*
+     *** The Cost ***
+
+     In the happy land of elegant code and pretty rainbows, there lives a
+     spoil-sport monster called inefficiency.
+
+     A program that processes an array is most elegantly expressed as a
+     sequence of cleanly separated steps that each do something with the
+     array and produce a new array. But building up all those intermediate
+     arrays is somewhat expensive.
+
+     Likewise, passing a function to forEach and letting that method handle
+     the array iteration for us is convenient and easy to read.
+
+     But function calls in JavaScript are costly compared to simple loop bodies.
+     And so it goes with a lot of techniques that help improve the clarity
+     of a program.
+
+     Abstractions add layers between the raw things the computer
+     is doing and the concepts we are working with and thus cause the
+     machine to perform more work. This is not an iron law—there are programming
+     languages that have better support for building abstractions
+     without adding inefficiencies, and even in JavaScript, an experienced
+     programmer can find ways to write abstract code that is still fast. But
+     it is a problem that comes up a lot.
+
+     Fortunately, most computers are insanely fast. If you are processing a
+     modest set of data or doing something that has to happen only on a human
+     time scale (say, every time the user clicks a button), then it does not
+     matter whether you wrote a pretty solution that takes half a millisecond
+     or a super-optimized solution that takes a tenth of a millisecond.
+
+     It is helpful to roughly keep track of how often a piece of your program
+     is going to run.
+
+     If you have a loop inside a loop (either directly or through the outer loop calling a function
+     that ends up performing the inner loop), the code inside the inner loop will end up running "N x M"
+     times, where N is the number of times the outer loop repeats and M
+     is the number of times the inner loop repeats within each iteration of
+     the outer loop. If that inner loop contains another loop that makes P
+     rounds, its body will run "M x N x P" times, and so on. This can add up
+     to large numbers, and when a program is slow, the problem can often be
+     traced to only a small part of the code, which sits inside an inner loop.
+     */
+//------------------------------------------------------------------------------------------
+    /*
+     Great-great-great-great-…
+
+     My grandfather, Philibert Haverbeke, is included in the data file.
+
+     By starting with him, I can trace my lineage to find out whether the most
+     ancient person in the data, Pauwels van Haverbeke, is my direct ancestor.
+     And if he is, I would like to know how much DNA I theoretically share with him.
+
+     To be able to go from a parent’s name to the actual object that represents
+     this person, we first build up an object that associates names with
+     people.
+     */
+    spacer();
+
+//To find ancestor by name with the original array of objects
+    console.log("The original object holding all ancestors(objects)\n\n", myAncestors);
+
+    for (var i = 0; i < myAncestors.length; i++) {
+        if (myAncestors[i].name == "Philibert Haverbeke") {
+            console.log(myAncestors[i]);
+        }
+
+    }
+
+    var referenceByName = {};
+
+    forEach(myAncestors, function (person) {
+        referenceByName[person.name] = person;
+    });
+
+    console.log("The following is a newly created object to search name of objects held within.\n\n", referenceByName);
+
+    spacer();
+
+    console.log(referenceByName["Philibert Haverbeke"]);
+
+    space();
+
+
+    space();
+    console.log("---------------------------------------------------------------------------");
+    space();
+
+//console.log(byName);
+    /*
+     Now, the problem is not entirely as simple as following the father properties
+     and counting how many we need to reach Pauwels.
+
+     There are several cases in the family tree where people married their second cousins (tiny
+     villages and all that).
+
+     This causes the branches of the family tree to
+     rejoin in a few places, which means I share more than 1/2G of my genes
+     with this person, where G for the number of generations between Pauwels
+     and me. This formula comes from the idea that each generation splits
+     the gene pool in two.
+
+     A reasonable way to think about this problem is to look at it as being
+     analogous to reduce, which condenses an array to a single value by
+     repeatedly combining values, left to right.
+
+     In this case, we also want to condense our data structure to a single value but in a way that follows
+     family lines.
+
+     The shape of the data is that of a family tree, rather than
+     a flat list.
+
+     The way we want to reduce this shape is by computing a value for
+     a given person by combining values from their ancestors.
+
+     This can be done recursively: if we are interested in person A, we have to compute
+     the values for A’s parents, which in turn requires us to compute the value
+     for A’s grandparents, and so on. In principle, that’d require us to look at
+     an infinite number of people, but since our data set is finite, we have to
+     stop somewhere.
+
+     We’ll allow a default value to be given to our reduction
+     function, which will be used for people who are not in the data. In our
+     case, that value is simply zero, on the assumption that people not in the
+     list don’t share DNA with the ancestor we are looking at.
+
+     Given a person, a function to combine values from the two parents of a
+     given person, and a default value, reduceAncestors condenses a value from
+     a family tree.
+     */
+    function reduceMyAncestors(person, f, defaultValue) {
+        function valueForMyAncestor(person) {
+            if (person == null) {
+                return defaultValue;
+            }
+            else {
+                return f(person, valueForMyAncestor(byName[person.mother]), valueForMyAncestor(byName[person.father]));
+            }
+
+        }
+
+        return valueForMyAncestor(person);
+    }
+
+    /*
+     The inner function (valueFor) handles a single person. Through the magic
+     of recursion, it can simply call itself to handle the father and the mother
+     of this person. The results, along with the person object itself, are passed
+     to f, which returns the actual value for this person.
+     We can then use this to compute the amount of DNA my grandfather
+     shared with Pauwels van Haverbeke and divide that by four.
+     */
+
+    function sharedDNA(person, fromMother, fromFather) {
+        if (person.name == "Pauwels van Haverbeke") {
+            return 1;
+        }
+        else return (fromMother + fromFather) / 2;
+    }
+
+    var ph = byName["Philibert Haverbeke"];
+
+    console.log(reduceMyAncestors(ph, sharedDNA, 0) / 4); // 0.00049
+
+    space();
+
+    /*
+     The person with the name Pauwels van Haverbeke obviously shared 100
+     percent of his DNA with Pauwels van Haverbeke (there are no people
+     who share names in the data set), so the function returns 1 for him. All
+     other people share the average of the amounts that their parents share.
+
+     So, statistically speaking, I share about 0.05 percent of my DNA with
+     this 16th-century person. It should be noted that this is only a statistical
+     approximation, not an exact amount.
+
+     It is a rather small number, but
+     given how much genetic material we carry (about 3 billion base pairs),
+     there’s still probably some aspect in the biological machine that is me
+     that originates with Pauwels.
+
+     We could also have computed this number without relying on reduceAncestors.
+     But separating the general approach (condensing a family tree) from
+     the specific case (computing shared DNA) can improve the clarity of the
+     code and allows us to reuse the abstract part of the program for other
+     cases.
+
+     For example, the following code finds the percentage of a person’s
+     known ancestors who lived past 70 (by lineage, so people may be counted
+     multiple times):
+     */
+
+    function AncestorCount(person, test) {
+        function combine(current, fromMother, fromFather) {
+            var thisOneCounts = current != person && test(current);
+
+            return fromMother + fromFather + (thisOneCounts ? 1 : 0);
+        }
+
+        return reduceMyAncestors(person, combine, 0)
+    }
+
+    function longLifeSpanPercentage(person) {
+        var all = AncestorCount(person, function (person) {
+            return true;
+        });
+
+        var longLifeSpan = AncestorCount(person, function (person) {
+            return person.died - person.born >= 70;
+        });
+
+        return longLifeSpan / all;
+    }
+
+    console.log(longLifeSpanPercentage(byName["Emile Haverbeke"]));
+
+    spacer();
+    /*
+     Such numbers are not to be taken too seriously, given that our data set
+     contains a rather arbitrary collection of people. But the code illustrates
+     the fact that reduceAncestors gives us a useful piece of vocabulary for
+     working with the family tree data structure.
+     */
+
+    /*
+     *** Binding ***
+
+     The 'bind' method, which all functions have, creates a new function that
+     will call the original function but with some of the 'arguments' already
+     fixed(constant var).
+
+     The following code shows an example of bind in use. It defines a function
+     'isInTheSet' that tells us whether a 'person' is in a given 'set of strings'.
+
+     To call filter, in order to collect those 'person objects' whose names are in a
+     specific set, we can either write a function expression that makes a call
+     to 'isInTheSet' with our 'set' as its first argument or partially apply the 'isInTheSet'
+     function.
+     */
+
+    var set01 = ["Carel Haverbeke", "Maria van Brussel", "Donald Duck"];
+
+    function isInTheSet(set, person) {
+        return set.indexOf(person.name) > -1;
+    }
+
+    console.log(myAncestors.filter(function (person) {
+        return isInTheSet(set01, person)
+    }));
+
+    space();
+
+    console.log(myAncestors.filter(isInTheSet.bind(null, set01)));
+
+}
+/*
+                                *** Summary ***
+
+ Being able to pass function values to other functions is not just a gimmick
+ but a deeply useful aspect of JavaScript. It allows us to write
+ computations with “gaps” in them as functions and have the code that
+ calls these functions fill in those gaps by providing function values that
+ describe the missing computations.
+ Arrays provide a number of useful higher-order methods—forEach to
+ do something with each element in an array, filter to build a new array
+ with some elements filtered out, map to build a new array where each
+ element has been put through a function, and reduce to combine all an
+ array’s elements into a single value.
+ Functions have an apply method that can be used to call them with an
+ array specifying their arguments. They also have a bind method, which
+ is used to create a partially applied version of the function.
+ */
+
+/*
+                        *** Exercises ***
+ Flattening:
+
+ Use the reduce method in combination with the concat method to “flatten”
+ an array of arrays into a single array that has all the elements of the input
+ arrays.
+
+ Mother-child age difference:
+
+ Using the example data set from this chapter, compute the average age
+ difference between mothers and children (the age of the mother when
+ the child is born). You can use the average function defined earlier in
+ this chapter.
+
+ **Note that not all the mothers mentioned in the data are themselves
+ present in the array. The byName object, which makes it easy to find a
+ person’s object from their name, might be useful here.
+
+ Historical life expectancy:
+
+ When we looked up all the people in our data set that lived more than
+ 90 years, only the latest generation in the data came out. Let’s take a
+ closer look at that phenomenon.
+ Compute and output the average age of the people in the ancestry data
+ set per century. A person is assigned to a century by taking their year
+ of death, dividing it by 100, and rounding it up, as in Math.ceil(person.
+ died / 100).
+
+ **For bonus points, write a function groupBy that abstracts the grouping
+ operation. It should accept as arguments an array and a function that
+ computes the group for an element in the array and returns an object
+ that maps group names to arrays of group members.
+
+ Every and then some:
+
+ Arrays also come with the standard methods every and some. Both take a
+ predicate function that, when called with an array element as argument,
+ returns true or false. Just like && returns a true value only when the
+ expressions on both sides are true, every returns true only when the
+ predicate returns true for all elements of the array.
+
+ Similarly, some returns true as soon as the predicate returns true for any of the elements. They
+ do not process more elements than necessary—for example, if some finds
+ that the predicate holds for the first element of the array, it will not look
+ at the values after that.
+
+ Write two functions, every and some, that behave like these methods,
+ except that they take the array as their first argument rather than being
+ a method.
+
+ */
