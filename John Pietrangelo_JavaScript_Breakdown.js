@@ -1,263 +1,297 @@
-//Writen by John Joseph Pietrangelo III
-
-function space()
-{
- console.log("");
-}
-var spacer = function()
-{
-    space();
-    console.log("---------------------------------------------------------------------------");
-    space();
-};
-
-console.log("Values, Types, and Operators");
+spacer();
+//                             Writen by John Joseph Pietrangelo III
+                  console.log("A JavaScript Breakdown\n\n\t Writen by John Joseph Pietrangelo III");
 spacer();
 
-//                              *** 1 Values, Types, and Operators ***
+//**********************************************************************************************************************
+//**********************************************************************************************************************
 
+
+                   console.log("\t\t\t\t\t*** Values, Types, and Operators ***\n");
+//                                        *** Values, Types, and Operators ***
+space();
 /*
  Inside the computer's mind, there is only data.
 
- All this data is stored as long sequences of bits and in this sence*, fundamentally alike.
+ ALL this data is stored as long sequences of bits.
 
- Bits are any kind of two-valued things, usually described as zeros and
- ones. Inside the computer, they take forms such as a high or low electrical
+ Bits are any kind of two-valued things, usually defined as zeros and
+ ones.
+
+ Inside the computer, they take forms such as a high or low electrical
  charge, a strong or weak signal.
 
  Here are the bits that make up the number
  13, with the weights of the digits shown below them:
 
-   0  0  0  0 1 1 0 1
+   0  1  0  0 0 1 0 1
  128 64 32 16 8 4 2 1
 
- So that’s the binary number 00001101, or 8 + 4 + 1, which equals 13.
+ So that’s the binary number 01000101, or 64 + 4 + 1, which equals 69.
+//----------------------------------------------------------------------------------------------------------------------
 
- Values:
+ VALUES:
 
- A typical modern computer
- has more than 30 billion bits in its volatile data storage.
-
- the hard disk or equivalent) tends to have yet a few orders of
- magnitude more.
+ A typical modern computer has more than 30 billion bits in its 'volatile' data storage.
+ The hard drive or equivalent tends to have yet a few orders of magnitude more.
 
  There are six basic types of values in JavaScript:
  numbers, strings, Booleans, objects, functions, and undefined values.
 
- As soon as you no longer use a value, it will dissipate,
- leaving behind its bits to be recycled as building material for the next
- generation of values.
+ As soon as a value is no longer being utilized, it will dissipate,
+ leaving behind its bits to be recycled, as building blocks for the next construction of values.
+//----------------------------------------------------------------------------------------------------------------------
 
- Numbers:
+ NUMBERS:
 
- JavaScript uses a fixed number of bits, namely 64 of them, to store
+ JavaScript uses a fixed number of bits(64 of them to be precise), to store
  a single number value.
 
- For N decimal digits, the amount of numbers
- that can be represented is 10N . Similarly, given 64 binary digits, you
- can represent 264 different numbers, which is about 18 quintillion (an 18
- with 18 zeros after it). This is a lot.
+ For 'N' decimal digits, the amount of numbers that can be represented is (10 * 'N').
+
+ Similarly, given 64 binary digits, you can represent 264 different numbers, which is about 18 quintillion!
+ (an 18 with 18 zeros after it). This is a lot.
 
  For very big or very small numbers, you can also use scientific notation by
  adding an “e” (for “exponent”), followed by the exponent of the number:
+
  2.998e8
  That is 2.998 * 10^8 = 299,800,000.
 
- Just as  (pi) cannot be precisely expressed by a finite number of decimal
+ Just as 'pi' cannot be precisely expressed by a finite number of decimal
  digits, many numbers lose some precision when only 64 bits are available
- to store them. This is a shame, but it causes practical problems only in
- specific situations.
+ to store them.
 
- Arithmetic:
+ This is a limitation, but it causes practical problems only in specific situations.
+//----------------------------------------------------------------------------------------------------------------------
 
- The + and * symbols are called operators.
+ ARITHMETIC:
 
- Does the example mean “add 4 and 100, and multiply the result by
- 11”, or is the multiplication done before the adding? As you might have
- guessed, the multiplication happens first. But as in mathematics, you
- can change this by wrapping the addition in parentheses.
- (100 + 4) * 11
+ The + and * symbols are called 'operators'.   Example -> 100 + 4 * 11
 
- When
- multiple operators with the same precedence appear next to each other,
- as in 1 - 2 + 1, they are applied left to right: (1 - 2) + 1.
- When in doubt, just add parentheses.
+ Does the example mean 'add 4 and 100, and multiply the result by 11',
+ or is the multiplication done before the adding?
 
- The % symbol is used to represent the remainder operation.
- X % Y is the remainder of dividing X by Y. For example, 314 % 100
- produces 14, and 144 % 12 gives 0.
+ follow the mathematical principles, which hopefully you have learned throughout your education,
+ They stay constant with-in computer-science too!
 
- Remainder’s precedence is the same as
- that of multiplication and division. You’ll often see this operator referred
- to as modulo, though technically remainder is more accurate.
+ The multiplication happens first, of course.
+ But as in mathematics, you can change this by wrapping the addition in parentheses. Example -> (100 + 4) * 11
 
- Special numbers:
+ When multiple operators with the same precedence, appear next to each other,
+ as in 4 - 2 + 3, they are applied left to right.
+ When in doubt, just add parentheses. (4 - 2) + 3.
 
- There are three special values in JavaScript that are considered numbers
- but don’t behave like normal numbers.
- The first two are Infinity and -Infinity, which represent the positive
- and negative infinities. Infinity - 1 is still Infinity, and so on. Don’t put
- too much trust in infinity-based computation. It isn’t mathematically
- solid, and it will quickly lead to our next special number: NaN.
+ The % symbol is used to represent the 'remainder' operation.
+ X % Y is the remainder of dividing 'X by Y'.
 
- NaN stands for “not a number”, even though it is a value of the number
- type. You’ll get this result when you, for example, try to calculate 0
- / 0 (zero divided by zero), Infinity - Infinity, or any number of other
- numeric operations that don’t yield a precise, meaningful result.
+ For example, 269 % 100 produces 69,
+              288 % 12 produces 0.
 
- Strings:
+ the Remainder(%) precedence is the same as
+ that of multiplication(*) and division(/).
 
- The next basic data type is the string. Strings are used to represent
- text. They are written by enclosing their content in quotes.
- " Patch my boat with chewing gum "
- ' Monkeys wave goodbye '
+ You’ll often see this(%) operator referred to as 'modulo', though technically 'remainder' is more accurate.
+//----------------------------------------------------------------------------------------------------------------------
+
+ SPECIAL NUMBERS:
+
+ There are three special values in JavaScript that are considered numbers but don’t behave like normal numbers.
+
+ The first two are Infinity and -Infinity, which represent the positive and negative infinities.
+ Infinity - 1 is still Infinity, and so on.
+
+ Infinity-based computation isn’t mathematically solid and it will usually lead to another type of special number: NaN.
+
+ 'NaN' stands for “not a number”, even though it is a 'value' of the 'number type'.
+ You’ll get this result when you, for example, try to calculate 0 / 0 (zero divided by zero),
+ Infinity - Infinity, or any number of other numeric operations that don’t yield a precise, meaningful result.
+//----------------------------------------------------------------------------------------------------------------------
+
+ STRINGS:
+
+ The next basic 'data-type' is the 'string'. Strings are used to represent 'text'.
+
+ They are written by enclosing their content in quotes.
+ example:  "To be or not to be?"
+           'That is the question.'
+
  Both single and double quotes can be used to mark strings as long as
- the quotes at the start and the end of the string match.
+ the quotes at the start and the end of the string match each other.
 
- To make it possible to include such characters in a string, the following
- notation is used: whenever a backslash (\) is found inside quoted text,
- it indicates that the character after it has a special meaning. This is
- called escaping the character.
+ To make it possible to 'Escape' from characters in a string, the following
+ notation is used: (\)
 
- When an n character occurs
- after a backslash, it is interpreted as a newline. Similarly, a t after a
- backslash means a tab character. Take the following string:
+ When the backslash is found inside quoted text, it indicates that the character after it has a special meaning.
+ This is called 'escaping the character'.
+
+ When an 'n' character occurs after a backslash, it is interpreted as a 'newline'.
+
+ Similarly, a 't' after the backslash means a 'tab' character. Take the following string:
 
  If two backslashes follow each
  other, they will collapse together, and only one will be left in the resulting
  string value.
 
- This is how the string “A newline character is written like
- "\n".” can be expressed:
+ The code below displays how the string:     A newline character is written like " \n ".
+ can be writen to the console screen.
  */
 
-console.log("A new line character is written like \" \\n \".\n");
+console.log("Below are the '\\' operator, 'escape' returns."); //Below are the '&&' operator, 'and' returns.
+space();
 
-//A newline character is written like "\n".
-console.log("\tThis is the 1st line.\nThis is the 2nd line.\n");
+console.log("A new line character is written like \" \\n \"."); //A newline character is written like " \n ".
+space();
+
+//Both tab and newline characters are written like this.
+console.log("\tThis is the 1st line.\nThis is the 2nd line.\n");  //    This is the 1st line.
+                                                                  //This is the 2nd line.
+
+//The following line will produce the string "concatenate":
+console.log("con" + "cat" + "e" + "nate");  //concatenate
+spacer();
+//----------------------------------------------------------------------------------------------------------------------
+
+//                                       *** Unary Operators ***
 
 /*
- The following line will produce the string "concatenate":
- */
+ Not all 'operators' are 'symbols', some are 'words'.
 
-console.log("con" + "cat" + "e" + "nate");
-spacer();
-
-//                  *** Unary Operators ***
-
-/*Not all operators are symbols. Some are written as words. One example
-is the 'typeof' operator, which produces a string value naming the type of
-the value you give it.*/
-console.log("\t\t*** Unary Operators ***");
-spacer();
-
-var a = 100;
-var b = "Hello";
-var c = true;
-var d = [1,2,3];
-var e = {name: "John Pietrangelo", degrees:["CIS","SOS"]};
-//------------------------------------------------------------
-
-console.log(a + "* is a '" + typeof a + "' data-type!"); // number
-space();
-
-console.log(b + "* is a '" + typeof b + "' data-type!"); // number
-space();
-
-console.log(c + "* is a '" + typeof c + "' data-type!"); // number
-space();
-
-console.log(d + "* is a '" + typeof d + "' data-type!  Arrays Are types of objects!!"); // number
-space();
-
-console.log(JSON.stringify(e) + "* is a '" + typeof e+ "' data-type!"); // number
-space();
-/*
- The other operators we saw all operated on two values, but 'typeof' takes
- only one.
+ For example, the 'typeof'-operator, produces a 'string'-value, of the 'data-type' of the 'value' you give it.
+ The other operators we saw all operated on two values, but 'typeof' takes only one.
 
  Operators that use two values are called 'binary operators',
  while those that take one are called 'unary operators'.
+*/
 
- The minus operator can be used both as a binary operator and as a unary operator.
- */
+// Below are the variables used for the following examples.
+var int_a = 100;
+var string_b = "Hello";
+var bool_c = true;
+var array_d = [1,2,3];
+var object_e = {
+                    name: "John Pietrangelo",
+                    degrees: ["CIS","SOS"]
+               };
 
+//----------------------------------------------------------------------------------------------------------------------
+
+console.log(int_a + " is a '" + typeof int_a + "' data-type!"); //100 is a 'number' data-type!
+space();
+
+console.log(string_b + " is a '" + typeof string_b + "' data-type!"); //Hello is a 'string' data-type!
+space();
+
+console.log(bool_c + " is a '" + typeof bool_c + "' data-type!"); //true is a 'boolean' data-type!
+space();
+
+console.log(array_d + " is a '" + typeof array_d + "' data-type!");//1,2,3 is a 'object' data-type!
+space();
+
+// I use JSON.stringify to write the content of the object to the console screen.
+// I will discuss JSON.stringify later on in this writing, don't concern yourself about its intricacies right now.
+console.log(JSON.stringify(object_e) + " is a '" + typeof object_e+ "' data-type!"); //object
+spacer();
+//----------------------------------------------------------------------------------------------------------------------
+
+//The minus operator can be used both as a binary operator and as a unary operator.
+
+//binary use, subtracts 2 from 10. Unary use, changes the given number(8) a negative value.
 console.log(-(10 - 2)); // -8
-
 space();
 /*
+//----------------------------------------------------------------------------------------------------------------------
 
- Boolean values:
+ BOOLEAN VALUES:
 
- Often, you will need a value that simply distinguishes between two possibilities,
- like “yes” and “no” or “on” and “off”. For this, JavaScript has
- a Boolean type, which has just two values: true and false.
+ In programming, there is a need for a value that simply distinguishes between two possibilities,
+ like ('yes' and 'no') or ('on' and 'off') or ('true' and 'false').
+ For these situations, JavaScript established a 'Boolean' data-type, which has just two values: 'true' and 'false'.
 
- Comparisons:
 
- Here is one way to produce Boolean values:
- */
-console.log("3 is greater than 2.", 3 > 2);  //true
+ Comparing values:
+
+ Here are example of utilizing Boolean to compare values:*/
+
+console.log("3 is greater than 2.","That statement is", + 3 > 2);  //3 is greater than 2. That statement is true
 space();
 
-console.log("3 is less than 2.", 3 < 2);  //false
-space();
+console.log("3 is less than 2.",'That statement is', + 3 < 2);  //3 is less than 2. That statement is false
+spacer();
 /*
- The > and < signs are the traditional symbols for “is greater than” and
- “is less than”, respectively. They are binary operators. Applying them
- results in a Boolean value that indicates whether they hold true in this
- case.
- Strings can be compared in the same way.
- */
-console.log("the 1st index value \'g\' in god is greater than the 1st index value \'d\' in dog:", "god" > "dog"); // true
+ The > and < signs are the traditional symbols for “is greater than” and “is less than”.
+ ard are 'binary'-operators.
+
+ Applying them, results in a Boolean-value that indicates whether the 'case' holds 'true' or 'false'.
+
+ Strings can be compared in the same way, as follows:
+
+ */                   // (operator in use)                             // (operator in use)   // (operator in use)
+console.log("The 1st index value \'g\' in god is greater than the 1st index value \'d\' in dog:", "god" > "dog");
+//The 1st index value 'g' in god is greater than the 1st index value 'd' in dog: true
 space();
 
-console.log("the 1st index value \'G\' in god is greater than the 1st index value \'d\' in dog:", "God" > "dog"); // false
-space();
+                     // (operator in use)                              // (operator in use)  // (operator in use)
+console.log("the 1st index value \'G\' in god is greater than the 1st index value \'d\' in dog:", "God" > "dog");
+//the 1st index value 'G' in god is greater than the 1st index value 'd' in dog: false
+spacer();
+
 /*
- The way strings are ordered is more or less alphabetic: uppercase letters
- are always “LESS” than lowercase ones, so "Z" < "a" is true, and nonalphabetic
- characters (!, -, and so on) are also included in the ordering.
- The actual comparison is based on the Unicode standard. This standard
- assigns a number to virtually every character you would ever need,
- including characters from Greek, Arabic, Japanese, Tamil, and so on.
+ The way strings are ordered is more or less alphabetic:
 
- When comparing strings, JavaScript goes over them from left to right,
- comparing the numeric codes of the characters one by one.
+ Uppercase letters are always a lesser value than lowercase ones, so "Z" < "a" is true.
 
- Other similar operators are >= (greater than or equal to), <= (less than
- or equal to), == (equal to), and != (not equal to).
+ Non-alphabetic characters(!, -, etc.) are also included in the ordering.
+
+ The 'Actual'-comparison of values are based on the Unicode standards......
+
+ This standard assigns a number to virtually every character you would ever need,
+ including characters from the Greek, Arabic, Japanese alphabets.
+
+ When comparing strings, JavaScript goes over them from left-to-right,
+ comparing the numeric codes of the characters one-by-one.
+
+ Other similar operators are:
+
+ >= (greater than or equal to),
+ <= (less than or equal to),
+ == (equal to), and != (not equal to).
+
  */
-console.log("\'itch\' dose not equal \'scratch\':", "itch" != "scratch"); // true
+console.log("\'itch\' dose not equal \'scratch\':", "itch" != "scratch"); //'itch' dose not equal 'scratch': true
+
 space();
 /*
  There is only one value in JavaScript that is not equal to itself, and that
- is NaN, which stands for “not a number”.
+ is 'NaN', which stands for “not a number”.
 
- NaN is supposed to denote the result of a nonsensical computation, and as
- such, it isn’t equal to the result of any other nonsensical computations.
+ NaN is supposed to denote the result of a 'nonsensical computation'.
+ Do to that fact it isn’t equal to the result of any other 'nonsensical computations'.
  */
 
-console.log("\'hi\' equals \'hi\'", "hi" == "hi"); //true
+console.log("\'hi\' equals \'hi\':", "hi" == "hi"); //'hi' equals 'hi': true
 space();
 
-console.log("\"4\" equals \"4\"", 4 == 4); //true
+console.log("\"4\" equals \"4\":", 4 == 4); //"4" equals "4": true
 space();
 
-console.log("\"NaN\" equals \"NaN\"", NaN == NaN); //false
-space();
+console.log("\"NaN\" equals \"NaN\":", NaN == NaN); //"NaN" equals "NaN": false
+spacer();
 
 /*
  Logical operators:
 
- There are also some operations that can be applied to Boolean values
- themselves.
+ There are operations we programmers apply to resulting 'Boolean'-values. JavaScript supports three logical operators.
 
- JavaScript supports three logical operators: and, or, and not. These can be used to “reason” about Booleans.
+ These operators are used for and, or, and not reasoning. These can be used to “reasoning” about Booleans.
 
- The '&&' operator represents a logical 'and'. It is a 'binary operator', and its
- result is 'true' only if both the values given to it are 'true'.
+ The '&&' operator represents a logical 'and'.
+
+ It is a 'binary'-operator, and its result is 'true' only if both the Boolean-values given to it are 'true'.
  */
+console.log("Below are the '&&' operator, 'and' returns."); //Below are the '&&' operator, 'and' returns.
+space();
+
 console.log(false && false); //false
 space();
 
@@ -268,11 +302,14 @@ console.log(true && false); //false
 space();
 
 console.log(true && true); //true
-space();
+spacer();
 /*
  The || operator denotes logical order. It produces true if either of the values
  given to it is true.
  */
+
+console.log("Below are the '||' operator, 'or' returns."); //Below are the '||' operator, 'or' returns.
+space();
 
 console.log(true || true); //true
 space();
@@ -282,37 +319,50 @@ space();
 
 console.log(false || true); //true
 space();
+
 console.log(false || false); //false
-space();
+spacer();
 
 /*
  'Not' is written as an exclamation mark '!'.
 
- It is a unary operator that flips the value given to it
+ It is a 'unary'-operator that flips the (+/-) value given to it.
 
- !true produces 'false' and !false produces 'true'.
+ !true = false and !false = true.
 
- When mixing these Boolean operators with arithmetic and other operators,
- it is not always obvious when parentheses are needed.
+ *When mixing the 'Boolean'-operators we have reviewed, with arithmetic and other operators,
+  it is not always obvious when parentheses are needed.
 
- In practice, you can usually get by with knowing that of the operators we have seen so far.
+ In practice, you can usually get by with knowing that, of the operators we have seen so far:
 
- || has the lowest precedence, then comes &&, then the comparison operators (>, ==, and so on), and then the rest.
+ '||' has the lowest precedence, then comes '&&', then the comparison operators (>, ==, and so on), and then the rest.
 
  This order has been chosen so that, in typical expressions like the following one, there are as few
- parentheses as possible:
+ parentheses as possible needed:
  */
 
-console.log('1 + 1 equals 2 and 10 * 10 is greater than 50.', 1 + 1 == 2 && 10*10 > 50); //true
-space();
-
+console.log('1 + 1 equals 2 and 10 * 10 is greater than 50:', 1 + 1 == 2 && 10*10 > 50);
+           //1 + 1 equals 2 and 10 * 10 is greater than 50: true
+spacer();
 /*
- The last logical operator I will discuss is not unary, not binary, but
- ternary, operating on three values. It is written with a question mark
- and a colon, like this:
+ The last logical operator I will discuss is not unary, not binary, but ternary(operating on three values).
+ This one is called the 'conditional'-operator(I call it the 'picker'-operator since it is the only one in the language).
+
+ It is written with a question mark and a colon, as follows:
  */
+
+// Below are the variables used for the following examples.
 var pickerSetToTrue = "1st option is chosen";
 var pickerSetToFalse = "2nd option is chosen";
+
+/*
+ The value on the left of the question mark “picks” which of the other two values will be returned.
+
+ When the first-value is true, the middle-value is returned.
+ When the first-value is false, the last-value, on the right is returned.
+ */
+console.log("Below are the ' ? : ' operator, 'picker' returns."); //Below are the ' ? : ' operator, 'picker' returns.
+space();
 
 console.log(true ? 1 : 2); // 1
 space();
@@ -320,20 +370,12 @@ space();
 console.log(false ? 1 : 2); // 2
 space();
 
-console.log("When value is true:",true ? pickerSetToTrue : pickerSetToFalse); //1st option is chosen
+console.log("When value is true:",true ? pickerSetToTrue : pickerSetToFalse); //When value is true: 1st option is chosen
 space();
 
-console.log("When value is false:",false ? pickerSetToTrue : pickerSetToFalse);//2nd option is chosen
-space();
-/*
- This one is called the conditional operator (or sometimes just ternary
- operator since it is the only such operator in the language). The value
- on the left of the question mark “picks” which of the other two values
- will come out.
+console.log("When value is false:",false ? pickerSetToTrue : pickerSetToFalse);//When value is false: 2nd option is chosen
+spacer();
 
- When it is true, the middle value is chosen, and when it
- is false, the value on the right comes out.
- */
 
 /*
  Undefined values:
@@ -361,6 +403,9 @@ space();
 
  This is nicely demonstrated by the following expressions:
  */
+console.log("Below are the 'Automatic type conversion' returns."); //Below are the 'Automatic type conversion' returns.
+space();
+
 console.log(8 * null); // 0
 space();
 
@@ -374,7 +419,7 @@ console.log('five' * 3); // NaN
 space();
 
 console.log(false == 0); // true
-space();
+spacer();
 
 /*
  When an operator is applied to the “wrong” type of value, JavaScript will
@@ -5258,7 +5303,7 @@ johnPietrangelo.speak = function(stringWords)
                         };
 
 johnPietrangelo.speak("This is my life");  // John Joseph Pietrangelo says,"This is my life"?!
-
+spacer();
 /*
  Usually a method needs to do something with the object it was called from.
 
@@ -5266,21 +5311,28 @@ johnPietrangelo.speak("This is my life");  // John Joseph Pietrangelo says,"This
  immediately called, as in '[object].method()'.  The special variable 'this' in its
  body, will point to the [object] that it was called from.
  */
-
-var goodGuy = {type: "good", speak: talkingSmack};
-var badGuy = {type: "bad", speak: talkingSmack};
-
-spacer();
-
-goodGuy.speak("Do you feel lucky punk, well do ya?");
-badGuy.speak("You know it bitch!");
-
-spacer();
-
 function talkingSmack(line)
 {
     console.log('The ' + this.type + 'guy says,\"' + line +'\".');
 }
+
+var goodGuy = {
+                   type: "good",
+                   speak: talkingSmack
+              };
+
+var badGuy = {
+                   type: "bad",
+                   speak: talkingSmack
+             };
+
+goodGuy.speak("Do you feel lucky punk, well do ya?");
+
+badGuy.speak("You know it bitch!");
+
+spacer();
+
+
 
 /*
  The code uses the 'this' keyword to output the type of [guy] that is
@@ -5294,15 +5346,14 @@ function talkingSmack(line)
  There is a method similar to apply, called call.
 
  It also calls the function it is a method of but takes its arguments normally, rather than as an
- arrayNums.
+ array.
 
  Like apply and bind, call can be passed a specific this value.
  */
 
-talkingSmack.apply(goodGuy,["Stop, in the propertyName of the law!"]);
+talkingSmack.apply(goodGuy,["Stop, in the name of the law!"]);
 
 talkingSmack.call({type:"watching-"},"Why are they fighting?");
-
 
 spacer();
 
@@ -6031,7 +6082,7 @@ for(var int_i = 0; int_i < 5; int_i++)
 function drawTable(arrayArraysOfObjects_table)
 {
     // To declare an arrayNums-variable, which holds the number of lines each row in the table contains, in order to display all of the row's data.
-    var arrayInts_CellHeights = rowHeights(arrayArraysOfObjects_table);
+    var arrayInts_cellHeights = rowHeights(arrayArraysOfObjects_table);
     // Checker table [ 1, 1, 1, 1, 1 ]
     // Mountain table [ 2, 1, 1, 1, 1, 1, 1]
     /*
@@ -6144,9 +6195,9 @@ function drawTable(arrayArraysOfObjects_table)
                                                                  // 1. 'width-value' from the index value of arrayInt_CellWidths(arrayNums of 'max string lengths' for each of the table's columns)
                                                                  // which corresponds with the the inner-loop iteration(row's column-index).
 
-                                                                 // 2. 'height-value' from arrayInts_CellHeights(arrayNums of 'max-number of lines' for each of the table's rows)
+                                                                 // 2. 'height-value' from arrayInts_cellHeights(arrayNums of 'max-number of lines' for each of the table's rows)
                                                                  // which corresponds with the outer-loop iteration(tables's row-index)
-                                                                 return object_Cell.draw(arrayInt_CellWidths[int_CellIndex], arrayInts_CellHeights[int_rowIndex]);
+                                                                 return object_Cell.draw(arrayInt_CellWidths[int_CellIndex], arrayInts_cellHeights[int_rowIndex]);
                                                              });
 
         return arrayStrings_rowBlock[0].map(function( _, int_CellLineIndex)
@@ -6948,30 +6999,31 @@ var twoSum = function(nums, target)
 {
     var arrayTargetIndices = [];
 
-        for(var i = 0; i < nums.length; i++)
+    nums.forEach(function(num)
+    {
+        for (var i = 0; i < nums.length; i++)
         {
-            for (var j = 0; j < nums.length; j++)
+            if (num + nums[i] == target)
             {
-                if (num + nums[i] == target)
+                if (num == nums[i])
                 {
-                    if (num == nums[i])
-                    {
-                        var numIndex1 = nums.indexOf(num);
-                        var numIndex1A = nums.indexOf(num) + 1;
-                        var numIndex2 = nums.indexOf(num, numIndex1A);
-                    }
-                    if (arrayTargetIndices.length == 0 && num == nums[i] && numIndex1 != numIndex2 && numIndex2 != -1) {
-                        arrayTargetIndices.push(nums.indexOf(num));
-                        arrayTargetIndices.push(nums.indexOf(num, numIndex1A));
-                    }
-                    else if (arrayTargetIndices.length == 0 && num != nums[i]) {
-                        arrayTargetIndices.push(nums.indexOf(num));
-                        arrayTargetIndices.push(nums.indexOf(nums[i]));
-                    }
+                    var numIndex1 = nums.indexOf(num);
+                    var numIndex1A = nums.indexOf(num) + 1;
+                    var numIndex2 = nums.indexOf(num, numIndex1A);
                 }
-
+                if (arrayTargetIndices.length == 0 && num == nums[i] && numIndex1 != numIndex2 && numIndex2 != -1)
+                {
+                    arrayTargetIndices.push(nums.indexOf(num));
+                    arrayTargetIndices.push(nums.indexOf(num, numIndex1A));
+                }
+                else if (arrayTargetIndices.length == 0 && num != nums[i])
+                {
+                    arrayTargetIndices.push(nums.indexOf(num));
+                    arrayTargetIndices.push(nums.indexOf(nums[i]));
+                }
             }
         }
+    });
     return arrayTargetIndices;
 };
 
@@ -6979,67 +7031,67 @@ console.log(twoSum([2,5,4,11],6));
 spacer();
 
 /*
-                            7 Project: Electronic Life
+                            *** Project: Electronic Life ***
 
- In “project” chapters, I’ll stop pummeling you with new theory for a
- brief moment and instead work through a program with you.
+ In “project” sections, we will work through writing a program.
 
  Theory is indispensable when learning to program, but it should be accompanied
- by reading and understanding nontrivial programs.
+ by reading and understanding non-trivial programs.
 
- Our project in this chapter is to build a virtual ecosystem, a little world
- populated with critters that move around and struggle for survival.
+ Our project in this chapter is to build a 'virtual world', a little world
+ populated with bots that move around and struggle for existence.
+
 
                                     Definition
 
  To make this task manageable, we will radically simplify the concept
- of a world. Namely, a world will be a two-dimensional grid where each
- entity takes up one full square of the grid.
+ of a world.
 
- On every turn, the critters all get a chance to take some action.
- Thus, we chop both time and space into units with a fixed size: squares
- for space and turns for time.
+ A 'world' will be a 'two-dimensional grid' where each entity takes up one full square of the grid.
 
- Of course, this is a somewhat crude and
- inaccurate approximation. But our simulation is intended to be amusing,
- not accurate, so we can freely cut such corners.
+ On every turn, the 'Bots'(short for Robots) all get a chance to take some action.
 
- We can define a world with a plan, an array of strings that lays out
- the world’s grid using one character per square.
+ We measure both time and space with fixed-valued units:
+ 'squares for space' and 'turns for time'.
+
+ These measures are somewhat elementary and inaccurate approximation of time and space.
+ But our simulation is intended to be amusing, not realistic, so we can freely cut such corners.
+
+ We can define a World with a 'World Map'(an array of strings that lays out
+ the "World’s Environment", using one character per square).
+
+ The “#” characters in this map will represent walls and pillars, and the “o”
+ characters represent 'Bot'-objects. The spaces, are empty space.
+
+ This array can be used to create the 'World'-object(This object keeps track of the size and content of the world.).
+
+ The 'World'-object will contain a 'toString'-method, which will convert the 'World'-object back to a printable string
+ (similar to the plan it was based on), so that we can see what’s going on inside the 'World'-object.
+
+ The 'World'-object also has a 'turn'-method, which will allow all the 'bot'-objects, with-in the 'World'-object,
+ to make one turn, then update the 'World'-object to reflect their actions.
  */
-var plan = [ " # # # # # # # # # # # # # # # # # # # # # # # # # # # # " ,
-             "# # # o ##" ,
-             "# #" ,
-             "# ##### #" ,
-             "## # # ## #" ,
-             "### ## # #" ,
-             "# ### # #" ,
-             "# #### #" ,
-             "# ## o #" ,
-             "# o # o ### #" ,
-             "# # #" ,
-             " # # # # # # # # # # # # # # # # # # # # # # # # # # # # " ] ;
+var arrayWorldMap = ["############################",
+                      "#      #    #      o      ##",
+                      "#                          #",
+                      "#          #####           #",
+                      "##         #   #    ##     #",
+                      "###           ##     #     #",
+                      "#           ###      #     #",
+                      "#   ####                   #",
+                      "#   ##      o              #",
+                      "# o  #        o        ### #",
+                      "#    #                     #",
+                      "############################"];
+
 
 /*
- The “#” characters in this plan represent walls and pillars, and the “o”
- characters represent critters. The spaces, as you might have guessed, are
- empty space.
-
- A plan array can be used to create a world object. Such an object keeps
- track of the size and content of the world.
-
- It has a toString method, which converts the world back to a printable string (similar to the plan it was
- based on) so that we can see what’s going on inside.
-
- The world object also has a turn method, which allows all the critters in it to take one turn
- and updates the world to reflect their actions.
-
                                 Representing space
 
- The grid that models the world has a fixed width and height. Squares
- are identified by their x- and y-coordinates. We use a simple type, Vector
- (as seen in the exercises for the previous chapter), to represent these
- coordinate pairs.
+ The "WorldMap"-array, which models the 'World'-object has a fixed width and height.
+
+ Squares are identified by their coordinates(x,y). We use a simple object-type, 'Vector'
+ (as seen in the exercises in the previous section), to contain these coordinate pairs.
  */
 
 // Constructor for Vector object.
@@ -7049,25 +7101,405 @@ function Vector(x,y)
     this.y = y;
 }
 
-// To declare & initialize the property 'plus' attributed to the Vector object.
-Vector.prototype.plus = function (x, y)
+// To declare & initialize the property 'plus' attributed to all Vector instances(objects).
+Vector.prototype.plus = function (object_otherVector)
 {
-    return new Vector(this.x + x, this.y + y);
+    return new Vector(this.x + object_otherVector.x, this.y + object_otherVector.y);
 };
 
 /*
- Next, we need an 'object' that models the grid.
+ Next, we need an object that models a 'grid' of the 'World'...
 
- A grid is part of a world, but we are making it a separate object (which will be a
- property of a world object) to keep the world object itself simple.
+ A 'Grid'-object is part of the 'World'-object, we are making it a separate object
+ (a property of a 'World'-object), to keep the 'World'-object itself, as simple as possible.
 
- The world should concern itself with world-related things, and the grid should
- concern itself with grid-related things.
+ The 'World'-object should concern itself with world-related things, and the 'Grid'-object should
+ concern itself with section-related things.
 
- To store a grid of values, we have several options. We can use an array
- of row arrays and use two property interfaces, to get to a specific square.
+ To store a Grid of values, we have several options....
+
+ One way would be to use an array-of-arrays, using 'two' property interfaces, to get to a specific square.
+
+ Below is an example:
  */
-var grid = ['Top-left', 'top-middle', 'top-right', 'Bottom-left', 'Bottom-middle', 'Bottom-right'];
+var grid = [// index[0]       index[1]       index[2]
+                ['Top-left', 'Top-middle', 'Top-right'], //gridEx1[0]
+                ['Bottom-left', 'Bottom-middle', 'Bottom-right'] //gridEx1[1]
+             ];
 
-console.log(grid[1][2]);
-//Top-left 
+console.log(grid[1][2]); //Bottom-right
+space();
+console.log(grid[0][0]); //Top-left
+space();
+console.log(grid[0][2]); //Top-right
+space();
+console.log(grid[1][1]); //Bottom-middle
+spacer();
+
+
+/*
+ Or we could use a single array, with a size of -> ('width' * 'height').
+ Where the element at (x,y) is found at position x + (y * width) in the array.
+ */
+
+ grid = ['Top-left', 'Top-middle', 'Top-right', 'Bottom-left', 'Bottom-middle', 'Bottom-right'];
+
+console.log(grid[2 + (1 * 3)]); //Bottom-right
+spacer();
+
+
+/*
+ Since the actual access to this array will be wrapped in methods of
+ the 'Grid'-object, it doesn’t matter to outer application(code),
+ which approach we take.
+
+ The 2nd example will be used in this program, because it makes it much
+ easier to create the array....
+
+ ***  When calling the 'Array'-constructor with a single number as an argument, ***
+               it will create a new empty array of the given length.
+
+ The following code defines the 'Grid'-object, with some basic methods:
+ */
+
+// Grid Constructor
+function Grid(int_width, int_height)
+{
+    //                      array's length value
+    this.space = new Array(int_width * int_height);
+    this.width = int_width;
+    this.height = int_height;
+}
+
+// Grid Properties
+Grid.prototype.isInside = function(object_vector)
+                          {
+                             return object_vector.x >= 0 && object_vector.x < this.width &&
+                                    object_vector.y >= 0 && object_vector.y < this.length;
+                          };
+
+Grid.prototype.get = function(object_vector)
+                     {
+                         return this.space[object_vector.x + this.width * object_vector.y];
+                     };
+
+Grid.prototype.set = function(object_vector, char_value)
+                     {
+                         this.space[object_vector.x + this.width * object_vector.y] = char_value;
+                     };
+
+
+                        // To test the code which we have written to this point.
+
+var object_sampleGrid = new Grid(5,5);
+
+// returns 'undefined' because value has not been assigned to this specific Vector.
+console.log(object_sampleGrid.get(new Vector(1,1))); // undefined
+space();
+
+// To assign character 'X' to this specific Vector.
+object_sampleGrid.set(new Vector(1,1), 'X');
+
+// returns the 'X'-character, which has now value been assigned to this specific Vector.
+console.log(object_sampleGrid.get(new Vector(1,1))); // X
+spacer();
+
+/*
+                        A Bots’s Programming Interface
+
+ Before we can start on the 'World'-constructor, we must get more specific
+ about the 'Bot'-objects that will be living inside it.
+
+ I mentioned that the 'World'-object will ask the 'Bot'-objects what actions they want to take.
+
+ This works as follows:
+
+ Each 'Bot'-object has an 'act'-method that, when 'called', returns
+ an 'Action'-object.
+
+ An 'Action'-object will hold a 'type'-property, which names the
+ 'type of action' the bot will take, for example,'move'.
+
+ The 'Action'-object may also contain properties with extra information,
+ such as the 'direction' the 'Bot'-object wants to 'move' to.
+
+ 'Bot'-objects can see only the squares directly around them,
+ this area we will be referred to as the 'WorldSection'-object.
+
+ This limited vision can be useful when deciding which 'action' to take.
+
+ When the 'act'-method is called, it is given a 'View'-object, which allows the Bot to inspect its surroundings.
+
+ We name the 'eight surrounding squares' individually, by their 'compass directions':
+
+ "n" = north, "ne" = northeast, and so on. Here’s the object we will use to
+ map from 'direction-names' to 'coordinate-offsets':
+ */
+
+var object_direction =
+    {
+        'nw': new Vector(-1,-1),
+        'w' : new Vector(-1,0),
+        'sw': new Vector(-1,1),
+        'se': new Vector(1,1),
+        'e' : new Vector(1,0),
+        'ne': new Vector(1,-1),
+        'n' : new Vector(0,-1),
+        's' : new Vector(0,1)
+    };
+/*
+ The 'View'-object has a 'look'-method, which 'takes a direction' and 'returns a character'.
+
+ For example "\#" when there is a wall in that direction, or " " (space) when there is nothing there.
+
+ The 'View'-object also provides the convenient 'find'-method and 'findAll'-method.
+
+ Both take a 'arrayWorldMap' character(' ', x, o) as an 'argument'.
+
+ The 'find'-method 'returns a direction' in which the character can be
+ found next to the Bot or 'returns null' if no such direction exists.
+
+ The 'findAll'-method returns an array containing all directions with that character.
+
+ For example, a Bot sitting left(west) of a wall will get ["ne", "e","se"]
+ when calling the 'findAll'-method on the 'Bot'-object's 'view'-object, with the "\#" character as argument.
+
+ Here is a simple-minded 'Bot'-object that just follows its forward momentum until it hits
+ an obstacle, then bounces off it in a random open direction:
+ */
+
+// generic function to pick a random element from an array,
+// using Math.random plus some arithmetic to get a random index.
+function randomElement(array)
+{
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+var arrayDirectionNames = 'n ne e se s sw w nw'.split(" ");
+
+//Constructor for bouncing Bot.
+function Bot()
+{
+    this.direction = randomElement(arrayDirectionNames);
+}
+
+// To declare the 'act'-property for ALL 'Bot'-objects.
+Bot.prototype.act = function(view)
+                                {
+                                    if(view.look(this.direction) != ' ')
+                                    {
+                                        this.direction = view.find(' ') || 's';
+                                    }
+
+                                    return {type: 'move', direction: this.direction};
+                                };
+
+/*
+ The 'randomElement'-function simply picks a random element from an
+ array, using Math.random plus some arithmetic to get a random index.
+
+ We’ll use this again later because randomness can be useful in simulations.
+
+ To pick a random direction, the 'Bouncing Bot'-constructor calls the 'randomElement'-function
+ on an array of direction names.
+
+ We could also have used 'Object.keys'-method to get this
+ 'arrayDirectionNames'-array from the 'objectDirections'-object we defined earlier,
+ but that provides no guarantees about the order in which the properties are listed.
+
+ *** In most situations, modern JavaScript engines will return properties in ***
+            the order they were defined, but they are not required to.
+
+
+ The “|| "s"” in the 'act'-method is there to prevent 'this.direction'-property from
+ getting the value 'null' if the Bot is somehow trapped with no empty
+ space around it (for example when crowded into a corner by other Bots).
+
+
+                                          The World Object
+
+ Now we can create the 'World'-object.
+
+ The constructor takes both a 'map'(the array of strings representing the 'world’s grid', described earlier)
+ and a 'legend' as the constructor 'arguments'.
+
+ A 'legend' is an 'object' that tells us what
+ each character in the 'World Map' means.
+
+ It contains a constructor for every character except for the 'space'-character
+ (The 'space'-character always refers to 'null', the value we’ll use to represent empty space).
+ */
+
+function elementFromCharacter(object_legend, char_character)
+{
+    if(char_character != ' ')
+    {
+        var object_element = new object_legend[char_character]();
+
+        object_element.originCharacter = char_character;
+    }
+    else
+    {
+        object_element = null;
+    }
+
+    return object_element;
+}
+
+
+/*
+                                            'this' and its scope.....
+
+ The 'World'-constructor(function) I have written below contains a call to its 'forEach'-method.
+
+ One interesting thing to note, is inside the function passed to 'forEach'-function,
+ 'focus' is no longer directly in the function 'scope' of the 'constructor'-function.
+
+ Each function call gets its own 'this' binding, so the 'this', in the inner-function,
+ does not refer to the newly constructed object that the outer this refers to!!
+
+ In fact, when ever a function isn’t called as a method...
+ 'this' will refer to the 'global'-object!
+
+ This means that we can’t write 'this.grid' to access the 'grid' from inside
+ the loop.
+
+ Instead, the outer function creates a normal local variable: 'grid'.
+
+ This local 'grid'-variable is used by the inner-function to gain access to the grid.
+ This is a bit of a design blunder in JavaScript.
+
+ Fortunately, the next version of the language provides a solution for this problem.
+
+ Meanwhile, there are workarounds.....
+
+ A common pattern is to say var self = this and from then on refer to self,
+ which is a local-variable and thus visible to inner-functions.
+ */
+
+
+// 'World'-object constructor
+function World(array_map, object_legend)
+{//                    (    width    ,   height  )
+    var object_localGrid = new Grid(array_map[0].length, array_map.length);
+
+    this.grid = object_localGrid;
+    this.legend = object_legend;
+
+    array_map.forEach(function(string_line, char_y)
+    {
+        for(var index_x = 0; index_x < string_line.length; index_x++)
+        {//               World Grid Vector        Vector's value
+            object_localGrid.set(new Vector(index_x,char_y), elementFromCharacter(object_legend, string_line[index_x]));
+        }
+    });
+}
+
+/*
+ In 'elementFromCharacter', first we create an instance of the right type by looking
+ up the character’s constructor and applying 'new' to it.
+
+ Then we add an 'originCharacter'-property to it to make it easy to find out what character
+ the element was originally created from.
+
+ We need this 'originCharacter'-property when implementing the world’s 'toString'-method.
+ This method builds up a map-like string from the world’s current
+ state by performing a two-dimensional loop over the squares on the
+ World's grid.
+ */
+
+function characterFromElement(element)
+{
+    if(element == null)
+    {
+        return ' ';
+    }
+    else
+    {
+        return element.originCharacter;
+    }
+}
+
+World.prototype.toString = function()
+{
+    var output = '';
+
+    for(var y = 0; y < this.grid.height; y++)
+    {
+        for(var x =0; x < this.grid.width; x++)
+        {
+            var element = this.grid.get(new Vector(x,y));
+
+            output += characterFromElement(element);
+        }
+        output += '\n';
+    }
+
+    return output;
+};
+
+/*
+ A wall is a simple object, it is used only for taking up space and has no
+ act method.
+ */
+
+function Wall()
+{
+
+}
+
+/*
+When we 'initialize & declare' the 'object_world'-variable
+(by creating an instance based on the 'map' from earlier in the application),
+then call its 'toString'-method, we get a returning string very similar to the plan we put in.
+*/
+var world = new World(arrayWorldMap, {
+                                          '#': Wall,
+                                          'o': Bot
+                                      });
+
+console.log(world.toString());
+
+/*
+ Beside the common pattern to say var self = this and from then on refer to self,
+ which is a local-variable and therefore visible to the function within the constructor-function,
+ is to use the 'bind'-method, which allows us to provide an explicit 'this'-object to 'bind' to.
+*/
+
+var object_test =
+            {
+                prop: 10,
+
+                addToProp: function(array)
+                           {
+                               return array.map(function (elt)
+                                                {
+                                                    return this.prop + elt;
+                                                }.bind(this));
+                           }
+
+            };
+
+console.log(object_test.addToProp([5])); // --> 15
+
+/*
+ The test-function passed to map is the result of the bind call and thus has its
+ this bound to the first argument given to bind—the outer function’s this
+ value (which holds the test object).
+ Most standard higher-order methods on arrays, such as forEach and map,
+ take an optional second argument that can also be used to provide a this
+ for the calls to the iteration function. So you could express the previous
+ example in a slightly simpler way.
+ */
+
+function space()
+{
+    console.log("");
+}
+
+function spacer()
+{
+    space();
+    console.log("---------------------------------------------------------------------------");
+    space();
+};
