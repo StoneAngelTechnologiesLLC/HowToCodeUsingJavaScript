@@ -1,28 +1,28 @@
 spacer();
 //                             Writen by John Joseph Pietrangelo III
-                  console.log("A JavaScript Breakdown\n\n\t Writen by John Joseph Pietrangelo III");
-spacer();
+                  console.log("A JavaScript Breakdown\n\n\t Writen by John Joseph Pietrangelo III\n");
 
+console.log('********************************************************************************************************');
+console.log('********************************************************************************************************');
+space();
 //**********************************************************************************************************************
 //**********************************************************************************************************************
 
 
                    console.log("\t\t\t\t\t*** Values, Types, and Operators ***\n");
 //                                        *** Values, Types, and Operators ***
+console.log('********************************************************************************************************');
 space();
 /*
  Inside the computer's mind, there is only data.
 
  ALL this data is stored as long sequences of bits.
 
- Bits are any kind of two-valued things, usually defined as zeros and
- ones.
+ Bits are any kind of two-valued things, usually defined as zeros and ones.
 
- Inside the computer, they take forms such as a high or low electrical
- charge, a strong or weak signal.
+ Inside the computer, they take forms such as a high or low electrical charge, a strong or weak signal.
 
- Here are the bits that make up the number
- 13, with the weights of the digits shown below them:
+ Here are the bits that make up the number 69, with the weights of the digits shown below them:
 
    0  1  0  0 0 1 0 1
  128 64 32 16 8 4 2 1
@@ -33,6 +33,7 @@ space();
  VALUES:
 
  A typical modern computer has more than 30 billion bits in its 'volatile' data storage.
+
  The hard drive or equivalent tends to have yet a few orders of magnitude more.
 
  There are six basic types of values in JavaScript:
@@ -44,23 +45,21 @@ space();
 
  NUMBERS:
 
- JavaScript uses a fixed number of bits(64 of them to be precise), to store
- a single number value.
+ JavaScript uses a fixed number of bits(64 of them to be precise), to store a single number value.
 
  For 'N' decimal digits, the amount of numbers that can be represented is (10 * 'N').
 
  Similarly, given 64 binary digits, you can represent 264 different numbers, which is about 18 quintillion!
  (an 18 with 18 zeros after it). This is a lot.
 
- For very big or very small numbers, you can also use scientific notation by
- adding an “e” (for “exponent”), followed by the exponent of the number:
+ For very big or very small numbers, you can also use scientific notation by adding an “e” (for “exponent”),
+ followed by the exponent of the number:
 
  2.998e8
  That is 2.998 * 10^8 = 299,800,000.
 
- Just as 'pi' cannot be precisely expressed by a finite number of decimal
- digits, many numbers lose some precision when only 64 bits are available
- to store them.
+ Just as 'pi' cannot be precisely expressed by a finite number of decimal digits,
+ many numbers lose some precision when only 64 bits are available to store them.
 
  This is a limitation, but it causes practical problems only in specific situations.
 //----------------------------------------------------------------------------------------------------------------------
@@ -72,26 +71,26 @@ space();
  Does the example mean 'add 4 and 100, and multiply the result by 11',
  or is the multiplication done before the adding?
 
- follow the mathematical principles, which hopefully you have learned throughout your education,
- They stay constant with-in computer-science too!
+ The answer is to follow the mathematical principles, which hopefully you have learned throughout your education,
+ They remain constant with-in computer-science too!
 
- The multiplication happens first, of course.
- But as in mathematics, you can change this by wrapping the addition in parentheses. Example -> (100 + 4) * 11
+ The multiplication happens but as in mathematics, you can change this by wrapping the addition in parentheses.
+ Example -> (100 + 4) * 11
 
- When multiple operators with the same precedence, appear next to each other,
- as in 4 - 2 + 3, they are applied left to right.
- When in doubt, just add parentheses. (4 - 2) + 3.
+ When multiple operators, with the same precedence, appear next to each other, as in 4 - 2 + 3,
+ they are applied left to right.  When in doubt, just add parentheses. (4 - 2) + 3.
 
  The % symbol is used to represent the 'remainder' operation.
+
  X % Y is the remainder of dividing 'X by Y'.
 
  For example, 269 % 100 produces 69,
               288 % 12 produces 0.
 
- the Remainder(%) precedence is the same as
- that of multiplication(*) and division(/).
+ the Remainder(%) precedence is the same as that of multiplication(*) and division(/).
 
  You’ll often see this(%) operator referred to as 'modulo', though technically 'remainder' is more accurate.
+
 //----------------------------------------------------------------------------------------------------------------------
 
  SPECIAL NUMBERS:
@@ -104,8 +103,10 @@ space();
  Infinity-based computation isn’t mathematically solid and it will usually lead to another type of special number: NaN.
 
  'NaN' stands for “not a number”, even though it is a 'value' of the 'number type'.
+
  You’ll get this result when you, for example, try to calculate 0 / 0 (zero divided by zero),
  Infinity - Infinity, or any number of other numeric operations that don’t yield a precise, meaningful result.
+
 //----------------------------------------------------------------------------------------------------------------------
 
  STRINGS:
@@ -119,25 +120,21 @@ space();
  Both single and double quotes can be used to mark strings as long as
  the quotes at the start and the end of the string match each other.
 
- To make it possible to 'Escape' from characters in a string, the following
- notation is used: (\)
+ To make it possible to 'Escape' from characters in a string, the following notation is used: (\)
 
  When the backslash is found inside quoted text, it indicates that the character after it has a special meaning.
+
  This is called 'escaping the character'.
 
  When an 'n' character occurs after a backslash, it is interpreted as a 'newline'.
 
  Similarly, a 't' after the backslash means a 'tab' character. Take the following string:
 
- If two backslashes follow each
- other, they will collapse together, and only one will be left in the resulting
- string value.
+ If backslashes follow each other, they will collapse together, and only one will be left in the resulting string value.
 
- The code below displays how the string:     A newline character is written like " \n ".
- can be writen to the console screen.
+ The code below displays how the string - A newline character is written like " \n ". - can be writen.
  */
-
-console.log("Below are the '\\' operator, 'escape' returns."); //Below are the '&&' operator, 'and' returns.
+console.log("Below are the '\\' operator, 'escape' returns."); //Below are the '\' operator, 'escape' returns.
 space();
 
 console.log("A new line character is written like \" \\n \"."); //A newline character is written like " \n ".
@@ -150,11 +147,11 @@ console.log("\tThis is the 1st line.\nThis is the 2nd line.\n");  //    This is 
 //The following line will produce the string "concatenate":
 console.log("con" + "cat" + "e" + "nate");  //concatenate
 spacer();
+
 //----------------------------------------------------------------------------------------------------------------------
-
-//                                       *** Unary Operators ***
-
 /*
+ UNARY OPERATORS:
+
  Not all 'operators' are 'symbols', some are 'words'.
 
  For example, the 'typeof'-operator, produces a 'string'-value, of the 'data-type' of the 'value' you give it.
@@ -163,7 +160,6 @@ spacer();
  Operators that use two values are called 'binary operators',
  while those that take one are called 'unary operators'.
 */
-
 // Below are the variables used for the following examples.
 var int_a = 100;
 var string_b = "Hello";
@@ -175,6 +171,9 @@ var object_e = {
                };
 
 //----------------------------------------------------------------------------------------------------------------------
+
+console.log("Below are the 'typeof' operator, returns."); //Below are the 'typeof' operator, returns.
+space();
 
 console.log(int_a + " is a '" + typeof int_a + "' data-type!"); //100 is a 'number' data-type!
 space();
@@ -188,17 +187,22 @@ space();
 console.log(array_d + " is a '" + typeof array_d + "' data-type!");//1,2,3 is a 'object' data-type!
 space();
 
-// I use JSON.stringify to write the content of the object to the console screen.
-// I will discuss JSON.stringify later on in this writing, don't concern yourself about its intricacies right now.
-console.log(JSON.stringify(object_e) + " is a '" + typeof object_e+ "' data-type!"); //object
-spacer();
+// I use 'JSON.stringify' to write the content with-in the 'object' to the 'console screen'.
+
+// I will discuss 'JSON.stringify' later on in this writing, don't concern yourself about its intricacies right now.
+
+console.log(JSON.stringify(object_e) + " is a '" + typeof object_e+ "' data-type!");
+//{"name":"John Pietrangelo","degrees":["CIS","SOS"]} is a 'object' data-type!
+space();
+
 //----------------------------------------------------------------------------------------------------------------------
 
-//The minus operator can be used both as a binary operator and as a unary operator.
+console.log("The minus operator can be used both as a binary operator and as a unary operator.");
+space();   //The minus operator can be used both as a binary operator and as a unary operator.
 
 //binary use, subtracts 2 from 10. Unary use, changes the given number(8) a negative value.
 console.log(-(10 - 2)); // -8
-space();
+spacer();
 /*
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -206,35 +210,38 @@ space();
 
  In programming, there is a need for a value that simply distinguishes between two possibilities,
  like ('yes' and 'no') or ('on' and 'off') or ('true' and 'false').
- For these situations, JavaScript established a 'Boolean' data-type, which has just two values: 'true' and 'false'.
 
+ For these situations, JavaScript established a 'Boolean' data-type, which has just two values: 'true' and 'false'.
+------------------------------------------------------------------------------------------------------------------------
 
  Comparing values:
 
- Here are example of utilizing Boolean to compare values:*/
+ Here are examples of utilizing the Boolean to compare values:*/
+
+console.log("Below are the 'comparing values' returns."); //Below are the 'comparing values' returns.
+space();
 
 console.log("3 is greater than 2.","That statement is", + 3 > 2);  //3 is greater than 2. That statement is true
 space();
 
 console.log("3 is less than 2.",'That statement is', + 3 < 2);  //3 is less than 2. That statement is false
-spacer();
+space();
 /*
- The > and < signs are the traditional symbols for “is greater than” and “is less than”.
- ard are 'binary'-operators.
+ The > and < signs are the traditional symbols for “is greater than” and “is less than” ard are 'binary'-operators.
 
  Applying them, results in a Boolean-value that indicates whether the 'case' holds 'true' or 'false'.
 
  Strings can be compared in the same way, as follows:
 
- */                   // (operator in use)                             // (operator in use)   // (operator in use)
+ */                   //(Escape operator in use)               //(Escape operator in use)  //(Boolean operator in use)
 console.log("The 1st index value \'g\' in god is greater than the 1st index value \'d\' in dog:", "god" > "dog");
 //The 1st index value 'g' in god is greater than the 1st index value 'd' in dog: true
 space();
 
-                     // (operator in use)                              // (operator in use)  // (operator in use)
-console.log("the 1st index value \'G\' in god is greater than the 1st index value \'d\' in dog:", "God" > "dog");
-//the 1st index value 'G' in god is greater than the 1st index value 'd' in dog: false
-spacer();
+                     //(Escape operator in use)                //(Escape operator in use)  //(Boolean operator in use)
+console.log("The 1st index value \'G\' in god is greater than the 1st index value \'d\' in dog:", "God" > "dog");
+//The 1st index value 'G' in god is greater than the 1st index value 'd' in dog: false
+space();
 
 /*
  The way strings are ordered is more or less alphabetic:
@@ -262,13 +269,12 @@ console.log("\'itch\' dose not equal \'scratch\':", "itch" != "scratch"); //'itc
 
 space();
 /*
- There is only one value in JavaScript that is not equal to itself, and that
- is 'NaN', which stands for “not a number”.
+ There is only one value in JavaScript that is not equal to itself, and that is 'NaN', which stands for “not a number”.
 
  NaN is supposed to denote the result of a 'nonsensical computation'.
+
  Do to that fact it isn’t equal to the result of any other 'nonsensical computations'.
  */
-
 console.log("\'hi\' equals \'hi\':", "hi" == "hi"); //'hi' equals 'hi': true
 space();
 
@@ -283,11 +289,11 @@ spacer();
 
  There are operations we programmers apply to resulting 'Boolean'-values. JavaScript supports three logical operators.
 
- These operators are used for and, or, and not reasoning. These can be used to “reasoning” about Booleans.
+ These operators are used for: 'and', 'or', and 'not' reasoning. These can be used to “reason” about Booleans.
 
- The '&&' operator represents a logical 'and'.
+ The '&&' operator represents a logical 'and'.  It is a 'binary'-operator.
 
- It is a 'binary'-operator, and its result is 'true' only if both the Boolean-values given to it are 'true'.
+ Its result is 'true', only if 'both' the Boolean-values given to it are 'true'.
  */
 console.log("Below are the '&&' operator, 'and' returns."); //Below are the '&&' operator, 'and' returns.
 space();
@@ -303,10 +309,9 @@ space();
 
 console.log(true && true); //true
 spacer();
-/*
- The || operator denotes logical order. It produces true if either of the values
- given to it is true.
- */
+
+
+//The || operator denotes logical order. It produces true if either of the values given to it is true.
 
 console.log("Below are the '||' operator, 'or' returns."); //Below are the '||' operator, 'or' returns.
 space();
@@ -321,7 +326,7 @@ console.log(false || true); //true
 space();
 
 console.log(false || false); //false
-spacer();
+space();
 
 /*
  'Not' is written as an exclamation mark '!'.
@@ -345,7 +350,8 @@ console.log('1 + 1 equals 2 and 10 * 10 is greater than 50:', 1 + 1 == 2 && 10*1
            //1 + 1 equals 2 and 10 * 10 is greater than 50: true
 spacer();
 /*
- The last logical operator I will discuss is not unary, not binary, but ternary(operating on three values).
+ The last logical operator I will discuss is not unary, not binary, but ternary(operating on three values)!!!
+
  This one is called the 'conditional'-operator(I call it the 'picker'-operator since it is the only one in the language).
 
  It is written with a question mark and a colon, as follows:
@@ -359,6 +365,7 @@ var pickerSetToFalse = "2nd option is chosen";
  The value on the left of the question mark “picks” which of the other two values will be returned.
 
  When the first-value is true, the middle-value is returned.
+
  When the first-value is false, the last-value, on the right is returned.
  */
 console.log("Below are the ' ? : ' operator, 'picker' returns."); //Below are the ' ? : ' operator, 'picker' returns.
@@ -370,82 +377,84 @@ space();
 console.log(false ? 1 : 2); // 2
 space();
 
-console.log("When value is true:",true ? pickerSetToTrue : pickerSetToFalse); //When value is true: 1st option is chosen
+console.log("When value is true:",true ? pickerSetToTrue : pickerSetToFalse);
+           //When value is true: 1st option is chosen
 space();
 
-console.log("When value is false:",false ? pickerSetToTrue : pickerSetToFalse);//When value is false: 2nd option is chosen
+console.log("When value is false:",false ? pickerSetToTrue : pickerSetToFalse);
+           //When value is false: 2nd option is chosen
 spacer();
 
 
 /*
  Undefined values:
 
- There are two special values, written null and undefined, that are used to
- denote the absence of a meaningful value. They are themselves values,
- but they carry no information.
+ There are two special values, written 'null' and 'undefined',
+ which are used to denote the 'absence of a meaningful value'.
 
- Many operations in the language that don’t produce a meaningful value
- (you’ll see some later) yield undefined simply because they have to yield
- some value.
+ They are themselves values,but they carry no information.
 
- The difference in meaning between undefined and null is an accident of
- JavaScript’s design, and it does not matter most of the time. In the cases
- where you actually have to concern yourself with these values, I recommend
- treating them as interchangeable.
- */
+ Many operations in the language that don’t produce a meaningful value(you’ll see some later) yield 'undefined',
+ simply because they have to yield some value.
 
-/*
+ I have found that the difference between 'undefined' and 'null' is an accident of JavaScript’s design.
+
+ It does not matter most of the time, which is utilized.
+
+ More often than not, the systems utilizes 'undefined',
+ unless 'null' has already been used to define the operation-instance, by the programmer.
+
+ In the cases where you actually have to concern yourself with these values,
+ I recommend treating them as interchangeable.
+
+------------------------------------------------------------------------------------------------------------------------
+
  Automatic type conversion:
 
- In the introduction, I mentioned that JavaScript goes out of its way
- to accept almost any program you give it, even programs that do odd
- things.
+ When an operator is applied to a value of the “wrong” data-type,
+ JavaScript will convert that value to the data-type it finds to be most efficient,
+ using a set of rules that often result in a return you don't want or expect.
 
- This is nicely demonstrated by the following expressions:
+ This is called 'type coercion':
+
+ In the introduction, I mentioned that JavaScript goes out of its way to accept almost any program you give it,
+ even programs that do odd things.
+
+ This is demonstrated by the following expressions:
  */
-console.log("Below are the 'Automatic type conversion' returns."); //Below are the 'Automatic type conversion' returns.
+console.log("Below are the 'automatic type conversion' returns.");
+           //Below are the 'automatic type conversion' returns.
 space();
 
+//the 'null' in this expression becomes 0.
 console.log(8 * null); // 0
 space();
 
+//the "5" in the this expression becomes 5 (from a string to number data-type).
 console.log('5' - 3); // 2
 space();
 
+//'+'-operator tries string concatenation before numeric addition,
+// so the 1 is converted to "1" (from number to string).
 console.log('5' + 3); // 53
 space();
 
+//When something that doesn’t 'map' to a 'number' in an obvious way(such as "five" or undefined),
+// it is converted to a number, the value 'NaN' is produced.
 console.log('five' * 3); // NaN
 space();
 
+//***Further arithmetic operations on 'NaN' keep producing 'NaN',
+//so if you find yourself getting one of those in an unexpected place, look for accidental type conversions.
+
+
+//When comparing values when the types differ, JavaScript uses a confusing set of rules to determine what to do.
+//In most cases, it just tries to convert one of the values to the other value’s type.
 console.log(false == 0); // true
-spacer();
+space();
 
-/*
- When an operator is applied to the “wrong” type of value, JavaScript will
- quietly convert that value to the type it wants, using a set of rules that
- often aren’t what you want or expect. This is called type coercion.
-
- So the
- null in the first expression becomes 0, and the "5" in the second expression
- becomes 5 (from string to number). Yet in the third expression, + tries
- string concatenation before numeric addition, so the 1 is converted to "1"
- (from number to string).
-
- When something that doesn’t map to a number in an obvious way
- (such as "five" or undefined) is converted to a number, the value NaN is
- produced. Further arithmetic operations on NaN keep producing NaN, so
- if you find yourself getting one of those in an unexpected place, look for
- accidental type conversions.
-
- When comparing values of the same type using ==, the outcome is easy
- to predict: you should get true when both values are the same, except in
- the case of NaN. But when the types differ, JavaScript uses a complicated
- and confusing set of rules to determine what to do. In most cases, it just
- tries to convert one of the values to the other value’s type. However,
- when null or undefined occurs on either side of the operator, it produces
- true only if both sides are one of null or undefined.
- */
+//However, when null or undefined occurs on either side of the operator,
+// it produces true only if both sides are one of null or undefined.
 console.log(null == undefined); // true
 space();
 
@@ -453,367 +462,471 @@ console.log(null == 0); // false
 space();
 
 console.log(undefined == 0); //false
-space();
+spacer();
 /*
-That last piece of behavior is often useful. When you want to test
-whether a value has a real value instead of null or undefined, you can 20
-simply compare it to null with the == (or !=) operator
+ That last piece of behavior is often useful When you want to test whether a value has a real value,
+ instead of null or undefined. A programmer can simply compare it to null with the == (or !=) operator.
 
- The rules for converting strings and numbers to Boolean
- values state that 0, NaN, and the empty string ("") count as false, while
- all the other values count as true.
+------------------------------------------------------------------------------------------------------------------------
 
- Because of this, expressions like 0
- == false and "" == false are also true. For cases like this, where you do
- not want any automatic type conversions to happen, there are two extra
- operators: === and !==.
+ The rules for converting strings and numbers to Boolean:
 
- The first tests whether a value is precisely equal
- to the other, and the second tests whether it is not precisely equal. So
- "" === false is false as expected.
+ Values state that 0, NaN, and the empty string ("") count as false.
 
- use the three-character comparison operators defensively
- to prevent unexpected type conversions from tripping you up.
- But when you’re certain the types on both sides will be the same, there
- is no problem with using the shorter operators.
+ While all the other values count as true(0 == false and "" == false are true statements).
 
- Short-circuiting of logical operators:
+ For cases like this, where you do not want any 'automatic type conversions' to happen,
+ there are two other operators a programmer can use: === and !==.
 
- The logical operators && and || handle values of different types in a
- peculiar way. They will convert the value on their left side to Boolean
- type in order to decide what to do, but depending on the operator and
- the result of that conversion, they return either the original left-hand
- value or the right-hand value.
- The || operator, for example, will return the value to its left when that
- can be converted to true and will return the value on its right otherwise.
- This conversion works as you’d expect for Boolean values and should do
- something analogous for values of other types.
+ The first tests whether a value is precisely equal to the other.
+
+ The second tests whether it is not precisely equal.
+
+ So ("" === false) is false as expected.
+
+ use the three-character comparison operators liberally, to prevent unexpected type conversions from tripping you up.
+
+ However, when you’re certain the types on both sides will be the same, use the shorter operators.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+ Short-Circuiting of Logical Operators:
+
+ The logical operators && and || handle values of different types in a specific way.
+
+ They will convert the value on their left side to a Boolean data-type in order to decide what to do.
+
+ Depending on the operator, they return either the original left-hand or the right-hand value.
+
+ The || operator, for example, will return the value to its 'left' when that can be converted to 'true'
+ and will return the value on its 'right' if 'false'.
+
+ This conversion works as you’d expect for Boolean values and should do something analogous for values of other types.
 */
+console.log("Below are the 'Short-circuiting of logical operator' returns.");
+space();   //Below are the 'Short-circuiting of logical operator' returns.
+
 console.log(null || 'user'); //user
 space();
 
 console.log('dog' || 'god'); //dog
 space();
 /*
- The && operator works similarly, but the other way around. When the
- value to its left is something that converts to false, it returns that value,
- and otherwise it returns the value on its right.
+ The && operator works similarly, but the other way around.
+
+ When the value to its 'left' is something that converts to 'false', it returns that value.
+
+ If the value to its 'left' is something that converts to 'true', it returns the value on its 'right'.
  */
 console.log(null && 'user'); //null
 space();
 
 console.log('dog' && 'god'); //god
+spacer();
+/*
+ Another rule to these two operators, is that the expression to their right, is evaluated only when necessary.
+
+ In the case of (true || X), no matter what X is, the result will be 'true', and X is never evaluated.
+
+ The same goes for (false && X), which is 'false' and will ignore 'X'. This is called 'short-circuit evaluation'.
+
+ The conditional(picker)-operator works in a similar way.
+
+ The first expression is always evaluated, but the second or third value, the one that is not picked, is not.
+
+------------------------------------------------------------------------------------------------------------------------
+
+ SUMMARY:
+
+ We have reviewed six data-types, of JavaScript values in this chapter:
+ numbers, strings, Booleans, NaN, null and undefined.
+
+ Such values are created by typing in their data-type values (69, 'abc', true, NaN, null, undefined).
+
+ You can combine and transform values with operators:
+
+ We reviewed binary operators for arithmetic (+, -, *, /, and %),
+
+ string concatenation(+),
+
+ comparison operators (==, !=, ===, !==, <, >, <=, >=),
+
+ logic operators (&&, ||),
+
+ unary operators (- to negate a number, ! to negate logically, and typeof to find a value’s type,
+
+ the ternary operator (?:) to pick one of two values based on a third value.
+
+ This is enough information to use JavaScript as a basic calculator, but not much more.
+
+ The next chapter will execute expressions together to create some basic programs.
+
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+ */
+console.log("\t\t\t\t\t*** Program Structure ***\n");
+console.log('********************************************************************************************************');
+space();
+//                     *** Program Structure ***
+/*
+ In this chapter, we create some basic programming.
+
+ We will continue to make small, steady steps(mano y mano) toward your evolution in JavaScript.
+
+ "
+   Any Path....
+
+   'Persistence' is the 'key' to 'unlock' your 'development'.
+   Small, steady steps will add up to quite a long distance before you know it.
+   The 'key' is to 'Never Stop Walking'!
+
+                                                                               "
+                                                                                 -- John J. Pietrangelo III
+
+------------------------------------------------------------------------------------------------------------------------
+
+ EXPRESSIONS:
+
+ A fragment of code that produces a value is called an 'expression'.
+
+ Every value that is written literally (such as 69 or "analytics") is an expression.
+
+ An expression between parentheses, a binary operator applied to two expressions or a unary operator
+ applied to one, are also an expressions.
+
+ The following concept reflects a major principle of any language-based interface:
+
+ Expressions can nest themselves with-in other expressions, similar to the way sub-sentences in human languages are nested.
+
+ A sub-sentence can contain its own sub-sentences, and so on.
+
+ This allows us to combine expressions to express relatively complex computations.
+
+ -----------------------------------------------------------------------------------------------------------------------
+ */
+console.log("Below are the 'Side effects' example returns."); //Below are the 'Side effects' example returns.
+space();
+
+console.log(1); //1
+space();
+
+console.log(!false); //true
+spacer();
+/*
+ These above changes to an application are called 'side effects'.
+
+ The statements produce the values '1' and 'true', then immediately recycle the storage units which once held them.
+
+ When executing the program, nothing observable happens.
+
+ expressions should always end with a semicolon.
+
+ The rules for when it can be safely omitted are somewhat complex and error-prone.
+
+ In all my examples, every statement that needs a semicolon will always be terminated by one.
+
+ I recommend you do the same, even after you have learned the applicable intricacies of leaving out semicolons.
+
+ -----------------------------------------------------------------------------------------------------------------------
+
+ VARIABLES:
+
+ How does a program keep an internal state? How does it remember things?
+
+ To catch and hold values, JavaScript provides a storage unit called a 'variable'.
+
+ The special word(keyword) 'var' indicates the 'defining' of a variable.
+
+ It is followed by the 'name' of the variable.
+
+ If a programmer wants to immediately 'initialize' a value, they follow the name with an = operator and an expression.
+
+ ** Though it is not necessary or even a common practice in JavaScript:
+ *
+ *  For the benefit to the reader,
+ *
+ *  I will begin each variable(var) name with its 'data-type' and then an 'under-score',
+ *  then the traditional pascal cased variable name.
+ *
+ *  As we delve deeper into some of the subject matter later on, it will help you follow along.
+ *
+ *  Just keep in mind, in most JavaScript programs:
+ *
+ ** A Standard Variable(var) Name Does Not Include Either Data-type or Underscore!                                          */
+
+console.log("Below are the 'variable value' returns."); //Below are the 'variable value' returns.
+space();
+
+// To declare a variable(var) named 'int_number' and initializing its value to the product of '5 * 5'.
+var int_number = 5 * 5;
+
+//After a variable has been defined, its name can be used as an expression.
+//The value of such an expression is the value the variable currently holds.
+console.log(int_number); //25
+space();
+
+// variable names are not required to reflect the value they hold,
+// though it would be hazardous to do so.
+var string_five = 10;
+
+console.log( string_five * string_five); // 100
 space();
 /*
- Another important property of these two operators is that the expression
- to their right is evaluated only when necessary. In the case of true
- || X, no matter what X is—even if it’s an expression that does something
- terrible—the result will be true, and X is never evaluated. The same goes
- for false && X, which is false and will ignore X. This is called short-circuit
- evaluation.
- The conditional operator works in a similar way. The first expression
- is always evaluated, but the second or third value, the one that is not
- picked, is not.
+
+ Variable name regulations:
+
+ Variable names can be any word that isn’t a 'key' word (such as var).
+
+ Spaces are not allowed.
+
+ Digits can be part of variable name but the name cannot begin with a digit,
+ catch22 is a valid name where as 2Catch is not.
+
+ A variable name cannot include punctuation, except for the characters $ and _
+
+ When a variable points at a value, that does not mean it is tied to that value forever:
+
+ The = operator can be used at any time on existing variables to disconnect them from their current value
+ and have them point to a new one.
+ */
+// To declare a variable(var) named 'string_securityClearance' and initializing its value to 'low level'.
+var string_securityClearance = "low level";
+
+console.log(string_securityClearance); //low level
+space();
+
+// This line changes the previous value of the 'string_securityClearance'-variable.
+string_securityClearance = 'high level';
+
+console.log(string_securityClearance);// high level
+space();
+/*
+ Example:
+ John owes you $40,000.00.
+ To remember the number of dollars that John still owes you, you create a variable.
+ Then when he pays back $1,000.50, you give this variable a new value to reflect that.
  */
 
+var double_johnsDebt = 40000.00;
+
+double_johnsDebt = double_johnsDebt - 1000.31;
+
+console.log('$' + double_johnsDebt.toLocaleString('en')); //$38,999.69
+space();
+
+//When you define a variable without giving it a value, it is empty, so it ends in thin air.
+//If you ask for the value of an empty variable, the value 'undefined' will be returned.
+
+var int_one;
+
+console.log(int_one); //undefined
+space();
+
+//A single variable statement may define multiple variables. The definitions must be separated by commas.
+
+var int_three = 3, int_four = 4;
+
+console.log(int_three + int_four); //7
+spacer();
 /*
- Summary:
+------------------------------------------------------------------------------------------------------------------------
 
- We looked at four types of JavaScript values in this chapter: numbers,
- strings, Booleans, and undefined values.
- Such values are created by typing in their propertyName (true, null) or value (13,
- "abc"). You can combine and transform values with operators. We saw
- binary operators for arithmetic (+, -, *, /, and %), string concatenation
- (+), comparison (==, !=, ===, !==, <, >, <=, >=), and logic (&&, ||), as well as
- several unary operators (- to negate a number, ! to negate logically, and
- typeof to find a value’s type) and a ternary operator (?:) to pick one of
- two values based on a third value.
- This gives you enough information to use JavaScript as a pocket calculator,
- but not much more. The next chapter will start tying these
- expressions together into basic programs.
- */
+ Keywords and Reserved Words:
 
-/*
- 2 Program Structure:
- In this chapter, we will start to do things that can actually be called
- programming. We will expand our command of the JavaScript language
- beyond the nouns and sentence fragments we’ve seen so far, to the point
- where we can express some meaningful prose.
- */
+ 'Words' with a special meaning, such as 'var', are 'keywords', and they may
+ not be used as 'variable names'.
 
-/*
- A fragment of code that produces a value is called an expression. Every
- value that is written literally (such as 22 or "psychoanalysis") is an
- expression. An expression between parentheses is also an expression,
- as is a binary operator applied to two expressions or a unary operator
- applied to one.
- This shows part of the beauty of a language-based interface. Expressions
- can nest in a way very similar to the way subsentences in human
- languages are nested—a subsentence can contain its own subsentences,
- and so on. This allows us to combine expressions to express arbitrarily
- complex computations.
- */
+ There are also a number of words that are “reserved for use” in future versions of JavaScript.
 
-console.log(1);  // 1
-space();
+ These are also officially not allowed to be used as 'variable names'(though some JavaScript
+ environments do allow them).
 
-console.log(!false); // true
-space();
-/*
- These changes
- are called side effects. The statements in the previous example just
- produce the values 1 and true and then immediately throw them away.
- This leaves no impression on the world at all. When executing the
- program, nothing observable happens.
+ Below you will find a full list, in alphabetical order, of 'keywords and reserved words'.
 
- The rules for when it can
- be safely omitted are somewhat complex and error-prone. In this book,
- every statement that needs a semicolon will always be terminated by
- one. I recommend you do the same in your own programs, at least until
- you’ve learned more about subtleties involved in leaving out semicolons.
+ break case catch class const continue debugger default delete do else enum export extends false
+ finally for function if implements import in instanceof interface let new null package private
+ protected public return static super switch this throw true try typeof var void while with yield
 
- Variables:
-
- How does a program keep an internal state? How does it remember
- things? We have seen how to produce new values from old values, but
- this does not change the old values, and the new value has to be immediately
- used or it will dissipate again. To catch and hold values, JavaScript
- provides a thing called a variable.
- */
-var number1 = 5 * 5;
-space();
-
-console.log(number1);
-space();
-/*
- The special word (keyword)
- var indicates that this sentence is going to define a variable. It is
- followed by the propertyName of the variable and, if we want to immediately give
- it a value, by an = operator and an expression.
-
- After a variable has been defined, its propertyName can be used as an expression.
- The value of such an expression is the value the variable currently
- holds.
- */
-
-var five = 10;
-
-console.log( five * five); // 100
-space();
-/*
- Variable names can be any word that isn’t a reserved word (such as
- var). They may not include spaces. Digits can be part of variable
- propertyName but cannot begin with one.  Catch22 is a valid propertyName where as 2Catch is not.
- A variable propertyName cannot include punctuation, except
- for the characters $ and _
-
- When a variable points at a value, that does not mean it is tied to
- that value forever. The = operator can be used at any time on existing
- variables to disconnect them from their current value and have them
- point to a new one.
- */
-var mood = "light";
-
-console.log(mood); // light
-space();
-
-mood = 'dark';
-
-console.log(mood);// dark
-space();
-/*
- To remember the number of dollars that John
- still owes you, you create a variable. And then when he pays back $35,
- you give this variable a new value.
- */
-
-var JohnsDebit = 40000;
-
-JohnsDebit = JohnsDebit - 1000;
-
-console.log(JohnsDebit); // 39000
-space();
-/*
- When you define a variable without giving it a value, the tentacle has
- nothing to grasp, so it ends in thin air.
-
- If you ask for the value of an empty variable, you’ll get the value undefined.
-
- A single var statement may define multiple variables.
-
- The definitions must be separated by commas.
- */
-var one;
-
-console.log(one); // undifined
-space();
-
-var three = 3, four = 4;
-
-console.log(three + four); // 7
-space();
-/*
- Keywords and reserved words
-
- Words with a special meaning, such as var, are keywords, and they may
- not be used as variable names. There are also a number of words that are
- “reserved for use” in future versions of JavaScript. These are also officially
- not allowed to be used as variable names, though some JavaScript
- environments do allow them. The full list of keywords and reserved
- words is rather long.
-
- break case catch class const continue debugger
- default delete do else enum export extends false
- finally for function if implements import in
- instanceof interface let new null package private
- protected public return static super switch this
- throw true try typeof var void while with yield
+------------------------------------------------------------------------------------------------------------------------
 
  The Environment:
 
- The collection of variables and their values that exist at a given time is
- called the environment. When a program starts up, this environment is
- not empty. It always contains variables that are part of the language
- standard, and most of the time, it has variables that provide ways to
- interact with the surrounding system. For example, in a browser, there
- are variables and functions to inspect and influence the currently loaded
- website and to read mouse and keyboard input.
+ The collection of variables and their values that exist at a given time is called the environment.
 
- A lot of the values provided in the default environment have the type
- function. A function is a piece of program wrapped in a value. Such
- values can be applied in order to run the wrapped program. For example,
- in a browser environment, the variable alert holds a function that shows
- a little dialog box with a message. It is used like this:;
+ When a program starts up, this environment is not empty.
+
+ It always contains variables that are part of the language standard, and most of the time,
+ it has variables that provide ways to interact with the surrounding system.
+
+ For example, in a browser, there are variables and functions to inspect and influence the currently loaded website
+ and to read mouse and keyboard input.
+
+ A lot of the values provided in the default environment have the 'function'-type.
+
+ A 'function' is a piece of program which can be wrapped in a variable.
+
+ Such variables can be applied, in order to run the wrapped program.
+
+------------------------------------------------------------------------------------------------------------------------
+
+*****       .html file MUST be linked to 'this' .js file and the lines of code must be uncommented,                *****
+                               in order to see the effects to the browser.
+
+Important info on 'functions'. Regardless if you do or don't have this file linked to a .html file, Read This Section!!!
+
+------------------------------------------------------------------------------------------------------------------------
+
+ For example, in a browser environment, the variable 'alert' holds a function that shows a dialog box with a message.
+
+ It is used like this:;
  */
-//alert("Good morning!");
 
-/*Executing a function is called invoking, calling, or applying it. You can
-call a function by putting parentheses after an expression that produces
-a function value. Usually you’ll directly use the propertyName of the variable
-that holds the function. The values between the parentheses are given
-to the program inside the function. In the example, the alert function
-uses the string that we give it as the text to show in the dialog box.
-Values given to functions are called arguments. The alert function needs
-only one of them, but other functions might need a different number or
-different types of arguments.
-
- The console.log function:
-
- console.log isn’t a simple variable. It
- is actually an expression that retrieves the log property from the value
- held by the console variable
-
- The alert function can be useful as an output device when experimenting.
- Most JavaScript systems
- (including all modern web browsers and Node.js) provide a console
- .log function that writes out its arguments to some text output device.
-
- In browsers, the output lands in the JavaScript console. This part of
- the browser interface is hidden by default, but most browsers open it
- when you press F12 or, on Mac, when you press Command-Option-I. If
- that does not work, search through the menus for an item named “web
- console” or “developer tools”.
-    */
-var x = 30;
-
-console.log("The value of 'x' is", x); // The value of 'x' is 30;
-space();
+//alert("Good morning!"); //uncomment if .html is linked to 'this' .js file
 
 /*
- Return values:
+ Executing a function is called 'invoking', 'calling', or 'applying' it.
+
+ You can 'call' a function by putting 'parentheses'() after an 'expression' that produces a 'function-value'.
+
+Usually you’ll directly use the name of the variable that holds the function.
+
+ The values between the parentheses are called the 'argument' and are given to the 'parameter', inside the function.
+
+ In the previous example, the 'alert'-function uses the 'string' that we gave it as the 'text' within the 'dialog box'.
+
+ The 'alert'-function requires at least one argument, but all functions vary in the number and types of arguments.
+
+------------------------------------------------------------------------------------------------------------------------
+
+ The console.log Function:
+
+ 'console.log' isn’t a simple variable.
+
+ It is actually an 'expression' that retrieves the 'log'-property from the value held by the console-'object' variable.
+
+ The 'alert'-function can be useful as an output device when experimenting.
+
+ Most JavaScript systems(including all modern web browsers and Node.js) provide a 'console.log'-function,
+ which writes out its arguments to some text output device(window).
+
+ In browsers, the output lands in the JavaScript console.
+
+ This part of the browser interface is hidden by default, but most browsers open it when you press F12 or,
+
+ on Mac(unfortunate for all of us if you are), when you press Command-Option-I.
+
+ If that does not work, search through the menus for an item named “web console” or “developer tools”.
+
+------------------------------------------------------------------------------------------------------------------------
+
+ Return Values:
 
  functions are useful because of the side effects they produce.
- For example, the function Math.max takes any number
- of number values and gives back the greatest.
+
+ For example, the function Math.max() takes as it's parameter's arguments,
+ multiple number values and returns the greatest value amongst them all.
  */
+
+console.log("Below are 'function value' returns."); //Below are 'function value' returns.
+space();
 
 console.log(Math.max(17,20,100)); //100
 space();
-/*
-When a function produces a value, it is said to return that value. Anything
-that produces a value, is an EXPRESSION in JavaScript, which means
-function calls can be used within larger expressions (Nested Functions).
+ /*
+ When a function produces a value, it is said to return that value.
+
+ In JavaScript, anything that produces a 'value' is an 'expression'.
+
+ Which means function calls can be used with in larger expressions(Nested Functions).
 
 
- a call to Math.min, which is the opposite of Math.max, is used as an input to the plus operator:
-    */
+ Below is a call to Math.min, which is the opposite of Math.max                       */
 console.log(Math.min(4,-50,100)); // -50
-space();
+spacer();
+
 /*
- prompt and confirm:
+ Prompt and Confirm:
 
- The following two functions aren’t used much in modern web programming,
- mostly because you have no control over the way the resulting windows
- look, but they are useful for toy programs and experiments.
+ The following two functions are not used much in modern programming but they are useful for experiments.
 
- Browser environments contain other functions besides alert for popping
- up windows. You can ask the user an OK/Cancel question using confirm.
- This returns a Boolean: true if the user clicks OK and false if the user
- clicks Cancel.
+ Browser environments contain other functions besides alert for popping up windows.
+
+ You can ask the user an 'OK/Cancel' question using 'confirm'.
+
+ This returns a Boolean: 'true' if the user clicks 'OK' and 'false' if the user clicks 'Cancel'.
  */
-//confirm("Shall we then?");
 
-/*The prompt function can be used to ask an “open” question. The first
- argument is the question, the second one is the text that the user starts
- with. A line of text can be typed into the dialog window, and the function
- will return this text as a string.
-    */
-//prompt("Tell me everything you know");
+//confirm("Shall we then?"); //uncomment if .html is linked to 'this' .js file
 
 /*
- Control flow:
+ The 'prompt'-function can be used to ask an “open” question.
 
- When your program contains more than one statement, the statements
- are executed, predictably, from top to bottom. As a basic example, this
- program has two statements. The first one asks the user for a number,
- and the second, which is executed afterward, shows the square of that
- number.
+ The first argument is the question, the second one is the text that the user starts with.
 
- The function 'Number' converts a value to a number. We need that conversion
- because the result of prompt is a string value, and we want a number.
- There are similar functions called String and Boolean that convert values
- to those types.
- */
-/*
-var theNumber = Number(prompt("pick a number",""));
-alert("your number is the square root of " + theNumber * theNumber);
+ A line of text can be typed into the dialog window, and the function will return this text as a string.
 */
+
+//prompt("Tell me everything you know"); //uncomment if .html is linked to 'this' .js file
+
 /*
- Conditional execution
+ Control Flow:
+
+ When your program contains more than one statement, the statements are executed, predictably, from top to bottom.
+
+ As a basic example, this program has two statements. The first one asks the user for a number
+ and the second, which is executed afterward, shows the square of that number.
+
+ The 'Number'-function casts(converts) a string-value into a integer-value.
+
+ We need that conversion because the result of prompt is a string value, and we want a number.
+
+ There are similar functions called 'String' and 'Boolean' that convert values to those data-types.
+ */
+
+/*
+var theNumber = Number(prompt("pick a number",""));                  //uncomment if .html is linked to 'this' .js file
+alert("your number is the square root of " + theNumber * theNumber); //uncomment if .html is linked to 'this' .js file
+*/
+
+/*
+ Conditional Execution:
+
  Executing statements in straight-line order isn’t the only option we have.
- An alternative is conditional execution, where we choose between two
- different routes based on a Boolean value.
 
- Conditional execution is written with the if keyword in JavaScript. In
- the simple case, we just want some code to be executed if, and only if,
- a certain condition holds. For example, in the previous program, we
- might want to show the square of the input only if the input is actually
- a number.
+ An alternative is conditional execution, where we choose between two different routes based on a Boolean value.
 
- The keyword if executes or skips a statement depending on the value
- of a Boolean expression
+ Conditional execution is written with the if keyword in JavaScript.
+
+ In that simple case, we just want some code to be executed if, and only if, a certain condition holds.
+
+ For example, we might want to show the square of the input only if the input is actually a number.
+
+ The keyword if executes or skips a statement depending on the value of a Boolean expression.
  */
 
 /*
- theNumber = Number(prompt("pick a number.",""));
- if(!isNaN(theNumber))
- {
- alert("Your number is the square root of" + theNumber*theNumber);
- }
+ theNumber = Number(prompt("pick a number.",""));                  //uncomment if .html is linked to 'this' .js file
+ if(!isNaN(theNumber))                                             //uncomment if .html is linked to 'this' .js file
+ {                                                                 //uncomment if .html is linked to 'this' .js file
+ alert("Your number is the square root of" + theNumber*theNumber); //uncomment if .html is linked to 'this' .js file
+ }                                                                 //uncomment if .html is linked to 'this' .js file
 */
-/*
- The isNaN function is a standard JavaScript function that returns true
- only if the argument it is given is NaN. The Number function happens to
- return NaN when you give it a string that doesn’t represent a valid number.
- Thus, the condition translates to “unless theNumber is not-a-number, do
- this”.
 
- You often won’t just have code that executes when a condition holds
- true, but also code that handles the other case. This alternate path is
- represented by the second arrow in the diagram. The else keyword can
- be used, together with if, to create two separate, alternative execution
- paths.
+/*
+ The isNaN function is a standard JavaScript function that returns true only if the argument it is given is NaN.
+
+ The Number function happens to return NaN when you give it a string that doesn’t represent a valid number.
+
+ Thus, the condition translates to “unless theNumber is not-a-number, do this”.
+
+ You often won’t just have code that executes when a condition holds true, but also code that handles the other case.
+
+ This alternate path is represented by the second arrow in the diagram.
+
+ The else keyword can be used, together with if, to create two separate, alternative execution paths.
  */
+
+//uncomment block of code below, if .html is linked to 'this' .js file
 /*
 theNumber = Number(prompt("pick a number.",""));
     if(!isNaN(theNumber))
@@ -830,6 +943,8 @@ else
  If we have more than two paths to choose from, multiple if/else pairs
  can be “chained” together. Here’s an example:
  */
+
+//uncomment block of code below, if .html is linked to 'this' .js file
 /*
 theNumber = Number(prompt("pick a number.",""));
 if(theNumber < 10)
@@ -851,81 +966,123 @@ else
    */
 
 /*
- while and do loops:
+------------------------------------------------------------------------------------------------------------------------
+
+ While and Do Loops:
 
  Consider a program that prints all even numbers from 0 to 12. One way
  to write this is as follows:
  */
 
-console.log(0);
-console.log(2);
-console.log(4);
-console.log(6);
-console.log(8);
-console.log(10);
-console.log(12);
+console.log("All even numbers from 0 to 12."); //All even numbers from 0 to 12.
+space();
+
+console.log(0);  // 0
+console.log(2);  // 2
+console.log(4);  // 4
+console.log(6);  // 6
+console.log(8);  // 8
+console.log(10); //10
+console.log(12); //12
+spacer();
 
 /*
- That works, but the idea of writing a program is to make something
- less work, not more. If we needed all even numbers less than 1,000, the
- previous would be unworkable. What we need is a way to repeat some
- code. This form of control flow is called a loop:
+ That works, but the idea of writing a program is to make something less work, not more.
+
+ If we needed all even numbers less than 10,000, the previous would take a while.
+
+ What we need is a way to reiterate over some code.
+
+ This form of control flow is called a loop:
+
+ A statement starting with the keyword 'while' creates a 'loop'.
+
+ The word 'while' is followed by an 'expression in parentheses' and then a 'statement'(block of code to run through),
+ much like the if-statement.
+
+ Whenever we need to execute multiple statements inside a loop, we wrap them in curly braces{}.
+
+ Braces do for statements what parentheses do for expressions:
+
+ They group them together, making them count as a single statement.
+
+ A sequence of statements wrapped in braces is called a block.
+
+ The loop executes the statement as many times as the expression produces a value that is true to the while condition.
  */
-var num = 0;
-while(num <= 12)
+console.log("Below are the 'while' and 'do' conditional-function returns.");
+           //Below are the 'while' and 'do' conditional-function returns.
+space();
+
+// to declare variable with a value of zero.
+var int_number = 0;
+
+//while expression checks the value of 'int_number, if less or equal to 12, the statement below is executed.
+while(int_number <= 12)
 {
-    console.log(num);
-    num = num + 2;
+    //writes int_number's value to console.
+    console.log(int_number);
+
+    //Adds 2 to the current value of 'int_number'
+    int_number = int_number + 2;
 }
 space();
 /*
- A statement starting with the keyword while creates a loop. The word
- while is followed by an expression in parentheses and then a statement,
- much like if. The loop executes that statement as long as the expression
- produces a value that is true when converted to Boolean type.
+ As an example that actually does something useful, we can now write a program that calculates and shows
+ the value of 2^10(2 to the 10th power) and 5^8(5 to the 8th power).
 
- Whenever we need to execute multiple statements inside a
- loop, we wrap them in curly braces ({ and }). Braces do for statements
- what parentheses do for expressions: they group them together, making
- them count as a single statement. A sequence of statements wrapped in
- braces is called a block.
+ We use two variables: one to keep track of our result and one to count how often we have multiplied this result by 2.
 
- As an example that actually does something useful, we can now write a
- program that calculates and shows the value of 2^10 (2 to the 10th power).
- We use two variables: one to keep track of our result and one to count
- how often we have multiplied this result by 2. The loop tests whether
- the second variable has reached 10 yet and then updates both variables.
+ The loop tests whether the second variable has reached 10 yet and then updates both variables.
  */
-var result = 1;
-var counter = 0;
 
-while(counter < 10)
+var int_result = 1;
+var int_counter = 0;
+
+while(int_counter < 10)
 {
-    result = result *5;
-    counter++;
+    int_result = int_result * 2;
+
+    int_counter++;
 }
-console.log(result);//1024 2^10
+console.log(int_result.toLocaleString('en')); //1,024   -> 2^10
 space();
 
-result = 1;
-counter = 0;
+//----------------------------------------------------------------------------------------------------------------------
 
-while(counter < 10)
+int_result = 1;
+int_counter = 0;
+
+while(int_counter < 8)
 {
-    result = result * 2;
-    counter++;
+    int_result = int_result * 5;
+
+    int_counter++;
 }
-console.log(result);//1024 2^10
-space();
+console.log(int_result.toLocaleString('en')); //390,625           5^8
+spacer();
 /*
- The counter could also start at 1 and check for <= 10, but, for reasons
- that will become apparent in Chapter 4, it is a good idea to get used to
- counting from 0.
+ The counter could also have started at 1 and check for <= 10.
 
- The do loop is a control structure similar to the while loop. It differs
- only on one point: a do loop always executes its body at least once, and
- it starts testing whether it should stop only after that first execution.
+ For reasons that will become apparent in soon, it will be a good idea to get used to counting from 0.
+
+ The 'do' loop is a control structure similar to the 'while' loop.
+
+ It differs only on one point:
+
+ A 'do' loop always executes its body at least once, and it starts testing whether it should stop
+ only after that first execution.
+
  To reflect this, the test appears after the body of the loop:
+
+ The following program will force you to enter a name.
+
+ It will ask again and again until it gets something that is not an empty string.
+
+ Applying the ! operator will convert a value to Boolean type before negating it, and all
+ strings except ""(empty-string) convert to true.
+
+ This means the loop continues going round until you provide a propertyName that is not the empty string.
  */
 /*
 do
@@ -934,173 +1091,201 @@ do
 }while (!yourName);
 console.log(yourName);
 */
-
 /*
- This program will force you to enter a propertyName. It will ask again and again
- until it gets something that is not an empty string. Applying the !
- operator will convert a value to Boolean type before negating it, and all
- strings except "" convert to true. This means the loop continues going
- round until you provide a propertyName that is not the empty string.
- */
+ for Loops:
 
-/*
- for loops:
+ Many loops follow the pattern seen in the previous 'while' examples.
 
- Many loops follow the pattern seen in the previous while examples. First,
- a “counter” variable is created to track the progress of the loop. Then
- comes a while loop, whose test expression usually checks whether the
- counter has reached some boundary yet. At the end of the loop body,
- the counter is updated to track progress.
- Because this pattern is so common, JavaScript and similar languages
- provide a slightly shorter and more comprehensive form, the for loop.
+ First, a “counter” variable is created to track the progress of the loop.
+
+ Then comes a while loop, whose test expression usually checks whether the counter has reached some boundary yet.
+
+ At the end of the loop body, the counter is updated to track progress.
+
+ Because this pattern is so common, JavaScript and similar languages provide a slightly shorter and more comprehensive
+ form, the 'for' loop.
  */
-for(var num = 0; num <= 12; num = num + 2)
-    console.log(num);
+console.log("Below are the 'for' conditional-function returns."); //Below are the 'for' conditional-function returns.
 space();
 
-for(var i = 0; i <= 12; i += 2)
+for(var int_index = 0; int_index <= 12; int_index = int_index + 2)
+    console.log(int_index);
+space();
+/*
+ The code above only has one statement needing execution inside the loop so instead of braces to signify the
+ loop's statement.
+
+ Instead, there is no indention to the following line of code: -> space()
+ (the 1st character in 'space();', lines up with the 1st character in 'for'.)
+
+                                ***     IMPORTANT     ***
+
+ However, to keep thing as simple as possible and to reduce any human error(adding statement to loop in later versions),
+
+ I wrap ALL code following the expression, regardless the number of statements, even just one.
+
+ Below is the same code only the statement following the expression is wrapped with braces.
+ */
+for(var int_index = 0; int_index <= 12; int_index += 2)
 {
-    console.log(i);
+    console.log(int_index);
 }
 space();
 /*
- The parentheses after a for keyword must contain two semicolons. The
- part before the first semicolon initializes the loop, usually by defining
- a variable. The second part is the expression that checks whether the
- loop must continue. The final part updates the state of the loop after
- every iteration. In most cases, this is shorter and clearer than a while
- construct.
+ With in the parentheses, after a 'for' keyword, there must contain two semicolons:
 
- Here is the code that computes 2^10, using for instead of while:
+ The part before the first semicolon initializes the loop, usually by defining a variable like 'i' or 'index'.
+
+ The second part is the 'expression' that checks whether the loop must continue(boolean-value return).
+
+ The final part updates the state of the loop after every iteration.
+
+ In most cases, this is shorter and clearer than a 'while' loop.
+
+ Here is the code that computes 2^10 and 5^8, using 'for' instead of 'while':
  */
-result = 1;
-
-for(var i = 0; i < 10; i++)
-  result= result * 2;
-
-console.log(result);
-space();
-
-result = 1;
+int_result = 1;
 
 for(var i = 0; i < 10; i++)
 {
-    result = result * 2;
+    int_result = int_result * 2;
 }
 
-console.log(result);
+console.log(int_result.toLocaleString('en')); //1,024   -> 2^10
 space();
-/*
- Note that even though no block is opened with a {, the statement in the
- loop is still indented two spaces to make it clear that it “belongs” to the
- line before it.
- Brackets{} are needed when the code below the proceeding statement
- is more than one line in length.
- */
 
-/*
- Having the loop’s condition produce false is not the only way a loop can
- finish. There is a special statement called break that has the effect of
- immediately jumping out of the enclosing loop.
+//----------------------------------------------------------------------------------------------------------------------
 
- The following code illustrates the break statement. It finds the first number
- that is both greater than or equal to 20 and divisible by 7.
- */
+int_result = 1;
 
-for(var current = 15; ; current++)
+for(var i = 0; i < 8; i++)
 {
-    if(current % 7 == 0)
+    int_result = int_result * 5;
+}
+
+console.log(int_result.toLocaleString('en'));  //390,625  -> 5^8
+space();
+
+/*
+ Having the loop’s condition produce false is not the only way a loop can finish.
+
+ There is a special statement called 'break' that has the effect of immediately jumping out of the enclosing loop.
+
+ The following code illustrates the 'break' statement.
+
+ It finds the 1st number that is both greater than or equal to 20 and divisible by 7.
+ */
+
+// The for-loop in the example does not have a conditional expression in the center, that checks for the end of the loop.
+// This means that the loop will never stop unless the break statement inside is executed.
+for(var int_currentValue = 0; ; int_currentValue++)
+{
+   // Using the remainder(%) operator is an easy way to test whether a number is divisible by another number.
+    // If it is, the remainder of their division is zero.
+    if(int_currentValue % 7 == 0 && int_currentValue >= 20)
     {
         break;
     }
 }
-console.log(current); // 21
+console.log(int_currentValue); // 21
 space();
 /*
- Using the remainder (%) operator is an easy way to test whether a number
- is divisible by another number. If it is, the remainder of their division is
- zero.
+ If you were to leave out that break statement or accidentally write a condition that always produces true,
+ your program would get stuck in an infinite loop.
 
- The for construct in the example does not have a part that checks for
- the end of the loop. This means that the loop will never stop unless the
- break statement inside is executed.
+ The 'continue' keyword is similar to 'break', in that it influences the progress of a loop.
 
- If you were to leave out that break statement or accidentally write a
- condition that always produces true, your program would get stuck in
- an infinite loop.
+ When continue is called in a loop body, control jumps out of the body and continues with the loop’s next iteration.
 
- *** The continue keyword is similar to break, in that it influences the progress
- of a loop. When continue is encountered in a loop body, control jumps
- out of the body and continues with the loop’s next iteration.
+ Updating variables succinctly:
+
+ When looping, a program needs to “update” a variable, to hold a value, based on that variable’s previous value:
  */
+int_counter = 0;
 
-/*
- Updating variables succinctly
- Especially when looping, a program often needs to “update” a variable
- to hold a value based on that variable’s previous value.
- */
-counter = 0;
-counter = counter + 1;
+int_counter = int_counter + 1;
 /*
  JavaScript provides a shortcut for this:
  */
-counter += 1;
+int_counter += 1;
 
 /*
- Similar shortcuts work for many other operators, such as result *= 2 to
- double result or counter -= 1 to count downward.
- This allows us to shorten our counting example a little more.
- */
-for(var i = 0; i <= 12; i +=2)
-  console.log(i)
+ Similar shortcuts work for many other operators, like result *= 2 -> to double a result or count -= 1 -> to count down.
 
+ This will shorten the counting example.
+ */
+for(var int_index = 0; int_index <= 12; int_index += 2)
+{
+    console.log(int_index);
+}
+spacer();
+/*
+As previously shown, For counter += 1 and counter -= 1, there are even shorter equivalents: counter ++ and counter-- .
+------------------------------------------------------------------------------------------------------------------------
+
+ Searching for desired 'code' to execute, 'based on a value', using a 'switch' Statement:
+ */
+console.log("Below are the 'switch' statement returns."); //Below are the 'switch' statement returns.
 space();
-/*
-As previously shown, For counter += 1 and counter -= 1, there are even shorter equivalents: counter
- ++ and counter--.
- */
 
-/*
- Dispatching on a value with switch:
+//---------------------------------------------------------------------------------------------------------------------
+//It is common for code to look like this:
 
- It is common for code to look like this
- */
 var action1 = function(){};
 var action2 = function(){};
 var action3 = function(){};
-var defaultAction = function(){console.log("Default action taken")};
-var variable = 'x';
 
-if(variable == "value1")
-    action1();
-else if(variable == "value2")
-    action2();
-else if(variable == "value3")
-    action3();
-else
-    defaultAction();
+var defaultAction = function()
+                    {
+                        console.log("Default action taken!\n")
+                    };
 
-switch (variable)
+var string_letter = 'x';
+
+if(string_letter == 'a')
 {
-    case "value1":
+    action1();
+}
+else if(string_letter == 'b')
+{
+    action2();
+}
+else if(string_letter == 'c')
+{
+    action3();
+}
+else
+{
+    defaultAction();
+}
+/*
+ There is a statement called 'switch' solves the above “if - else if - else” statement, in a more direct way.
+
+ The syntax JavaScript uses for this (which it inherited from the C/Java line of programming languages)
+ is somewhat awkward so the above chain of 'if' statements, may looks better.
+ */
+
+switch (string_letter)
+{
+    case 'a':
         action1();
         break;
-    case "value2":
+
+    case 'b':
         action2();
         break;
+
+    case 'c':
+        action3();
+        break;
+
     default:
         defaultAction();
         break;
 }
-space();
-/*
- There is a construct called switch that is intended to solve such a “dispatch”
- in a more direct way. Unfortunately, the syntax JavaScript uses
- for this (which it inherited from the C/Java line of programming languages)
- is somewhat awkward—a chain of if statements often looks better.
- Here is an example:
- */
+spacer();
 
+//example to run in browser if .html is linked to this .js file
 /*switch(prompt("what is the weather like?"))
 {
     case "rainy":
@@ -1115,18 +1300,18 @@ space();
 }
 */
 /*
- You may put any number of case labels inside the block opened by switch.
+ You may put any number of 'case' labels inside the block opened by switch.
+
  The program will jump to the label that corresponds to the value that switch
- was given or to default if no matching value is found. It starts
- executing statements there, even if they’re under another label, until
- it reaches a break statement.
- */
+ was given or to default if no matching value is found.
 
-/*
- Exercises:
+ It starts executing statements there, even if they’re under another label, until it reaches a 'break' statement.
 
- Looping a triangle
- Write a loop that makes seven calls to console.log to output the following
+------------------------------------------------------------------------------------------------------------------------
+
+ Program Example #1: Looping a triangle
+
+ A loop that makes 10 calls to console.log to output the following
  triangle:
  #
  ##
@@ -1135,35 +1320,54 @@ space();
  #####
  ######
  #######
+ ########
+ #########
+ ##########
  */
-var row = "";
+console.log("Below Is The Return For Program Example #1: Looping a triangle.");
+           //Below Is The Return For Program Example #1: Looping a triangle.
+space();
 
-for(var index= 0; index < 7; index++)
+//----------------------------------------------------------------------------------------------------------------------
+
+//for loop example.
+var string_rowContent = "";
+
+for(var index= 0; index < 10; index++)
 {
-    row = row+"#";
-    console.log(row)
+    string_rowContent = string_rowContent + "#";
+
+    console.log(string_rowContent);
 }
 space();
 
-row = "";
+//----------------------------------------------------------------------------------------------------------------------
 
-while(row.length < 7)
+//while loop example
+string_rowContent = "";
+
+while(string_rowContent.length < 10)
 {
-    row = row+"#";
-    console.log(row);
+    string_rowContent = string_rowContent + "#";
+
+    console.log(string_rowContent);
 }
 space();
 
-row = "";
+//----------------------------------------------------------------------------------------------------------------------
+
+//do-while loop example
+string_rowContent = "";
 
 do
 {
-    row = row+"#";
-    console.log(row);
+    string_rowContent = string_rowContent+"#";
+    console.log(string_rowContent);
 
-}while(row.length < 7);
+}while(string_rowContent.length < 10);
 
 space();
+
 /*
  FizzBuzz
  Write a program that uses console.log to print all the numbers from 1
@@ -1460,16 +1664,16 @@ console.log(chicken() + "which came first");
 
 function squarePower(base,exponent)
 {
-    result = 1;
+    int_result = 1;
     if (exponent == undefined)
     {
         exponent = 2;
     }
     for(var i = 0; i < exponent; i++)
     {
-        result *= base;
+        int_result *= base;
     }
-    return result;
+    return int_result;
 }
 console.log(squarePower(5));//25
 space();
@@ -3411,8 +3615,8 @@ function sum1(numbers)
 
     for (int_i = 0; int_i < array.length; int_i++)
     {
-        current = array[int_i];
-        console.log(current);
+        int_currentValue = array[int_i];
+        console.log(int_currentValue);
     }
     space();
     /*
