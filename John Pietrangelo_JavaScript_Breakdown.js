@@ -1982,7 +1982,8 @@ var landscape = function()
 };
 
 //line calls the value of the landscape-function to the console-window
-console.log(landscape());
+
+console.log(landscape()); //__/''''\_/'''\__/'''''\_
 spacer();
 
 /*----------------------------------------------------------------------------------------------------------------------
@@ -3062,6 +3063,7 @@ space();
 var array_games = [];
 
 //line calls array_games's held value, to the console-window
+
 console.log(array_games); //[]
 space();
 
@@ -3073,20 +3075,23 @@ array_games.push("chess");
 array_games.push("poker","knife");
 
 //line calls array_games's held value, to the console window
-console.log(array_games); // ['chess', 'poker', 'tetris']
+
+console.log(array_games); //['chess', 'poker', 'tetris']
 space();
 
 //line calls the return, of a copy, of the array of strings concatenated into a single string, using the parameter's
 //argument to connect each array element to on another
-console.log(array_games.join(" ")); // chess poker tetris
+
+console.log(array_games.join(" ")); //chess poker tetris
 space();
 
 //line removes the 'tetris'-string, the end value held by the array and returns it to the console-window
-console.log(array_games.pop()); // knife
+console.log(array_games.pop()); //knife
 space();
 
  //line calls array_games's held value, to the console-window
-console.log(array_games); // ['Mack', 'the']
+
+console.log(array_games); //['Mack', 'the']
 spacer();
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -3094,20 +3099,8 @@ spacer();
 console.log('\t\t\t\t\t\t\t\t\t*** Objects ***');
 console.log('********************************************************************************************************');
 space();
+
 /*
- Allergy Analysis Application:
-
- A journal of daily log-entries can be represented using an array.
-
- The log-entries created in the this example do not consist of just a number or string, they will hold multiple values.
-
- In the following journal(array of log-entries), each entry stores a list of activities(Array)
- and a 'Boolean'-value which indicates if an 'allergic'-reaction took place.
-
- Each log-entry(holding an array-of-activities and boolean-value) will be grouped together into a single 'Object',
-
- then stored in the allergy-journal(array).
-
  In general, Object-values are stored in an arbitrary collection of 'properties', and programmers can add or remove
  these properties as they see fit.
 
@@ -3116,11 +3109,13 @@ space();
  So, In the example below I am going to place a 'property_' in front of the property name, as opposed to its data-type.
 
  ***********************************************************************************************************************
- REMEMBER: In the traditional naming of variables or object properties, the data-type or the 'property_' in front are
- not added. I only do this to make it easier to comprehend what the code is doing.
+ REMEMBER: In the traditional naming of variables and object-properties,
+ do not hold the 'data-type_' or the 'property_' as part of the name.
+
+ I only do this to make it easier for the reader of this material, to be able to better comprehend aplication processes.
  ***********************************************************************************************************************
 
-  One way to create an object is by using a 'curly brace' notation, surrounding the properties within.
+  One way to create an object is by using a 'curly brace'-{} notation, which encapsulate the properties within.
 
   Inside the curly braces, we can give a list of properties separated by commas.
 
@@ -3129,14 +3124,12 @@ space();
 
   Spaces and line breaks are not read by the program.
 
-
-
-  To briefly return variable value-bindings, property-bindings very are similar.
+  Variable value-bindings and property-bindings are very similar.
 
   Properties represent values, but other variables or properties might be representing those same values.
 
   You may think of objects as variables with any number of values held within,
-  each of which has a property-name to call on it.
+  each of which has a property-name to allow the program, to call it.
   */
 console.log('\'object_day1\' Returns:');
 space();
@@ -3178,7 +3171,7 @@ spacer();
  In any other position, they describe an object.
 
  //---------------------------------------------------------------------------------------------------------------------
-Delete Operater:
+Delete Operator:
 
  The 'delete'-operator removes properties from the objects which hold them.
 
@@ -3313,34 +3306,87 @@ object_b["property_switch"] = 'Back On';
 console.log(object_a.property_switch); //Back On
 spacer();
 /*
+ Allergy Analysis Application:
+
+ A journal containing daily log-entries, can be represented using an array.
+
+ In the following application, the log-entries created, do not consist of just a number or string.
+
+ They will hold multiple values.
+
+ In the following journal(array of log-entries), each entry stores a list of activities(an Array)
+ and a 'Boolean'-value, which will indicate if an 'allergic'-reaction took place on that day.
+
+ Each log-entry(holding an array-of-activities and boolean-value) will be grouped together into a single 'Object'.
+
+ That 'Object' wil then be stored in the allergy-journal(Array-of-Objects).
  The following, is a sample representation of the 'allergy’-journal, as an Array-of-Objects.
  */
 
+//declaring array(our journal) and initializing its 1st three index-values(days) to three objects(daily log-entries)
 var array_allergyJournalSample =
-    [
-        {
-            property_event: ["work","touched tree","pizza","running","television"],
+
+    [//bracket signifies the beginning of the array
+
+        {//curly-brace signifies the beginning of the object
+
+            //declaring property and initialing its value to an array(of events)
+            property_event: ["work","touched tree","pizza","running","television"], //comma used to separate properties
+
+            //declaring property and initialing its value to a 'boolean'-data-type(allergic reaction)
             property_reaction: false
-        },
-        {
-            property_event: ["work","ice cream","cauliflower","lasagna","touched tree","brush teeth"],
+
+        },//curly-brace signifies the ending of the object, comma used to separate array-indexes
+
+        {//curly-brace signifies the beginning of the object
+
+            //declaring property and initialing its value to an array(of events)
+            property_event: ["work","lasagna","touched tree","brush teeth"], //comma used to separate properties
+
+            //declaring property and initialing its value to a 'boolean'-data-type(allergic reaction)
             property_reaction: false
-        },
-        {
-            property_event: ["weekend","cycling","break","peanuts","beer"],
+
+        },//curly-brace signifies the ending of the object, comma used to separate array-indexes
+
+        {//curly-brace signifies the beginning of the object
+
+            //declaring property and initialing its value to an array(of events)
+            property_event: ["weekend","cycling","break","peanuts","beer"], //comma used to separate properties
+
+            //declaring property and initialing its value to a 'boolean'-data-type(allergic reaction)
             property_reaction: true
         }
-    ];
+    ];//bracket signifies the beginning of the array, colon signifies the end of the variable-declaration
 
-function addEntry(array_events,boolean_reaction)
+//line writes journal's entries to the console-window
+console.log(array_allergyJournalSample);
+space();
+ /*
+ Instead of going into the above variable-declaration, holding our journal's data,
+ and manually writing in a new log-entry every day.
+
+ It would be more efficient(cardinal rule of coding) to create a function, to do the work for us.
+
+ Below is a function that will take in an array-of-events and a boolean-data-type,
+ indicating if an allergic reaction took place that day, for its parameters
+ */
+
+//declaring function                    //parameters
+function addEntryToSampleJournal(array_events, boolean_reaction)
 {
+    //line uses one of an Array-object's many immutable property-methods named 'push()',
+    //to append its argument, to the calling array, which holds the daily log-entries
     array_allergyJournalSample.push({property_events: array_events, property_reaction: boolean_reaction});
 }
 
+//calling function to add events and reaction-status to sample-journal, passing an Array and Boolean as its arguments
+addEntryToSampleJournal(["work","ice cream","brushed teeth"],false);
 
-addEntry(["work","ice cream","brushed teeth"],false);
+//line writes journal's entries to the console-window
+console.log(array_allergyJournalSample);
+spacer();
 
-
+//declaring array(our offical journal) and initializing its index-values(days) to objects(daily log-entries)
 var array_allergyJournal =
     [
         {
@@ -3348,7 +3394,7 @@ var array_allergyJournal =
             "property_reaction":false
         },
         {"property_events":["bread","pudding","brushed teeth","weekend","touched tree"],"property_reaction":false},
-        {"property_events":["carrot","nachos","brushed teeth","cycling","weekend"],"property_reaction":false}, // false no pizza
+        {"property_events":["carrot","nachos","brushed teeth","cycling","weekend"],"property_reaction":false},
         {"property_events":["brussel sprouts","ice cream","brushed teeth","computer","weekend"],"property_reaction":false},
         {"property_events":["potatoes","candy","brushed teeth","exercise","weekend","dentist"],"property_reaction":false},
         {"property_events":["brussel sprouts","pudding","brushed teeth","running","weekend"],"property_reaction":false},
