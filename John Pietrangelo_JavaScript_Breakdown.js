@@ -1238,7 +1238,7 @@ space();
  Below is the same code only the statement following the expression is wrapped with braces.
  */
 
- //'for' loop will execute each time the loop's 'int_index'-value is less than or equal to 12
+ //for-loop will execute each time the loop's 'int_index'-value is less than or equal to 12
  //the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
 for(var int_index = 0; int_index <= 12; int_index ++)
 {
@@ -2385,13 +2385,16 @@ console.log('\'farmInventory-function\' Returns:\n');
 function printFarmInventoryVersion1(int_cowCount, int_chickenCount)
 {
     //line declares a variable(var) named 'string_cowCount' and initializes its value to a 'String'-dada-type,
-    //representing the 'int_cowCount'(Integer) data-type value.
-    //This is accomplished by using the 'Data-Type Casting-function': String(number-value).
-    //Where, in this case the 'int_cowCount'-value represents the 'number-value'.
+    //representing the 'int_cowCount'(Integer) data-type value
+
+    //this is accomplished by using the 'Data-Type Casting-function': String(number-value)
+
+    //where, in this case the 'int_cowCount'-value represents the 'number-value'
     var string_cowCount = String(int_cowCount);
 
     //adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
-    //This 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0').
+
+    //This 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0')
     while (string_cowCount.length < 3)
     {
         //line adds a char(character)which as you know by now, is a 'String' data-type,
@@ -2400,13 +2403,16 @@ function printFarmInventoryVersion1(int_cowCount, int_chickenCount)
     }
 
     //line declares a variable(var) named 'string_chickenCount' and initializes its value to a 'String' dada-type,
-    // representing the 'int_chickenCount' 'Integer'-data-type value,
-    // by using the 'Data-Type Casting'-function, 'String(number-value)',
-    // where, in this case the 'int_cow'-value represents the 'number-value'.
+    //representing the 'int_chickenCount'(Integer) data-type value,
+
+    //this is accomplished by using the 'Data-Type Casting-function': String(number-value)
+
+    //where, in this case the 'int_cow'-value represents the 'number-value'
     var string_chickenCount = String(int_chickenCount);
 
     //adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
-    //This 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0').
+
+    //This 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0')
     while (string_chickenCount.length < 3)
     {
         //line adds a char(character) which is a 'String' data-type,
@@ -2415,16 +2421,16 @@ function printFarmInventoryVersion1(int_cowCount, int_chickenCount)
     }
 
     //line writes the 'string_cowCount'-value, concatenated with a string holding a space and animal-type(" Cows"),
-    //allowing for a space between values, when writen as one continual string.
+    //allowing for a space between values, when writen as one continual string
     console.log(string_cowCount + " Cows");
 
     //line writes the 'string_chickenCount'-value, concatenating a string holding a space and animal-type(" Chickens"),
-    //allowing for a space between values, when writen as one continual string.
+    //allowing for a space between values, when writen as one continual string
     console.log(string_chickenCount + " Chickens");
 }
 
-//calling the 'farmInventory'-function, with 25 as the 'argument' for the 'int_cow'-parameter
-//and 9 for the 'int_chicken'-parameter.
+//calling the 'farmInventory'-function, using 25 as the 'argument' for the 'int_cow'-parameter
+//and 9 for the 'int_chicken'-parameter
 printFarmInventoryVersion1(25,9); // 025 Cows
                                   // 009 Chickens
 
@@ -2467,23 +2473,26 @@ space();
 function printFarmInventoryVersion2(int_cowCount, int_chickenCount, int_pigCount)
 {
     //calling 'zeroPaddingWithLabel'-function for each animal(holding the 'animal-count'(local variable,
-    //passed though by the calling function) and the 'animal-type',as its two arguments).
+    //passed though by the calling function) and the 'animal-type',as its two arguments)
     zeroPaddingWithLabel(int_cowCount,"Cows");
     zeroPaddingWithLabel(int_chickenCount,"Chickens");
     zeroPaddingWithLabel(int_pigCount, "Pigs");
 }
 
-//declaring function          //abstraction, used for ALL animals on inventory list
+//declaring abstraction-function, can be used by ALL animals on inventory list
 function zeroPaddingWithLabel(int_animalCount,string_animalType)
 {
     //line declares a variable(var) named 'string_animalCount' and initializes its value to a 'String'-dada-type,
-    //representing the 'int_animalCount'(Integer) data-type value.
-    //This is accomplished by using the 'Data-Type Casting-function': String(number-value).
-    //Where, in this case the 'int_animalCount'-value represents the 'number-value'.
+    //representing the 'int_animalCount'(Integer data-type) value
+
+    //this is accomplished by using the 'Data-Type Casting-function': String(number-value)
+
+    //where, in this case the 'int_animalCount'-value represents the 'number-value'
     var string_animalCount = String(int_animalCount);
 
     //adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
-    //This 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0').
+
+    //this 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0')
     while (string_animalCount.length < 3)
     {
         //line adds a char(character) which is a 'String' data-type,
@@ -2496,545 +2505,937 @@ function zeroPaddingWithLabel(int_animalCount,string_animalType)
     console.log(string_animalCount + " " + string_animalType);
 }
 
-//calling the 'farmInventory'-function, with 25 as the 'argument' for the 'int_cowCount'-parameter,
+//calling the 'farmInventory'-function, using 25 as the 'argument' for the 'int_cowCount'-parameter,
 //9 as the 'argument' for the 'int_chickenCount'-parameter and 101 as the 'argument' for the 'int_pigCount'-parameter.
 printFarmInventoryVersion2(25,9,101);
 
 space();
 //----------------------------------------------------------------------------------------------------------------------
-
- function zeroPadding(number,width)
-{
-    var numberString = String(number);
-    while(numberString.length < width)
-    {
-        numberString = "0" + numberString;
-    }
-    return numberString
-}
-
-function printFarmInventoryV2(cows,chickens,pigs)
-{
-    console.log(zeroPadding(cows,3) + " Cows");
-    console.log(zeroPadding(chickens,3) + " Chickens");
-    console.log(zeroPadding(pigs,3) + " Pigs");
-}
-
-printFarmInventoryV2(8,45,123);
-space();
 /*
-                                        *** Exercises ***
+This program can even be refined even further, as follows:
 
- Minimum:
- The previous chapter introduced the standard function Math.min that returns
- its smallest argument. We can do that ourselves now. Write a
- function min that takes two arguments and returns their minimum.
+*Allowing access to send a dynamic, scalable-variable, through a function-call's argument(numberPlacePadding)
+ representing the length of the number's place, of animals the inventory-list is able to hold, as opposed to
+ a static-number held within the conditional-expression of the function(numberPlacePadding)
+
+*Replacing the 'zero-padding' functionality with 'blank-padding', to print out an inventory-list
+ which is easier to read
+
+ *Ability to appened the 'animal-type'-label through
+
+
  */
 
-function minValue(valueA, valueB)
+ //function declaration                              parameter
+function printFarmInventoryVersion3(int_roosterCount,int_cowCount, int_chickenCount,int_pigCount)
 {
-    if(valueA > valueB)
+    //calling 'numberPlacePadding'-function for each animal(holding the 'animal-count'(local variable,
+    //passed though by the calling function), and the length of padding desired, as its two arguments.
+
+    //Then concatenating the 'numberPlacePaddingWithAppendableLabel-function's return with a 'string' of the animal-type
+    //with an empty space in front of it
+
+    //This will return a nicely formatted 'string', which is printed(called)
+    //to the console-screen, by being wrapped in the console.log() method
+
+    console.log(numberPlacePaddingWithAppendableLabel(int_roosterCount,5) + " Roosters");
+    console.log(numberPlacePaddingWithAppendableLabel(int_cowCount,5) + " Cows");
+    console.log(numberPlacePaddingWithAppendableLabel(int_chickenCount,5) + " Chickens");
+    console.log(numberPlacePaddingWithAppendableLabel(int_pigCount,5) + " Pigs");
+}
+
+//declaring abstraction-function, can be used by ALL animals on inventory list
+function numberPlacePaddingWithAppendableLabel(int_animalCount, int_numberPlaceWidth)
+{
+    //line declares a variable(var) named 'string_animalCount' and initializes its value to a 'String',
+    //representing the 'int_animalCount'(Integer data-type) value with commas, where needed(after every 3 0's)
+
+    //this is accomplished by using the Integer.toLocaleString()-method, while using the string-'en'(english)
+    // as an argument, to pass through its parameter
+    var string_animalCount = int_animalCount.toLocaleString('en');
+
+    //adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
+
+    //This 'while'-loop will execute until the string-length is less than 'int_numberPlaceWidth'-value
+    //(remember, the 'count' always starts at '0').
+    while(string_animalCount.length < int_numberPlaceWidth)
     {
-        return valueB;
+        //line adds a char representing an 'empty-space' to the beginning of the 'string_animalCount'-variable,
+        //then stores it as the 'new' value of the 'string_animalCount'-variable
+        string_animalCount = " " + string_animalCount;
     }
+
+    //returns the value of the 'string_animalCount'-variable's value to the calling function(console.log();
+    return string_animalCount
+}
+
+
+ //calling the 'farmInventory'-function, using 9 as the 'argument' for the 'int_roosterCount'-parameter,
+ //81 as the 'argument' for the 'int_cowCount'-parameter, 450 as the 'argument' for the 'int_chickenCount'-parameter
+ //and 1230 as the 'argument' for the 'int_pigCount'-parameter.
+printFarmInventoryVersion3(9,81,450,1230);
+spacer();
+
+//----------------------------------------------------------------------------------------------------------------------
+console.log("\'minValue-function Return:\'\n");
+/*
+ Minimum-Value:
+
+ In a previous section, we reviewed the standard function 'Math.min()' that returns
+ its smallest argument. You have the knowledge to write it yourself now.
+
+ Here is an example how its internal process(code) is writen.
+
+ Below is a minValue-function, it takes two arguments and returns the smallest value.
+ */
+
+//function declaration
+function minValue(variable_valueA, variable_valueB)
+{
+    //block executes if valueA is greater than valueB
+    if(variable_valueA > variable_valueB)
+    {
+        //line returns valueB
+        return variable_valueB;
+    }
+
+    //block executes if valueA is less or equal to valueB
     else
     {
-        return valueA;
+        //line returns valueA
+        return variable_valueA;
     }
 }
 
-console.log(minValue("art","Zebra")); // Zebra (Because uppercase has smaller value than lowercase)
+//calling minValue-function return to the console window
+console.log(minValue("art","Zebra")); //Zebra (Because uppercase-strings have smaller value than lowercase-strings)
 space();
 
-console.log(minValue(25,10));  // 10
+ //calling minValue-function return to the console window
+console.log(minValue(25,10)); //10
+spacer();
+//----------------------------------------------------------------------------------------------------------------------
+
+console.log('\'isEven-function\' Returns:');
 space();
 /*
  Recursion:
- We’ve seen that % (the remainder operator) can be used to test whether
- a number is even or odd by using % 2 to check whether it’s divisible by
- two.
 
- Use Recursion to define whether a positive whole number is even or odd:
- • Zero is even.
- • One is odd.
- • For any other number N, its evenness = N - 2.
+ We’ve seen that '%' (the remainder operator) can be used to test whether
+ a number is 'even or odd' by using '% 2' to check whether it’s divisible by
+ 'two'.
 
- Define a recursive function "isEven", corresponding to this description.
- The function should accept a number parameter and return a Boolean.
- Test it on 50 and 75. See how it behaves on -1. Why? Can you think
- of a way to fix this?
+ Using recursion to define whether a positive whole number is even or odd:
+
+    *zero is even
+    *one is odd
+    *for any other number-N, its evenness = (N - 2)
+
+ Below is the recursive-function "isEven", it corresponds to the description above.
+
+ The function will accept a 'number'-parameter and return a 'Boolean'(true or false).
+ Test it on 50 and 75. See how it behaves on -1.
  */
 
-function isEven(testNumber)
+//function-declaration
+function isEven(int_testNumber)
 {
-    var oddString = "This Number Is ODD!!";
-    var evenString = "This Number Is EVEN!!";
-    var numIsEven = true;
-    if(testNumber >= 0)
-    {
-        if (testNumber != 0)
-        {
-            if (testNumber == 1)
-                console.log(oddString);
-            else
-               isEven(testNumber - 2);
-        }
-        else
-            console.log(evenString);
-    }
-    else {
-        if (testNumber != -1)
-            isEven(testNumber + 2);
-        else
-            console.log(oddString);
-    }
-}
+    //line declares a variable(var) named 'string_oddNumber' and initializes its value to,"This Number Is ODD!!"
+    var string_oddNumber = "This Number Is ODD!!";
 
+    //line declares a variable(var) named 'string_oddNumber' and initializes its value to,"This Number Is EVEN!!"
+    var string_evenNumber = "This Number Is EVEN!!";
+
+    //if-statement's code-block executes if the 'test number' is greater or equal to 0
+    if(int_testNumber >= 0)
+    {
+        //nested if-statement's code-block executes if the 'test number' does not equal 0
+        if (int_testNumber != 0)
+        {
+            //nested if-statement's code-block executes if the 'test number' equals 1
+            if (int_testNumber == 1)
+            {
+                //line writes 'string_oddNumber'-value to console-window
+                console.log(string_oddNumber);
+            }
+
+            //nested else-statement's code-block executes if 'string_evenNumber'-value is greater than 0
+            else
+            {
+                //recursion-function call, with the ('testNumber'-value minus 2) as the parameter's argument
+                isEven(int_testNumber - 2);
+            }
+
+        }
+
+        //else-statement's code-block executes if 'string_evenNumber'-value equals 0
+        else
+        {
+            //line writes 'string_evenNumber'-value to console-window
+            console.log(string_evenNumber);
+        }
+    }
+
+    //else-statement's code-block executes if the 'test number' is less than 0
+    else
+    {
+        //nested if-statement's code-block executes if the 'test number' is less than -1
+        if (int_testNumber != -1)
+        {
+            //recursion-function call, with the ('testNumber'-value plus 2) as the parameter's argument
+            isEven(int_testNumber + 2);
+        }
+
+        //nested else-statement's code-block executes if 'string_evenNumber'-value equals -1
+        else
+        {
+            //line writes 'string_evenNumber'-value to console-window
+            console.log(string_oddNumber);
+        }
+    }
+
+}//end of function's code-block
+
+//calling 'isEven'-function, passing an argument-value of -5 through its parameter
 isEven(-5);
 space();
 
+//calling 'isEven'-function, passing an argument-value of 5 through its parameter
 isEven(5);
 space();
 
+//calling 'isEven'-function, passing an argument-value of -4 through its parameter
 isEven(-4);
 space();
 
+//calling 'isEven'-function, passing an argument-value of 4 through its parameter
 isEven(4);
-space();
+spacer();
+
+//----------------------------------------------------------------------------------------------------------------------
+console.log('\'charCounter\'-function Return:');
 /*
- Bean counting
+ Character Counting:
 
- You can get the Nth character, or letter, from a string by writing "string".
- charAt(N), similar to how you get its length with "s".length. The returned
- value will be a string containing only one character (for example, "b"
- ). The first character has position zero, which causes the last one to
- be found at position string.length - 1. In other words, a two-character
- string has length 2, and its characters have positions 0 and 1.
+ You can get the 'Nth' character, or letter, from a string by writing,'String.charAt(N)',
+ similar to how you retrieve a String's length-property, "String.length.
 
- Write a function countBs that takes a string as its only argument and
- returns a number that indicates how many uppercase “B” characters are
- in the string.
+ The returned value will be a string containing only one character (for example, 's').
+
+ The 1st character(char) of a String data-type has an index-position of zero, which causes the last character
+ of any string, to be found at the position: (string.length - 1)
+
+ In other words, a two-character string has length of 2, and its characters(chars) have index-positions of '0 and 1'.
+
+ The following function 'charCounter1', takes one word(string) as its only argument and returns a number-value,
+ corresponding to how many uppercase “S” characters are in the string.
  */
-function countBs(word)
+
+//declaring function
+function charCounter1(string_word)
 {
-    var counter = 0;
-    for(var i = 0; i < word.length; i++)
+    //line declares a variable(var) named 'int_counter' and initializes its value to 0
+    var int_counter = 0;
+
+    //for-loop will execute each time the loop's 'int_index'-value is less than or equal to the string_word's length
+    //the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+    for(var int_index = 0; int_index < string_word.length; int_index++)
     {
-        if(word.charAt(i) == "B")
+        //if-statement's code-block executes if the 'char' of the string, at loop's specified index-number equals 'S'
+        if(string_word.charAt(int_index) == "S")
         {
-            counter++;
+            //line increases the 'int_counter'-value by 1
+            int_counter++;
         }
     }
-    return counter;
+    //returns 'int_counter'-value to the function's call
+    return int_counter;
 }
 
-console.log(countBs("BoBby")); // 2
-space();
+//line call's the 'charCounter'-functions return to the console window,
+//passing the string 'Sassy' as the argument to the functions parameter
+console.log(charCounter1("Sassy")); //1
+spacer();
+
+ console.log('\'charCounter2\'-function Return:');
+ space();
 /*
- Next, write a function called countChar that behaves like countBs, except
- it takes a second argument that indicates the character that is to be
- counted (rather than counting only uppercase “B” characters). Rewrite
- countBs to make use of this new function.
+ The following function called 'countChar2', behaves like 'countChar1', except
+ for that it takes a 2nd argument(required) that indicates the character that is to be
+ counted (rather than counting only a set(static) character within the function's conditional-statements).
+
+ There is also a 3rd argument(not required), allowing a 2nd letter to be search for in the 1st argument's string as well
+
+ Lastly, the function's return-statement, will be writen to the console-window, from within the function's operation
  */
-function  countChar(word,letter1,letter2)
+
+//function declaration           parameters
+function  charCounter2(string_word, char_letter1, char_letter2)
 {
-    var counter1 = 0;
-    var counter2 = 0;
-    for(var i = 0; i < word.length; i++)
+    //line declares a variable(var) named 'int_counter1' and initializes its value to 0
+    var int_counter1 = 0;
+
+    //line declares a variable(var) named 'int_counter2' and initializes its value to 0
+    var int_counter2 = 0;
+
+    //for-loop will execute each time the loop's 'int_index'-value is less than or equal to the string_word's length
+    //(remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
+    //the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+    for(var int_index = 0; int_index < string_word.length; int_index++)
     {
-        if(word.charAt(i) === letter1)
+        //if-statement's code-block executes, when the 'char' of 'string_word', at the loop's specified index-number,
+        // equals the same value as the 'char_letter1'-value
+        if(string_word.charAt(int_index) === char_letter1)
         {
-            counter1++;
+            //line increases the 'int_counter'-value by 1
+            int_counter1++;
         }
     }
-    if(letter2 != undefined)
+
+    //if-statement's code-block executes, when the 'char_letter2'-value contains a value, other than 'undefined'
+    if(char_letter2 != undefined)
     {
-        for (var i = 0; i < word.length; i++)
+        //for-loop will execute each time the loop's 'int_index'-value is less than or equal to the string_word's length
+        //(remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
+        //the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+        for (var int_index = 0; int_index < string_word.length; int_index++)
         {
-            if (word.charAt(i) === letter2)
+            //if-statement's code-block executes, when the 'char' of 'string_word', at the loop's specified index-number,
+            // equals the same value as the 'char_letter2'-value
+            if (string_word.charAt(int_index) === char_letter2)
             {
-                counter2++;
+                //line increases the 'int_counter'-value by 1
+                int_counter2++;
             }
         }
     }
-    if (counter1 == 1 && counter2 == 1)
+
+    //if- else if- else statement-chain:
+
+    //if-statement code-block executes, when the 'int_counter1'-value equals 0,
+    //the 2nd function-argument('char_letter1')-value is 'NOT undefined'
+    //and the 3rd function-argument('char_letter2')-value 'IS undefined'
+    if(int_counter1 == 0 && char_letter1 != undefined && char_letter2 == undefined )
     {
-        return "There is " + String(counter1) + " letter (" + letter1 + ") and "+ String(counter2) + " letter (" + letter2 + "), in the string \"" + word + '".\n';
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s, in the string \'"
+            + string_word + "\'.\n");
     }
-    else if (counter1 == 0 && counter2 == 1)
+
+    //else if-statement code-block executes, when the 'int_counter1'-value equals 1
+    //and the 3rd function-argument('char_letter2')-value is 'undefined'
+    else if (int_counter1 == 1 && char_letter2 == undefined)
     {
-        return "There is " + String(counter1) + " letter (" + letter1 + ")'s and "+ String(counter2) + " letter" + letter2 + ' in the string "' + word + '".\n';
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log("There is " + String(int_counter1) + " letter \'" + char_letter1 + "\', in the string \'"
+                            + string_word + "\'.\n");
     }
-    else if (counter1 != 1 && letter2 == undefined)
+
+    //else if-statement code-block executes, when the 'int_counter1'-value is greater than 1
+    //and the 3rd function-argument('char_letter2')-value is 'undefined'
+    else if (int_counter1 > 1 && char_letter2 == undefined)
     {
-        return "There are " + String(counter1) + " letter (" + letter1 + ")'s, in the string " + word + ".\n";
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s, in the string \'"
+                            + string_word + "\'.\n");
     }
-    else if (counter1 == 1 && letter2 == undefined)
+
+    //else if-statement code-block executes, when the 'int_counter1'-value equals 0
+    //and the 'int_counter2'-value equals 1
+    else if(int_counter1 == 0 && int_counter2 == 1)
     {
-        return "There is " + String(counter1) + " letter (" + letter1 + "), in the string '" + word + "'.\n";
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and "+ String(int_counter2)
+            + " letter \'" + char_letter2 + "\', in the string,\'" + string_word + "\'.\n");
     }
+
+    //else if-statement code-block executes, when the 'int_counter1'-value equals 0
+    //and the 'int_counter2'-value is greater than 1
+    else if(int_counter1 == 0 && int_counter2 > 1)
+    {
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and "+ String(int_counter2)
+            + " letter (" + char_letter2 + ")'s, in the string,\'" + string_word + "\'.\n");
+    }
+
+    //else if-statement code-block executes, when the 'int_counter1'-value equals 0,
+    //the 'int_counter2'-value equals 0,
+    //and the 3rd function-argument has a value other than 'undefined'
+    else if(int_counter1 == 0 && int_counter2 == 0 && char_letter2 != undefined)
+    {
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and "+ String(int_counter2)
+            + " letter (" + char_letter2 + ")'s, in the string,\'" + string_word + "\'.\n");
+    }
+
+    //else if-statement code-block executes, when the 'int_counter1'-value equals 1,
+    //the 'int_counter2'-value equals 0,
+    //and the 3rd function-argument(char_letter2) has a value other than 'undefined'
+    else if (int_counter1 == 1 && int_counter2 == 0 && char_letter2 != undefined)
+    {
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log( "There is " + String(int_counter1) + " letter \'" + char_letter1 + "\' and "+ String(int_counter2) +
+            " letter (" + char_letter2 + ")'s, in the string \'" + string_word + "\'.\n");
+    }
+
+    //else if-statement code-block executes, when the 'int_counter1'-value equals 1 and
+    //the 'int_counter2'-value equals 1
+    else if (int_counter1 == 1 && int_counter2 == 1)
+    {
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log( "There is " + String(int_counter1) + " letter \'" + char_letter1 + "\' and "+ String(int_counter2) +
+                            " letter \'" + char_letter2 + "\', in the string \'" + string_word + "\'.\n");
+    }
+
+    //else if-statement code-block executes, when the 'int_counter1'-value equals 1 and
+    //the 'int_counter2'-value is greater than 1
+    else if (int_counter1 == 1 && int_counter2 > 1)
+    {
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log( "There is " + String(int_counter1) + " letter \'" + char_letter1 + "\' and "+ String(int_counter2) +
+            " letter (" + char_letter2 + ")'s, in the string \'" + string_word + "\'.\n");
+    }
+
+    //else if-statement code-block executes, when the 'int_counter1'-value is greater than 1 and
+    //the 'int_counter2'-value equals 1
+    else if (int_counter1 > 1 && int_counter2 == 1)
+    {
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and " + String(int_counter2)
+            + " letter \'" + char_letter2 + "\', in the string,\'" + string_word + "\'.\n");
+    }
+
+    //else if-statement code-block executes, when both the 'int_counter1'-value and
+    //the 'int_counter2'-value is greater than 1
+    else if (int_counter1 > 1 && int_counter2 > 1)
+    {
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and " + String(int_counter2)
+                            + " letter (" + char_letter2 + ")'s, in the string,\'" + string_word + "\'.\n");
+    }
+
+    //else statement code-block executes, when none of the above 'conditional-statements' are valid
     else
     {
-        return "There are " + String(counter1) + " letter (" + letter1 + ")\'s and "+ String(counter2) + " letter (" + letter2 + ')\'s, in the string "' + word + '".\n';
+        //line returns the function-call's information request to the console window, then program-focus exits function
+        return console.log("Input Error!!  Check your arguments!!!");
     }
+
 }
-console.log(countChar("Mississippi River","M"));
-console.log(countChar("Mississippi River","m"));
-console.log(countChar("Mississippi River","o"));
-console.log(countChar("Mississippi River","int_i"));
-console.log(countChar("Mississippi River","e","v"));
-console.log(countChar("Mississippi River","s","p"));
-console.log(countChar("Mississippi River","M","p"));
-console.log(countChar("Mississippi River","p","e"));
+//Below is a list of calls to the 'charCounter2-function, each passing different argument values,
+//to test all lines of code with in the function.
 
+charCounter2("Mississippi River","M");
+//There is 1 letter 'M', in the string 'Mississippi River'.
+
+charCounter2("Mississippi River","m");
+//There are 0 letter (m)'s, in the string 'Mississippi River'.
+
+charCounter2("Mississippi River","o");
+//There are 0 letter (o)'s, in the string 'Mississippi River'.
+
+charCounter2("Mississippi River","i");
+//There are 5 letter (i)'s, in the string 'Mississippi River'.
+
+charCounter2("Mississippi River","e","v");
+//There is 1 letter 'e' and 1 letter 'v', in the string 'Mississippi River'.
+
+charCounter2("Mississippi River","s","p");
+//There are 4 letter (s)'s and 2 letter (p)'s, in the string,'Mississippi River'.
+
+charCounter2("Mississippi River","M","p");
+//There is 1 letter 'M' and 2 letter (p)'s, in the string 'Mississippi River'.
+
+charCounter2("Mississippi River","p","e");
+//There are 2 letter (p)'s and 1 letter 'e', in the string,'Mississippi River'.
+
+charCounter2("Mississippi River","z","r");
+//There are 0 letter (z)'s and 1 letter 'r', in the string,'Mississippi River'.
+
+charCounter2("Mississippi River","y","i");
+//There are 0 letter (y)'s and 5 letter (i)'s, in the string,'Mississippi River'.
+
+charCounter2("Mississippi River","a","b");
+//There are 0 letter (a)'s and 0 letter (b)'s, in the string,'Mississippi River'.
+
+charCounter2("Mississippi River");
+//Input Error!!  Check your arguments!!!
+
+//----------------------------------------------------------------------------------------------------------------------
+ spacer();
+ console.log('\t\t\t\t\t\t\t\t\t*** Data Sets ***');
+ console.log('********************************************************************************************************');
+ space();
 /*
- Data sets
+ Data Sets:
 
- To work with a chunk of digital data, we’ll first have to find a way to
- represent it in our machine’s memory. Say, as a simple example, that we
- want to represent a collection of numbers: 2, 3, 5, 7, and 11.
- We could get creative with strings—after all, strings can be any length,
- so we can put a lot of data into them—and use "2 3 5 7 11" as our representation.
- But this is awkward. You’d have to somehow extract the
- digits and convert them back to numbers to access them.
+ To work with a data-set(array), it must be represented the machine’s memory.
 
- Fortunately, JavaScript provides a data type specifically for storing
- sequences of values. It is called an arrayNums and is written as a list of values
- between square brackets, separated by commas.
+ As a simple example, I will represent a collection of numbers: 1, 33, 6, 26, and 89.
+
+ Strings can be any length, we could store the data into them, using "2 3 5 7 11" as our representation of the data-set.
+
+ However, it would break one of the cardinal rules of coding,'efficiency'.
+
+ You’d have to extract the digits and convert them back to numbers to access them, using-up memory and processing power.
+
+ Fortunately, JavaScript provides a data-type specifically for storing sets of values,
+ it is called an 'Array' and is written as a list of values between square brackets, separated by commas.
  */
+console.log('Array \'Length-Property\' Return:');
 
-var listOfNumbers = [1,33,6,26,89];
+//declaring and array-variable and initializing its value to a set of integers -> [1,33,6,26,89]
+var array_numberSet = [1,33,6,26,89];
 
-console.log(listOfNumbers[2]); // 6
+//line calls the integer in the '3rd index' of the array(ARRAY-INDEXES ALWAYS START AT 0)
+console.log(array_numberSet[2]); //6
 space();
 
-console.log(listOfNumbers["length"]); // 5
+ /*
+  Array-Methods:
+
+  Both the String and Array data-types, posses a number of properties that refer to 'function-produced values'.
+
+  One example is the length-property, shown below:
+  */
+
+//line calls the 'length-property'-value of the array, to the console-window
+console.log(array_numberSet.length); //5
+space();
+//----------------------------------------------------------------------------------------------------------------------
+
+ /*
+  All String-objects have a 'toUpperCase'-property.
+
+  When called, it will return a copy of the string, where the letters have all been capitalized.
+
+  There is also a 'toLowerCase'-property, which returns a copy of the string, where all letters are lower-case.
+
+  In the example below, the call to 'string_word.toUpperCase' does not pass any arguments
+  but the function had access to the string.
+
+  Properties that contain 'functions' are called 'methods' of the datatype or object they belong to.
+
+  '.toUpperCase()' is a 'method' of a 'String'-data-type.
+
+  */
+
+//line declares a variable(var) named 'String_word' and initializes its value to 'Snap'
+var string_word = "Snap";
+
+//using the 'typeof'-keyword to return the 'string_word'-variable data-type
+
+console.log(typeof string_word); //string  -> data-type
 space();
 
-console.log(listOfNumbers.length);  // 5
+//using the 'typeof'-keyword to return the 'string_word'-variable, 'toUpperCase'-property data-type
+
+console.log(typeof string_word.toUpperCase); //Function  -> object's data-type
+space();
+
+//using the 'typeof'-keyword to return the 'string_word'-variable, 'toUpperCase'-property's 'returning-output' data-type
+
+console.log(typeof string_word.toUpperCase()); //string  ->the the data-type which the function()-object produces
+space();
+
+//calling 'string_word'-variable's 'toUpperCase()'-property, to return a copy of the variable's value,
+//where the letters have all been capitalized.
+
+console.log(string_word.toUpperCase()); //SNAP  -> The return-output
+space();
+
+//
+
+ /*
+  The following examples demonstrate some of the methods 'Array-objects' have:
+
+  The 'push()'-method can be used to add values to the end of an array.
+
+  The 'pop()'-method removes the value at the end of the array and then returns that value to the method-call.
+
+  The 'join()'-method, takes an array of strings and concatenates them into a single string.
+
+  The argument given to 'join'-method's parameter determines the value that is connection between the array’s elements.
+  */
+
+//line declares an array-variable(var) named 'String_word' and initializes its value to an empty-value
+var array_games = [];
+
+//line calls array_games's held value, to the console-window
+console.log(array_games); //[]
+space();
+
+//line adds the 'chess'-string, to the end of the last value held by the array(a currently empty array)
+array_games.push("chess");
+
+//line adds both the 'poker' and 'tetris'-strings, to the end of the current value held by the array
+//(notice, a comma is what separates the two values)
+array_games.push("poker","knife");
+
+//line calls array_games's held value, to the console window
+console.log(array_games); // ['chess', 'poker', 'tetris']
+space();
+
+//line calls the return, of a copy, of the array of strings concatenated into a single string, using the parameter's
+//argument to connect each array element to on another
+console.log(array_games.join(" ")); // chess poker tetris
+space();
+
+//line removes the 'tetris'-string, the end value held by the array and returns it to the console-window
+console.log(array_games.pop()); // knife
+space();
+
+ //line calls array_games's held value, to the console-window
+console.log(array_games); // ['Mack', 'the']
+spacer();
+//----------------------------------------------------------------------------------------------------------------------
+
+spacer();
+console.log('\t\t\t\t\t\t\t\t\t*** Objects ***');
+console.log('********************************************************************************************************');
 space();
 /*
- Methods
- Both string and arrayNums objects contain, in addition to the length property,
- a number of properties that refer to function values.
- */
+ Allergy Analysis Application:
 
-var word = "Snap";
+ A journal of daily log-entries can be represented using an array.
 
-console.log(typeof word.toUpperCase); // function  **What it is
+ The log-entries created in the this example do not consist of just a number or string, they will hold multiple values.
+
+ In the following journal(array of log-entries), each entry stores a list of activities(Array)
+ and a 'Boolean'-value which indicates if an 'allergic'-reaction took place.
+
+ Each log-entry(holding an array-of-activities and boolean-value) will be grouped together into a single 'Object',
+
+ then stored in the allergy-journal(array).
+
+ In general, Object-values are stored in an arbitrary collection of 'properties', and programmers can add or remove
+ these properties as they see fit.
+
+ At this stage, you should be able to recognize a variable's data-type by the value it holds.
+
+ So, In the example below I am going to place a 'property_' in front of the property name, as opposed to its data-type.
+
+ ***********************************************************************************************************************
+ REMEMBER: In the traditional naming of variables or object properties, the data-type or the 'property_' in front are
+ not added. I only do this to make it easier to comprehend what the code is doing.
+ ***********************************************************************************************************************
+
+  One way to create an object is by using a 'curly brace' notation, surrounding the properties within.
+
+  Inside the curly braces, we can give a list of properties separated by commas.
+
+  Each property is written as a name, followed by a colon(:), followed by an 'expression',
+  providing a value for the property.
+
+  Spaces and line breaks are not read by the program.
+
+
+
+  To briefly return variable value-bindings, property-bindings very are similar.
+
+  Properties represent values, but other variables or properties might be representing those same values.
+
+  You may think of objects as variables with any number of values held within,
+  each of which has a property-name to call on it.
+  */
+console.log('\'object_day1\' Returns:');
 space();
 
-console.log(typeof word.toUpperCase()); // string  **What it produces
-space();
-
-console.log(word.toUpperCase()); // SNAP  **The product
-space();
-/*
- Every string has a toUpperCase property. When called, it will return a
- copy of the string, in which all letters have been converted to uppercase.
- There is also toLowerCase. You can guess what that does.
- Interestingly, even though the call to toUpperCase does not pass any
- arguments, the function somehow has access to the string "Doh".
-
- Properties that contain functions are generally called methods of the
- value they belong to.
-
- As in, “toUpperCase is a method of a string”.
- This example demonstrates some methods that arrayNums objects have:
- */
-
-var mack = [];
-
-mack.push("Mack");
-mack.push("the","knife");
-
-console.log(mack); // ['Mack', 'the', 'knife']
-space();
-
-console.log(mack.join(" ")); // Mack the knife
-space();
-
-console.log(mack.pop()); // knife
-space();
-
-console.log(mack); // ['Mack', 'the']
-space();
-/*
- The push method can be used to add values to the end of an arrayNums. The
- pop method does the opposite: it removes the value at the end of the
- arrayNums and returns it. An arrayNums of strings can be flattened to a single
- string with the join method. The argument given to join determines the
- text that is glued between the arrayNums’s elements.
- */
-
-
-/*
-                            *** Objects ***
-
- A set of daily log entries can be represented as
- an arrayNums. But the entries do not consist of just a number or a string—
- each entry needs to store a list of activities and a Boolean value that
- indicates whether Jacques turned into a squirrel. Ideally, we would like
- to group these values together into a single value and then put these
- grouped values into an arrayNums of log entries.
- Values of the type object are arbitrary collections of properties, and we
- can add or remove these properties as we please. One way to create an
- object is by using a curly brace notation.
- */
-
-var day1 =
+//declaring an object, giving it the name 'object_day1' and initializing its value with two properties.
+var object_day1 =
     {
-       squirrel: false,
-       events: ["work","touched tree", "pizza", "running","television"]
+       //naming a property which holds a 'Boolean'-data-type and 'setting' its value.
+       property_reaction: false,
+
+       //naming a property which holds a 'array'-data-type and 'setting' its value.
+       property_events: ["work","touched tree", "pizza", "running","television"]
     };
 
-console.log(day1.squirrel); // false
+//line calls the "object_day1"-object's "property_reaction"-property's held-value, to the console-window
+
+console.log(object_day1.property_reaction); //false
 space();
 
-console.log(day1.wolf); // undefined
+//line calls the "object_day1"-object's "property_any"-property's held-value(which does not exist), to the console
+
+console.log(object_day1.property_any); //undefined
 space();
 
-day1.wolf = false;
+//line declares "property_any"-property", outside of the "object_day1"-object's declaration,
+//setting its held-value to 'true'.
+object_day1.property_any = true;
 
-console.log(day1.wolf); // false
-space();
-/*
- Inside the curly braces, we can give a list of properties separated by
- commas.
+//line calls the "object_day1"-object's "property_any"-property's held-value(which does now exists), to the console
 
- Each property is written as a propertyName, followed by a colon, followed
- by an expression that provides a value for the property.
-
- Spaces and line breaks are not significant.
-
- When an object spans multiple lines,
- indenting it like in the previous example improves readability.
-
- Properties whose names are not valid variable names or valid numbers
- have to be quoted.
-
- To briefly return to our tentacle model of variable bindings—property
- bindings are similar. They grasp values, but other variables and properties
- might be holding onto those same values. You may think of objects
- as octopuses with any number of tentacles, each of which has a propertyName
- inscribed on it.
- */
-
-var description =
-    {
-     work: "Went to work",
-        "touched a tree": "Touched a tree"
-    };
+console.log(object_day1.property_any); //true
+spacer();
 
 /*
- This means that curly braces have two meanings in JavaScript. At the
- start of a statement, they start a block of statements. In any other
- position, they describe an object.
+ This means that curly braces have two meanings in JavaScript.
 
+ At the beginning of a function's body, one is used to start a block of statements and then another ends the block.
+
+ In any other position, they describe an object.
+
+ //---------------------------------------------------------------------------------------------------------------------
+Delete Operater:
+
+ The 'delete'-operator removes properties from the objects which hold them.
+
+ It is a 'unary'-operator that, when applied before an object's 'property access expression',
+
+ the delete-keyword will remove the named property from the object.
+
+ This is not a common thing to do, but can come in useful, you never know.
  */
+console.log('\'object_sides\' Returns:');
+space();
+
+//declaring an object, giving it the name 'object_sides' and initializing its value with four properties
+var object_sides = {
+                       //naming four properties, holding 'double'-data-types and 'setting' their values
+                       property_left: 1.5,
+                       property_right: 1.5,
+                       property_top: 2.2,
+                       property_bottom:2.2
+                   };
+
+//line calls the "object_sides"-object's "property_left"-property's held-value, to the console-window
+
+console.log(object_sides.property_left); //1.5
+space();
+
+//line Deletes property 'left', not just its value.
+delete object_sides.property_left;
+
+//line calls the "object_sides"-object's "property_left"-property's held-value(which no longer exists, to the console
+
+console.log(object_sides.property_left); //undefined
+space();
 
 /*
- The delete operator cuts off a tentacle from such an octopus. It is a
- unary operator that, when applied to a property access expression, will
- remove the named property from the object. This is not a common thing
- to do, but it is possible.
- */
-var anObject = {left: 1, right: 2};
+ The binary, 'in'-operator, when used on a 'string' representing a property's name and an 'object',
+ will return a 'boolean'-value that indicates whether that object has that property.
 
-console.log(anObject.left); // 1
+ There is a difference between setting a property's-value to 'undefined' and deleting the property itself.
+
+ In the first case, the object still has the property(holding no value)
+ but when using the 'in'-keyword on it, will return true.
+
+ Where as in the second case, the property is no longer present and the 'in'-keyword will return false.
+*/
+
+ //Properties whose names are not valid variable names or valid numbers have to be quoted.
+
+console.log("left" in object_sides); //false
 space();
 
-delete anObject.left;  // Deletes property 'left', not just its value.
+console.log("right" in object_sides); //true
+spacer();
 
-console.log(anObject.left); // undefined
+//------------------------------------------------------------------------------------------------------
+console.log('Array \'typeof\'-keyword Return:');
 space();
-
-console.log("left" in anObject); // false
-space();
-
-console.log("right" in anObject); // true
-space();
-/*
- The binary 'in' operator, when applied to a string and an object, returns a
- Boolean value that indicates whether that object has that property.
-
- The difference between setting a property to undefined and actually deleting it
- is that, in the first case, the object still has the property (it just doesn’t
- have a very interesting value), whereas in the second case the property
- is no longer present and in will return false.
- */
-
 /*
  Arrays, are types of objects specialized for storing sequences
  of things.
 
- If you evaluate typeof [1, 2], this produces "object". You can
- see them as long, flat octopuses with all their arms in a neat arrayObjects_Row, labeled
- with numbers.
+ If you evaluate typeof [1, 2], this produces "object".
+
+ You can view arrays, as objects with all their properties labeled in consecutive numbers,
+ in a straight row, of any given length.
+
  */
 
 var nums = [1,2];
 
-console.log(typeof nums); // object **Arrays are a type of object.
+console.log('An array is an ' + typeof nums +'-type.'); //An array is an object-type.
+spacer();
 
+console.log('\'Mutability-Concept\' Returns:');
+space();
 /*
                             *** Mutability ***
 
- We’ve seen that object values can be modified. The types of values
- discussed in earlier chapters, such as numbers, strings, and Booleans,
- are all immutable—it is impossible to change an existing value of those
- types. You can combine them and derive new values from them, but
- when you take a specific string value, that value will always remain the
- same. The text inside it cannot be changed.
+ We’ve seen that object-values(the properties within) can be modified.
 
- When we have two numbers, 120 and 120, we can consider them precisely
- the same number, whether or not they refer to the same physical
- bits. But with objects, there is a difference between having two references
- to the same object and having two different objects that contain
- the same properties. Consider the following code:
+ All the data-type values discussed earlier, such as integers, strings, and Booleans, are 'immutable'.
+
+ they are immutable because it is impossible to change an existing property of data-types.
+
+ You can combine them and derive new values from them, but when you take a specific string value,
+ that value will always remain the same.
+
+ When we have two distinct instances of the same number such as, 20 and 20, they are precisely the same number,
+ but rarely refer to the same physical bits.
+
+ With objects on the other hand, there is a difference between having two references to the same object
+ (they ALWAYS refer to the same physical bits)
+
+ and having two different objects that containing the same property and property-value.
+ (they NEVER refer to the same physical bits)
+
+ Consider the following code:
  */
 
-var object1 = {value: 10};
-var object2 = object1;
-var object3 = {value: 10};
+//declaring an object, giving it the name 'object_a' and initializing it's 'mutable'-value to a property,
+//named 'switch', with a value of 'On'
+var object_a = {property_switch: 'On'};
 
-console.log(object1 == object2);// true
+//declaring an object, giving it the name 'object_b' and initializing it's 'mutable'-value to 'object_a'
+var object_b = object_a;
+
+ //declaring an object, giving it the name 'object_a' and initializing it's 'mutable'-value to a property,
+ //named 'switch', with a value of 'On'
+var object_c = {property_switch: 'On'};
+
+console.log(object_a == object_b); //true
 space();
 
-console.log(object1 == object3);// false
+console.log(object_a == object_c); //false
 space();
 
-object1.value = 20;
+//changes the property-value of 'object_a' to 'Off', using the '.' followed by the property-name, to access its value
+object_a.property_switch = 'Off';
 
-console.log(object2.value);// 20
+//line calls a 'object_b' property value, which refers to the same physical bits as 'object_a', returning the same value
+
+console.log(object_b.property_switch); //Off
 space();
 
-object2["value"] = 30;
+//changes the property-value of 'object_b' to 'Back On',
+//using square-brackets[], wrapped around a 'string'-representation of the property-name, to access its value
+//Think of it like calling an Array's index value but instead of a 'number' for it's label(name), it's a 'string'
+object_b["property_switch"] = 'Back On';
 
-console.log(object1.value);// 30
-space();
+//line calls a 'object_a' property value, which refers to the same physical bits as 'object_b', returning the same value
+
+console.log(object_a.property_switch); //Back On
+spacer();
 /*
- Represent Jacques’ journal as an arrayNums of objects.
+ The following, is a sample representation of the 'allergy’-journal, as an Array-of-Objects.
  */
 
-var journal1 =
+var array_allergyJournalSample =
     [
         {
-            events: ["work","touched tree","pizza","running","television"],
-            squirrel: false
+            property_event: ["work","touched tree","pizza","running","television"],
+            property_reaction: false
         },
         {
-            events: ["work","ice cream","cauliflower","lasagna","touched tree","brush teeth"],
-            squirrel: false
+            property_event: ["work","ice cream","cauliflower","lasagna","touched tree","brush teeth"],
+            property_reaction: false
         },
         {
-            events: ["weekend","cycling","break","peanuts","beer"],
-            squirrel: true
+            property_event: ["weekend","cycling","break","peanuts","beer"],
+            property_reaction: true
         }
     ];
 
-function addEntry(events,transformation)
+function addEntry(array_events,boolean_reaction)
 {
-    journal1.push({events: events, squirrel: transformation});
+    array_allergyJournalSample.push({property_events: array_events, property_reaction: boolean_reaction});
 }
+
 
 addEntry(["work","ice cream","brushed teeth"],false);
 
 
-var Journal = [
-    {
-        "events":["carrot","exercise","weekend"],
-        "squirrel":false
-    },
-    {"events":["bread","pudding","brushed teeth","weekend","touched tree"],"squirrel":false},
-    {"events":["carrot","nachos","brushed teeth","cycling","weekend"],"squirrel":false}, // false no pizza
-    {"events":["brussel sprouts","ice cream","brushed teeth","computer","weekend"],"squirrel":false},
-    {"events":["potatoes","candy","brushed teeth","exercise","weekend","dentist"],"squirrel":false},
-    {"events":["brussel sprouts","pudding","brushed teeth","running","weekend"],"squirrel":false},
-    {"events":["pizza","brushed teeth","computer","work","touched tree"],"squirrel":false},
-    {"events":["bread","beer","brushed teeth","cycling","work"],"squirrel":false},
-    {"events":["cauliflower","brushed teeth","work"],"squirrel":false},
-    {"events":["pizza","brushed teeth","cycling","work"],"squirrel":false},
-    {"events":["lasagna","nachos","brushed teeth","work"],"squirrel":false},
-    {"events":["brushed teeth","weekend","touched tree"],"squirrel":false},
-    {"events":["lettuce","brushed teeth","television","weekend"],"squirrel":false},
-    {"events":["spaghetti","brushed teeth","work"],"squirrel":false},
-    {"events":["brushed teeth","computer","work"],"squirrel":false},
-    {"events":["lettuce","nachos","brushed teeth","work"],"squirrel":false},
-    {"events":["carrot","brushed teeth","running","work"],"squirrel":false},
-    {"events":["brushed teeth","work"],"squirrel":false},
-    {"events":["cauliflower","reading","weekend"],"squirrel":false},
-    {"events":["bread","brushed teeth","weekend"],"squirrel":false},
-    {"events":["lasagna","brushed teeth","exercise","work"],"squirrel":false},
-    {"events":["spaghetti","brushed teeth","reading","work"],"squirrel":false},
-    {"events":["carrot","ice cream","brushed teeth","television","work"],"squirrel":false},
-    {"events":["spaghetti","nachos","work"],"squirrel":false},
-    {"events":["cauliflower","ice cream","brushed teeth","cycling","work"],"squirrel":false},
-    {"events":["spaghetti","peanuts","computer","weekend"],"squirrel":true},
-    {"events":["potatoes","ice cream","brushed teeth","computer","weekend"],"squirrel":false},
-    {"events":["potatoes","ice cream","brushed teeth","work"],"squirrel":false},
-    {"events":["peanuts","brushed teeth","running","work"],"squirrel":false},
-    {"events":["potatoes","exercise","work"],"squirrel":false},
-    {"events":["pizza","ice cream","computer","work"],"squirrel":false},
-    {"events":["lasagna","ice cream","work"],"squirrel":false},
-    {"events":["cauliflower","candy","reading","weekend"],"squirrel":false},
-    {"events":["lasagna","nachos","brushed teeth","running","weekend"],"squirrel":false},
-    {"events":["potatoes","brushed teeth","work"],"squirrel":false},
-    {"events":["carrot","work"],"squirrel":false},
-    {"events":["pizza","beer","work","dentist"],"squirrel":false},
-    {"events":["lasagna","pudding","cycling","work"],"squirrel":false},
-    {"events":["spaghetti","brushed teeth","reading","work"],"squirrel":false},
-    {"events":["spaghetti","pudding","television","weekend"],"squirrel":false},
-    {"events":["bread","brushed teeth","exercise","weekend"],"squirrel":false},
-    {"events":["lasagna","peanuts","work"],"squirrel":true},
-    {"events":["pizza","work"],"squirrel":false},
-    {"events":["potatoes","exercise","work"],"squirrel":false},
-    {"events":["brushed teeth","exercise","work"],"squirrel":false},
-    {"events":["spaghetti","brushed teeth","television","work"],"squirrel":false},
-    {"events":["pizza","cycling","weekend"],"squirrel":false},
-    {"events":["carrot","brushed teeth","weekend"],"squirrel":false},
-    {"events":["carrot","beer","brushed teeth","work"],"squirrel":false},
-    {"events":["pizza","peanuts","candy","work"],"squirrel":true},
-    {"events":["carrot","peanuts","brushed teeth","reading","work"],"squirrel":false},
-    {"events":["potatoes","peanuts","brushed teeth","work"],"squirrel":false},
-    {"events":["carrot","nachos","brushed teeth","exercise","work"],"squirrel":false},
-    {"events":["pizza","peanuts","brushed teeth","television","weekend"],"squirrel":false},
-    {"events":["lasagna","brushed teeth","cycling","weekend"],"squirrel":false},
-    {"events":["cauliflower","peanuts","brushed teeth","computer","work","touched tree"],"squirrel":false},
-    {"events":["lettuce","brushed teeth","television","work"],"squirrel":false},
-    {"events":["potatoes","brushed teeth","computer","work"],"squirrel":false},
-    {"events":["bread","candy","work"],"squirrel":false},
-    {"events":["potatoes","nachos","work"],"squirrel":false},
-    {"events":["carrot","pudding","brushed teeth","weekend"],"squirrel":false},
-    {"events":["carrot","brushed teeth","exercise","weekend","touched tree"],"squirrel":false},
-    {"events":["brussel sprouts","running","work"],"squirrel":false},
-    {"events":["brushed teeth","work"],"squirrel":false},
-    {"events":["lettuce","brushed teeth","running","work"],"squirrel":false},
-    {"events":["candy","brushed teeth","work"],"squirrel":false},
-    {"events":["brussel sprouts","brushed teeth","computer","work"],"squirrel":false},
-    {"events":["bread","brushed teeth","weekend"],"squirrel":false},
-    {"events":["cauliflower","brushed teeth","weekend"],"squirrel":false},
-    {"events":["spaghetti","candy","television","work","touched tree"],"squirrel":false},
-    {"events":["carrot","pudding","brushed teeth","work"],"squirrel":false},
-    {"events":["lettuce","brushed teeth","work"],"squirrel":false},
-    {"events":["carrot","ice cream","brushed teeth","cycling","work"],"squirrel":false},
-    {"events":["pizza","brushed teeth","work"],"squirrel":false},
-    {"events":["spaghetti","peanuts","exercise","weekend"],"squirrel":true},
-    {"events":["bread","beer","computer","weekend","touched tree"],"squirrel":false},
-    {"events":["brushed teeth","running","work"],"squirrel":false},
-    {"events":["lettuce","peanuts","brushed teeth","work","touched tree"],"squirrel":false},
-    {"events":["lasagna","brushed teeth","television","work"],"squirrel":false},
-    {"events":["cauliflower","brushed teeth","running","work"],"squirrel":false},
-    {"events":["carrot","brushed teeth","running","work"],"squirrel":false},
-    {"events":["carrot","reading","weekend"],"squirrel":false},
-    {"events":["carrot","peanuts","reading","weekend"],"squirrel":true},
-    {"events":["potatoes","brushed teeth","running","work"],"squirrel":false},
-    {"events":["lasagna","ice cream","work","touched tree"],"squirrel":false},
-    {"events":["cauliflower","peanuts","brushed teeth","cycling","work"],"squirrel":false},
-    {"events":["pizza","brushed teeth","running","work"],"squirrel":false},
-    {"events":["lettuce","brushed teeth","work"],"squirrel":false},
-    {"events":["bread","brushed teeth","television","weekend"],"squirrel":false},
-    {"events":["cauliflower","peanuts","brushed teeth","weekend"],"squirrel":false}
+var array_allergyJournal =
+    [
+        {
+            "property_events":["carrot","exercise","weekend"],
+            "property_reaction":false
+        },
+        {"property_events":["bread","pudding","brushed teeth","weekend","touched tree"],"property_reaction":false},
+        {"property_events":["carrot","nachos","brushed teeth","cycling","weekend"],"property_reaction":false}, // false no pizza
+        {"property_events":["brussel sprouts","ice cream","brushed teeth","computer","weekend"],"property_reaction":false},
+        {"property_events":["potatoes","candy","brushed teeth","exercise","weekend","dentist"],"property_reaction":false},
+        {"property_events":["brussel sprouts","pudding","brushed teeth","running","weekend"],"property_reaction":false},
+        {"property_events":["pizza","brushed teeth","computer","work","touched tree"],"property_reaction":false},
+        {"property_events":["bread","beer","brushed teeth","cycling","work"],"property_reaction":false},
+        {"property_events":["cauliflower","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["pizza","brushed teeth","cycling","work"],"property_reaction":false},
+        {"property_events":["lasagna","nachos","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["brushed teeth","weekend","touched tree"],"property_reaction":false},
+        {"property_events":["lettuce","brushed teeth","television","weekend"],"property_reaction":false},
+        {"property_events":["spaghetti","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["brushed teeth","computer","work"],"property_reaction":false},
+        {"property_events":["lettuce","nachos","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["carrot","brushed teeth","running","work"],"property_reaction":false},
+        {"property_events":["brushed teeth","work"],"property_reaction":false},
+        {"property_events":["cauliflower","reading","weekend"],"property_reaction":false},
+        {"property_events":["bread","brushed teeth","weekend"],"property_reaction":false},
+        {"property_events":["lasagna","brushed teeth","exercise","work"],"property_reaction":false},
+        {"property_events":["spaghetti","brushed teeth","reading","work"],"property_reaction":false},
+        {"property_events":["carrot","ice cream","brushed teeth","television","work"],"property_reaction":false},
+        {"property_events":["spaghetti","nachos","work"],"property_reaction":false},
+        {"property_events":["cauliflower","ice cream","brushed teeth","cycling","work"],"property_reaction":false},
+        {"property_events":["spaghetti","peanuts","computer","weekend"],"property_reaction":true},
+        {"property_events":["potatoes","ice cream","brushed teeth","computer","weekend"],"property_reaction":false},
+        {"property_events":["potatoes","ice cream","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["peanuts","brushed teeth","running","work"],"property_reaction":false},
+        {"property_events":["potatoes","exercise","work"],"property_reaction":false},
+        {"property_events":["pizza","ice cream","computer","work"],"property_reaction":false},
+        {"property_events":["lasagna","ice cream","work"],"property_reaction":false},
+        {"property_events":["cauliflower","candy","reading","weekend"],"property_reaction":false},
+        {"property_events":["lasagna","nachos","brushed teeth","running","weekend"],"property_reaction":false},
+        {"property_events":["potatoes","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["carrot","work"],"property_reaction":false},
+        {"property_events":["pizza","beer","work","dentist"],"property_reaction":false},
+        {"property_events":["lasagna","pudding","cycling","work"],"property_reaction":false},
+        {"property_events":["spaghetti","brushed teeth","reading","work"],"property_reaction":false},
+        {"property_events":["spaghetti","pudding","television","weekend"],"property_reaction":false},
+        {"property_events":["bread","brushed teeth","exercise","weekend"],"property_reaction":false},
+        {"property_events":["lasagna","peanuts","work"],"property_reaction":true},
+        {"property_events":["pizza","work"],"property_reaction":false},
+        {"property_events":["potatoes","exercise","work"],"property_reaction":false},
+        {"property_events":["brushed teeth","exercise","work"],"property_reaction":false},
+        {"property_events":["spaghetti","brushed teeth","television","work"],"property_reaction":false},
+        {"property_events":["pizza","cycling","weekend"],"property_reaction":false},
+        {"property_events":["carrot","brushed teeth","weekend"],"property_reaction":false},
+        {"property_events":["carrot","beer","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["pizza","peanuts","candy","work"],"property_reaction":true},
+        {"property_events":["carrot","peanuts","brushed teeth","reading","work"],"property_reaction":false},
+        {"property_events":["potatoes","peanuts","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["carrot","nachos","brushed teeth","exercise","work"],"property_reaction":false},
+        {"property_events":["pizza","peanuts","brushed teeth","television","weekend"],"property_reaction":false},
+        {"property_events":["lasagna","brushed teeth","cycling","weekend"],"property_reaction":false},
+        {"property_events":["cauliflower","peanuts","brushed teeth","computer","work","touched tree"],"property_reaction":false},
+        {"property_events":["lettuce","brushed teeth","television","work"],"property_reaction":false},
+        {"property_events":["potatoes","brushed teeth","computer","work"],"property_reaction":false},
+        {"property_events":["bread","candy","work"],"property_reaction":false},
+        {"property_events":["potatoes","nachos","work"],"property_reaction":false},
+        {"property_events":["carrot","pudding","brushed teeth","weekend"],"property_reaction":false},
+        {"property_events":["carrot","brushed teeth","exercise","weekend","touched tree"],"property_reaction":false},
+        {"property_events":["brussel sprouts","running","work"],"property_reaction":false},
+        {"property_events":["brushed teeth","work"],"property_reaction":false},
+        {"property_events":["lettuce","brushed teeth","running","work"],"property_reaction":false},
+        {"property_events":["candy","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["brussel sprouts","brushed teeth","computer","work"],"property_reaction":false},
+        {"property_events":["bread","brushed teeth","weekend"],"property_reaction":false},
+        {"property_events":["cauliflower","brushed teeth","weekend"],"property_reaction":false},
+        {"property_events":["spaghetti","candy","television","work","touched tree"],"property_reaction":false},
+        {"property_events":["carrot","pudding","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["lettuce","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["carrot","ice cream","brushed teeth","cycling","work"],"property_reaction":false},
+        {"property_events":["pizza","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["spaghetti","peanuts","exercise","weekend"],"property_reaction":true},
+        {"property_events":["bread","beer","computer","weekend","touched tree"],"property_reaction":false},
+        {"property_events":["brushed teeth","running","work"],"property_reaction":false},
+        {"property_events":["lettuce","peanuts","brushed teeth","work","touched tree"],"property_reaction":false},
+        {"property_events":["lasagna","brushed teeth","television","work"],"property_reaction":false},
+        {"property_events":["cauliflower","brushed teeth","running","work"],"property_reaction":false},
+        {"property_events":["carrot","brushed teeth","running","work"],"property_reaction":false},
+        {"property_events":["carrot","reading","weekend"],"property_reaction":false},
+        {"property_events":["carrot","peanuts","reading","weekend"],"property_reaction":true},
+        {"property_events":["potatoes","brushed teeth","running","work"],"property_reaction":false},
+        {"property_events":["lasagna","ice cream","work","touched tree"],"property_reaction":false},
+        {"property_events":["cauliflower","peanuts","brushed teeth","cycling","work"],"property_reaction":false},
+        {"property_events":["pizza","brushed teeth","running","work"],"property_reaction":false},
+        {"property_events":["lettuce","brushed teeth","work"],"property_reaction":false},
+        {"property_events":["bread","brushed teeth","television","weekend"],"property_reaction":false},
+        {"property_events":["cauliflower","peanuts","brushed teeth","weekend"],"property_reaction":false}
 ];
 
 
@@ -3069,18 +3470,18 @@ var Journal = [
  φ = (++ * --) - (+- * -+) / srt(++ + +-) * (-- + -+) * ( ++ + -+) * (-- + +-)
 
  */
-function phi(table)
+function phi(array_table)
 {
-    return (table[3] * table[0] - table[2] * table[1]) /
-        Math.sqrt((table[2] + table[3]) * (table[0] + table[1]) *
-                  (table[1] + table[3]) * (table[0] + table[2]));
+    return (array_table[3] * array_table[0] - array_table[2] * array_table[1]) /
+        Math.sqrt((array_table[2] + array_table[3]) * (array_table[0] + array_table[1]) *
+                  (array_table[1] + array_table[3]) * (array_table[0] + array_table[2]));
 }
 //table[0] = var1(transformation) = false & var2(event) = false
 //table[1] = var1(transformation) = false & var2(event) = true
 //table[2] = var1(transformation) = true & var2(event) = false
 //table[3] = var1(transformation) = true & var2(event) = true
 
-console.log(phi([76,9,4,1]));
+console.log(phi([76,9,4,1])); //0.06859943405700354
 space();
 /*
  Jacques kept his journal for three months.
@@ -3091,54 +3492,54 @@ space();
  */
 
 // function to search an individual journal entry's 'event' property, for an instance of event.
-function hasEvent(event,entry)
+function hasEvent(string_event,object_journalEntry)
 {// returns index of the matching 'event' if found, or -1 if not found.
-    return entry.events.indexOf(event) != -1;
+    return object_journalEntry.property_events.indexOf(string_event) != -1;
 }
 
 //function to create the arrayNums-object, which contains 4 properties(--,-+,+-,++)
 //for use as the parameter of the phi coefficient function
 //To ascertain the the probability that the event causes
 // transformation "1.0" or counters the transformation "-1.0"
-function tableFor(event,journal)
+function tableFor(string_event,array_journal)
 {
     //declaring and initializing an arrayNums-object.
-    var table = [0,0,0,0];
+    var array_table = [0,0,0,0];
 
     // A loop to run through the Journal, which holds
     // 90 days of event and transformation information.
-    for (var i = 0; i < journal.length; i++)
+    for (var int_index = 0; int_index < array_journal.length; int_index++)
     {
         // to declare and initialize an object to store an individual Journal["day"]
-        var entry = journal[i];
+        var object_journalEntry = array_journal[int_index];
 
         //  int value-data-type, used as the marker to select
         // which of the table's property to increase by 1.
-        var index = 0;
+        var int_tableIndex = 0;
 
         // A branching statement that uses the event in question and a day
         // of the Journal's event entries as, arguments to the parameters.
-        if (hasEvent(event,entry))
+        if (hasEvent(string_event,object_journalEntry))
         {// if event is found, marker moves 1.
-            index += 1;
+            int_tableIndex += 1;
         }
         // if transformation is found, marker moves 2.
-        if (entry.squirrel)
-            index += 2;
+        if (object_journalEntry.property_reaction)
+            int_tableIndex += 2;
 
 // a    //For each loop iteration, a single tally mark is added to the Table property
         // with the same index as the marker("index")'s value.
-        table[index] += 1;
+        array_table[int_tableIndex] += 1;
     }
     // Once loop is complete the arrayNums-object named 'table'
     // is returned to the function call
-    return table;
+    return array_table;
 }
 
-console.log(tableFor("pizza",Journal)); // [ 76, 9, 4, 1 ]
+console.log(tableFor("pizza",array_allergyJournal)); //[ 76, 9, 4, 1 ]
 space();
 
-console.log(phi(tableFor("pizza",Journal))); // 0.06859943405700345
+console.log(phi(tableFor("pizza",array_allergyJournal))); //0.06859943405700345
 space();
 /*
  We now have the tools we need to compute individual correlations.
@@ -3207,7 +3608,7 @@ function gatherCorrelations(journal)
 
     for(var entry = 0; entry < journal.length; entry ++)
     {
-        var events = journal[entry].events;
+        var events = journal[entry].property_events;
 
         for (var i = 0; i < events.length; i++)
         {
@@ -3222,7 +3623,7 @@ function gatherCorrelations(journal)
     return phis;
 }
 
-var correlations = gatherCorrelations(Journal);
+var correlations = gatherCorrelations(array_allergyJournal);
 
 console.log(correlations.pizza);
 space();
@@ -3257,17 +3658,17 @@ space();
  Interesting. Let’s try something.
  */
 
-for(var i = 0; i < Journal.length; i++) {
-    var entry = Journal[i];
+for(var i = 0; i < array_allergyJournal.length; i++) {
+    var entry = array_allergyJournal[i];
 
     if (hasEvent("peanuts", entry) && !hasEvent("brushed teeth", entry))
-        entry.events.push("peanut teeth");
+        entry.property_events.push("peanut teeth");
 }
 space();
 console.log("-----------------------------------------------------");
 space();
 
-console.log(phi(tableFor("peanut teeth", Journal)));
+console.log(phi(tableFor("peanut teeth", array_allergyJournal)));
 space();
 /*
  More generally useful arrayNums methods.
@@ -3527,9 +3928,9 @@ space();
 
 AddJournalEntry(["work","gym","sleep"],false);
 
-function AddJournalEntry(events,transformation)
+function AddJournalEntry(array_events,boolean_reaction)
 {
-    Journal.push({events: events, squirrel: transformation} );
+    array_allergyJournal.push({property_events: array_events, property_reaction: boolean_reaction} );
 }
 
 
@@ -3546,15 +3947,15 @@ space();
  */
 AddEntryToJournal(false, "sleep", "beans", "running");
 
-function AddEntryToJournal(squirrel)
+function AddEntryToJournal(boolean_reaction)
 {
-    var entry = {events: [], squirrel: squirrel};
+    var object_journalEntry = {property_events: [], property_reaction: boolean_reaction};
 
-    for(var i = 1; i < arguments.length; i++)
+    for(var int_index = 1; int_index < arguments.length; int_index++)
     {
-        entry.events.push(arguments[i]);
+        object_journalEntry.property_events.push(arguments[int_index]);
     }
-    Journal.push(entry);
+    array_allergyJournal.push(object_journalEntry);
 }
 
 /*
