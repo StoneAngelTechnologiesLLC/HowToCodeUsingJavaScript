@@ -3483,116 +3483,158 @@ var array_allergyJournal =
         {"property_events":["bread","brushed teeth","television","weekend"],"property_reaction":false},
         {"property_events":["cauliflower","peanuts","brushed teeth","weekend"],"property_reaction":false}
 ];
+ //---------------------------------------------------------------------------------------------------------------------
+ /*
+ Correlation is a measure of dependence between variables
+ (“variables” in the statistical sense, not the JavaScript sense).
 
+ It is usually expressed as a 'coefficient' that can range from -1 to 1.
 
+ A correlation of 0(zero) means the variables are not related.
 
-/*
- Correlation is a measure of dependence between variables (“variables”
- in the statistical sense, not the JavaScript sense). It is usually expressed
- as a coefficient that ranges from -1 to 1.
+ Where as a correlation of 1(one) indicates that the
+ two variables are 'perfectly related'(if you know one, you also know the other).
 
- Zero correlation means the variables are not related, whereas a correlation of one indicates that the
- two are perfectly related—if you know one, you also know the other.
+ On the opposite end of the spectrum, a correlation of -1(Negative one) also means the variables are 'perfectly related'
+ However they are opposites(when one is true, the other is false).
 
- Negative one also means that the variables are perfectly related but that
- they are opposites—when one is true, the other is false.
+ For binary (0 = false/off and 1 = true/on) variables, the 'phi-coefficient' (φ) provides a good
+ measure of a correlation between variables.
 
- For binary (Boolean: 0 = false/off or 1 = true/on) variables, the phi coefficient (φ) provides a good
- measure of correlation and is relatively easy to compute.
+ To compute the 'phi-coefficient' φ, we need a table,
+ containing the number of times the various combinations of the two variables were observed.
+ (in our allergy-journal's case, 90(for each daily log-entry)
 
- To compute φ, we need a table n that contains the number of times the various
- combinations of the two variables were observed. For example, we could
- take the event of eating pizza and put that in a table like this:
+ We will use 'an event' and 'an allergic reaction' as our two variables.
 
- no pizza, no tran = 76
- no pizza, tran = 4
- pizza, no tran = 9
- pizza, tran = 1
+ For example, we could take the event 'pizza' and put that in a table like this:
 
- φ can be computed using the following formula, where var1 refers to the 1st value of a paired sign
- and var2 refers to the 2nd value of the pair. where values: + = true and - = false.
+ Total instances tracked(entries in journal) = 90 instances*
 
- table:
+ no pizza, no tran = 76 instances
+ no pizza, tran = 4 instances
+ pizza, no tran = 9 instances
+ pizza, tran = 1 instances
+ //----------------------------------------------------------------------------------------------------------------------
+
+ The 'phi-coefficient':
+
  φ = (++ * --) - (+- * -+) / srt(++ + +-) * (-- + -+) * ( ++ + -+) * (-- + +-)
 
+ Below is a function with the 'phi-coefficient' being operation within its body.
  */
-function phi(array_table)
-{
-    return (array_table[3] * array_table[0] - array_table[2] * array_table[1]) /
-        Math.sqrt((array_table[2] + array_table[3]) * (array_table[0] + array_table[1]) *
-                  (array_table[1] + array_table[3]) * (array_table[0] + array_table[2]));
-}
-//table[0] = var1(transformation) = false & var2(event) = false
-//table[1] = var1(transformation) = false & var2(event) = true
-//table[2] = var1(transformation) = true & var2(event) = false
-//table[3] = var1(transformation) = true & var2(event) = true
+ //function declaration, allowing an Array to pass through its parameter
+ function phi(array_table)
+ {
+     /*
+      The 'phi-coefficient' can be computed using the following formula:
 
-console.log(phi([76,9,4,1])); //0.06859943405700354
-space();
-/*
- Jacques kept his journal for three months.
- It is stored in the JOURNAL variable.
- To extract a two-by-two table for a specific event from this journal, we
- must loop over all the entries and tally up how many times the event
- occurs in relation to squirrel transformations.
- */
+      where variable-x refers to the 1st 'paired of signs' value
+      and variable-y refers to the 2nd value of the pair. where values: '+' equals true and '-' equals false
 
-// function to search an individual journal entry's 'event' property, for an instance of event.
-function hasEvent(string_event,object_journalEntry)
-{// returns index of the matching 'event' if found, or -1 if not found.
-    return object_journalEntry.property_events.indexOf(string_event) != -1;
-}
+      table:
+      array_table[0] = variable-x(allergic-reaction) is false & variable(event) is false --
+      array_table[1] = variable-x(allergic-reaction) is false & variable(event) is true  -+
+      array_table[2] = variable-x(allergic-reaction) is true & variable(event) is false  +-
+      array_table[3] = variable-x(allergic-reaction) is true & variable(event) is true   ++
+      */
+     //            ++               --               +-               -+        / =  divided by
+     return (array_table[3] * array_table[0] - array_table[2] * array_table[1]) /
+         //Object-property    +-               ++                 --               -+        * = multiplied by
+         Math.sqrt((array_table[2] + array_table[3]) * (array_table[0] + array_table[1]) *
+             //                   -+               ++                 --               +-
+             (array_table[1] + array_table[3]) * (array_table[0] + array_table[2]));
+ }
 
-//function to create the arrayNums-object, which contains 4 properties(--,-+,+-,++)
-//for use as the parameter of the phi coefficient function
-//To ascertain the the probability that the event causes
-// transformation "1.0" or counters the transformation "-1.0"
-function tableFor(string_event,array_journal)
-{
-    //declaring and initializing an arrayNums-object.
-    var array_table = [0,0,0,0];
+ //line calls the phi-function's return, to the console-window
+ //(using pizza's correlation-results to allergic-reaction as its argument)
+ //               -- -+ +- ++
+ console.log(phi([76, 9, 4, 1])); //0.06859943405700354
+ spacer();
+ /*
+  As previously stated, the journal holds 90 days of log-entries.
 
-    // A loop to run through the Journal, which holds
-    // 90 days of event and transformation information.
-    for (var int_index = 0; int_index < array_journal.length; int_index++)
-    {
-        // to declare and initialize an object to store an individual Journal["day"]
-        var object_journalEntry = array_journal[int_index];
+  It is stored in the array_allergyJournal-variable.
 
-        //  int value-data-type, used as the marker to select
-        // which of the table's property to increase by 1.
-        var int_tableIndex = 0;
+  To extract a two-by-two table for a specific event from this journal, we
+  must loop over all the entries and tally up how many times the event
+  occurs in relation to allergy-reaction.
+  */
 
-        // A branching statement that uses the event in question and a day
-        // of the Journal's event entries as, arguments to the parameters.
-        if (hasEvent(string_event,object_journalEntry))
-        {// if event is found, marker moves 1.
-            int_tableIndex += 1;
-        }
-        // if transformation is found, marker moves 2.
-        if (object_journalEntry.property_reaction)
-            int_tableIndex += 2;
+ //function to search an individual journal entry's 'event'-property(array), for an instance of 'event'(index of array)
+ function hasEvent(string_event,object_journalEntry)
+ {
+     //line returns the index-number of the 'event' in the object_journalEntry's 'event'-property(an array of 'events')
+     //matching this function's 'string_event'-argument, if found or -1 if not found.
+     return object_journalEntry.property_events.indexOf(string_event) != -1;
+ }
 
-// a    //For each loop iteration, a single tally mark is added to the Table property
-        // with the same index as the marker("index")'s value.
-        array_table[int_tableIndex] += 1;
-    }
-    // Once loop is complete the arrayNums-object named 'table'
-    // is returned to the function call
-    return array_table;
-}
+ //function to create the 'table'-array, which contains four indexes(Array-object properties)with values of (--,-+,+-,++)
 
-console.log(tableFor("pizza",array_allergyJournal)); //[ 76, 9, 4, 1 ]
-space();
+ //function's return is used as the argument for the 'phi coefficient'-function's parameter, to ascertain
+ //the probability that the event 'causes' allergic-reation(1.0) or 'counters' the allergic-reaction(-1.0)
 
-console.log(phi(tableFor("pizza",array_allergyJournal))); //0.06859943405700345
-space();
-/*
- We now have the tools we need to compute individual correlations.
- The only step remaining is to find a correlation for every type of event
- that was recorded and see whether anything stands out. But how should
- we store these correlations once we compute them?
- */
+
+ function tableFor(string_event,array_journal)
+ {
+     //declaring and initializing an Array-object.
+     var array_table = [0,0,0,0];
+
+     //A loop to run through the allergy-journal, which holds
+     //90 daily log-entries, of the events that had taken place that day and if an allergic-reaction occurred.
+     for (var int_index = 0; int_index < array_journal.length; int_index++)
+     {
+         //to declare and initialize an object, to store an individual log-entry["day"]
+         var object_journalEntry = array_journal[int_index];
+
+         //to declare an integer-valued data-type, used as the 'marker' to select
+         //which of the array_table's indexes to increase by 1.
+         var int_tableIndex = 0;
+
+         //branching statement that uses the 'hasEvent'-function we just created, passing the 'event' in question
+         //and a daily log-entry of the allergy-journal as arguments to its parameters
+
+         //conditional-statement executes if event is found(return from 'hasEvent'-function is not -1)
+         if (hasEvent(string_event,object_journalEntry))
+         {
+             // if event is found, marker moves from array_table[0] to array_table[1]
+             int_tableIndex += 1;
+         }
+
+         //conditional-statement executes if allergic-reaction is found(call to property returns true)
+         if (object_journalEntry.property_reaction)
+         {
+             // if event is found, marker moves from array_table[0] to array_table[2], when the previous if-statement
+             // DOES NOT execute before the program focus reaches this line
+
+             // if event is found, marker moves from array_table[1] to array_table[3], when the previous if-statement
+             // DOES execute before the program focus reaches this line
+
+             int_tableIndex += 2;
+         }
+
+         //for each loop iteration, a single tally mark is added to the index of the array_table,
+         //with the same value as the marker's value.
+         array_table[int_tableIndex] += 1;
+     }
+
+     // Once loop is complete the array-object named 'array_table'
+     // is returned to the function call
+     return array_table;
+ }
+
+
+ console.log(tableFor("pizza",array_allergyJournal)); //[ 76, 9, 4, 1 ]
+ space();
+
+ console.log(phi(tableFor("pizza",array_allergyJournal))); //0.06859943405700345
+ space();
+ /*
+  We now have the tools we need to compute individual correlations.
+  The only step remaining is to find a correlation for every type of event
+  that was recorded and see whether anything stands out. But how should
+  we store these correlations once we compute them?
+  */
 
 /*
                                 *** Objects as maps ***
@@ -4357,7 +4399,7 @@ function reverseArrayInPlace(array)
     for(var i = 0; i <= array.length;)
     {
         reverseArray.push(array.pop());
-        
+
         if(array.length == 0)
         {
             i++;
@@ -4589,23 +4631,23 @@ function range1(x,y)
     {
         var range = [];
 
-        if (x < y) 
+        if (x < y)
         {
-            while (x <= y) 
+            while (x <= y)
             {
                 range.push(x);
                 x += 1;
             }
         }
-        else if (x > y) 
+        else if (x > y)
         {
-            while (x >= y) 
+            while (x >= y)
             {
                 range.push(x);
                 x -= 1;
             }
         }
-        else 
+        else
         {
             range.push(0);
         }
@@ -4617,7 +4659,7 @@ function sum1(numbers)
     {
         var total = 0;
 
-        for (var i = 0; i < numbers.length; i++) 
+        for (var i = 0; i < numbers.length; i++)
         {
             total += numbers[i];
         }
@@ -4724,7 +4766,7 @@ function sum1(numbers)
      console.log on every element.
      */
 	logEach(array); // 123
-    
+
     function logEach(array)
     {
         for (var i = 0; i < array.length; i++)
@@ -4749,7 +4791,7 @@ function sum1(numbers)
     forEach(array, function(number){sum += number;});
 
     console.log(sum); // 6
-    
+
     function forEach(array_Input, function_Action)
     {
         for (var i = 0; i < array_Input.length; i++)
@@ -4784,11 +4826,11 @@ function sum1(numbers)
      previous chapter. It contains two arrayNums-traversing loops.
 
 
-    function gatherCorrelations(journal) 
+    function gatherCorrelations(journal)
     {
         var pastHistory = {};
 
-        for (var entry = 0; entry < journal.length; entry++) 
+        for (var entry = 0; entry < journal.length; entry++)
         {
             var events = journal[entry].events;
 
@@ -4796,7 +4838,7 @@ function sum1(numbers)
             {
                 var event = events[int_i];
 
-                if (!(event in pastHistory)) 
+                if (!(event in pastHistory))
                 {
                     pastHistory[event] = phi(tableFor(event, journal));
                 }
@@ -4814,11 +4856,11 @@ function sum1(numbers)
     {
         var pastHistory = {};
 
-        journal.forEach(function(entry) 
+        journal.forEach(function(entry)
         				{
-            				entry.events.forEach(function (event) 
+            				entry.events.forEach(function (event)
             				{
-                				if (!(event in pastHistory)) 
+                				if (!(event in pastHistory))
                 				{
                     				pastHistory[event] = phi(tableFor(event, journal));
                 				}
@@ -4952,7 +4994,7 @@ function sum1(numbers)
 
     //------------------------------------------------------------------------------------
 
-    
+
 // ! 0 is even
 // ! 2 is even
 
@@ -5010,9 +5052,9 @@ function sum1(numbers)
      the function with those arguments.
      */
 
-    function transparentWrapping(f) 
+    function transparentWrapping(f)
     {
-        return function () 
+        return function ()
         {
             return f.apply(null, arguments);
         };
@@ -5941,11 +5983,11 @@ spacer();
      */
     console.log(objectArray_Ancestors.reduce(function(oldestAncestor, currentAncestor)
     							   {
-        						       if(currentAncestor.born < oldestAncestor.born) 
+        						       if(currentAncestor.born < oldestAncestor.born)
         						       {
             						       return currentAncestor;
         							   }
-        							   else 
+        							   else
         							   {
             						       return oldestAncestor;
         							   }
@@ -6197,7 +6239,7 @@ spacer();
             {
                 return defaultValue;
             }
-            else 
+            else
             {
                 return relationalCalculationFunction(ancestor, relationalValueForMyAncestor(objectReferenceByName[ancestor.mother]), relationalValueForMyAncestor(objectReferenceByName[ancestor.father]));
             }
@@ -6219,7 +6261,7 @@ spacer();
             return 1;
         }
         else
-        { 
+        {
         	return (sharedDNAFromMother + sharedDNAFromFather) / 2;
         }
     }
@@ -6264,7 +6306,7 @@ spacer();
 
     function AncestorCount(objectAncestor, functionTest)
     {
-        function combine(current, fromMother, fromFather) 
+        function combine(current, fromMother, fromFather)
         {
             var thisOneCounts = current != objectAncestor && functionTest(current);
 
@@ -6352,7 +6394,7 @@ console.log(arrayOfNumberArrays.reduce(function(initialIndexValue, nextIndexValu
 
 										return initialIndexValue;
 									}));
-									
+
 spacer();
 /*
  Mother-child age difference:
@@ -7218,7 +7260,7 @@ spacer();
  This technique is called polymorphism—though no actual shape-shifting
  is involved. Polymorphic code can work with values of different shapes,
  as long as they support the interface it expects.
- 
+
  --------------------------------------------------------------------------------------------------
 
                             Exercise: Table Layout (Take your time analyzing this section)
