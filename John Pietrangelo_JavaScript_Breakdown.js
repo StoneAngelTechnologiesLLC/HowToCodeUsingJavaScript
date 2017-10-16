@@ -7,7 +7,6 @@ console.log('*******************************************************************
 space();
 
                    console.log("\t\t\t\t\t\t\t\t\t*** Values, Data-Types, and Operators ***\n");
-//                                                *** Values, Data-Types, and Operators ***
 console.log('********************************************************************************************************');
 space();
 /*
@@ -3244,7 +3243,7 @@ space();
 
  console.log('An array is an ' + typeof nums +'-type.'); //An array is an object-type.
  spacer();
-
+ //---------------------------------------------------------------------------------------------------------------------
  console.log('\'Mutability-Concept\' Returns:');
  space();
  /*
@@ -3323,7 +3322,10 @@ space();
   That 'Object' wil then be stored in the allergy-journal(Array-of-Objects).
   The following, is a sample representation of the 'allergy’-journal, as an Array-of-Objects.
   */
- console.log('Allergy-Journal Sample Returns:');
+ //---------------------------------------------------------------------------------------------------------------------
+
+ console.log('Sample Allergy-Journal Returns:\n');
+
  //declaring array(our journal) and initializing its 1st three index-values(days) to three objects(daily log-entries)
  var array_allergyJournalSample =
 
@@ -3361,7 +3363,7 @@ space();
 
  //line writes journal's entries to the console-window
  console.log(array_allergyJournalSample);
- space();
+ spacer();
   /*
   Instead of going into the above variable-declaration, holding our journal's data,
   and manually writing in a new log-entry every day.
@@ -3386,6 +3388,7 @@ space();
  //line writes journal's entries to the console-window
  console.log(array_allergyJournalSample);
  spacer();
+ //---------------------------------------------------------------------------------------------------------------------
 
  //declaring array(our official journal) and initializing its index-values(days) to objects(daily log-entries)
  var array_allergyJournal =
@@ -3484,8 +3487,9 @@ space();
          {"property_events":["bread","brushed teeth","television","weekend"],"property_reaction":false},
          {"property_events":["cauliflower","peanuts","brushed teeth","weekend"],"property_reaction":false}
  ];
-  //---------------------------------------------------------------------------------------------------------------------
-  /*
+ //---------------------------------------------------------------------------------------------------------------------
+ console.log('Official Allergy-Journal Returns:\n');
+ /*
   Correlation is a measure of dependence between variables
   (“variables” in the statistical sense, not the JavaScript sense).
 
@@ -3551,7 +3555,7 @@ space();
   //(using pizza's correlation-results to allergic-reaction as its argument)
   //               -- -+ +- ++
   console.log(phi([76, 9, 4, 1])); //0.06859943405700354
-  spacer();
+  space();
   /*
    As previously stated, the journal holds 90 days of log-entries.
 
@@ -3589,7 +3593,7 @@ space();
           //which of the array_allergyTable's indexes to increase by 1.
           var int_tableIndex = 0;
 
-          //branching statement that uses the 'hasEvent'-function we just created, passing the 'event' in question
+          //branching statements that uses the 'hasEvent'-function we just created, passing the 'event' in question
           //and a daily log-entry of the allergy-journal as arguments to its parameters
 
           //conditional-statement executes if event is found(return from 'hasEvent'-function is not -1)
@@ -3603,10 +3607,10 @@ space();
           if (object_journalEntry.property_reaction)
           {
               // if event is found, marker moves from array_allergyTable[0] to array_allergyTable[2],
-              // when the previous if-statement DOES NOT execute before the program focus reaches this line
+              // ***when the previous if-statement DOES NOT execute before the loop's focus reaches this line
 
               // if event is found, marker moves from array_allergyTable[1] to array_allergyTable[3],
-              // when the previous if-statement DOES execute before the program focus reaches this line
+              // ***when the previous if-statement DOES execute before the loop's focus reaches this line
               int_tableIndex += 2;
           }
 
@@ -3620,125 +3624,202 @@ space();
       return array_allergyTable;
   }
 
-  //line calls the phi-function's return, to the console-window
-  //(using pizza's correlation-results to allergic-reaction as its argument)
+  //line calls the allergyOutcomeTableFor-function's return, to the console-window
+  //(passing the string-'pizza' and the array_allergyJournal as its arguments)
+
   console.log(allergyOutcomeTableFor("pizza",array_allergyJournal)); //[ 76, 9, 4, 1 ]
   space();
 
+  //line calls the phi-function's return, to the console-window
+  //(passing the allergyOutcomeTableFor-function's return as its argument,
+  // which in turn is passing the string-'pizza' and the array_allergyJournal as its arguments)
+
   console.log(phi(allergyOutcomeTableFor("pizza",array_allergyJournal))); //0.06859943405700345
-  spacer();
   /*
    We now have the tools we need to compute individual correlations.
 
    The only step remaining is to find a correlation for every type of event that was recorded
    and see whether anything stands out.
 
-   But how should
-   we store these correlations once we compute them?
-   */
-
- /*
-                                 *** Objects as maps ***
-
-  One possible way is to store all the correlations in an arrayNums, using objects
-  with propertyName and value properties. But that makes looking up the correlation
-  for a given event somewhat cumbersome: you’d have to loop over the
-  whole arrayNums to find the object with the right propertyName. We could wrap this
-  lookup process in a function, but we would still be writing more code,
+   In the following section of this writing, you will be shown how to store these correlations once they are computed?
+  */
+ spacer();
+ console.log('\t\t\t\t\t\t\t\t\t*** Objects as maps ***');
+ console.log('********************************************************************************************************');
+ space();
+  /*
+  We could wrap this lookup process in a function, but we would be writing more code,
   and the computer would be doing more work than necessary.
-  A better way is to use object properties named after the event types.
-  We can use the square bracket access notation to create and read the
-  properties and can use the in operator to test whether a given property
-  exists.
+
+  A better way is to use object properties named after the event-types.
+
+  We can use the square-bracket'[]' access-notation to create and read the properties and can use the 'in' operator
+  to test whether a given property is present among the object's properties.
   */
 
- var map1 = {};
+ console.log('\'object_correlationMap Returns:\n');
 
- function storePhi(event,phi)
+ // declaring an empty object named,"object_correlationMap"
+ var object_correlationMap = {};
+
+ // declaring a function which takes in the 'event' and its 'correlation' to the allergic reaction as its parameters
+ function storeCorrelationInstance(string_event, double_coefficient)
  {
-   map1[event]= phi;
+  // line declares an 'object_correlationMap'-property, with the name held by the 'string_event'-argument and
+  // initializing its value to the 'double_coefficient'-argument
+   object_correlationMap[string_event] = double_coefficient;
  }
 
- storePhi("pizza", 0.069);
- storePhi("touched tree", -0.081);
+ // let's grab one more event and it's correlation to the allergic-reaction, for good measure, before testing the
+ // 'storeCorrelation'-function found directly above these comments
 
- console.log("pizza" in map);  // true
+ // line calls the allergyOutcomeTableFor-function's return, to the console-window
+ // (passing the string-'pizza' and the array_allergyJournal as its arguments)
+
+ console.log(allergyOutcomeTableFor("touched tree",array_allergyJournal)); //[ 76, 9, 5, 0 ]
  space();
 
- console.log(map["touched tree"]);  // -0.81
+ // line calls the phi-function's return, to the console-window
+ // (passing the allergyOutcomeTableFor-function's return as its argument,
+ //  which in turn is passing the string-'pizza' and the array_allergyJournal as its arguments)
+
+ console.log(phi(allergyOutcomeTableFor("touched tree",array_allergyJournal))); //-0.08084520834544433
+ spacer();
+
+ // line calls the storeCorrelation-function using the 'pizza'-event and its 'correlation'-value to the allergic
+ // reaction as its arguments
+ storeCorrelationInstance("pizza", 0.069);
+
+ // line calls the storeCorrelation-function using the 'touched tree'-event and its 'correlation'-value to the allergic
+ // reaction as its arguments
+ storeCorrelationInstance("touched tree", -0.081);
+
+ // using the 'in'-keyword to check it the 'property' named 'pizza' currenlty exsists in the 'object_correlationMap'
+ // and writing the result-return to the console-window
+ console.log("pizza" in object_correlationMap);  // true
  space();
+
+ // calling the object_correlationMap's 'touched tree'-property's value
+ // and writing the result-return to the console-window
+
+ console.log(object_correlationMap["touched tree"]);  // -0.81
+ spacer();
 
  /*
-  What if we want to find all the events for which we have stored a
-  coefficient? The properties don’t form a predictable series, like they
-  would in an arrayNums, so we cannot use a normal for loop. JavaScript
-  provides a loop construct specifically for going over the properties of
-  an object. It looks a little like a normal for loop but distinguishes itself
-  by the use of the word 'in'.
+  To find all the events for which we have stored a coefficient:
+
+  The properties don’t form a linear, numeric series of properties, like they
+  would in an Array, so we cannot use a normal 'for'-loop.
+
+  JavaScript provides a loop-construct specifically for going over the properties of object-types other than Array.
+
+  It looks a little like a normal for loop but distinguishes itself by the use of the 'in'-keyword.
   */
- for(var event in map1)
+
+ // 'for'-loop will execute on each enumerable-property by using the 'in'-keyword,
+ // which directs the loop-execution within the 'object_correlationMap'
+ for(var property_event in object_correlationMap)
  {
-     console.log("The correlation for '" + event + "' is " + map[event]);
+     // line write each return's 'event'-name and their held value to the console window
+     console.log("The correlation for '" + property_event + "' is " + object_correlationMap[property_event]);
  }
- space();
+ spacer();
 
+ console.log('The Final Analysis: \'All Events and Their Corresponding Allergy-reaction\'\n');
  /*
-  The final analysis
-  To find all the types of events that are present in the data set, we simply
-  process each entry in turn and then loop over the events in that entry.
-  We keep an object phis that has correlation coefficients for all the event
-  types we have seen so far. Whenever we run across a type that isn’t in
-  the phis object yet, we compute its correlation and add it to the object.
+  The Final Analysis:
+
+  To find all the event-types that are present in the data set, we simply
+  process each entry in linear-order, looping over the all the events in that entry.
+
+  We keep an object named, 'object_EventToAllergyCorrelations' that will store the correlation coefficients for all the
+  event-types we have seen so far.
+
+  Whenever we run across an event-type that isn’t currently in the 'object_EventToAllergyCorrelations' a
+  'function' will compute its correlation-coefficient and add it to the object as a property value.
   */
 
- function gatherCorrelations(journal)
+ // declaring a function to store correlations between the Events and the allergy-reaction, with a parameter that
+ // accepts an 'Array' to pass through its parameter
+ function storeCorrelations(array_journal)
  {
-     var phis = {};
+     // declaring an empty object, named object_allergyCorrelation
+     var object_allergyCorrelation = {};
 
-     for(var entry = 0; entry < journal.length; entry ++)
+     // for-loop will execute each time the loop's 'int_index'-value is less than the array_journal's length
+     // (remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
+     // the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+     for(var int_outerIndex = 0; int_outerIndex < array_journal.length; int_outerIndex ++)
      {
-         var events = journal[entry].property_events;
+         // declaring an array and initializing its value to the 'property_events'-value, of the array_journal
+         // entry-number which matches the loop's int_index-value
+         var array_events = array_journal[int_outerIndex].property_events;
 
-         for (var i = 0; i < events.length; i++)
+         // for-loop will execute each time the loop's 'int_index'-value is less than the array_events's length
+         // (remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
+         // the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration
+         // completes.
+         for (var int_innerIndex = 0; int_innerIndex < array_events.length; int_innerIndex++)
          {
-             var event = events[i];
 
-             if (!(event in phis))
+             // declaring a string and initializing its value to the 'array_events' index-value matching the loop's
+             // int_index-value
+             var string_event = array_events[int_innerIndex];
+
+             // declaring a if-conditional statement that prevents multiple logs
+             // of the same, paired 'event-allergy'-correlation.
+             // the exclamation-mark is used as a 'not'-operator to the preceding expression, which is using the
+             // 'in'-keyword to search for the 'string_event'-argument in the current
+             // object_allergyCorrelation.properties
+             if (!(string_event in object_allergyCorrelation))
              {
-                 phis[event] = phi(allergyOutcomeTableFor(event, journal));
+                 // line declares a property with the name of the string_event's held-value and initializes the
+                 // properties held-value to the phi-function's return, while passing the 'sting_event' and the
+                 // 'array_journal' as its arguments
+                 object_allergyCorrelation[string_event] = phi(allergyOutcomeTableFor(string_event, array_journal));
              }
-         }
-     }
-     return phis;
+
+         }// end of inner-loop
+
+     }// end of outer-loop
+
+     // line returns object_allergyCorrelation's held-value to the function's caller
+     return object_allergyCorrelation;
  }
 
- var correlations = gatherCorrelations(array_allergyJournal);
 
- console.log(correlations.pizza);
- space();
+ // declaring a variable and initializing its held-value to the 'storeCorrelations'-function's return, which is
+ // passing the 'array_allergyJournal' as its argument
+ var object_allergyCorrelationMap = storeCorrelations(array_allergyJournal);
 
- for(var event in correlations)
-     console.log(event + ": " + correlations[event]);
+ // 'for'-loop will execute on each enumerable-property by using the 'in'-keyword,
+ // which directs the loop-execution within the 'object_allergyCorrelationMap'
+ for(var property_event in object_allergyCorrelationMap)
+ {
+     console.log(property_event + ": " + object_allergyCorrelationMap[property_event]);
+ }
 
+
+ spacer();
 
  /*
-  Most correlations seem to lie close to zero. Eating carrots, bread, or
-  pudding apparently does not trigger squirrel-lycanthropy. It does seem
-  to occur somewhat more often on weekends, however. Let’s filter the
-  results to show only correlations greater than 0.1 or less than -0.1.
-  */
- space();
- console.log("-----------------------------------------------------");
- space();
+  Most correlations seem to lie close to zero. Eating carrots, bread, or pudding apparently does not trigger
+  an allergic-reaction.
 
- for(var event in correlations)
+  However, the reaction does seem to occur more often on weekends.
+
+  Below, a 'for'-loop will be used to filter the results to show only correlations greater than 0.1 or less than -0.1.
+  */
+
+ for(var event in object_allergyCorrelationMap)
  {
-     var correlation = correlations[event];
+     var correlation = object_allergyCorrelationMap[event];
 
      if(correlation > 0.1 || correlation < -0.1)
          console.log(event + ": " + correlation);
  }
- space();
+
+ spacer();
  /*
   A-ha! There are two factors whose correlation is clearly stronger than
   the others. Eating peanuts has a strong positive effect on the chance
@@ -3747,18 +3828,17 @@ space();
   Interesting. Let’s try something.
   */
 
+
  for(var i = 0; i < array_allergyJournal.length; i++) {
      var entry = array_allergyJournal[i];
 
      if (hasEvent("peanuts", entry) && !hasEvent("brushed teeth", entry))
          entry.property_events.push("peanut teeth");
  }
- space();
- console.log("-----------------------------------------------------");
- space();
+ spacer();
 
  console.log(phi(allergyOutcomeTableFor("peanut teeth", array_allergyJournal)));
- space();
+ spacer();
  /*
   More generally useful arrayNums methods.
   We saw push and pop, which add and remove elements at the end of
@@ -7018,7 +7098,7 @@ space();
 
  Object.prototype.visiblePropertyInAllObjects = "An added property to the root-object prototype";
 
- for(var propertyName in map1)
+ for(var propertyName in object_correlationMap)
  {
      console.log(propertyName);
  }
@@ -7056,7 +7136,7 @@ space();
   */
  delete Object.prototype.visiblePropertyInAllObjects;
 
- console.log(map1.visiblePropertyInAllObjects); // undefined
+ console.log(object_correlationMap.visiblePropertyInAllObjects); // undefined
  space();
 
  console.log(Human.prototype.visiblePropertyInAllObjects); // undefined
@@ -7097,7 +7177,7 @@ space();
          value: "An added, hidden-property to the Human-object prototype."
      });
 
- for(var propertyName in map1)
+ for(var propertyName in object_correlationMap)
  {
      console.log(propertyName);
  }
@@ -7119,19 +7199,19 @@ space();
   fight
   */
 
- console.log("hiddenPropertyInAbsolutelyAllObjects" in map1); // true
+ console.log("hiddenPropertyInAbsolutelyAllObjects" in object_correlationMap); // true
  space();
 
  console.log("hiddenPropertyInAbsolutelyAllObjects" in objectGoodHuman); // true
  space();
 
- console.log("hiddenPropertyInOnlyAllHumanObjects" in map1); // false
+ console.log("hiddenPropertyInOnlyAllHumanObjects" in object_correlationMap); // false
  space();
 
  console.log("hiddenPropertyInOnlyAllHumanObjects" in objectGoodHuman); // true
  space();
 
- console.log(map1.hiddenPropertyInAbsolutelyAllObjects); // An added, hidden-property to the root-object prototype.
+ console.log(object_correlationMap.hiddenPropertyInAbsolutelyAllObjects); // An added, hidden-property to the root-object prototype.
  space();
 
  console.log(Object.prototype.hiddenPropertyInAbsolutelyAllObjects); // An added, hidden-property to the root-object prototype.
@@ -7140,7 +7220,7 @@ space();
  console.log(Human.prototype.hiddenPropertyInAbsolutelyAllObjects); // An added, hidden-property to the root-object prototype.
  spacer();
 
- console.log(map1.hiddenPropertyInOnlyAllHumanObjects); // undefined
+ console.log(object_correlationMap.hiddenPropertyInOnlyAllHumanObjects); // undefined
  space();
 
  console.log(Object.prototype.hiddenPropertyInOnlyAllHumanObjects); // undefined
@@ -7158,10 +7238,10 @@ space();
   For that, we can use the object’s hasOwnProperty method.
   */
 
- console.log(map1.hasOwnProperty("hiddenPropertyInAbsolutelyAllObjects")); // false
+ console.log(object_correlationMap.hasOwnProperty("hiddenPropertyInAbsolutelyAllObjects")); // false
  space();
 
- console.log(map1.hasOwnProperty("toString")); // false
+ console.log(object_correlationMap.hasOwnProperty("toString")); // false
  space();
 
  console.log(Object.prototype.hasOwnProperty("hiddenPropertyInAbsolutelyAllObjects")); // true
@@ -7196,9 +7276,9 @@ space();
   I recommend you write for/in loops like this:
   */
 
- for(var propertyName in map1)
+ for(var propertyName in object_correlationMap)
  {
-     if(map1.hasOwnProperty(propertyName))
+     if(object_correlationMap.hasOwnProperty(propertyName))
      {
          console.log(propertyName);
      }
@@ -7227,14 +7307,14 @@ space();
   For objects like map1, where the properties could be anything, this is exactly what we want.
   */
 
- map1 = Object.create(null);
+ object_correlationMap = Object.create(null);
 
- map1["sleeping"] = 0.099;
+ object_correlationMap["sleeping"] = 0.099;
 
- console.log("sleeping" in map1); // true
+ console.log("sleeping" in object_correlationMap); // true
  space();
 
- console.log("toString" in map1); // false
+ console.log("toString" in object_correlationMap); // false
  spacer();
 
  /*
@@ -8840,4 +8920,3 @@ space();
 
      space();
  };
- 
