@@ -3574,36 +3574,36 @@ space();
       return object_journalEntry.property_events.indexOf(string_event) != -1;
   }
 
-  //function to create the 'table'-array, which contains four indexes(place-holders for the outcomes of(--,-+,+-,++))
-  //the function's return is used as the argument for the 'phi coefficient'-function's parameter, to ascertain
-  //the probability that the event 'causes' allergic-reaction(1.0) or 'counters' the allergic-reaction(-1.0)
+  // function to create the 'table'-array, which contains four indexes(place-holders for the outcomes of(--,-+,+-,++))
+  // the function's return is used as the argument for the 'phi coefficient'-function's parameter, to ascertain
+  // the probability that the event 'causes' allergic-reaction(1.0) or 'counters' the allergic-reaction(-1.0)
   function allergyOutcomeTableFor(string_event, array_journal)
   {
-      //declaring and initializing an Array-object.
+      // declaring and initializing an Array-object.
       var array_allergyTable = [0,0,0,0];
 
-      //A loop to run through the allergy-journal, which holds
-      //90 daily log-entries, of the events that had taken place that day and if an allergic-reaction occurred.
+      // A loop to run through the allergy-journal, which holds 90 daily log-entries, of the events that had taken
+      // place each day and if an allergic-reaction occurred(true or false)
       for (var int_index = 0; int_index < array_journal.length; int_index++)
       {
-          //to declare and initialize an object, to store an individual log-entry["day"]
+          // to declare and initialize an object, to store an individual log-entry["day"]
           var object_journalEntry = array_journal[int_index];
 
-          //to declare an integer-valued data-type, used as the 'marker' to select
-          //which of the array_allergyTable's indexes to increase by 1.
+          // to declare an integer-valued data-type, used as the 'marker' to select
+          // which of the array_allergyTable's indexes to increase by 1.
           var int_tableIndex = 0;
 
-          //branching statements that uses the 'hasEvent'-function we just created, passing the 'event' in question
-          //and a daily log-entry of the allergy-journal as arguments to its parameters
+          // branching statements that uses the 'hasEvent'-function we just created, passing the 'event' in question
+          // and a daily log-entry of the allergy-journal as arguments to its parameters
 
-          //conditional-statement executes if event is found(return from 'hasEvent'-function is not -1)
+          // conditional-statement executes if event is found(return from 'hasEvent'-function is not -1)
           if (hasEvent(string_event,object_journalEntry))
           {
               // if event is found, marker moves from array_allergyTable[0] to array_allergyTable[1]
               int_tableIndex += 1;
           }
 
-          //conditional-statement executes if allergic-reaction is found(call to property returns true)
+          // conditional-statement executes if allergic-reaction is found(call to property returns true)
           if (object_journalEntry.property_reaction)
           {
               // if event is found, marker moves from array_allergyTable[0] to array_allergyTable[2],
@@ -3614,8 +3614,8 @@ space();
               int_tableIndex += 2;
           }
 
-          //for each loop iteration, a single tally mark is added to the index of the array_allergyTable,
-          //with the same value as the marker's value.
+          // for each loop iteration, a single tally mark is added to the index of the array_allergyTable,
+          // with the same value as the marker's value.
           array_allergyTable[int_tableIndex] += 1;
       }
 
@@ -3624,14 +3624,14 @@ space();
       return array_allergyTable;
   }
 
-  //line calls the allergyOutcomeTableFor-function's return, to the console-window
-  //(passing the string-'pizza' and the array_allergyJournal as its arguments)
+  // line calls the allergyOutcomeTableFor-function's return, to the console-window
+  // (passing the string-'pizza' and the array_allergyJournal as its arguments)
 
   console.log(allergyOutcomeTableFor("pizza",array_allergyJournal)); //[ 76, 9, 4, 1 ]
   space();
 
-  //line calls the phi-function's return, to the console-window
-  //(passing the allergyOutcomeTableFor-function's return as its argument,
+  // line calls the phi-function's return, to the console-window
+  // (passing the allergyOutcomeTableFor-function's return as its argument,
   // which in turn is passing the string-'pizza' and the array_allergyJournal as its arguments)
 
   console.log(phi(allergyOutcomeTableFor("pizza",array_allergyJournal))); //0.06859943405700345
@@ -3681,7 +3681,7 @@ space();
 
  // line calls the phi-function's return, to the console-window
  // (passing the allergyOutcomeTableFor-function's return as its argument,
- //  which in turn is passing the string-'pizza' and the array_allergyJournal as its arguments)
+ // which in turn is passing the string-'pizza' and the array_allergyJournal as its arguments)
 
  console.log(phi(allergyOutcomeTableFor("touched tree",array_allergyJournal))); //-0.08084520834544433
  spacer();
@@ -3694,8 +3694,9 @@ space();
  // reaction as its arguments
  storeCorrelationInstance("touched tree", -0.081);
 
- // using the 'in'-keyword to check it the 'property' named 'pizza' currenlty exsists in the 'object_correlationMap'
+ // using the 'in'-keyword to check it the 'property' named 'pizza' currently exists in the 'object_correlationMap'
  // and writing the result-return to the console-window
+
  console.log("pizza" in object_correlationMap);  // true
  space();
 
@@ -3739,7 +3740,7 @@ space();
   'function' will compute its correlation-coefficient and add it to the object as a property value.
   */
 
- // declaring a function to store correlations between the Events and the allergy-reaction, with a parameter that
+ // declaring a function to store correlations between the 'events' and the 'allergy-reaction', with a parameter that
  // accepts an 'Array' to pass through its parameter
  function storeCorrelations(array_journal)
  {
@@ -3796,169 +3797,299 @@ space();
  // which directs the loop-execution within the 'object_allergyCorrelationMap'
  for(var property_event in object_allergyCorrelationMap)
  {
+     // line writes return's 'property_event'-name and its held value to the console window
      console.log(property_event + ": " + object_allergyCorrelationMap[property_event]);
  }
-
-
  spacer();
-
+ //---------------------------------------------------------------------------------------------------------------------
  /*
-  Most correlations seem to lie close to zero. Eating carrots, bread, or pudding apparently does not trigger
-  an allergic-reaction.
+  Most event-coefficients held in the 'object_allergyCorrelationMap' seem to lie close to zero.
 
-  However, the reaction does seem to occur more often on weekends.
+  Eating carrots(0.014), bread(-0.075), or pudding(-0.068) apparently do not trigger an allergic-reaction.
 
-  Below, a 'for'-loop will be used to filter the results to show only correlations greater than 0.1 or less than -0.1.
+  However, the reaction does seem to occur more often on weekends(0.137)-ten times stronger than carrots.
+
+  Below, a 'for'-loop will be used to filter the results, to return only correlation-coefficients
+
+  which are greater than 0.1 or less than -0.1:
   */
 
- for(var event in object_allergyCorrelationMap)
+ // 'for'-loop will execute on each enumerable-property in an object by using the 'in'-keyword,
+ // which directs the loop-execution to within the 'object_allergyCorrelationMap'
+ for(var property_event in object_allergyCorrelationMap)
  {
-     var correlation = object_allergyCorrelationMap[event];
+     // declares a variable named,'double_correlationCoefficient' and initializes its value, to the value held by the
+     // 'object_allergyCorrelationMap'-property-name, currently held in the loop-iteration's 'property_event'-variable
+     var double_correlationCoefficient = object_allergyCorrelationMap[property_event];
 
-     if(correlation > 0.1 || correlation < -0.1)
-         console.log(event + ": " + correlation);
+     // 'if'-statement executes when the coefficient is greater than(>) 0.1 or(||) less than(<) -0.1
+     if(double_correlationCoefficient > 0.1 || double_correlationCoefficient < -0.1)
+     {
+         // line writes 'property_event'-name and their held value, stored within the 'double_correlationCoefficient',
+         // to the console window
+         console.log(property_event + ": " + double_correlationCoefficient);
+     }
+ }// end of 'for'-loop
+
+ spacer();
+ //---------------------------------------------------------------------------------------------------------------------
+ /*
+  There are two factors whose correlations are clearly stronger than the rest.
+
+  Eating peanuts(0.59), has a strong positive effect on the chance of having an allergic-reaction and
+  brushing teeth(-0.38), has a significant negative effect(antidote).
+
+  The following code will add a new 'property_Event' named 'peanut teeth'(using the Array.push()-method) to
+  each of the journal's daily-log-entries that hold the event named 'peanuts' but does not hold the event named,
+  'brushed-teeth'(using the hasEvent()-function), in its 'property_event'-property(array)
+  */
+
+ // A loop to run through the allergy-journal, which holds 90 daily log-entries, of the events that had taken place
+ // each day and if an allergic-reaction occurred(true or false)
+ for(var int_index = 0; int_index < array_allergyJournal.length; int_index++)
+ {
+     // to declare and initialize an object, to store an individual log-entry["day"]
+     var object_journalEntry = array_allergyJournal[int_index];
+
+     // 'if'-statement executes when the 'object_journalEntry' Has 'peanuts' but Dose not(!) have 'brushed teeth'
+     // in its 'property_events'(array) by using the 'hasEvent()'-function and passing the event and journal through its
+     // parameters, as arguments
+
+     if (hasEvent("peanuts", object_journalEntry) && !hasEvent("brushed teeth", object_journalEntry))
+     {
+         // both lines append an event to the 'object_journalEntry's 'property_events'(array)
+
+         // because both the 'object_journalEntry'-variable and the loop's iteration-value of
+         // 'array_allergyJournal[int_index]'-variable are linked to the same memory-space(bits of data),
+         // changing either object will effect both
+
+         // To demonstrate this concept, both lines below are adding the Array.push()-methods's argument
+         // ("peanuts in teeth" and "same event as peanuts in teeth") to the same daily log-entry of the allergy-journal
+
+         object_journalEntry.property_events.push("peanuts in teeth");
+
+         array_allergyJournal[int_index].property_events.push("same event as peanuts in teeth");
+     }
  }
-
  spacer();
- /*
-  A-ha! There are two factors whose correlation is clearly stronger than
-  the others. Eating peanuts has a strong positive effect on the chance
-  of turning into a squirrel, whereas brushing his teeth has a significant
-  negative effect.
-  Interesting. Let’s try something.
-  */
+ //---------------------------------------------------------------------------------------------------------------------
 
+ //line writes the returned correlation-coefficient produced by the 'phi()'-function, using the table(array) returned by
+ //the 'allergyOutcomeTableFor()'-function, which uses the arguments of the 'peanuts in teeth'-event and the
+ //'array_allergyJournal'-(array-of-objects), as its parameter's arguments
 
- for(var i = 0; i < array_allergyJournal.length; i++) {
-     var entry = array_allergyJournal[i];
+ console.log(phi(allergyOutcomeTableFor("peanuts in teeth", array_allergyJournal))); // 1.0
+ space();
 
-     if (hasEvent("peanuts", entry) && !hasEvent("brushed teeth", entry))
-         entry.property_events.push("peanut teeth");
- }
+ //line writes the returned correlation-coefficient produced by the 'phi()'-function, using the table(array) returned by
+ //the 'allergyOutcomeTableFor()'-function, which uses the arguments of the 'same event as peanuts in teeth'-event and
+ // the 'array_allergyJournal'-(array-of-objects), as its parameter's arguments
+
+ console.log(phi(allergyOutcomeTableFor("same event as peanuts in teeth", array_allergyJournal))); // 1.0
  spacer();
 
- console.log(phi(allergyOutcomeTableFor("peanut teeth", array_allergyJournal)));
+ //There you have it the returned correlation-coefficient, the allergic-reaction occurs precisely when the person
+ //we are keeping a journal of, eats peanuts and fails to brush his teeth.
+
+ //---------------------------------------------------------------------------------------------------------------------
+
  spacer();
+ console.log('\t\t\t\t\t\t\t\t\t*** More Generally Useful \'Array-Methods\' ***');
+ console.log('********************************************************************************************************');
+ space();
  /*
-  More generally useful arrayNums methods.
-  We saw push and pop, which add and remove elements at the end of
-  an arrayNums, earlier in this chapter. The corresponding methods for adding
-  and removing things at the start of an arrayNums are called unshift and shift.
+  We saw the push()-method and pop()-method, which added and removed elements at the 'end' of
+  an Array in a earlier section, within this JavaScript Breakdown.
+
+  The corresponding methods for adding and removing elements at the 'beginning' of an Array are the unshift()-method
+  and the shift()-method'.
+
+  Array.push() adds to the ending of an Array
+  Array.unshift() adds to the beginning of an Array
+
+  Array.pop() removes and returns the ending of an Array
+  Array.shift() removes and returns the beginning of an Array
+
+  We will use these methods in the example below, to add and remove 'tasks' from a to-do list, held by an Array
   */
- /*
- push adds to top
- unshift adds to bottom
- pop takes from top
- shift takes from bottom
-  */
+ console.log('push, pop, unshift, shift Method Returns:\n');
+
+ // declares an array named 'toDoList' and initializing its value to 'empty'
  var toDoList = [];
 
- RememberToDo("brush teeth");
- RememberToDo("shower");
- RememberToDo("eat");
-
-
-
- console.log(WhatIsNext()); // brush teeth
- space();
-
- console.log(WhatIsNext()); // shower
- space();
-
- UrgentToDo("Call Z");
-
- console.log(WhatIsNext()); // Call Z (Not: eat)
- space();
-
- function WhatIsNext()
+// declaring a function with a parameter, which takes a 'task' as its argument
+ function  rememberToDo(string_task)
  {
+     // the Array.push()-method adds the task to the bottom(last-index) of the to-do list(array)
+     toDoList.push(string_task);
+ }
+
+ // three lines calling the 'rememberToDo()'-function holding three different tasks,'brush teeth','shower' and 'eat', as
+ // arguments to the function's parameter
+
+ rememberToDo("brush teeth"); // stored in the Array's 1st index
+ rememberToDo("shower");      // stored in the Array's 2nd index
+ rememberToDo("eat");         // stored in the Array's 3rd index
+
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declaring a function with no parameter
+ function whatIsNext()
+ {
+     // the Array.shift()-method removes and returns the task from the top(1st index) of the to-do list(array)
      return toDoList.shift();
  }
 
- function  RememberToDo(task)
- {
-     toDoList.push(task);
- }
+ // line removes the value held in the 1st Array-index and returns it to the call to the console-window
 
- function UrgentToDo(task)
+ console.log(whatIsNext()); // brush teeth
+ space();
+
+ // line removes the value held in the 1st Array-index and returns it to the call to the console-window
+
+ console.log(whatIsNext()); // shower
+ space();
+
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declaring a function with a parameter, which takes a 'task' as its argument
+ function urgentToDo(task)
  {
+     // adds the task to the top(1st index) of the to-do list(array)
      toDoList.unshift(task);
  }
 
+ // line calls the 'urgentToDo()'-function holding the task,'Call Z' as argument to the function's parameter
+ urgentToDo("Call Z");
+
+ // line removes the value held in the 1st Array-index and returns it to the call to the console-window
+
+ console.log(whatIsNext()); // Call Z (Not, 'eat')
+ spacer();
 
  /*
-  The previous program manages lists of tasks. You add tasks to the
-  end of the list by calling rememberTo("eat"), and when you’re ready to do
-  something, you call whatIsNext() to get (and remove) the front item from
-  the list. The urgentlyRememberTo function also adds a task but adds it to
-  the front instead of the back of the list.
+  The previous program managed a list of tasks.
+
+  It added tasks to the end of the list(array) by calling 'rememberTo()'-function, and when the next task was called for
+  it calls the 'whatIsNext()'-function to 'remove' and 'return' the front index-value from
+  the list.
+
+  The urgentlyToDo()-function also adds a task but adds it to the front instead of the back of the list.
   */
+  //--------------------------------------------------------------------------------------------------------------------
+ console.log('indexOf, lastIndexOf, slice, concat Method Returns:\n');
 
  /*
-  The indexOf method has a sibling called lastIndexOf, which starts searching
-  for the given element at the end of the arrayNums instead of the front.
+  The Array.indexOf()-method has a siblings called Array.lastIndexOf(), which starts searching
+  for a given element from the end of the Array instead of from the beginning.
 
-  Both indexOf and lastIndexOf take an optional second argument that indicates
+  Both Array.indexOf() and Array.lastIndexOf() take an 'optional' second-argument that indicates
   where to start searching from.
   */
 
- var words = ["the","cat","in","the","hat"];
- var numbers = [9,8,9,6,9];
+ // declaring an Array-variable and initializing its value to five strings
+ var array_words = ["the","cat","in","the","hat"];
 
+ // declaring an Array-variable and initializing its value to five integers
+ var array_numbers = [9,8,9,6,9];
 
- console.log(words.indexOf("dog")); // -1
+ // using Array.indexOf()-method on the array_words, to return the index-number which holds the value 'dog'
+ // the call to the method returns '-1' to the console-window because the value 'dog' is not found
+
+ console.log(array_words.indexOf("dog")); // -1
  space();
 
- console.log(words.indexOf("the")); // 0
+ // using Array.indexOf()-method on the array_words, to return the 1st index-number which holds the value 'the',
+ // starting search from the beginning of the array
+
+ // the call to the method returns '0' to the console-window because the value 'the' is found in 'array_words[0]'
+
+ console.log(array_words.indexOf("the")); // 0
  space();
 
- console.log(words.lastIndexOf("the")); // 3
+ // using Array.lastIndexOf()-method on the array_words, to return the last index-number which holds the value 'the',
+ // starting search from the from the end of the array
+
+ // the call to the method returns '3' to the console-window because the value 'the' is found in 'array_words[3]'
+
+ console.log(array_words.lastIndexOf("the")); // 3
  space();
 
- console.log(numbers.indexOf(9)); // 0
+ // using Array.indexOf()-method on the array_numbers, to return the 1st index-number which holds the value '9',
+ // starting search from the beginning of the array
+
+ // the call to the method returns '0' to the console-window because the value 'the' is found in 'array_numbers[0]'
+
+ console.log(array_numbers.indexOf(9)); // 0
  space();
 
- console.log(numbers.indexOf(9,1)); // searching from index 1: // 2
+ // using Array.indexOf()-method on the array_numbers while utilizing the optional-parameter, passing the value '1'
+ // as its argument, this will return the 1st index-number which holds the value '9', starting the search from the
+ // 'array_numbers[1](2nd index-number) of the array
+
+ // the call to the method returns '2' to the console-window because the value 'the' is found in 'array_numbers[2]'
+
+ console.log(array_numbers.indexOf(9,1));  // 2  <- result produced by searching from index-1 instead of index-0
  space();
 
- console.log(numbers.lastIndexOf(9)); // 4
+ // using Array.lastIndexOf()-method on the array_numbers, to return the last index-number which holds the value '9',
+ // starting search from the from the end of the array
+
+ // the call to the method returns '4' to the console-window because the value 'the' is found in 'array_numbers[4]'
+ console.log(array_numbers.lastIndexOf(9)); // 4
  space();
  /*
-  Another fundamental method is slice, which takes a start index and
-  an end index and returns an arrayNums that has only the elements between
-  those indices. The start index is inclusive, the end index exclusive.
+  Another fundamental method is Array.slice(), which takes a 'start'-index and an 'end'-index and returns an Array that
+  has only the elements between those indices.
 
-  When the end index is not given, slice will take all of the elements after
-  the start index. Strings also have a slice method, which has a similar
-  effect.
+  The 'start-index' is inclusive(part of the return), the end index exclusive(not part of the return).
+
+  When the 'end-index' is not given, the Array.slice()-method will return the 'start index' and all of the elements
+  following after.
+
+  Strings have a String.slice()-method, which has a similar effect.
   */
 
- numbers = [5,6,7,8,9,10];
+ // initializing Array-variable to the value of, six integers
+ array_numbers = [5,6,7,8,9,10];
 
- console.log(numbers.slice(1,3)); // [ 6, 7 ]
+ // calling the array_number's Array.slice()-method with the number-1 as its 1st argument('start-index') and the
+ // number-3 as its 2nd argument('end-index'), returning the Array's index[1] and index[2] vales to the console-window
+
+ console.log(array_numbers.slice(1,3)); // [ 6, 7 ]
  space();
 
- console.log(numbers.slice(2)); // [ 7, 8, 9, 10 ]
+ // calling the array_number's Array.slice()-method with the number-2 as its only argument('start-index'),
+ // returning the Array's index[2] through the end index[5] vales to the console-window
+ console.log(array_numbers.slice(2)); // [ 7, 8, 9, 10 ]
  space();
  /*
-  The concat method can be used to glue arrays together, similar to what
-  the + operator does for strings. The following example shows both concat
-  and slice in action. It takes an arrayNums and an index, and it returns a new
-  arrayNums that is a copy of the original arrayNums with the element at the given
-  index removed.
+  The Array.concat()-method can be used to link arrays together, similar to what the '+'-operator does for Strings.
+
+  The following example shows both Array.concat()-method and the Array.slice()-method in action.
+
+  It takes an Array and an index-number as its parameter's arguments, and it returns a new
+  Array that is a 'copy' of the original Array with the element at the given index removed.
   */
- var sentenceArray = ["Is this","the very","last","first","time?"];
 
- console.log(Remove(sentenceArray,2)); // [ 'Is this', 'the very', 'first', 'time?' ]
- space();
+ // declaring an Array and initializing its value to, five sentence-fragments
+ var array_sentenceFragments = ["Is this","the very","last","first","time?"];
 
- console.log(Remove(sentenceArray,3)); // [ 'Is this', 'the very', 'last', 'time?' ]
- space();
-
- function  Remove(array,index)
+ // declaring a function which takes an Array and and Array's index-number as arguments to its parameter
+ function  Remove(array_strings,int_index)
  {
-    return array.slice(0, index).concat(array.slice(index + 1));
+
+     return array_strings.slice(0, int_index).concat(array_strings.slice(int_index + 1));
  }
+ //sentence
+
+ console.log(Remove(array_sentenceFragments,2)); // [ 'Is this', 'the very', 'first', 'time?' ]
+ space();
+
+ console.log(Remove(array_sentenceFragments,3)); // [ 'Is this', 'the very', 'last', 'time?' ]
+ space();
+
+
  /*
                          Strings and their properties
   We can read properties like length and toUpperCase from string values. But
@@ -4078,7 +4209,7 @@ space();
   arrayNums. But this object, unfortunately, does not have any arrayNums methods
   (like slice or indexOf), so it is a little harder to use than a real arrayNums.
   */
- ArgumentCounter("Alpha", 2, NoArguments(), alphaString, sentenceArray );
+ ArgumentCounter("Alpha", 2, NoArguments(), alphaString, array_sentenceFragments );
 
  function  ArgumentCounter()
  {
