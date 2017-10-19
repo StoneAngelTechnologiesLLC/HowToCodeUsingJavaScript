@@ -1,15 +1,15 @@
  spacer();
-//                             A JavaScript Breakdown       Writen by John Joseph Pietrangelo III
+ //                             A JavaScript Breakdown       Writen by John Joseph Pietrangelo III
                   console.log("A JavaScript Breakdown\n\n\t Writen by John Joseph Pietrangelo III\n");
 
-console.log('********************************************************************************************************');
-console.log('********************************************************************************************************');
-space();
+ console.log('*******************************************************************************************************');
+ console.log('*******************************************************************************************************');
+ space();
 
                    console.log("\t\t\t\t\t\t\t\t\t*** Values, Data-Types, and Operators ***\n");
-console.log('********************************************************************************************************');
-space();
-/*
+ console.log('*******************************************************************************************************');
+ space();
+ /*
  Inside the computer's mind, there is only data.
 
  ALL this data is stored as long sequences of bits.
@@ -24,7 +24,8 @@ space();
  128 64 32 16 8 4 2 1
 
  So that’s the binary number 01000101, or 64 + 4 + 1, which equals 69.
-//----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
 
  VALUES:
 
@@ -37,7 +38,8 @@ space();
 
  As soon as a value is no longer being utilized, it will dissipate,
  leaving behind its bits to be recycled, as building blocks for the next construction of values.
-//----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
 
  NUMBERS:
 
@@ -58,7 +60,8 @@ space();
  many numbers lose some precision when only 64 bits are available to store them.
 
  This is a limitation, but it causes practical problems only in specific situations.
-//----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
 
  ARITHMETIC:
 
@@ -130,29 +133,30 @@ space();
 
  The code below displays how the string - A newline character is written like " \n ". - can be writen.
  */
- console.log("Escape-Operator(\\) Returns:"); //Escape-Operator(\) Returns:
+ console.log("Escape-Operator(\\) Returns:"); // Escape-Operator(\) Returns:
  space();
 
- console.log("A new line character is written like \" \\n \"."); //A newline character is written like " \n ".
+ console.log("A new line character is written like \" \\n \"."); // A newline character is written like " \n ".
  space();
 
- //Both tab(\t) and newline(\n) characters are written like this:
+ // Both tab(\t) and newline(\n) characters are written like this:
 
  console.log("\tThis is the 1st line.\nThis is the 2nd line."); //    This is the 1st line.
  spacer();                                                      //This is the 2nd line.
 
-//----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
  //CONCATENATION:
+
  console.log("Concatenation(+) Return:");
  space();
 
- //The following line will produce the string "concatenate":
+ // the following line will produce the string "concatenate":
 
- console.log("con" + "cat" + "e" + "nate"); //concatenate
+ console.log("con" + "cat" + "e" + "nate"); // concatenate
  spacer();
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
  console.log('Unary-Operator(typeOf) Returns:');
  space();
@@ -172,59 +176,63 @@ space();
 
  // Below are the variables used for the following 'typeOf'-operator examples.
 
- //DATA-TYPE
- /*integer*/  var int_a = 100;
- /*double*/   var double_b = 100.25;
- /*char*/     var char_c   = 'x';
- /*string*/   var string_d = "Hello";
- /*bool*/     var bool_e = true;
- /*array*/    var array_f = ['a','r','r','a','y'];
- /*object*/   var object_g = {
-     name: "John Pietrangelo", //comma separates object-properties
-     degrees: ["CIS","SOS"]
- };
+ // DATA-TYPES:
+ /* integer */  var int_a = 100;
+ /* double */   var double_b = 100.25;
+ /* char */     var char_c   = 'x';
+ /* string */   var string_d = "Hello";
+ /* bool */     var bool_e = true;
+ /* array */    var array_f = ['a','r','r','a','y'];
+ /* object */   var object_g = {
+                                  name: "John Pietrangelo", // comma separates object-properties
+                                  degrees: ["CIS","SOS"]
+                               };
 
- console.log(int_a + ", is a '" + typeof int_a + "' data-type!"); //100 is a 'number' data-type!
+ console.log(int_a + ", is a '" + typeof int_a + "' data-type!"); // 100 is a 'number' data-type!
  space();
 
- console.log(double_b + ", is a '" + typeof double_b + "' data-type!"); //100.00 is a 'number' data-type!
+ console.log(double_b + ", is a '" + typeof double_b + "' data-type!"); // 100.00 is a 'number' data-type!
  space();
 
- console.log(char_c + ", is a '" + typeof char_c + "' data-type!"); //x is a 'string' data-type!
+ console.log(char_c + ", is a '" + typeof char_c + "' data-type!"); // x is a 'string' data-type!
  space();
 
- console.log(string_d + ", is a '" + typeof string_d + "' data-type!"); //Hello is a 'string' data-type!
+ console.log(string_d + ", is a '" + typeof string_d + "' data-type!"); // Hello is a 'string' data-type!
  space();
 
- console.log(bool_e + ", is a '" + typeof bool_e + "' data-type!"); //true is a 'boolean' data-type!
+ console.log(bool_e + ", is a '" + typeof bool_e + "' data-type!"); // true is a 'boolean' data-type!
  space();
 
- console.log(array_f + ", is a '" + typeof array_f + "' data-type!"); //1,2,3 is a 'object' data-type!
+ console.log(array_f + ", is a '" + typeof array_f + "' data-type!"); // 1,2,3 is a 'object' data-type!
  space();
 
- // I use 'JSON.stringify' to write the content with-in the 'object' to the 'console screen'.
+ // I use 'JSON.stringify' to write the content with-in the 'object' to the 'console screen'
 
- // I will discuss 'JSON.stringify' later on in this writing, don't concern yourself about its intricacies right now.
+ // I will discuss 'JSON.stringify' later on in this writing, don't concern yourself about its intricacies right now
 
  console.log(JSON.stringify(object_g) + " is a '" + typeof object_g + "' data-type!");
- //{"name":"John Pietrangelo","degrees":["CIS","SOS"]} is a 'object' data-type!
+
+ // {"name":"John Pietrangelo","degrees":["CIS","SOS"]} is a 'object' data-type!
 
  spacer();
- //----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
 
  console.log("The Minus-Operator(-) Return:");
  space();
 
- //MINUS OPERATOR:
+ // MINUS OPERATOR:
 
- //The minus operator can be used both as a binary operator and as a unary operator.
+ // The minus(-) operator can be used both as a binary operator and as a unary operator.
 
- //binary use, subtracts 2 from 10. Unary use, changes the given number(8) a negative value.
+ // binary use, subtracts 2 from 10. Unary use, changes the given number(8) a negative value.
 
- console.log(-(10 - 2)); //-8
+ // calling the result of '10 - 2' multiplied by -1, to the console-window
+
+ console.log(-(10 - 2)); // -8
  spacer();
  /*
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
   BOOLEAN VALUES:
 
@@ -232,19 +240,22 @@ space();
   like ('yes' and 'no') or ('on' and 'off') or ('true' and 'false').
 
   For these situations, JavaScript established a 'Boolean' data-type, which has just two values: 'true' and 'false'.
- ----------------------------------------------------------------------------------------------------------------------*/
+
+ ---------------------------------------------------------------------------------------------------------------------*/
 
  console.log("Comparison-Operator(==, !=, ===, !==, <, >, <=, >=) Returns:");
  space();
 
- //COMPARING VALUES:
+ // COMPARING VALUES:
 
- //Here are examples of utilizing the 'Boolean' to compare values:
+ // Here are examples of utilizing the 'Boolean' to compare values:
 
- console.log("3 is greater than 2.","That statement is", + 3 > 2); //3 is greater than 2. That statement is true
+ //---------------------------------------------------------------------------------------------------------------------
+
+ console.log("3 is greater than 2.","That statement is", + 3 > 2); // 3 is greater than 2. That statement is true
  space();
 
- console.log("3 is less than 2.",'That statement is', + 3 < 2); //3 is less than 2. That statement is false
+ console.log("3 is less than 2.",'That statement is', + 3 < 2); // 3 is less than 2. That statement is false
  space();
  /*
   The > and < signs are the traditional symbols for “is greater than” and “is less than” ard are 'binary'-operators.
@@ -255,14 +266,19 @@ space();
 
   */                        //Escape operators                               //Escape operators  //Boolean operator
  console.log("The 1st index value \'g\' in god is greater than the 1st index value \'d\' in dog:", "god" > "dog");
- //The 1st index value 'g' in god is greater than the 1st index value 'd' in dog: true
+
+ // The 1st index value 'g' in god is greater than the 1st index value 'd' in dog: true
+
  space();
 
- //Escape operators                               //Escape operators  //Boolean operator
+ // Escape operators                               //Escape operators  //Boolean operator
  console.log("The 1st index value \'G\' in god is greater than the 1st index value \'d\' in dog:", "God" > "dog");
- //The 1st index value 'G' in god is greater than the 1st index value 'd' in dog: false
+
+ // The 1st index value 'G' in god is greater than the 1st index value 'd' in dog: false
+
  space();
 
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   The way strings are ordered, is alphabetic, so 'a' < 'z' is true.
 
@@ -284,32 +300,36 @@ space();
   <= (less than or equal to),
   == (equal to), and != (not equal to).
 
-  */
- console.log("\'itch\' dose not equal \'scratch\':", "itch" != "scratch"); //'itch' dose not equal 'scratch': true
+ */
+ //---------------------------------------------------------------------------------------------------------------------
 
+ console.log("\'itch\' dose not equal \'scratch\':", "itch" != "scratch"); // 'itch' dose not equal 'scratch': true
  space();
+
  /*
   There is only one value in JavaScript that is not equal to itself, and that is 'NaN', which stands for “not a number”.
 
   NaN is supposed to denote the result of a 'nonsensical computation'.
 
   Do to that fact it isn’t equal to the result of any other 'nonsensical computations'.
-  */
- console.log("\'hi\' equals \'hi\':", "hi" == "hi"); //'hi' equals 'hi': true
+ */
+
+ console.log("\'hi\' equals \'hi\':", "hi" == "hi"); // 'hi' equals 'hi': true
  space();
 
- console.log("\"4\" equals \"4\":", 4 == 4); //"4" equals "4": true
+ console.log("\"4\" equals \"4\":", 4 == 4); // "4" equals "4": true
  space();
 
- console.log("\"NaN\" equals \"NaN\":", NaN == NaN); //"NaN" equals "NaN": false
+ console.log("\"NaN\" equals \"NaN\":", NaN == NaN); // "NaN" equals "NaN": false
  spacer();
- //----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
 
  console.log('\t\t\t\t\t\t\t\t\tLogical-Operators\n');
- console.log('********************************************************************************************************');
+ console.log('*******************************************************************************************************');
  space();
  /*
-  Logical operators:
+  Logical Operators:
 
   There are operations we programmers apply to resulting 'Boolean'-values. JavaScript supports three logical operators.
 
@@ -318,40 +338,47 @@ space();
   The '&&' operator represents a logical 'and'.  It is a 'binary'-operator.
 
   Its result is 'true', only if 'both' the Boolean-values given to it are 'true'.
-  */
+ */
+
  console.log("And(&&)-Operator Returns:");
  space();
 
- console.log(false && false); //false
+ //---------------------------------------------------------------------------------------------------------------------
+
+ console.log(false && false); // false
  space();
 
- console.log(false && true); //false
+ console.log(false && true); // false
  space();
 
- console.log(true && false); //false
+ console.log(true && false); // false
  space();
 
- console.log(true && true); //true
+ console.log(true && true); // true
  spacer();
- //----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
 
  console.log("Or-operator(||) Returns:");
  space();
 
- //The || operator denotes logical order. It produces true if either of the values given to it is true.
+ // the || operator denotes logical order. It produces true if either of the values given to it is true
 
- console.log(true || true); //true
+ //---------------------------------------------------------------------------------------------------------------------
+
+ console.log(true || true); // true
  space();
 
- console.log(true || false); //true
+ console.log(true || false); // true
  space();
 
- console.log(false || true); //true
+ console.log(false || true); // true
  space();
 
- console.log(false || false); //false
+ console.log(false || false); // false
  spacer();
- //----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
 
  console.log('Mixed Boolean Expression Return:');
  space();
@@ -371,24 +398,30 @@ space();
 
   This order has been chosen so that, in typical expressions like the following one, there are as few
   parentheses as possible needed:
-  */
+ */
+ //---------------------------------------------------------------------------------------------------------------------
 
  console.log('1 + 1 equals 2 and 10 * 10 is greater than 50:', 1 + 1 == 2 && 10*10 > 50);
- //1 + 1 equals 2 and 10 * 10 is greater than 50: true
- spacer();
- //----------------------------------------------------------------------------------------------------------------------
 
- console.log("Picker-Operator(boolean-value ? x : y) Returns:");
+ // 1 + 1 equals 2 and 10 * 10 is greater than 50: true
+
+ spacer();
+
+ //---------------------------------------------------------------------------------------------------------------------
+
+ console.log("Picker-Operator (boolean-value ? x : y) Returns:");
  space();
  /*
   The last logical operator I will discuss is not unary, not binary, but ternary(operating on three values)!!!
 
-  This one is called the 'conditional'-operator(I call it the 'picker'-operator since it is the only one in the language).
+  This one is called a 'conditional'-operator(I call it the 'picker'-operator since it is the only one in the language).
 
   It is written with a question mark and a colon, as follows:
   */
 
  // Below are the variables used for the following examples.
+ //---------------------------------------------------------------------------------------------------------------------
+
  var pickerSetToTrue = "1st option is chosen";
  var pickerSetToFalse = "2nd option is chosen";
 
@@ -398,28 +431,30 @@ space();
   When the first-value is true, the middle-value is returned.
 
   When the first-value is false, the last-value, on the right is returned.
-  */
-
+ */
+ //---------------------------------------------------------------------------------------------------------------------
 
  console.log("When value is true:",true ? pickerSetToTrue : pickerSetToFalse);
- space();   //When value is true: 1st option is chosen
+ space();
+           // When value is true: 1st option is chosen
 
  console.log("When value is false:",false ? pickerSetToTrue : pickerSetToFalse);
- space();   //When value is false: 2nd option is chosen
+ space();
+           // When value is false: 2nd option is chosen
 
- console.log(true ? 1 : 2); //1
+ console.log(true ? 1 : 2); // 1
  space();
 
- console.log(false ? 1 : 2); //2
+ console.log(false ? 1 : 2); // 2
  space();
 
- console.log(true ? 'a' : 'b'); //a
+ console.log(true ? 'a' : 'b'); // a
  space();
 
- console.log(false ? 'a' : 'b'); //b
+ console.log(false ? 'a' : 'b'); // b
  spacer();
- //----------------------------------------------------------------------------------------------------------------------
- //----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   Undefined Values:
 
@@ -441,7 +476,7 @@ space();
   In the cases where you actually have to concern yourself with these values,
   I recommend treating them as interchangeable.
 
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
  */
  console.log("Automatic Data-Type Conversion Returns:");
  space();
@@ -458,41 +493,48 @@ space();
   even programs that do odd things.
 
   This is demonstrated by the following expressions:
-  */
+ */
+ //---------------------------------------------------------------------------------------------------------------------
 
- //the 'null' in this expression becomes 0.
- console.log(8 * null); //0
+ // the 'null' in this expression becomes 0
+
+ console.log(8 * null); // 0
  space();
 
- //the "5" in the this expression becomes 5 (from a string to number data-type).
- console.log('5' - 3); //2
+ // the "5" in the this expression becomes 5 (from a string to number data-type)
+
+ console.log('5' - 3); // 2
  space();
 
- //'+'-operator tries string concatenation before numeric addition,
+ // '+'-operator tries string concatenation before numeric addition,
  // so the 1 is converted to "1" (from number to string).
- console.log('5' + 3); //53
+
+ console.log('5' + 3); // 53
  space();
 
- //When something that doesn’t 'map' to a 'number' in an obvious way(such as "five" or undefined),
+ // When something that doesn’t 'map' to a 'number' in an obvious way(such as "five" or undefined),
  // it is converted to a number, the value 'NaN' is produced.
- console.log('five' * 3); //NaN
+
+ console.log('five' * 3); // NaN
  space();
 
- //***Further arithmetic operations on 'NaN' keep producing 'NaN',
- //so if you find yourself getting one of those in an unexpected place, look for accidental type conversions.
+ // ***Further arithmetic operations on 'NaN' keep producing 'NaN',
+ // so if you find yourself getting one of those in an unexpected place, look for accidental type conversions.
 
 
- //When comparing values when the types differ, JavaScript uses a confusing set of rules to determine what to do.
- //In most cases, it just tries to convert one of the values to the other value’s type.
- console.log(false == 0); //true
+ // When comparing values when the types differ, JavaScript uses a confusing set of rules to determine what to do.
+ // In most cases, it just tries to convert one of the values to the other value’s type.
+
+ console.log(false == 0); // true
  space();
 
- //However, when null or undefined occurs on either side of the operator,
+ // However, when null or undefined occurs on either side of the operator,
  // it produces true only if both sides are one of null or undefined.
- console.log(null == undefined); //true
+
+ console.log(null == undefined); // true
  space();
 
- console.log(null == 0); //false
+ console.log(null == 0); // false
  space();
 
  console.log(undefined == 0); //false
@@ -501,7 +543,7 @@ space();
   That last piece of behavior is often useful When you want to test whether a value has a real value,
   instead of null or undefined. A programmer can simply compare it to null with the == (or !=) operator.
 
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
 
   The rules for converting strings and numbers to Boolean:
 
@@ -522,7 +564,7 @@ space();
 
   However, when you’re certain the types on both sides will be the same, use the shorter operators.
 
- ----------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
 
   Short-Circuiting of Logical Operators:
 
@@ -540,10 +582,12 @@ space();
  console.log("Short-Circuiting of Logical Operator Returns:");
  space();
 
- console.log(null || 'user'); //user
+ //---------------------------------------------------------------------------------------------------------------------
+
+ console.log(null || 'user'); // user
  space();
 
- console.log('dog' || 'god'); //dog
+ console.log('dog' || 'god'); // dog
  space();
  /*
   The && operator works similarly, but the other way around.
@@ -551,11 +595,11 @@ space();
   When the value to its 'left' is something that converts to 'false', it returns that value.
 
   If the value to its 'left' is something that converts to 'true', it returns the value on its 'right'.
-  */
- console.log(null && 'user'); //null
+ */
+ console.log(null && 'user'); // null
  space();
 
- console.log('dog' && 'god'); //god
+ console.log('dog' && 'god'); // god
  spacer();
  /*
   Another rule to these two operators, is that the expression to their right, is evaluated only when necessary.
@@ -570,9 +614,10 @@ space();
 
  ------------------------------------------------------------------------------------------------------------------------
 
-  SUMMARY:
+                                          SUMMARY:
 
-  We have reviewed six data-types, of JavaScript values in this chapter:
+  We have reviewed six data-types, of JavaScript values in this section:
+
   numbers, strings, Booleans, NaN, null and undefined.
 
   Such values are created by typing in their data-type values (69, 'abc', true, NaN, null, undefined).
@@ -599,13 +644,14 @@ space();
 ------------------------------------------------------------------------------------------------------------------------
  */
  console.log("\t\t\t\t\t\t\t\t\t*** Program Structure ***\n");
- console.log('********************************************************************************************************');
+ console.log('*******************************************************************************************************');
  space();
 //                             *** Program Structure ***
 /*
  In this section, I cover some basic programming principles.
 
  We will continue to make small, steady steps 'mano y mano', toward your evolution in JavaScript.
+
 ------------------------------------------------------------------------------------------------------------------------
  " Any Path....
 
@@ -628,7 +674,9 @@ space();
 
  The following concept reflects a major principle of any language-based interface:
 
- Expressions can nest themselves with-in other expressions, similar to the way sub-sentences in human languages are nested.
+ Expressions can nest themselves with-in other expressions.
+
+ Similar to the way sub-sentences in human languages are nested.
 
  A sub-sentence can contain its own sub-sentences, and so on.
 
@@ -639,10 +687,10 @@ space();
  console.log("'Side-Effect' Returns.");
  space();
 
- console.log(1); //1
+ console.log(1); // 1
  space();
 
- console.log(!false); //true
+ console.log(!false); // true
  spacer();
  /*
  The above changes to an application are called 'side effects'.
@@ -690,21 +738,29 @@ space();
  console.log("'Variable-Value' Returns:");
  space();
 
- //line declares a variable(var) named 'int_number' and initializes its value to the product of (5 * 5).
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // line declares a variable(var) named 'int_number' and initializes its value to the product of (5 * 5).
+
  var int_number = 5 * 5;
 
- //After a variable has been defined, its name can be used as an expression.
- //The value of such an expression is the value the variable currently holds.
+ // After a variable has been defined, its name can be used as an expression.
+ // The value of such an expression is the value the variable currently holds.
+
  console.log(int_number); //25
  space();
 
- //variable names are not required to reflect their value, though it could be hazardous to do so.
+ // variable names are not required to reflect their value, though it could be hazardous to do so.
+
  var int_five = 10;
 
- console.log( int_five * int_five); //100
- space();
- /*
+ // calls the 'int_five'-variable's value multiplied by itself, to the console-window
 
+ console.log( int_five * int_five); // 100
+ space();
+
+ //---------------------------------------------------------------------------------------------------------------------
+ /*
   Variable-Name Regulations:
 
   Variable names can be any word that isn’t a 'key' word (such as var).
@@ -721,16 +777,24 @@ space();
   The = operator can be used at any time on existing variables to disconnect them from their current value
   and have them point to a new one.
   */
- //line declares a variable(var) named 'string_securityClearance' and initializing its value to 'low level'.
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declares a variable(var) named 'string_securityClearance' and initializing its value to 'low level'.
+
  var string_securityClearance = "low level";
 
- console.log(string_securityClearance); //low level
+ // calls the 'string_securityClearance'-variable's value, to the console-window
+
+ console.log(string_securityClearance); // low level
  space();
 
- //This line changes the previous value of the 'string_securityClearance'-variable.
+ // changes the previous value of the 'string_securityClearance'-variable
+
  string_securityClearance = 'high level';
 
- console.log(string_securityClearance); //high level
+ // calls the 'string_securityClearance'-variable's value to the console-window
+
+ console.log(string_securityClearance); // high level
  space();
 
  /*
@@ -738,29 +802,44 @@ space();
   John owes you $40,000.00.
   To remember the number of dollars that John still owes you, you create a variable.
   Then when he pays back $1,000.50, you give this variable a new value to reflect that.
-  */
+ */
 
- //line declares a variable(var) named 'double_johnsDebt' and initializing its value to '40000.00'.
+ // declares a variable(var) named 'double_johnsDebt' and initializing its value to '40000.00'
+
  var double_johnsDebt = 40000.00;
 
+ // subtracts 1000.31 from the current 'double_johnsDebt'-variable and storing as the new value of the same variable
+
  double_johnsDebt = double_johnsDebt - 1000.31;
+
+ // calls the '$'-string concatenating it with the 'double_johnsDebt'-variable's value return, from the call to the
+ // String.toLocaleString()-method which adds a decimal-point and the to following numbers
+ // (*** I will discuss 'data-type'-methods in a later session ***)
 
  console.log('$' + double_johnsDebt.toLocaleString('en')); //$38,999.69
  space();
 
- //When you define a variable without giving it a value, it is empty, so it ends in thin air.
- //If you ask for the value of an empty variable, the value 'undefined' will be returned.
+ // When you define a variable without giving it a value, it is empty, so it ends in thin air.
+ // If you ask for the value of an empty variable, the value 'undefined' will be returned.
+
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declares a variable named,'int_numberX' without initializing its value
 
  var int_one;
 
- console.log(int_one); //undefined
+ // calls the 'int_one'-variable's value to the console-window
+
+ console.log(int_one); // undefined
  space();
 
- //A single variable statement may define multiple variables. The definitions must be separated by commas.
+ // A single variable statement may define multiple variables. The definitions must be separated by commas.
 
  var int_three = 3, int_four = 4;
 
- console.log(int_three + int_four); //7
+ // calls the result of adding the 'int_three' and 'int_four' variable values, to the console-window
+
+ console.log(int_three + int_four); // 7
  spacer();
  /*
  ------------------------------------------------------------------------------------------------------------------------
@@ -780,6 +859,7 @@ space();
   [ break case catch class const continue debugger default delete do else enum export extends false
     finally for function if implements import in instanceof interface let new null package private
     protected public return static super switch this throw true try typeof var void while with yield ]
+
  ------------------------------------------------------------------------------------------------------------------------
 
   The Environment:
@@ -800,21 +880,21 @@ space();
 
   Such variables can be applied, in order to run the wrapped program.
 
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
 
- *****       .html file MUST be linked to 'this' .js file and the lines of code must be uncommented,                *****
+ *****       .html file MUST be linked to 'this' .js file and the lines of code must be uncommented,               *****
                                 in order to see the effects to the browser.
 
- Important info on 'functions'. Regardless if you do or don't have this file linked to a .html file, Read This Section!!!
+ Important info on 'functions'. Regardless if you do or don't have this file linked to a .html file, Read This Section!!
 
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
 
   For example, in a browser environment, the variable 'alert' holds a function that shows a dialog box with a message.
 
   It is used like this:;
   */
 
- //alert("Good morning!"); //uncomment if .html is linked to 'this' .js file
+ // alert("Good morning!"); //uncomment if .html is linked to 'this' .js file
 
  /*
   Executing a function is called 'invoking', 'calling', or 'applying' it.
@@ -829,7 +909,7 @@ space();
 
   The 'alert'-function requires at least one argument, but all functions vary in the number and types of arguments.
 
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
 
   The console.log Function:
 
@@ -850,31 +930,34 @@ space();
 
   If that does not work, search through the menus for an item named “web console” or “developer tools”.
 
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
 
   Return Values:
 
   functions are useful because of the side effects they produce.
 
   For example, the function Math.max() takes as it's parameter's arguments,
-  multiple number values and returns the greatest value amongst them all.
+  multiple number-values and returns the greatest-value amongst them all.
   */
 
  console.log("Math-Class 'Function-Value' Returns:");
  space();
 
- console.log(Math.max(17,20,100)); //100
+ //---------------------------------------------------------------------------------------------------------------------
+
+ console.log(Math.max(17,20,100)); // 100
  space();
-  /*
-  When a function produces a value, it is said to return that value.
+ /*
+   When a function produces a value, it is said to return that value.
 
-  In JavaScript, anything that produces a 'value' is an 'expression'.
+   In JavaScript, anything that produces a 'value' is an 'expression'.
 
-  Which means function calls can be used with in larger expressions(nested expressions).
+   Which means function calls can be used with in larger expressions(nested expressions).
 
 
-  Below is a call to Math.min, which is the opposite of Math.max                       */
- console.log(Math.min(4,-50,100)); //-50
+   Below is a call to Math.min, which is the opposite of Math.max
+ */
+ console.log(Math.min(4,-50,100)); // -50
  spacer();
 
  /*
@@ -887,7 +970,7 @@ space();
   You can ask the user an 'OK/Cancel' question using 'confirm'.
 
   This returns a Boolean: 'true' if the user clicks 'OK' and 'false' if the user clicks 'Cancel'.
-  */
+ */
 
  //confirm("Shall we then?"); //uncomment if .html is linked to 'this' .js file
 
@@ -920,6 +1003,7 @@ space();
  var theNumber = Number(prompt("pick a number",""));                  //uncomment if .html is linked to 'this' .js file
  alert("your number is the square root of " + theNumber * theNumber); //uncomment if .html is linked to 'this' .js file
  */
+
  console.log('Conditional-Execution(if, else if, else) Return:');
  space();
  /*
@@ -937,41 +1021,48 @@ space();
 
   The keywords 'if', 'else if' and 'else' executes or skips a 'statement',
   depending on the 'value' of a 'Boolean expression'.
-  */
+ */
+ //---------------------------------------------------------------------------------------------------------------------
 
-  //line declares variable named 'int_numberX' and initializes its value to '99'.
-  var int_numberX = 99;
+ // declares variable named 'int_numberX' and initializes its value to '99'
 
-  // var int_numberX = 101;   *If using IDE to read this material, uncomment a commented line and debug, to execute
-  // var int_numberX = 100;
-  // var int_numberX = 'word';
+ var int_numberX = 99;
 
-  //block executes if 'int_numberX' is less than 100
-  if(int_numberX < 100)
-  {
-      console.log(int_numberX + ' is less than 100');
-  }
+ // var int_numberX = 101;   *If using IDE to read this material, comment variable declaration in use, then uncomment a
+ // var int_numberX = 100;    commented line and debug, to execute
+ // var int_numberX = 'word';
 
-  //block executes if 'int_numberX' is more than 100
-  else if(int_numberX > 100)
-  {
-      console.log(int_numberX + ' is more than 100');
-  }
+ // block executes if 'int_numberX' is less than 100
 
-  //block executes if 'int_numberX' equals 100
-  else if(int_numberX === 100)
-  {
-      console.log(int_numberX + ' equals 100');
-  }
+ if(int_numberX < 100)
+ {
+     console.log(int_numberX + ' is less than 100');
+ }
 
-  //block executes if 'int_numberX' is not a number
-  else
-  {
-      console.log(int_numberX + ' is not a number.');
-  }
+ // block executes if 'int_numberX' is more than 100
 
-  spacer();
- /*----------------------------------------------------------------------------------------------------------------------
+ else if(int_numberX > 100)
+ {
+     console.log(int_numberX + ' is more than 100');
+ }
+
+ // block executes if 'int_numberX' equals 100
+
+ else if(int_numberX === 100)
+ {
+     console.log(int_numberX + ' equals 100');
+ }
+
+ // block executes if 'int_numberX' is not a number
+
+ else
+ {
+     console.log(int_numberX + ' is not a number.');
+ }
+
+ spacer();
+
+ /*---------------------------------------------------------------------------------------------------------------------
 
   theNumber = Number(prompt("pick a number.",""));                  //uncomment if .html is linked to 'this' .js file
   if(!isNaN(theNumber))                                             //uncomment if .html is linked to 'this' .js file
@@ -1034,7 +1125,7 @@ space();
     */
 
  /*
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
 
   While and Do Loops:
 
@@ -1063,7 +1154,7 @@ space();
 
   This form of control flow is called a 'loop'.
 
-  -----------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------
 
   While Loop:
 
@@ -1084,26 +1175,31 @@ space();
   */
  console.log("Conditional-Loops('while' and 'do') Returns:");
  space();
- //----------------------------------------------------------------------------------------------------------------------
 
- //line declares variable named 'int_number' and initializes its value to '0'.
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declares variable named 'int_number' and initializes its value to '0'
+
  var int_number = 0;
 
- //'while'-expression compares the value of 'int_number'-variable to the number 12 before each loop-iteration
- //each time the 'int_number'-variable is 'less or equal' to 12, the code-block within the 'while'-loop will execute
+ // 'while'-expression compares the value of 'int_number'-variable to the number 12 before each loop-iteration
+ // each time the 'int_number'-variable is 'less or equal' to 12, the code-block within the 'while'-loop will execute
+
  while(int_number <= 12)
  {
-     //line writes int_number's value to console
+     //calls int_number's value to console-window
+
      console.log(int_number);
 
      //line adds 2 to the current 'int_number'-value, then stores the sum back into the 'int_result'-variable
+
      int_number = int_number + 2;
 
- }//end of loop
+ }// end of loop
 
  space();
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   As an example that actually does something useful, we can now write a program that calculates and shows
   the value of 2^10(2 to the 10th power) and 5^8(5 to the 8th power).
@@ -1112,54 +1208,65 @@ space();
 
   The loop tests whether the second variable has reached 10 yet and then updates both variables.*/
 
- //line declares variable named 'int_result' and initializes its value to '1'.
+ // declares variable named 'int_result' and initializes its value to '1'
+
  var int_result = 1;
 
- //line declares variable named 'int_count' and initializes its value to '0'.
+ // declares variable named 'int_count' and initializes its value to '0'
+
  var int_count = 0;
 
-  //'while'-expression compares the value of 'int_count'-variable to the number 10 before each loop-iteration
-  //each time the 'int_count'-variable is 'less' than 10, the code-block within the 'while'-loop will execute
+  // 'while'-expression compares the value of 'int_count'-variable to the number 10 before each loop-iteration
+  // each time the 'int_count'-variable is 'less' than 10, the code-block within the 'while'-loop will execute
+
  while(int_count < 10)
  {
-     //line multiplies current 'int_result'-value by 2 then stores the product back into the 'int_result'-variable
+     // multiplies current 'int_result'-value by 2 then stores the product back into the 'int_result'-variable
+
      int_result = int_result * 2;
 
-     //line adds 1 to the current 'int_count'-value
+     // adds 1 to the current 'int_count'-value
+
      int_count++;
 
- }//end of loop
+ }// end of loop
 
  //***  Classes/Objects and their properties will be discussed in detail, later on in the reading.
- //***  all you need to understand right now is that 'toLocaleString' is a property held by 'Object.String'        !!!!!!
+ //***  all you need to understand right now is that 'toLocaleString' is a property held by 'Object.String'
  //***  which converts Number-data-type to a String-data-type
  //***  and places commas after every 3rd 'number-place' following the tenths-place
 
- //line writes 'int_result-variable's value' to 'console-window'
+ // calls 'int_result-variable's value' to console-window
+
  console.log(int_result.toLocaleString('en')); //1,024   -> 2^10
  space();
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
- //line declares variable named 'int_result' and initializes its value to '1'.
+ // declares variable named 'int_result' and initializes its value to '1'
+
  var int_result = 1;
 
- //line declares variable named 'int_count' and initializes its value to '0'.
+ // declares variable named 'int_count' and initializes its value to '0'
+
  var int_count = 0;
 
- //'while'-expression compares the value of 'int_count'-variable to the number 10 before each loop-iteration
+ // 'while'-expression compares the value of 'int_count'-variable to the number 10 before each loop-iteration
  // each time the 'int_count'-variable is 'less' than 8, the code-block within the 'while'-loop will execute
+
  while(int_count < 8)
  {
-     //line multiplies current 'int_result'-value by 5 then stores the product back into the 'int_result'-variable
+     // multiplies current 'int_result'-value by 5 then stores the product back into the 'int_result'-variable
+
      int_result = int_result * 5;
 
-     //line adds 1 to the current 'int_count'-value
+     // adds 1 to the current 'int_count'-value
+
      int_count++;
 
- }//end of loop
+ }// end of loop
 
-  //line writes 'int_result-variable's' value to 'console-window'
+  // calls 'int_result-variable's' value to 'console-window'
  console.log(int_result.toLocaleString('en')); //390,625  -> 5^8
  spacer();
  /*
@@ -1167,7 +1274,7 @@ space();
 
   For reasons that will become apparent soon... It will behoove you to get used to counting from 0.
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
  Do-Loop:
 
@@ -1178,7 +1285,7 @@ space();
 
   To reflect this, the condition-test appears after the body of the loop.
 
-  -----------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------
 
   The following program will force you to enter a name.
 
@@ -1197,7 +1304,7 @@ space();
  console.log(yourName);
  */
  /*
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
   'for'-Loops:
 
@@ -1215,13 +1322,19 @@ space();
  console.log("Conditional-Loop('for') Returns:");
  space();
 
-  //'for' loop will execute each time the loop's 'int_index'-value is less than or equal to 12
-  //the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+  // 'for' loop will execute each time the loop's 'int_index'-value is less than or equal to 12
+  // the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+
  for(var int_index = 0; int_index <= 12; int_index++)
+ {
+     // calls the 'int_index'-variable's value, to the console-window
+
      console.log(int_index);
+ }
 
  space();
- //----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   The code above only has one statement needing execution inside the loop so instead of braces to signify the
 
@@ -1235,19 +1348,21 @@ space();
   I wrap ALL code following the loop-expression(s), regardless the number of statements, even if its just one.
 
   Below is the same code only the statement following the expression is wrapped with braces.
-  */
+ */
 
-  //for-loop will execute each time the loop's 'int_index'-value is less than or equal to 12
-  //the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+ // for-loop will execute each time the loop's 'int_index'-value is less than or equal to 12
+ // the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+
  for(var int_index = 0; int_index <= 12; int_index ++)
  {
-     //line writes 'int_index-value to the console window
+     // line writes 'int_index'-value to the console window
      console.log(int_index);
 
- }//end of loop
+ }// end of loop
 
  space();
- //----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   With in the parentheses, after a 'for' keyword, there must contain two semicolons:
 
@@ -1260,43 +1375,51 @@ space();
   In most cases, this is shorter and clearer than a 'while' loop.
 
   Here is the code that computes 2^10 and 5^8, using 'for' instead of 'while':
-  */
+ */
 
-  //line declares variable named 'int_result' and initializes its value to '1'.
-  var int_result = 1;
+ // line declares variable named 'int_result' and initializes its value to '1'
 
-   //'for' loop will execute each time the loop's 'int_index'-value is less than 10
-   //the last expression of the loop(int_index++), increases the index-value by 1 after each iteration completes.
-  for(var int_index = 0; int_index < 10; int_index++)
-  {
-      //line multiplies current 'int_result'-value by 2 then stores the product back into the 'int_result'-variable
-      int_result = int_result * 2;
+ var int_result = 1;
 
-  }//end of loop
+ // 'for' loop will execute each time the loop's 'int_index'-value is less than 10
+ // the last expression of the loop(int_index++), increases the index-value by 1 after each iteration completes
 
-  //line writes 'int_result-variable's' value to 'console-window'
-  console.log(int_result.toLocaleString('en')); //1,024   -> 2^10
+ for(var int_index = 0; int_index < 10; int_index++)
+ {
+     // line multiplies current 'int_result'-value by 2 then stores the product back into the 'int_result'-variable
 
-  space();
-  //----------------------------------------------------------------------------------------------------------------------
+     int_result = int_result * 2;
 
-  //line declares variable named 'int_result' and initializes its value to '1'.
-  var int_result = 1;
+ }// end of loop
 
-   //'for' loop will execute each time the loop's 'int_index'-value is less than 8
-   //the last expression of the loop(int_index++), increases the index-value by 1 after each iteration completes.
-  for(var int_index = 0; int_index < 8; int_index++)
-  {
-      //line multiplies current 'int_result'-value by 5 then stores the product back into the 'int_result'-variable
-      int_result = int_result * 5;
+ // line writes 'int_result-variable's' value to 'console-window'
 
-  }//end of loop
-
- //line writes 'int_result-variable's' value to 'console-window'
- console.log(int_result.toLocaleString('en'));  //390,625  -> 5^8
+ console.log(int_result.toLocaleString('en')); // 1,024   -> 2^10
 
  space();
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declares variable named 'int_result' and initializes its value to '1'.
+
+ var int_result = 1;
+
+ // 'for' loop will execute each time the loop's 'int_index'-value is less than 8
+ // the last expression of the loop(int_index++), increases the index-value by 1 after each iteration completes.
+
+ for(var int_index = 0; int_index < 8; int_index++)
+ {
+     // line multiplies current 'int_result'-value by 5 then stores the product back into the 'int_result'-variable
+
+     int_result = int_result * 5;
+
+ }// end of loop
+
+ // line writes 'int_result-variable's' value to 'console-window'
+
+ console.log(int_result.toLocaleString('en'));  // 390,625  -> 5^8
+
+ space();
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   Having the loop’s condition produce false is not the only way a loop can finish.
 
@@ -1305,27 +1428,32 @@ space();
   The following code illustrates the 'break' statement.
 
   It finds the 1st number that is both greater than or equal to 20 and divisible by 7.
-  */
+ */
+ //---------------------------------------------------------------------------------------------------------------------
 
- // The for-loop in the example does not have a conditional expression in the center, that checks for the end of the loop.
- // This means that the loop will never stop unless the break statement inside is executed.
+ // this for-loop does not have a conditional-expression in the center, that checks for the end of the loop
+ // this means that the loop will never stop unless the break statement inside is executed
+
  for(var int_currentValue = 0; ; int_currentValue++)
  {
-     // Using the remainder(%) operator is an easy way to test whether a number is divisible by another number.
-     // If it is, the remainder of their division is zero.
+     // Using the remainder(%) operator is an easy way to test whether a number is divisible by another number
+     // If it is, the remainder of their division is zero
+
      if(int_currentValue % 7 == 0 && int_currentValue >= 20)
      {
          //line makes program's focus immediately jump out of the enclosing loop
+
          break;
      }
 
- }//end of loop
+ }// end of loop
 
- //line writes the 'int_currentValue'-variable's value to console
+ // line writes the 'int_currentValue'-variable's value to console
+
  console.log(int_currentValue); // 21
-
  space();
- //----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   If you were to leave out that break statement or accidentally write a condition that always produces true,
   your program would get stuck in an infinite loop.
@@ -1337,87 +1465,103 @@ space();
   Updating variables succinctly:
 
   When looping, a program needs to “update” a variable, to hold a value, based on that variable’s previous value:
-  */
+ */
 
- //line declares variable named 'int_count' and initializes its value to '0'.
+ // line declares variable named 'int_count' and initializes its value to '0'.
+
  var int_count = 0;
 
- //line adds 1 to the current 'int_count'-value, then stores the sum back into the 'int_count'-variable
+ // line adds 1 to the current 'int_count'-value, then stores the sum back into the 'int_count'-variable
+
  int_count = int_count + 1;
 
  /*
   JavaScript provides a shortcut for this:
   */
 
- //line adds 1 to the current 'int_count'-value, then stores the sum back into the 'int_count'-variable
+ // line adds 1 to the current 'int_count'-value, then stores the sum back into the 'int_count'-variable
+
  int_count += 1;
 
  /*
-  Similar shortcuts work for many other operators, like result *= 2 -> to double a result or count -= 1 -> to count down.
+  Similar shortcuts work for other operators, like (result *= 2) -> to double a result or (count -= 1) -> to count down.
 
   This will shorten the counting example.
-  */
+ */
+ //---------------------------------------------------------------------------------------------------------------------
 
-  //'for' loop will execute each time the loop's 'int_index'-value is less than or equal to 12
-  //the last expression of the loop(int_index += 2), increases the index-value by 2 after each iteration completes.
+  // 'for' loop will execute each time the loop's 'int_index'-value is less than or equal to 12
+  // the last expression of the loop(int_index += 2), increases the index-value by 2 after each iteration completes.
+
  for(var int_index = 0; int_index <= 12; int_index += 2)
  {
-     //line writes 'int_index-value to the console window
+     // line writes 'int_index-value to the console window
      console.log(int_index);
 
- }//end of loop
- /*
- As previously shown, For counter += 1 and counter -= 1, there are even shorter equivalents: counter ++ and counter-- .
- ------------------------------------------------------------------------------------------------------------------------
+ }// end of loop
 
-  Using a 'switch' Statement:
-  */
+ /*---------------------------------------------------------------------------------------------------------------------
+
+ As previously shown, For counter += 1 and counter -= 1, there are even shorter equivalents: counter ++ and counter--
+ */
  spacer();
  console.log("Conditional-Statement('switch') Returns:");
  space();
 
+ // It is common for code to have the following format:
 
- //It is common for code to have the following format:
+ //---------------------------------------------------------------------------------------------------------------------
 
- //empty functions, used for visual-aid in the following 'if/ else if' and 'switch' examples
+ // empty functions, used for visual-aid in the following 'if/ else if' and 'switch' examples
+
  var action1 = function(){};
  var action2 = function(){};
  var action3 = function(){};
 
- //function, used for visual-aid in the following 'if/ else if' and 'switch' examples
+ // function, used for visual-aid in the following 'if/ else if' and 'switch' examples
+
  var actionDefault = function()
                      {
                          console.log("Default action taken!\n")
                      };
 
- //line declares variable named 'string_letter' and initializes its value to 'x'.
+ // line declares variable named 'string_letter' and initializes its value to 'x'
+
  var string_letter = 'x';
 
- //code-block executes if the 'string_letter'-variable's value is 'a'
+ // code-block executes if the 'string_letter'-variable's value is 'a'
+
  if(string_letter == 'a')
  {
-     //line executes the action1()-function
+     // line executes the action1()-function
+
      action1();
  }
 
- //code-block executes if the 'string_letter'-variable's value is 'b'
+ // code-block executes if the 'string_letter'-variable's value is 'b'
+
  else if(string_letter == 'b')
  {
-     //line executes the action2()-function
+     // line executes the action2()-function
+
      action2();
  }
 
- //code-block executes if the 'string_letter'-variable's value is 'c'
+ // code-block executes if the 'string_letter'-variable's value is 'c'
+
  else if(string_letter == 'c')
  {
-     //line executes the action3()-function
+     // line executes the action3()-function
+
      action3();
  }
 
  //code-block executes if the none of the above comparison-statements hold 'true'
+
  else
  {
-     //line executes the actionDefault()-function
+     // line executes the actionDefault()-function
+
      actionDefault();
  }
  /*
@@ -1425,51 +1569,68 @@ space();
 
   The syntax JavaScript uses for this (which it inherited from the C/Java line of programming languages)
   is somewhat awkward so the above chain of 'if' statements, may looks better.
-  */
- //switch-keyword declares the statement and is followed by the 'variable'(held in parentheses)
- //which will trigger the execution of the code-block, held by the matching 'case'
+ */
+
+ // switch-keyword declares the statement and is followed by the 'variable'(held in parentheses)
+ // which will trigger the execution of the code-block, held by the matching 'case'
+
  switch (string_letter)
  {
-     //case-keyword declares the comparison-variable 'a'
+     // case-keyword declares the comparison-variable 'a'
+
      case 'a':
 
-         //line executes the action1()-function
+         // line executes the action1()-function
+
          action1();
 
-         //line makes program's focus immediately jump out of the enclosing code-block
+         // line makes program's focus immediately jump out of the enclosing code-block
+
          break;
 
-     //case-keyword declares the comparison-variable 'b'
+     // case-keyword declares the comparison-variable 'b'
+
      case 'b':
 
-         //line executes the action2()-function
+         // line executes the action2()-function
+
          action2();
 
-         //line makes program's focus immediately jump out of the enclosing code-block
+         // line makes program's focus immediately jump out of the enclosing code-block
+
          break;
 
-     //case-keyword declares the comparison-variable 'c'
+     // case-keyword declares the comparison-variable 'c'
+
      case 'c':
 
-         //line executes the action3()-function
+         // line executes the action3()-function
+
          action3();
 
-         //line makes program's focus immediately jump out of the enclosing code-block
+         // line makes program's focus immediately jump out of the enclosing code-block
+
          break;
 
-     //default-keyword declares the end of the switch-statement
-     //(ALL Switch-statements must hold a 'default'-option after the final case, with in the switch-statement itself)
+     // default-keyword declares the end of the switch-statement
+     // (ALL Switch-statements must hold a 'default'-option after the final case, with in the switch-statement itself)
+
      default:
-         //line executes the actionDefault-function
+
+         // line executes the actionDefault-function
+
          actionDefault();
 
-         //line makes program's focus immediately jump out of the enclosing code-block
+         // line makes program's focus immediately jump out of the enclosing code-block
+
          break;
  }
  spacer();
+ //---------------------------------------------------------------------------------------------------------------------
 
- //example to run in browser if .html is linked to this .js file
- /*switch(prompt("what is the weather like?"))
+ // example to run in browser if .html is linked to this .js file
+ /*
+ switch(prompt("what is the weather like?"))
  {
      case "rainy":
 
@@ -1495,7 +1656,7 @@ space();
 
   It starts executing statements there, even if they’re under another label, until it reaches a 'break' statement.
 
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
 
   Program Example #1: Looping a Triangle
 
@@ -1516,65 +1677,80 @@ space();
 
  console.log("Returns For Program Example #1: Looping a Triangle\n");
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
- //for-loop example.
+ // for-loop example.
 
- //To declare a string-var, which will hold row content and initialize its value to: 'empty'.
+ // declaring a string-variable named,'string_rowContent' and initializes its value to: 'an empty string'.
+
  var string_rowContent = "";
 
- //This 'for' loop will execute each time the loop's index is 9 or less(accounting for the 1st loop iteration starting at 0).
- //the last expression of the loop(int_RowsCharIndex++) increases the index value by 1 after each iteration completes.
+ // for-loop will execute each time the loop's index is 9 or less(accounting for the 1st loop iteration starting at 0).
+ // the last expression of the loop(int_RowsCharIndex++) increases the index value by 1 after each iteration completes.
+
  for(var int_RowsCharIndex= 0; int_RowsCharIndex < 10; int_RowsCharIndex++)
  {
-     //This line adds(stores) the char '#' to the row's content.
+     // this line adds(stores) the char '#' to the row's content
+
      string_rowContent = string_rowContent + "#";
 
-     //This line prints the row's content to the console.
+     // calls the row's content to the console
+
      console.log(string_rowContent);
- }//end of loop
+
+ }// end of loop
 
  space();
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
- //while-loop example
+ // while-loop Example:
 
- //To declare a string-var, which will hold row content and initialize its value to: 'empty'.
+ // declares a string-var, which will hold row content and initialize its value to: 'an empty string'
+
  string_rowContent = "";
 
- //This 'while' loop will execute each time the row's length is 9 chars or less(accounting 1st iteration starting at 0).
+ // while-loop will execute each time the row's length is 9 chars or less(accounting 1st iteration starting at 0)
+
  while(string_rowContent.length < 10)
  {
-     //This line adds(stores) the char '#' to the row's content.
+     // this line adds(stores) the char '#' to the row's content
+
      string_rowContent = string_rowContent + "#";
 
-     //This line prints the row's content to the console.
+     // calls the row's content to the console
+
      console.log(string_rowContent);
- }//end of loop
+
+ } // end of loop
 
  space();
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
- //do-while-loop example
+ // do-while-loop Example:
 
- // To declare a string-var, which will hold row content and initialize its value to: 'empty'.
+ // declare a string-var, which will hold row content and initialize its value to: 'an empty string'.
+
  string_rowContent = "";
 
- //'do'-keyword is used to run the block of code directly following it, at least once before checking for any conditions.
+ //'do'-keyword is used to run the block of code directly following it, at least once before checking for any conditions
+
  do
  {
-     //This line adds(stores) the char '#' to the row's content.
+     // this line adds(stores) the char '#' to the row's content
+
      string_rowContent = string_rowContent+"#";
 
-     //This line prints the row's content to the console.
+     // this line prints the row's content to the console
+
      console.log(string_rowContent);
 
-  //This 'while' loop will continue to execute each time the row's length is 9 chars or less.
+  // this 'while' loop will continue to execute each time the row's length is 9 chars or less
+
  }while(string_rowContent.length < 10); //end of loop
 
 
- //----------------------------------------------------------------------------------------------------------------------
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
  spacer();
  console.log("Return For Program Example #2: FizzBuzz\n");
  /*
@@ -1590,53 +1766,57 @@ space();
   (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
 
   This is an interview question that has been claimed to weed out a significant percentage of programmer candidates.
- ----------------------------------------------------------------------------------------------------------------------*/
 
- // Variable holding the number-value to be tested.
+ ---------------------------------------------------------------------------------------------------------------------*/
+
+ // variable holding the number-value to be tested
+
  var int_number = 1;
 
- //This 'while' loop will continue to execute each time the number-value is less or equal to 100.
+ // 'while' loop will continue to execute each time the number-value is less or equal to 100
  while(int_number <= 100)
  {
-     //1st test.
-     //This 'if'-statement executes when the 'test'-number is 'divisible by both 3 and 5'.
+     // 1st test:
+     // 'if'-statement executes when the 'test'-number is 'divisible by both 3 and 5'
      if(int_number % 3 == 0 && int_number % 5 == 0)
      {
-         //line prints "FizzBuzz" to the console window.
+         // calls the string, "FizzBuzz" to the console window.
          console.log("FizzBuzz");
      }
 
-     //2nd test, if 1st test returns 'false'.
-     //This 'else if'-statement executes when 'test'-number divisible by 3 and only 3.
+     // 2nd test, if 1st test returns 'false':
+     // 'else if'-statement executes when 'test'-number divisible by 3 and only 3.
      else if(int_number % 3 == 0)
      {
-         //line prints "Fizz" to the console window.
+         // calls the string, "Fizz" to the console window.
          console.log("Fizz");
      }
 
-     //3rd test, if both 1st and 2nd test returns 'false'.
-     //This 'else if'-statement executes when 'test'-number divisible by 5 and only 5.
+     // 3rd test, if both 1st and 2nd test returns 'false':
+     // 'else if'-statement executes when 'test'-number divisible by 5 and only 5
+
      else if(int_number % 5 == 0)
      {
-         //line prints "Buzz" to the console window.
+         // calls the string, "Buzz" to the console window.
          console.log("Buzz")
      }
 
-     //4th test, if all tests above return false.
-     //This 'else'-statement executes when the 'test'-number is 'not divisible by either 3 or 5'.
+     // 4th test, if all tests above return false:
+     // 'else'-statement executes when the 'test'-number is 'not divisible by either 3 or 5'
      else
      {
-         //line prints int_number's value to the console window.
+         //calls the int_number's value to the console window
+
          console.log(int_number);
      }
 
-     //This line increases the 'int_number' variable by 1.
+     // increases the 'int_number' variable by 1
      int_number += 1;
 
  }//end of loop
 
- //----------------------------------------------------------------------------------------------------------------------
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
   spacer();
  console.log("Return For Program Example #3: Chess-board\n");
  /*----------------------------------------------------------------------------------------------------------------------
@@ -1651,101 +1831,117 @@ space();
   I defined a variable, named 'size', which currently holds a value of '8'.
 
   The program will works for any 'size'-value, outputting a grid of the given width and height.
- ----------------------------------------------------------------------------------------------------------------------*/
 
- //Variable can be assigned any EVEN number, accounting for BOTH the chess-board's width AND height.***
+ ---------------------------------------------------------------------------------------------------------------------*/
+
+ // *** can be assigned any EVEN number, accounting for BOTH the chess-board's width AND height ***
  var int_chessboardHeightAndWidthDimensions = 8;
 
- //Variable tracks which row will be created or manipulated within the loops.
+ // tracks which row will be created or manipulated within the loops
  var int_chessboardRow = 0;
 
- //Variable holds a string of the visual representation of the chessboard.
+ // holds a string of the visual representation of the chessboard
  var string_chessboard = "";
 
- //This 'while'-loop will execute until the 'number-of-rows' is the same value as the chessboard's 'dimensions' - 1.
- //The ('dimensions' - 1) value, is to account for the chessboardRow's starting value of 0.
+ // 'while'-loop will execute until the 'number-of-rows' is the same value as the chessboard's 'dimensions' - 1
+ // ('dimensions' - 1) value, is to account for the chessboardRow's starting value of 0
+
  while(int_chessboardRow < int_chessboardHeightAndWidthDimensions)
  {
 
-     //'for' loop will execute each time the loop's index-value is less than the chessboard's 'dimension'-value(length).
-     //the last expression of the loop(int_indexOuter++) increases the index value by 1 after each iteration completes.
+     // 'for'-loop will execute each time the loop's index-value is less than the chessboard's 'dimension'-value(length)
+     // the last expression of the loop(int_indexOuter++) increases the index value by 1 after each iteration completes
      for (var int_indexOuter = 0; int_indexOuter < int_chessboardHeightAndWidthDimensions; int_indexOuter++)
      {
 
-         //This 'if'-statement executes when the 'row-number' equals 0 or has a remainder of 0, when divided by 2.
+         // 'if'-statement executes when the 'row-number' equals 0 or has a remainder of 0, when divided by 2
          if (int_chessboardRow == 0 || int_chessboardRow % 2 == 0)
          {
 
-      //'for' loop will execute each time the loop's index-value is less than the chessboard's 'dimension'-value(width).
-      //the last expression of the loop(int_indexInner1++) increases the index value by 1 after each iteration completes.
+      // 'for'-loop will execute each time the loop's index-value is less than the chessboard's 'dimension'-value(width)
+      // last expression of the loop(int_indexInner1++) increases the index value by 1 after each iteration completes
+
              for (var int_indexInner1 = 0; int_indexInner1 < int_chessboardHeightAndWidthDimensions; int_indexInner1++)
              {
 
-                 //This 'if'-statement executes when the 'row-length' equals 0 or has a remainder of 0, when divided by 2
+                 // 'if'-statement executes when the 'row-length' equals 0 or has a remainder of 0, when divided by 2
+
                  if (string_chessboard.length == 0 || string_chessboard.length % 2 == 0)
                  {
-                     //line adds the char '#' to the 'string_chessboard' variable's value.
+                     // adds the char '#' to the 'string_chessboard' variable's value
+
                      string_chessboard += "#";
                  }
 
-                 //This 'else'-statement executes when the 'row-length' is an odd number.
+                 // 'else'-statement executes when the 'row-length' is an odd number
+
                  else
                  {
-                     //line adds the char ' '(1 space) to the 'string_chessboard' variable's value.
+                     // adds the char ' '(1 space) to the 'string_chessboard' variable's value
+
                      string_chessboard += " ";
                  }
 
-             }//end of inner-loop for even rows.
+             }// end of inner-loop for even rows.
 
-             //line adds the 'newline' escape-symbol at the end of completed, inner-for-loop cycle
+             // adds the 'newline' escape-symbol at the end of completed, inner-for-loop cycle
+
              string_chessboard += "\n";
 
-         }//end of if-statement for even.
+         }// end of if-statement for even.
 
-         //This 'else'-statement executes when the 'row-number' is odd.
+         // 'else'-statement executes when the 'row-number' is odd
+
          else
          {
 
-       //'for' loop will execute each time the loop's index-value is less than the chessboard's 'dimension'-value(width).
-       //the last expression of the loop(int_indexInner2++) increases the index value by 1 after each iteration completes
+       // 'for'-loop executes each time the loop's index-value is less than the chessboard's 'dimension'-value(width)
+       // last expression of the loop(int_indexInner2++) increases the index value by 1 after each iteration completes
+
              for (var int_indexInner2 = 0; int_indexInner2 < int_chessboardHeightAndWidthDimensions; int_indexInner2++)
              {
-                 //This 'if'-statement executes when the 'row-length' is an odd value.
+                 // 'if'-statement executes when the 'row-length' is an odd value
+
                  if (string_chessboard.length % 2 != 0)
                  {
-                     //line adds the char ' '(1 space) to the 'string_chessboard' variable's value.
+                     // adds the char ' '(1 space) to the 'string_chessboard' variable's value
+
                      string_chessboard += " ";
                  }
 
-                 //This 'else'-statement executes when the 'row-length' is an even value.
+                 // 'else'-statement executes when the 'row-length' is an even value
+
                  else
                  {
-                     //line adds the char '#' to the 'string_chessboard' variable's value
+                     // adds the char '#' to the 'string_chessboard' variable's value
+
                      string_chessboard += "#";
                  }
 
-             }//end of inner-loop for odd rows
+             }// end of inner-loop for odd rows
 
-             //line adds the 'newline' escape-symbol at the end of completed, inner-for-loop cycle
+             // adds the 'newline' escape-symbol at the end of completed, inner-for-loop cycle
+
              string_chessboard += "\n";
 
 
-         }//end of else-statement for odd rows
+         }// end of else-statement for odd rows
 
-         //line increases the 'int_number' variable by 1. (Yes, (int_chessboardRow += 1) would cause the same effect.)
+         // increases the 'int_number' variable by 1. (Yes, (int_chessboardRow += 1) would cause the same effect)
          int_chessboardRow++;
 
-     }//end of outer-loop for 'all rows'(both even and odd)
+     }// end of outer-loop for 'all rows'(both even and odd)
 
- }//end of while-loop
+ }// end of while-loop
 
- //line writes the string_chessboard-value to the console screen.
+ // calls the string_chessboard-value to the console screen
+
  console.log(string_chessboard);
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
  spacer();
                      console.log("\t\t\t\t\t\t\t*** FUNCTIONS ***\n");
- console.log('********************************************************************************************************');
+ console.log('*******************************************************************************************************');
  space();
  /*
  Defining a Function:
@@ -1768,72 +1964,84 @@ space();
 
   The following code initializes the 'squared'-variable value,
   to be a function that produces the 'squared-value' of any 'number-argument' passed to its 'parameter':
-  */
+ */
+
  console.log('\'squared-variable\' Return:');
  space();
 
-    //name          parameter
+ //---------------------------------------------------------------------------------------------------------------------
+
+    // name          parameter
  var squared = function(x)
  {
-     //line returns ('parameter-value * parameter-value')
+     // returns ('parameter-value' multiplied by 'parameter-value')
+
      return x * x
  };
 
- //line writes the call-return from the 'squared'-function. (the 'argument' to the function's 'parameter' is 12)
+ // calls the call-return from the 'squared'-function (the 'argument' to the function's 'parameter' is 12)
+
  console.log(squared(12)); // 144
  spacer();
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
  //In the following example, 'makeNoise' does not list any parameter names, whereas 'power' lists two:
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
+
  console.log('\'Parameter-Example\' Return:');
  space();
 
-     //name        parameter
+     // name        parameter
  var noise = function ()
  {
-     //line writes,"Hurray!" to the console window
+     // calls the string,"Hurray!" to the console window
+
      console.log("Hurray!");
  };
 
- noise(); //Hurray!
+ noise(); // Hurray!
 
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
  spacer();
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
 
  console.log('\'power-function\' Return:');
  space();
 
-     //name                        parameters
+     // name                        parameters
  var powerLoop = function (int_baseNumber, int_exponent)
  {
-     //variable initialized to 1, it will hold the value, of the 'product' of this 'power-function'
+     // variable initialized to 1, it will hold the value, of the 'product' of this 'power-function'
+
      var int_result = 1;
 
-     //for-loop will execute, each time the loop's 'index-value' is less than the value of the call's argument
-     //given to the 'exponent-parameter' of the function
+     // for-loop will execute, each time the loop's 'index-value' is less than the value of the call's argument
+     // given to the 'exponent-parameter' of the function
+
      for(var int_index = 0; int_index < int_exponent; int_index++)
      {
-         //line multiplies('current' result-value by the base-value), then stores it as the 'new' result-value
+         // multiplies('current' result-value by the base-value), then stores it as the 'new' result-value
+
          int_result *=int_baseNumber;
      }
 
-     //after loop's cycles are complete, the value to the result variable is returned from the function' call.
+     // after loop's cycles are complete, the value to the result variable is returned from the function' call
+
      return int_result.toLocaleString('en');
  };
 
- //line calling the 'power'-function's return-value to the console window,
- //using 10 as the argument for the 'base'-parameter and
- //using 5 as the argument for the 'exponent'-parameter
+ // calling the 'power'-function's return-value to the console window,
+ // using 10 as the argument for the 'base'-parameter and
+ // using 5 as the argument for the 'exponent'-parameter
+
  console.log(powerLoop(10,5)); //100,000
  spacer();
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
   console.log('\'function-scope\' Returns:');
   space();
- /*----------------------------------------------------------------------------------------------------------------------
+ /*---------------------------------------------------------------------------------------------------------------------
 
   Function-Value Returns:
 
@@ -1845,7 +2053,7 @@ space();
   gives the returned value to the code that called the function which held the return statement.
 
   The 'return' keyword without an expression after it will cause the function to return 'undefined'.
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
 
   Parameters and Scopes:
 
@@ -1872,39 +2080,50 @@ space();
 
   The 2nd function does not declare the x-variable locally, so reference to the x-variable 'inside' of the function,
   refers to the 'global' x-variable, which is defined at the top of the example.
-  */
+ */
 
- //global variable
+ // global variable
+
  var string_x = "original value";
 
- //1st function
+ // declaring 1st function
+
  var function1 = function ()
  {
-     //declaring local variable using 'var' keyword and setting its value to 'new value'
+     // declaring local variable using 'var' keyword and setting its value to 'new value'
+
      var string_x = "new value";
  };
 
- //a call to function1
- function1(); //no 'side-effect'
+ // a call to function1
 
- //line writes global x-variable to console-window
+ function1(); // no 'side-effect'
+
+ // calls global x-variable to console-window
+
  console.log(string_x); //original value
  space();
 
+ // declaring 2nd function
+
  var function2 = function ()
  {
-     //there is not a 'var' keyword before variable-name, so it is not being declaring as a local variable
-     //so this line is either a programing error(which we know it is not) or it is referring to a global variable
+     // there is not a 'var' keyword before variable-name, so it is not being declaring as a local variable
+     // so this line is either a programing error(which we know it is not) or it is referring to a global variable
+
      string_x = "new value"
  };
 
- //a call to function2
+ // a call to function2
+
  function2();
 
- //line writes global x-variable to console-window
+ // calls global x-variable to console-window
+
  console.log(string_x); //new value
  spacer();
- /*----------------------------------------------------------------------------------------------------------------------
+
+ /*---------------------------------------------------------------------------------------------------------------------
 
   Nested Scope:
 
@@ -1919,73 +2138,93 @@ space();
  console.log('\'Nested-function\' Return: The Mountains');
  space();
 
- //outer-function
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declaring outer-function
+
  var landscape = function()
  {
-     //variable holds the value of the landscape-string, which the landscape-function returns when it is called
+     // variable holds the value of the landscape-string, which the landscape-function returns when it is called
+
      var string_landscape = "";
 
-     //1st inner-function
+     // 1st inner-function
+
      var flat = function (int_size)
      {
-         //for-loop will execute each time the loop's index-value is less than the value of the call's argument,
-         //given to the size-parameter of the function
+         // for-loop will execute each time the loop's index-value is less than the value of the call's argument,
+         // given to the size-parameter of the function
+
          for(var int_index = 0; int_index < int_size; int_index++)
          {
-             //line adds the 'argument'-number of 'chars', representing 'flat-areas' in the 'landscape-string'
+             // adds the 'argument'-number of 'chars', representing 'flat-areas' in the 'landscape-string'
+
              string_landscape += "_";
          }
      };
 
-     //2nd inner-function
+     // 2nd inner-function
+
      var mountain = function (int_size)
      {
-         //line adds a 'char' representing the 'left-side' of the 'mountain' in the 'landscape-string'
+         // line adds a 'char' representing the 'left-side' of the 'mountain' in the 'landscape-string'
+
          string_landscape += "/";
 
-         //for-loop will execute each time the loop's index-value is less than the value of the call's argument,
-         //given to the size-parameter of the function
+         // for-loop will execute each time the loop's index-value is less than the value of the call's argument,
+         // given to the size-parameter of the function
+
          for(var int_index = 0; int_index < int_size; int_index++)
          {
-             //line adds a 'char' representing a 'middle-ridge' of the 'mountain' in the 'landscape-string'
+             // line adds a 'char' representing a 'middle-ridge' of the 'mountain' in the 'landscape-string'
+
              string_landscape += "'";
          }
 
-         //line adds a 'char' representing the 'right-side' of the 'mountain' in the 'landscape-string'
+         // line adds a 'char' representing the 'right-side' of the 'mountain' in the 'landscape-string'
+
          string_landscape += "\\";
      };
 
-     //a call within the outer-function's scope, to the 1st inner-function, with 2 as the argument-value
+     // a call within the outer-function's scope, to the 1st inner-function, with 2 as the argument-value
+
      flat(2);
 
-     //a call within the outer-function's scope, to the 2nd inner-function, with 4 as the argument-value
+     // a call within the outer-function's scope, to the 2nd inner-function, with 4 as the argument-value
+
      mountain(4);
 
-     //a call within the outer-function's scope, to the 1st inner-function, with 1 as the argument-value
+     // a call within the outer-function's scope, to the 1st inner-function, with 1 as the argument-value
+
      flat(1);
 
-     //a call within the outer-function's scope, to the 2nd inner-function, with 3 as the argument-value
+     // a call within the outer-function's scope, to the 2nd inner-function, with 3 as the argument-value
+
      mountain(3);
 
-     //a call within the outer-function's scope, to the 1st inner-function, with 2 as the argument-value
+     // a call within the outer-function's scope, to the 1st inner-function, with 2 as the argument-value
+
      flat(2);
 
-     //a call within the outer-function's scope, to the 2nd inner-function, with 5 as the argument-value
+     // a call within the outer-function's scope, to the 2nd inner-function, with 5 as the argument-value
+
      mountain(5);
 
-     //a call within the outer-function's scope, to the 1st inner-function, with 1 as the argument-value
+     // a call within the outer-function's scope, to the 1st inner-function, with 1 as the argument-value
+
      flat(1);
 
-     //statement returns the value of the string_lanscape variable
+     // statement returns the value of the 'string_landscape'-variable
+
      return string_landscape;
  };
 
- //line calls the value of the landscape-function to the console-window
+ // calls the value of the landscape-function to the console-window
 
  console.log(landscape()); //__/''''\_/'''\__/'''''\_
  spacer();
 
- /*----------------------------------------------------------------------------------------------------------------------
+ /*---------------------------------------------------------------------------------------------------------------------
   Declaration Notation:
 
   There is a slightly shorter way to say:"var squared = function(parameter){code...};"
@@ -1997,31 +2236,38 @@ space();
  console.log('\'squared-function\' Return:');
  space();
 
- //function-declaration, the statement 'defines' and 'points program-focus' to the given function when called.
+ // function-declaration, the statement 'defines' and 'points program-focus' to the given function when called
+
  function squared(x)
  {
-     //line returns 'parameter * parameter'
+     // line returns the 'parameter'-value multiplied by the same 'parameter-value'
+
      return x * x
  }
 
- //line writes the return from the 'squared'-function. (the 'argument' to the function's 'parameter' is 12)
+ // line writes the return from the 'squared'-function. (the 'argument' to the function's 'parameter' is 12)
+
  console.log(squared(12)); // 144
  spacer();
 
- console.log('\"Difference Between Declaring a \'function\' and Declaring a \'variable-value\' holding a \'function\'\" Return:');
+ console.log('\"Difference Between Declaring a \'function\' and Declaring a \'variable-value\' ' +
+             'holding a \'function\'\" Return:');
  space();
- /*----------------------------------------------------------------------------------------------------------------------
+ /*---------------------------------------------------------------------------------------------------------------------
 
- There is a major distinction between the 'declaring a function' and 'declaring a variable's value, as a function'.
+  There is a major distinction between the 'declaring a function' and 'declaring a variable's value, as a function'
 
- Checkout the code below:
-  */
+  Checkout the code below:
 
- //line writes a 'string' and a 'function call's return-value'(another string), to the console window.
+ ---------------------------------------------------------------------------------------------------------------------*/
+
+ // calls a 'string' and a function-call's 'return-value'(another string), to the console window
+
  console.log("The future says:",future());
  spacer();
 
- //function-declaration
+ // function-declaration
+
  function future()
  {
      return "We still have no flying cars.";
@@ -2034,14 +2280,14 @@ space();
 
   Functions are asynchronous:
 
-  They are conceptually moved to the top of the program's global-scope and can be used by all the code within that scope.
+  They are conceptually moved to the top of the program's global-scope and can be used by all code within that scope.
 
   This is sometimes useful because it gives us the freedom to order code in a way that seems meaningful
   (not having to worry about having to define all functions above their first use).
-  ---------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------
  */
  console.log('\t\t\t\t\t\t\t\t\tUtilizing Call Stacks, in Functions');
- console.log('********************************************************************************************************');
+ console.log('*******************************************************************************************************');
  space();
  /*
 
@@ -2059,11 +2305,12 @@ space();
 
   Storing this stack requires space in the computer’s memory.
 
-  When the stack grows too high, the computer will fail with a message like: 'out of stack space' or 'too much recursion'
+  When the stack grows too high, the program will fail with a message like: 'out of stack space' or 'too much recursion'
 
   The following code causes an infinite back-and-forth between two functions. Rather, it would be infinite,
   if the computer had an infinite stack. As it is, we will run out of space, or “blow the stack”.
- ----------------------------------------------------------------------------------------------------------------------*/
+
+ ---------------------------------------------------------------------------------------------------------------------*/
 
  //Uncomment the code below and debug, to see the stack grow to an infinite size, then re-comment it to continue.
  /*
@@ -2079,7 +2326,7 @@ space();
 
  console.log(chicken() + "which came first");
  */
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
  /* Closure:
 
   Closure is the ability to reference a specific instance of local variables in an enclosing function.
@@ -2089,41 +2336,50 @@ space();
   This behavior allows for some creative use of function-values.
 
   We can turn a previous example, into a way to create functions that multiply by an arbitrary amount.
-  ---------------------------------------------------------------------------------------------------------------------*/
+  --------------------------------------------------------------------------------------------------------------------*/
 
  console.log('\'squaredOrPower-function\' Returns:');
  space();
 
- //function declaration
+ // function declaration
+
  function squaredOrPower(int_base, int_exponent)
  {
-     //variable initialized to 1, it will hold the 'product'-value of the function
+     // variable initialized to 1, it will hold the 'product'-value of the function
+
      var int_result = 1;
 
-     // line executes if no argument-value is given for the exponent-parameter
+     // executes if no argument-value is given for the exponent-parameter
+
      if (int_exponent == undefined)
      {
-         //line declares 2, as the value of the local-variable's(parameter-variable) value
+         // declares 2, as the value of the local-variable's(parameter-variable) value
+
          int_exponent = 2;
      }
 
-     //for-loop will execute each time the loop's index-value is less than the value of the 'current'-value,
-     //given to the exponent-parameter of the function(in this example, the number 2, if exponent-parameter is undefined)
+     // for-loop will execute each time the loop's index-value is less than the value of the 'current'-value, given to
+     // the exponent-parameter of the function(in this example, the number 2, if exponent-parameter is undefined)
+
      for(var i = 0; i < int_exponent; i++)
      {
-         //line multiplies the 'current' result-value by the base-value, stores it as the 'new' result-value
+         // multiplies the 'current' result-value by the base-value, stores it as the 'new' result-value
+
          int_result *= int_base;
      }
 
-     //after loop's cycles are complete, the value of the result-variable is returned to the function's call.
+     // after loop's cycles are complete, the value of the result-variable is returned to the function's call
+
      return int_result;
  }
 
- //calling squaredOrPower function with only 1 argument
+ // calling squaredOrPower function with only 1 argument
+
  console.log(squaredOrPower(5)); //25
  space();
 
- //calling the same squaredOrPower function with 2 arguments
+ // calling the same squaredOrPower function with 2 arguments
+
  console.log(squaredOrPower(10,3)); //1000
  spacer();
 
@@ -2148,47 +2404,60 @@ space();
 
  //example 1:
 
- //function declaration
+ // function declaration
+
  function wrapValue(int_x)
  {
-     //assigns parameter-value to local-variable
+     // assigns parameter-value to local-variable
+
      var int_local = int_x;
 
-     //'callback'(nameless)-function, returns the callback-function's returned-value
+     // 'callback'(nameless)-function, returns the callback-function's returned-value
+
      return function(int_wrapperArgument)
             {
-                //if-statement executes when called without an 'argument-value' being pass through the parameter
+                // if-statement executes when called without an 'argument-value' being pass through the parameter
+
                 if(int_wrapperArgument == undefined)
                 {
-                    //line initializes int_wrapperArgument to 0
+                    // initializes int_wrapperArgument to 0
+
                     int_wrapperArgument = 0;
                 }
 
-                //line returns the sum of the 'stored' local variable-value and the parameter's argument-value
+                // returns the sum of the 'stored' local variable-value and the parameter's argument-value
+
                 return int_local + int_wrapperArgument;
             }
  }
- //declaring wrap1-variable and initializing its 'value' to the 'wrapValue-function return'(using 1 as its argument)
+ // declaring wrap1-variable and initializing its 'value' to the 'wrapValue-function return'(using 1 as its argument)
+
  var function_wrap1 = wrapValue(1);
 
- //declaring wrap2-variable and initializing its 'value' to the 'wrapValue-function return'(using 2 as its argument)
+ // declaring wrap2-variable and initializing its 'value' to the 'wrapValue-function return'(using 2 as its argument)
+
  var function_wrap2 = wrapValue(2);
 
- //calling wrap1-variable's callback-functions return-value to the console-window
- console.log(function_wrap1()); //1 -> 0 + 1
+ // calling wrap1-variable's callback-functions return-value to the console-window
+
+ console.log(function_wrap1()); // 1 -> 0 + 1
  space();
 
- //calling wrap1-variable's callback-functions return-value to the console-window
- console.log(function_wrap1(68)); //69 -> 68 + 1
+ // calling wrap1-variable's callback-functions return-value to the console-window
+
+ console.log(function_wrap1(68)); // 69 -> 68 + 1
  space();
 
- //calling wrap2-variable's callback-functions return-value to the console-window
- console.log(function_wrap2()); //2 -> 0 + 2
+ // calling wrap2-variable's callback-functions return-value to the console-window
+
+ console.log(function_wrap2()); // 2 -> 0 + 2
  space();
 
- //calling wrap2-variable's callback-functions return-value to the console-window
- console.log(function_wrap2(68)); //70 -> 68 + 2
+ // calling wrap2-variable's callback-functions return-value to the console-window
+
+ console.log(function_wrap2(68)); // 70 -> 68 + 2
  space();
+
  //----------------------------------------------------------------------------------------------------------------------
 
  /*example 2:
@@ -2203,26 +2472,32 @@ space();
   In addition it gets 'access' to the argument-value 5, when passed through its number-parameter.
  */
 
- //function declaration
+ // function declaration
+
  function multiplierBy2(int_factor)
  {
-     //'callback'(nameless)-function, line returns the callback-function's returned-value
+     // 'callback'(nameless)-function, line returns the callback-function's returned-value
+
      return function(int_number)
             {
-                //line multiplies the 'current' number-value by the factor-value, then stores it as 'new' number-value
+                // line multiplies the 'current' number-value by the factor-value, then stores it as 'new' number-value
+
                 return int_number * int_factor;
             };
  }
 
- //initializing 'function_doubleTheValue-variable' and declaring the 'multiplierBy2-function' with 2 as its argument,
- //as its stored value
+ // initializing 'function_doubleTheValue-variable' and declaring the 'multiplierBy2-function' with 2 as its argument,
+ // as its stored value
+
  var function_doubleTheValue = multiplierBy2(2);
 
- //calling the return-value of the 'function-variable' when it is passing 5 to its stored code-block's(multiplierBy2)
- //callback-function
- console.log(function_doubleTheValue(5)); //10
+ // calling the return-value of the 'function-variable' when it is passing 5 to its stored code-block's(multiplierBy2)
+ // callback-function
+
+ console.log(function_doubleTheValue(5)); // 10
  spacer();
  /*
+ -----------------------------------------------------------------------------------------------------------------------
 
   Recursion is not always a less-efficient alternative to looping.....
 
@@ -2236,32 +2511,40 @@ space();
   console.log('\'Recursion-function\' Returns:');
   space();
 
- //function-declaration    parameters -> base , exponent
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // function-declaration    parameters -> base , exponent
+
  function powerRecursion(int_base, int_exponent)
  {
-     //block executes when exponent-value is 0 or non-existent
+     // block executes when exponent-value is 0 or non-existent
+
      if(int_exponent == 0 || int_exponent == undefined)
      {
-         //line returns 1 because any number to the '0' power has a product of '1'
+         // line returns 1 because any number to the '0' power has a product of '1'
+
          return 1;
      }
-     //block executes when exponent-value is greater than 0
+     // block executes when exponent-value is greater than 0
+
      else
      {
-         //recursion returns are added to call-stack(Frames) until int_exponent == 0
-         //calculations start from top-Frame(most recent iteration) of stack to the bottom(1st iteration),
+         // recursion returns are added to call-stack(Frames) until int_exponent == 0
+         // calculations start from top-Frame(most recent iteration) of stack to the bottom(1st iteration),
          // then multiplied by 1, the final-return, for if's statement,'int_exponent == 0'
+
          return int_base * powerRecursion(int_base,int_exponent -1);
      }
  }
 
- console.log(powerRecursion(5)); //1
+ console.log(powerRecursion(5)); // 1
  space();
 
- console.log(powerRecursion(5,4)); //625
+ console.log(powerRecursion(5,4)); // 625
  space();
  /*
- ------------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
+
   Consider this puzzle: by starting from the number 1 and repeatedly either adding 5 or multiplying by 3,
   an infinite amount of new numbers can be produced.
 
@@ -2273,69 +2556,79 @@ space();
 
   Here is a recursive solution:
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
- //function-declaration (parameter)
+ // function-declaration (parameter)
+
  function findSolution(int_target)
  {
-     //line calls inner-function, passing the 'integer' data-type 1, and 'string' data-type '1' as arguments to parameter
+     // calls inner-function, passing the 'integer' data-type '1', and 'string' data-type '1' as argument's parameter
+
      return find(1,"1");
 
-     //declaring inner-function
+     // declaring inner-function
+
      function find(int_start,int_history)
      {
-         //block executes if start(inner-function parameter) and target(outer-function parameter) values match
+         // block executes if start(inner-function parameter) and target(outer-function parameter) values match
+
          if (int_start == int_target)
          {
-             //line returns history-variable to outer-function call, when a sequence that produces target-value is found
+             // returns history-variable to outer-function call, when a sequence that produces target-value is found
+
              return int_history;
          }
 
-         //block executes if start(inner-function parameter) value is greater than target(outer-function parameter) value
+         // executes if start(inner-function parameter) value is greater than target(outer-function parameter) value
+
          else if (int_start > int_target)
          {
-            //line returns 'null' to call('top-frame' of 'call-stack')
-            //if returning 'null' to initial frame, there is no sequence that will produce target-value
+            // returns 'null' to call('top-frame' of 'call-stack')
+            // if returning 'null' to initial frame, there is no sequence that will produce target-value
+
              return null;
          }
 
+         // executes only if none of the above conditional-statements  have been execute
          else
          {
-             //following line will add 5 to the target-value, while also adding a 'new frame' to the 'call-stack'.
+             // following line will add 5 to the target-value, while also adding a 'new frame' to the 'call-stack'
 
-             //while target-value is less than history-value, 'left-side' of ||(or)-statement will continue to execute
-             // on each iteration.
+             // while target-value is less than history-value, 'left-side' of ||(or)-statement will continue to execute
+             // on each iteration
 
-             //if target-value is exceeded, 'else-if'-statement will return 'null' and 'remove the top frame'.
+             // if target-value is exceeded, 'else-if'-statement will return 'null' and 'remove the top frame'
 
-             //on following iteration, the line will then multiply
-             //the 'target-value' of the former-frame(new top-frame) by 3(right-side of 'or'-statement).
+             // on following iteration, the line will then multiply
+             // the 'target-value' of the former-frame(new top-frame) by 3(right-side of 'or'-statement)
 
-             //if target is exceeded, else-if statement will return null and remove the top frame.
+             // if target is exceeded, else-if statement will return null and remove the top frame
 
-             //on following iteration, the line will again multiply the target-value of the frame by 3.
+             // on following iteration, the line will again multiply the target-value of the frame by 3
 
-             //if target is exceeded, else-if statement will return null and remove the top frame
-             //and repeat process on each following iterations.
+             // if target is exceeded, else-if statement will return null and remove the top frame
+             // and repeat process on each following iterations
 
-             //if 'call-stack' is reduced to 'initial-frame' of the 'call-stack',
-             //the same 'initial process' will take place but 'in reverse-order'.
-             //('left-side' of ||(or)-statement will execute 1st)
+             // if 'call-stack' is reduced to 'initial-frame' of the 'call-stack',
+             // the same 'initial process' will take place but 'in reverse-order'
+             // ('left-side' of ||(or)-statement will execute 1st)
 
-             //line will multiply the initial target-value by 3, while also adding a new frame to the call-stack.
+             // line will multiply the initial target-value by 3, while also adding a new frame to the call-stack
 
-             //while target-value is less than history-value the right-side of ||(or) statement will continue to execute
+             //  while target-value is less than history-value, right-side of ||(or) statement will continue to execute
 
-             //if target is exceeded, else-if statement will return null and remove the top frame.
+             // if target is exceeded, else-if statement will return null and remove the top frame
 
-             //on following iterations, the line will add 5 to the target-value.
+             // on following iterations, the line will add 5 to the target-value.
 
-             //if target is exceeded, else-if statement will return null and remove 'all the adding by 5 frames', above
-             //the most recent frame 'multiplying history value by 3', which still remains in the call-stack,
+             // if target is exceeded, else-if statement will return null and remove 'all the adding by 5 frames', above
+             // the most recent frame 'multiplying history value by 3', which still remains in the call-stack,
 
-             // repeats above sequence.
+             // repeats above sequence
 
-             //if call-stack is reduced again to the initial frame of call-stack, 'null' is returned
-             //**(there is no sequence which will produce target-value of the parameter)
+             // if call-stack is reduced again to the initial frame of call-stack, 'null' is returned
+             // **(there is no sequence which will produce target-value of the parameter)
+
              return find(int_start + 5,"(" + int_history + " + 5)") || find(int_start * 3, "(" + int_history + " * 3)");
          }
      }
@@ -2343,13 +2636,14 @@ space();
  }
 
  //line returns value of findSolution()-function with an argument-value of 18
+
  console.log(findSolution(18)); // ((1 + 5) * 3)
 
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
  spacer();
  console.log('\t\t\t\t\t\t\t\t\t*** Growing functions ***');
- console.log('********************************************************************************************************');
+ console.log('*******************************************************************************************************');
  space();
  /*
                              *** Growing functions ***
@@ -2382,55 +2676,64 @@ space();
 
 
  //function declaration             //parameter: 'animal-counts'
+
  function printFarmInventoryVersion1(int_cowCount, int_chickenCount)
  {
-     //line declares a variable(var) named 'string_cowCount' and initializes its value to a 'String'-dada-type,
-     //representing the 'int_cowCount'(Integer) data-type value
+     // line declares a variable(var) named 'string_cowCount' and initializes its value to a 'String'-dada-type,
+     // representing the 'int_cowCount'(Integer) data-type value
 
-     //this is accomplished by using the 'Data-Type Casting-function': String(number-value)
+     // this is accomplished by using the 'Data-Type Casting-function': String(number-value)
 
-     //where, in this case the 'int_cowCount'-value represents the 'number-value'
+     // where, in this case the 'int_cowCount'-value represents the 'number-value'
+
      var string_cowCount = String(int_cowCount);
 
-     //adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
+     // adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
 
-     //This 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0')
+     // 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0')
      while (string_cowCount.length < 3)
      {
-         //line adds a char(character)which as you know by now, is a 'String' data-type,
-         //representing the number 0, to the beginning of the 'string_cowCount'-variable
+         // line adds a char(character)which as you know by now, is a 'String' data-type,
+         // representing the number 0, to the beginning of the 'string_cowCount'-variable
+
          string_cowCount = "0" + string_cowCount;
      }
 
-     //line declares a variable(var) named 'string_chickenCount' and initializes its value to a 'String' dada-type,
-    //representing the 'int_chickenCount'(Integer) data-type value,
+    // line declares a variable(var) named 'string_chickenCount' and initializes its value to a 'String' dada-type,
+    // representing the 'int_chickenCount'(Integer) data-type value,
 
-    //this is accomplished by using the 'Data-Type Casting-function': String(number-value)
+    // this is accomplished by using the 'Data-Type Casting-function': String(number-value)
 
-    //where, in this case the 'int_cow'-value represents the 'number-value'
+    // where, in this case the 'int_cow'-value represents the 'number-value'
+
     var string_chickenCount = String(int_chickenCount);
 
-    //adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
+    // adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
 
-    //This 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0')
+    // 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0')
+
     while (string_chickenCount.length < 3)
     {
         //line adds a char(character) which is a 'String' data-type,
         // representing the number 0, to the beginning of the 'string_chickenCount'-variable
+
         string_chickenCount = "0"+ string_chickenCount;
     }
 
     //line writes the 'string_cowCount'-value, concatenated with a string holding a space and animal-type(" Cows"),
     //allowing for a space between values, when writen as one continual string
+
     console.log(string_cowCount + " Cows");
 
     //line writes the 'string_chickenCount'-value, concatenating a string holding a space and animal-type(" Chickens"),
     //allowing for a space between values, when writen as one continual string
+
     console.log(string_chickenCount + " Chickens");
  }
 
  //calling the 'farmInventory'-function, using 25 as the 'argument' for the 'int_cow'-parameter
  //and 9 for the 'int_chicken'-parameter
+
  printFarmInventoryVersion1(25,9); // 025 Cows
                                    // 009 Chickens
 
@@ -2468,48 +2771,58 @@ space();
 
   Here’s a first attempt:
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
  //function declaration                     // adding new 'animal-count' to parameter
+
  function printFarmInventoryVersion2(int_cowCount, int_chickenCount, int_pigCount)
  {
      //calling 'zeroPaddingWithLabel'-function for each animal(holding the 'animal-count'(local variable,
      //passed though by the calling function) and the 'animal-type',as its two arguments)
+
      zeroPaddingWithLabel(int_cowCount,"Cows");
      zeroPaddingWithLabel(int_chickenCount,"Chickens");
      zeroPaddingWithLabel(int_pigCount, "Pigs");
  }
 
  //declaring abstraction-function, can be used by ALL animals on inventory list
+
  function zeroPaddingWithLabel(int_animalCount,string_animalType)
  {
-     //line declares a variable(var) named 'string_animalCount' and initializes its value to a 'String'-dada-type,
-     //representing the 'int_animalCount'(Integer data-type) value
+     // line declares a variable(var) named 'string_animalCount' and initializes its value to a 'String'-dada-type,
+     // representing the 'int_animalCount'(Integer data-type) value
 
-     //this is accomplished by using the 'Data-Type Casting-function': String(number-value)
+     // this is accomplished by using the 'Data-Type Casting-function': String(number-value)
 
-     //where, in this case the 'int_animalCount'-value represents the 'number-value'
+     // where, in this case the 'int_animalCount'-value represents the 'number-value'
+
      var string_animalCount = String(int_animalCount);
 
-     //adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
+     // adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
 
-     //this 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0')
+     // 'while'-loop will execute until the string-length is less than 3(remember, the 'count' always starts at '0')
+
      while (string_animalCount.length < 3)
      {
-         //line adds a char(character) which is a 'String' data-type,
-         //representing the number 0, to the beginning of the 'string_animalCount'-variable
+         // line adds a char(character) which is a 'String' data-type,
+         // representing the number 0, to the beginning of the 'string_animalCount'-variable
+
          string_animalCount = "0" + string_animalCount;
      }
 
-     //line writes a single string to the console-window, containing
-     //the 'string_animalCount'-value, concatenated with a empty-string(" ") and the string_animalType-value
+     // line writes a single string to the console-window, containing
+     // the 'string_animalCount'-value, concatenated with a empty-string(" ") and the string_animalType-value
+
      console.log(string_animalCount + " " + string_animalType);
  }
 
- //calling the 'farmInventory'-function, using 25 as the 'argument' for the 'int_cowCount'-parameter,
- //9 as the 'argument' for the 'int_chickenCount'-parameter and 101 as the 'argument' for the 'int_pigCount'-parameter.
+ // calling the 'farmInventory'-function, using 25 as the 'argument' for the 'int_cowCount'-parameter,
+ // 9 as the 'argument' for the 'int_chickenCount'-parameter and 101 as the 'argument' for the 'int_pigCount'-parameter
+
  printFarmInventoryVersion2(25,9,101);
 
  space();
+
  //----------------------------------------------------------------------------------------------------------------------
  /*
  This program can even be refined even further, as follows:
@@ -2525,54 +2838,65 @@ space();
 
 
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
-  //function declaration                              parameter
+ //function declaration                              parameter
+
  function printFarmInventoryVersion3(int_roosterCount,int_cowCount, int_chickenCount,int_pigCount)
  {
-     //calling 'numberPlacePadding'-function for each animal(holding the 'animal-count'(local variable,
-     //passed though by the calling function), and the length of padding desired, as its two arguments.
+     // calling 'numberPlacePadding'-function for each animal(holding the 'animal-count'(local variable,
+     // passed though by the calling function), and the length of padding desired, as its two arguments.
 
-     //Then concatenating the 'numberPlacePaddingWithAppendableLabel-function's return with a 'string' of the animal-type
-     //with an empty space in front of it
+     // Then concatenating the 'numberPlacePaddingWithAppendableLabel-function's return with a 'string' of the
+     // animal-type with an empty space in front of it
 
-     //This will return a nicely formatted 'string', which is printed(called)
-     //to the console-screen, by being wrapped in the console.log() method
+     // This will return a nicely formatted 'string', which is printed(called)
+     // to the console-screen, by being wrapped in the console.log() method
 
      console.log(numberPlacePaddingWithAppendableLabel(int_roosterCount,5) + " Roosters");
+
      console.log(numberPlacePaddingWithAppendableLabel(int_cowCount,5) + " Cows");
+
      console.log(numberPlacePaddingWithAppendableLabel(int_chickenCount,5) + " Chickens");
+
      console.log(numberPlacePaddingWithAppendableLabel(int_pigCount,5) + " Pigs");
  }
 
  //declaring abstraction-function, can be used by ALL animals on inventory list
+
  function numberPlacePaddingWithAppendableLabel(int_animalCount, int_numberPlaceWidth)
  {
-     //line declares a variable(var) named 'string_animalCount' and initializes its value to a 'String',
-     //representing the 'int_animalCount'(Integer data-type) value with commas, where needed(after every 3 0's)
+     // line declares a variable(var) named 'string_animalCount' and initializes its value to a 'String',
+     // representing the 'int_animalCount'(Integer data-type) value with commas, where needed(after every 3 0's)
 
-     //this is accomplished by using the Integer.toLocaleString()-method, while using the string-'en'(english)
+     // this is accomplished by using the Integer.toLocaleString()-method, while using the string-'en'(english)
      // as an argument, to pass through its parameter
+
      var string_animalCount = int_animalCount.toLocaleString('en');
 
-     //adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
+     // adding '.length'(an Object.String-property), after a string value will give us the 'length' of that string-value
 
-     //This 'while'-loop will execute until the string-length is less than 'int_numberPlaceWidth'-value
-     //(remember, the 'count' always starts at '0').
+     // This 'while'-loop will execute until the string-length is less than 'int_numberPlaceWidth'-value
+     // (remember, the 'count' always starts at '0')
+
      while(string_animalCount.length < int_numberPlaceWidth)
      {
-         //line adds a char representing an 'empty-space' to the beginning of the 'string_animalCount'-variable,
-         //then stores it as the 'new' value of the 'string_animalCount'-variable
+         // line adds a char representing an 'empty-space' to the beginning of the 'string_animalCount'-variable,
+         // then stores it as the 'new' value of the 'string_animalCount'-variable
+
          string_animalCount = " " + string_animalCount;
      }
 
-     //returns the value of the 'string_animalCount'-variable's value to the calling function(console.log();
+     // returns the value of the 'string_animalCount'-variable's value to the calling function(console.log();
+
      return string_animalCount
  }
 
 
-  //calling the 'farmInventory'-function, using 9 as the 'argument' for the 'int_roosterCount'-parameter,
-  //81 as the 'argument' for the 'int_cowCount'-parameter, 450 as the 'argument' for the 'int_chickenCount'-parameter
-  //and 1230 as the 'argument' for the 'int_pigCount'-parameter.
+  // calling the 'farmInventory'-function, using 9 as the 'argument' for the 'int_roosterCount'-parameter,
+  // 81 as the 'argument' for the 'int_cowCount'-parameter, 450 as the 'argument' for the 'int_chickenCount'-parameter
+  // and 1230 as the 'argument' for the 'int_pigCount'-parameter
+
  printFarmInventoryVersion3(9,81,450,1230);
  spacer();
 
@@ -2588,32 +2912,41 @@ space();
 
   Below is a minValue-function, it takes two arguments and returns the smallest value.
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
- //function declaration
+ // function declaration
+
  function minValue(variable_valueA, variable_valueB)
  {
-     //block executes if valueA is greater than valueB
+     // block executes if valueA is greater than valueB
+
      if(variable_valueA > variable_valueB)
      {
-         //line returns valueB
+         // line returns valueB
+
          return variable_valueB;
      }
 
-     //block executes if valueA is less or equal to valueB
+     // block executes if valueA is less or equal to valueB
+
      else
      {
-         //line returns valueA
+         // line returns valueA
+
          return variable_valueA;
      }
  }
 
- //calling minValue-function return to the console window
+ // calling minValue-function return to the console window
+
  console.log(minValue("art","Zebra")); //Zebra (Because uppercase-strings have smaller value than lowercase-strings)
  space();
 
-  //calling minValue-function return to the console window
+  // calling minValue-function return to the console window
+
  console.log(minValue(25,10)); //10
  spacer();
+
  //----------------------------------------------------------------------------------------------------------------------
 
  console.log('\'isEven-function\' Returns:');
@@ -2636,83 +2969,105 @@ space();
   The function will accept a 'number'-parameter and return a 'Boolean'(true or false).
   Test it on 50 and 75. See how it behaves on -1.
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
- //function-declaration
+ // function-declaration
+
  function isEven(int_testNumber)
  {
-     //line declares a variable(var) named 'string_oddNumber' and initializes its value to,"This Number Is ODD!!"
+     // line declares a variable(var) named 'string_oddNumber' and initializes its value to,"This Number Is ODD!!"
+
      var string_oddNumber = "This Number Is ODD!!";
 
-     //line declares a variable(var) named 'string_oddNumber' and initializes its value to,"This Number Is EVEN!!"
+     // line declares a variable(var) named 'string_oddNumber' and initializes its value to,"This Number Is EVEN!!"
+
      var string_evenNumber = "This Number Is EVEN!!";
 
-     //if-statement's code-block executes if the 'test number' is greater or equal to 0
+     // if-statement's code-block executes if the 'test number' is greater or equal to 0
+
      if(int_testNumber >= 0)
      {
-         //nested if-statement's code-block executes if the 'test number' does not equal 0
+         // nested if-statement's code-block executes if the 'test number' does not equal 0
+
          if (int_testNumber != 0)
          {
-             //nested if-statement's code-block executes if the 'test number' equals 1
+             // nested if-statement's code-block executes if the 'test number' equals 1
+
              if (int_testNumber == 1)
              {
-                 //line writes 'string_oddNumber'-value to console-window
+                 // line writes 'string_oddNumber'-value to console-window
+
                  console.log(string_oddNumber);
              }
 
-             //nested else-statement's code-block executes if 'string_evenNumber'-value is greater than 0
+             // nested else-statement's code-block executes if 'string_evenNumber'-value is greater than 0
+
              else
              {
-                 //recursion-function call, with the ('testNumber'-value minus 2) as the parameter's argument
+                 // recursion-function call, with the ('testNumber'-value minus 2) as the parameter's argument
+
                  isEven(int_testNumber - 2);
              }
 
          }
 
-         //else-statement's code-block executes if 'string_evenNumber'-value equals 0
+         // else-statement's code-block executes if 'string_evenNumber'-value equals 0
+
          else
          {
-             //line writes 'string_evenNumber'-value to console-window
+             // line writes 'string_evenNumber'-value to console-window
+
              console.log(string_evenNumber);
          }
      }
 
-     //else-statement's code-block executes if the 'test number' is less than 0
+     // else-statement's code-block executes if the 'test number' is less than 0
+
      else
      {
-         //nested if-statement's code-block executes if the 'test number' is less than -1
+         // nested if-statement's code-block executes if the 'test number' is less than -1
+
          if (int_testNumber != -1)
          {
-             //recursion-function call, with the ('testNumber'-value plus 2) as the parameter's argument
+             // recursion-function call, with the ('testNumber'-value plus 2) as the parameter's argument
+
              isEven(int_testNumber + 2);
          }
 
-         //nested else-statement's code-block executes if 'string_evenNumber'-value equals -1
+         // nested else-statement's code-block executes if 'string_evenNumber'-value equals -1
+
          else
          {
-             //line writes 'string_evenNumber'-value to console-window
+             // line writes 'string_evenNumber'-value to console-window
+
              console.log(string_oddNumber);
          }
      }
 
- }//end of function's code-block
+ }// end of function's code-block
 
- //calling 'isEven'-function, passing an argument-value of -5 through its parameter
+ // calling 'isEven'-function, passing an argument-value of -5 through its parameter
+
  isEven(-5);
  space();
 
- //calling 'isEven'-function, passing an argument-value of 5 through its parameter
+ // calling 'isEven'-function, passing an argument-value of 5 through its parameter
+
  isEven(5);
  space();
 
- //calling 'isEven'-function, passing an argument-value of -4 through its parameter
+ // calling 'isEven'-function, passing an argument-value of -4 through its parameter
+
  isEven(-4);
  space();
 
- //calling 'isEven'-function, passing an argument-value of 4 through its parameter
+ // calling 'isEven'-function, passing an argument-value of 4 through its parameter
+
  isEven(4);
  spacer();
 
- //----------------------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
+
  console.log('\'charCounter\'-function Return:');
  /*
   Character Counting:
@@ -2730,31 +3085,39 @@ space();
   The following function 'charCounter1', takes one word(string) as its only argument and returns a number-value,
   corresponding to how many uppercase “S” characters are in the string.
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
- //declaring function
+ // declaring function
+
  function charCounter1(string_word)
  {
-     //line declares a variable(var) named 'int_counter' and initializes its value to 0
+     // line declares a variable(var) named 'int_counter' and initializes its value to 0
+
      var int_counter = 0;
 
-     //for-loop will execute each time the loop's 'int_index'-value is less than or equal to the string_word's length
-     //the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+     // for-loop will execute each time the loop's 'int_index'-value is less than or equal to the string_word's length
+     // the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes
+
      for(var int_index = 0; int_index < string_word.length; int_index++)
      {
-         //if-statement's code-block executes if the 'char' of the string, at loop's specified index-number equals 'S'
+         // if-statement's code-block executes if the 'char' of the string, at loop's specified index-number equals 'S'
+
          if(string_word.charAt(int_index) == "S")
          {
-             //line increases the 'int_counter'-value by 1
+             // line increases the 'int_counter'-value by 1
+
              int_counter++;
          }
      }
-     //returns 'int_counter'-value to the function's call
+     // returns 'int_counter'-value to the function's call
+
      return int_counter;
  }
 
- //line call's the 'charCounter'-functions return to the console window,
- //passing the string 'Sassy' as the argument to the functions parameter
- console.log(charCounter1("Sassy")); //1
+ // line call's the 'charCounter'-functions return to the console window,
+ // passing the string 'Sassy' as the argument to the functions parameter
+
+ console.log(charCounter1("Sassy")); // 1
  spacer();
 
   console.log('\'charCounter2\'-function Return:');
@@ -2768,203 +3131,248 @@ space();
 
   Lastly, the function's return-statement, will be writen to the console-window, from within the function's operation
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
  //function declaration           parameters
+
  function  charCounter2(string_word, char_letter1, char_letter2)
  {
-     //line declares a variable(var) named 'int_counter1' and initializes its value to 0
+     // line declares a variable(var) named 'int_counter1' and initializes its value to 0
+
      var int_counter1 = 0;
 
-     //line declares a variable(var) named 'int_counter2' and initializes its value to 0
+     // line declares a variable(var) named 'int_counter2' and initializes its value to 0
+
      var int_counter2 = 0;
 
-     //for-loop will execute each time the loop's 'int_index'-value is less than or equal to the string_word's length
-     //(remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
-     //the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+     // for-loop will execute each time the loop's 'int_index'-value is less than or equal to the string_word's length
+     // (remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
+     // the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes
+
      for(var int_index = 0; int_index < string_word.length; int_index++)
      {
-         //if-statement's code-block executes, when the 'char' of 'string_word', at the loop's specified index-number,
+         // if-statement's code-block executes, when the 'char' of 'string_word', at the loop's specified index-number,
          // equals the same value as the 'char_letter1'-value
+
          if(string_word.charAt(int_index) === char_letter1)
          {
-             //line increases the 'int_counter'-value by 1
+             // line increases the 'int_counter'-value by 1
+
              int_counter1++;
          }
      }
 
-     //if-statement's code-block executes, when the 'char_letter2'-value contains a value, other than 'undefined'
+     // if-statement's code-block executes, when the 'char_letter2'-value contains a value, other than 'undefined'
+
      if(char_letter2 != undefined)
      {
-         //for-loop will execute each time the loop's 'int_index'-value is less than or equal to the string_word's length
-         //(remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
-         //the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+         // for-loop executes each time the loop's 'int_index'-value is less than or equal to the string_word's length
+         // (remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
+         // last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes
+
          for (var int_index = 0; int_index < string_word.length; int_index++)
          {
-             //if-statement's code-block executes, when the 'char' of 'string_word', at the loop's specified index-number,
+             // if-statement's code-block executes, when the 'char' of 'string_word', at loop's specified index-number,
              // equals the same value as the 'char_letter2'-value
+
              if (string_word.charAt(int_index) === char_letter2)
              {
-                 //line increases the 'int_counter'-value by 1
+                 // line increases the 'int_counter'-value by 1
+
                  int_counter2++;
              }
          }
      }
 
-     //if- else if- else statement-chain:
+     // *** if- else if- else statement-chain:
 
-     //if-statement code-block executes, when the 'int_counter1'-value equals 0,
-     //the 2nd function-argument('char_letter1')-value is 'NOT undefined'
-     //and the 3rd function-argument('char_letter2')-value 'IS undefined'
+     // if-statement code-block executes, when the 'int_counter1'-value equals 0,
+     // the 2nd function-argument('char_letter1')-value is 'NOT undefined'
+     // and the 3rd function-argument('char_letter2')-value 'IS undefined'
+
      if(int_counter1 == 0 && char_letter1 != undefined && char_letter2 == undefined )
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
+         // returns the function-call's information request to the console window, then program-focus exits function
+
          return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s, in the string \'"
              + string_word + "\'.\n");
      }
 
-     //else if-statement code-block executes, when the 'int_counter1'-value equals 1
-     //and the 3rd function-argument('char_letter2')-value is 'undefined'
+     // else if-statement code-block executes, when the 'int_counter1'-value equals 1
+     // and the 3rd function-argument('char_letter2')-value is 'undefined'
+
      else if (int_counter1 == 1 && char_letter2 == undefined)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
+         // returns the function-call's information request to the console window, then program-focus exits function
+
          return console.log("There is " + String(int_counter1) + " letter \'" + char_letter1 + "\', in the string \'"
                              + string_word + "\'.\n");
      }
 
-     //else if-statement code-block executes, when the 'int_counter1'-value is greater than 1
-     //and the 3rd function-argument('char_letter2')-value is 'undefined'
+     // else if-statement code-block executes, when the 'int_counter1'-value is greater than 1
+     // and the 3rd function-argument('char_letter2')-value is 'undefined'
+
      else if (int_counter1 > 1 && char_letter2 == undefined)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
+         // returns the function-call's information request to the console window, then program-focus exits function
+
          return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s, in the string \'"
                              + string_word + "\'.\n");
      }
 
      //else if-statement code-block executes, when the 'int_counter1'-value equals 0
      //and the 'int_counter2'-value equals 1
+
      else if(int_counter1 == 0 && int_counter2 == 1)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
-         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and "+ String(int_counter2)
-             + " letter \'" + char_letter2 + "\', in the string,\'" + string_word + "\'.\n");
+         // returns the function-call's information request to the console window, then program-focus exits function
+
+         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and " +
+             String(int_counter2) + " letter \'" + char_letter2 + "\', in the string,\'" + string_word + "\'.\n");
      }
 
-     //else if-statement code-block executes, when the 'int_counter1'-value equals 0
-     //and the 'int_counter2'-value is greater than 1
+     // else if-statement code-block executes, when the 'int_counter1'-value equals 0
+     // and the 'int_counter2'-value is greater than 1
+
      else if(int_counter1 == 0 && int_counter2 > 1)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
-         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and "+ String(int_counter2)
-             + " letter (" + char_letter2 + ")'s, in the string,\'" + string_word + "\'.\n");
+         // returns the function-call's information request to the console window, then program-focus exits function
+
+         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and " +
+             String(int_counter2) + " letter (" + char_letter2 + ")'s, in the string,\'" + string_word + "\'.\n");
      }
 
-     //else if-statement code-block executes, when the 'int_counter1'-value equals 0,
-     //the 'int_counter2'-value equals 0,
-     //and the 3rd function-argument has a value other than 'undefined'
+     // else if-statement code-block executes, when the 'int_counter1'-value equals 0,
+     // the 'int_counter2'-value equals 0,
+     // and the 3rd function-argument has a value other than 'undefined'
+
      else if(int_counter1 == 0 && int_counter2 == 0 && char_letter2 != undefined)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
-         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and "+ String(int_counter2)
-             + " letter (" + char_letter2 + ")'s, in the string,\'" + string_word + "\'.\n");
+         // returns the function-call's information request to the console window, then program-focus exits function
+         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and " +
+             String(int_counter2) + " letter (" + char_letter2 + ")'s, in the string,\'" + string_word + "\'.\n");
      }
 
-     //else if-statement code-block executes, when the 'int_counter1'-value equals 1,
-     //the 'int_counter2'-value equals 0,
-     //and the 3rd function-argument(char_letter2) has a value other than 'undefined'
+     // else if-statement code-block executes, when the 'int_counter1'-value equals 1,
+     // the 'int_counter2'-value equals 0,
+     // and the 3rd function-argument(char_letter2) has a value other than 'undefined'
+
      else if (int_counter1 == 1 && int_counter2 == 0 && char_letter2 != undefined)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
-         return console.log( "There is " + String(int_counter1) + " letter \'" + char_letter1 + "\' and "+ String(int_counter2) +
-             " letter (" + char_letter2 + ")'s, in the string \'" + string_word + "\'.\n");
+         // returns the function-call's information request to the console window, then program-focus exits function
+
+         return console.log( "There is " + String(int_counter1) + " letter \'" + char_letter1 + "\' and " +
+             String(int_counter2) + " letter (" + char_letter2 + ")'s, in the string \'" + string_word + "\'.\n");
      }
 
-     //else if-statement code-block executes, when the 'int_counter1'-value equals 1 and
-     //the 'int_counter2'-value equals 1
+     // else if-statement code-block executes, when the 'int_counter1'-value equals 1 and
+     // the 'int_counter2'-value equals 1
+
      else if (int_counter1 == 1 && int_counter2 == 1)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
-         return console.log( "There is " + String(int_counter1) + " letter \'" + char_letter1 + "\' and "+ String(int_counter2) +
-                             " letter \'" + char_letter2 + "\', in the string \'" + string_word + "\'.\n");
+         // returns the function-call's information request to the console window, then program-focus exits function
+
+         return console.log( "There is " + String(int_counter1) + " letter \'" + char_letter1 + "\' and " +
+             String(int_counter2) + " letter \'" + char_letter2 + "\', in the string \'" + string_word + "\'.\n");
      }
 
-     //else if-statement code-block executes, when the 'int_counter1'-value equals 1 and
-     //the 'int_counter2'-value is greater than 1
+     // else if-statement code-block executes, when the 'int_counter1'-value equals 1 and
+     // the 'int_counter2'-value is greater than 1
      else if (int_counter1 == 1 && int_counter2 > 1)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
-         return console.log( "There is " + String(int_counter1) + " letter \'" + char_letter1 + "\' and "+ String(int_counter2) +
-             " letter (" + char_letter2 + ")'s, in the string \'" + string_word + "\'.\n");
+         // returns the function-call's information request to the console window, then program-focus exits function
+
+         return console.log( "There is " + String(int_counter1) + " letter \'" + char_letter1 + "\' and " +
+             String(int_counter2) + " letter (" + char_letter2 + ")'s, in the string \'" + string_word + "\'.\n");
      }
 
-     //else if-statement code-block executes, when the 'int_counter1'-value is greater than 1 and
-     //the 'int_counter2'-value equals 1
+     // else if-statement code-block executes, when the 'int_counter1'-value is greater than 1 and
+     // the 'int_counter2'-value equals 1
+
      else if (int_counter1 > 1 && int_counter2 == 1)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
-         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and " + String(int_counter2)
-             + " letter \'" + char_letter2 + "\', in the string,\'" + string_word + "\'.\n");
+         // returns the function-call's information request to the console window, then program-focus exits function
+
+         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and " +
+             String(int_counter2) + " letter \'" + char_letter2 + "\', in the string,\'" + string_word + "\'.\n");
      }
 
-     //else if-statement code-block executes, when both the 'int_counter1'-value and
-     //the 'int_counter2'-value is greater than 1
+     // else if-statement code-block executes, when both the 'int_counter1'-value and
+     // the 'int_counter2'-value is greater than 1
+
      else if (int_counter1 > 1 && int_counter2 > 1)
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
-         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and " + String(int_counter2)
-                             + " letter (" + char_letter2 + ")'s, in the string,\'" + string_word + "\'.\n");
+         // returns the function-call's information request to the console window, then program-focus exits function
+
+         return console.log("There are " + String(int_counter1) + " letter (" + char_letter1 + ")'s and " +
+             String(int_counter2) + " letter (" + char_letter2 + ")'s, in the string,\'" + string_word + "\'.\n");
      }
 
-     //else statement code-block executes, when none of the above 'conditional-statements' are valid
+     // else statement code-block executes, when none of the above 'conditional-statements' are valid
      else
      {
-         //line returns the function-call's information request to the console window, then program-focus exits function
+         // returns the function-call's information request to the console window, then program-focus exits function
+
          return console.log("Input Error!!  Check your arguments!!!");
      }
 
  }
- //Below is a list of calls to the 'charCounter2-function, each passing different argument values,
- //to test all lines of code with in the function.
+
+ // Below is a list of calls to the 'charCounter2-function, each passing different argument values,
+ // to test all lines of code with in the function.
 
  charCounter2("Mississippi River","M");
- //There is 1 letter 'M', in the string 'Mississippi River'.
+
+ // There is 1 letter 'M', in the string 'Mississippi River'.
 
  charCounter2("Mississippi River","m");
- //There are 0 letter (m)'s, in the string 'Mississippi River'.
+
+ // There are 0 letter (m)'s, in the string 'Mississippi River'.
 
  charCounter2("Mississippi River","o");
- //There are 0 letter (o)'s, in the string 'Mississippi River'.
+
+ // There are 0 letter (o)'s, in the string 'Mississippi River'.
 
  charCounter2("Mississippi River","i");
- //There are 5 letter (i)'s, in the string 'Mississippi River'.
+
+ // There are 5 letter (i)'s, in the string 'Mississippi River'.
 
  charCounter2("Mississippi River","e","v");
- //There is 1 letter 'e' and 1 letter 'v', in the string 'Mississippi River'.
+
+ // There is 1 letter 'e' and 1 letter 'v', in the string 'Mississippi River'.
 
  charCounter2("Mississippi River","s","p");
- //There are 4 letter (s)'s and 2 letter (p)'s, in the string,'Mississippi River'.
+
+ // There are 4 letter (s)'s and 2 letter (p)'s, in the string,'Mississippi River'.
 
  charCounter2("Mississippi River","M","p");
- //There is 1 letter 'M' and 2 letter (p)'s, in the string 'Mississippi River'.
+
+ // There is 1 letter 'M' and 2 letter (p)'s, in the string 'Mississippi River'.
 
  charCounter2("Mississippi River","p","e");
- //There are 2 letter (p)'s and 1 letter 'e', in the string,'Mississippi River'.
+
+ // There are 2 letter (p)'s and 1 letter 'e', in the string,'Mississippi River'.
 
  charCounter2("Mississippi River","z","r");
- //There are 0 letter (z)'s and 1 letter 'r', in the string,'Mississippi River'.
+
+ // There are 0 letter (z)'s and 1 letter 'r', in the string,'Mississippi River'.
 
  charCounter2("Mississippi River","y","i");
- //There are 0 letter (y)'s and 5 letter (i)'s, in the string,'Mississippi River'.
+
+ // There are 0 letter (y)'s and 5 letter (i)'s, in the string,'Mississippi River'.
 
  charCounter2("Mississippi River","a","b");
- //There are 0 letter (a)'s and 0 letter (b)'s, in the string,'Mississippi River'.
+
+ // There are 0 letter (a)'s and 0 letter (b)'s, in the string,'Mississippi River'.
 
  charCounter2("Mississippi River");
- //Input Error!!  Check your arguments!!!
 
- //----------------------------------------------------------------------------------------------------------------------
+ // Input Error!!  Check your arguments!!!
+
+ //---------------------------------------------------------------------------------------------------------------------
   spacer();
   console.log('\t\t\t\t\t\t\t\t\t*** Data Sets ***');
-  console.log('********************************************************************************************************');
+  console.log('******************************************************************************************************');
   space();
  /*
   Data Sets:
@@ -2981,14 +3389,17 @@ space();
 
   Fortunately, JavaScript provides a data-type specifically for storing sets of values,
   it is called an 'Array' and is written as a list of values between square brackets, separated by commas.
-  */
+ */
  console.log('Array \'Length-Property\' Return:');
+ //---------------------------------------------------------------------------------------------------------------------
 
- //declaring and array-variable and initializing its value to a set of integers -> [1,33,6,26,89]
+ // declaring and array-variable and initializing its value to a set of integers -> [1,33,6,26,89]
+
  var array_numberSet = [1,33,6,26,89];
 
- //line calls the integer in the '3rd index' of the array(ARRAY-INDEXES ALWAYS START AT 0)
- console.log(array_numberSet[2]); //6
+ // line calls the integer in the '3rd index' of the array(ARRAY-INDEXES ALWAYS START AT 0)
+
+ console.log(array_numberSet[2]); // 6
  space();
 
   /*
@@ -2999,9 +3410,11 @@ space();
    One example is the length-property, shown below:
    */
 
- //line calls the 'length-property'-value of the array, to the console-window
- console.log(array_numberSet.length); //5
+ // line calls the 'length-property'-value of the array, to the console-window
+
+ console.log(array_numberSet.length); // 5
  space();
+
  //----------------------------------------------------------------------------------------------------------------------
 
   /*
@@ -3019,32 +3432,34 @@ space();
    '.toUpperCase()' is a 'method' of a 'String'-data-type.
 
    */
+ //---------------------------------------------------------------------------------------------------------------------
 
- //line declares a variable(var) named 'String_word' and initializes its value to 'Snap'
+ // line declares a variable(var) named 'String_word' and initializes its value to 'Snap'
+
  var string_word = "Snap";
 
- //using the 'typeof'-keyword to return the 'string_word'-variable data-type
+ // using the 'typeof'-keyword to return the 'string_word'-variable data-type
 
- console.log(typeof string_word); //string  -> data-type
+ console.log(typeof string_word); // string  -> data-type
  space();
 
- //using the 'typeof'-keyword to return the 'string_word'-variable, 'toUpperCase'-property data-type
+ // using the 'typeof'-keyword to return the 'string_word'-variable, 'toUpperCase'-property data-type
 
- console.log(typeof string_word.toUpperCase); //Function  -> object's data-type
+ console.log(typeof string_word.toUpperCase); // Function  -> object's data-type
  space();
 
- //using the 'typeof'-keyword to return the 'string_word'-variable, 'toUpperCase'-property's 'returning-output' data-type
+ // using 'typeof'-keyword to return the 'string_word'-variable, 'toUpperCase'-property's 'returning-output' data-type
 
- console.log(typeof string_word.toUpperCase()); //string  ->the the data-type which the function()-object produces
+ console.log(typeof string_word.toUpperCase()); // string  ->the the data-type which the function()-object produces
  space();
 
- //calling 'string_word'-variable's 'toUpperCase()'-property, to return a copy of the variable's value,
- //where the letters have all been capitalized.
+ // calling 'string_word'-variable's 'toUpperCase()'-property, to return a copy of the variable's value,
+ // where the letters have all been capitalized.
 
- console.log(string_word.toUpperCase()); //SNAP  -> The return-output
+ console.log(string_word.toUpperCase()); // SNAP  -> The return-output
  space();
 
- //
+ //---------------------------------------------------------------------------------------------------------------------
 
   /*
    The following examples demonstrate some of the methods 'Array-objects' have:
@@ -3057,41 +3472,47 @@ space();
 
    The argument given to 'join'-method's parameter determines the value that is connection between the array’s elements.
    */
+ //---------------------------------------------------------------------------------------------------------------------
 
- //line declares an array-variable(var) named 'String_word' and initializes its value to an empty-value
+ // line declares an array-variable(var) named 'String_word' and initializes its value to an empty-value
+
  var array_games = [];
 
- //line calls array_games's held value, to the console-window
+ // line calls array_games's held value, to the console-window
 
- console.log(array_games); //[]
+ console.log(array_games); // []
  space();
 
- //line adds the 'chess'-string, to the end of the last value held by the array(a currently empty array)
+ // line adds the 'chess'-string, to the end of the last value held by the array(a currently empty array)
+
  array_games.push("chess");
 
- //line adds both the 'poker' and 'tetris'-strings, to the end of the current value held by the array
- //(notice, a comma is what separates the two values)
+ // line adds both the 'poker' and 'tetris'-strings, to the end of the current value held by the array
+ // (notice, a comma is what separates the two values)
+
  array_games.push("poker","knife");
 
- //line calls array_games's held value, to the console window
+ // line calls array_games's held value, to the console window
 
  console.log(array_games); //['chess', 'poker', 'tetris']
  space();
 
- //line calls the return, of a copy, of the array of strings concatenated into a single string, using the parameter's
- //argument to connect each array element to on another
+ // line calls the return, of a copy, of the array of strings concatenated into a single string, using the parameter's
+ // argument to connect each array element to on another
 
- console.log(array_games.join(" ")); //chess poker tetris
+ console.log(array_games.join(" ")); // chess poker tetris
  space();
 
- //line removes the 'tetris'-string, the end value held by the array and returns it to the console-window
- console.log(array_games.pop()); //knife
+ // line removes the 'tetris'-string, the end value held by the array and returns it to the console-window
+
+ console.log(array_games.pop()); // knife
  space();
 
-  //line calls array_games's held value, to the console-window
+ // line calls array_games's held value, to the console-window
 
- console.log(array_games); //['Mack', 'the']
+ console.log(array_games); // ['Mack', 'the']
  spacer();
+
  //----------------------------------------------------------------------------------------------------------------------
 
  spacer();
@@ -3129,37 +3550,42 @@ space();
 
    You may think of objects as variables with any number of values held within,
    each of which has a property-name to allow the program, to call it.
-   */
+  */
+
  console.log('\'object_day1\' Returns:');
  space();
+ //---------------------------------------------------------------------------------------------------------------------
 
- //declaring an object, giving it the name 'object_day1' and initializing its value with two properties.
+ // declaring an object, giving it the name 'object_day1' and initializing its value with two properties
  var object_day1 =
      {
-        //naming a property which holds a 'Boolean'-data-type and 'setting' its value.
+        // naming a property which holds a 'Boolean'-data-type and 'setting' its value
+
         property_reaction: false,
 
-        //naming a property which holds a 'array'-data-type and 'setting' its value.
+        // naming a property which holds a 'array'-data-type and 'setting' its value
+
         property_events: ["work","touched tree", "pizza", "running","television"]
      };
 
- //line calls the "object_day1"-object's "property_reaction"-property's held-value, to the console-window
+ // line calls the "object_day1"-object's "property_reaction"-property's held-value, to the console-window
 
- console.log(object_day1.property_reaction); //false
+ console.log(object_day1.property_reaction); // false
  space();
 
- //line calls the "object_day1"-object's "property_any"-property's held-value(which does not exist), to the console
+ // line calls the "object_day1"-object's "property_any"-property's held-value(which does not exist), to the console
 
- console.log(object_day1.property_any); //undefined
+ console.log(object_day1.property_any); // undefined
  space();
 
- //line declares "property_any"-property", outside of the "object_day1"-object's declaration,
- //setting its held-value to 'true'.
+ // line declares "property_any"-property", outside of the "object_day1"-object's declaration,
+ // setting its held-value to 'true'
+
  object_day1.property_any = true;
 
- //line calls the "object_day1"-object's "property_any"-property's held-value(which does now exists), to the console
+ // line calls the "object_day1"-object's "property_any"-property's held-value(which does now exists), to the console
 
- console.log(object_day1.property_any); //true
+ console.log(object_day1.property_any); // true
  spacer();
 
  /*
@@ -3169,8 +3595,9 @@ space();
 
   In any other position, they describe an object.
 
-  //---------------------------------------------------------------------------------------------------------------------
- Delete Operator:
+ //---------------------------------------------------------------------------------------------------------------------
+
+  Delete Operator:
 
   The 'delete'-operator removes properties from the objects which hold them.
 
@@ -3179,11 +3606,14 @@ space();
   the delete-keyword will remove the named property from the object.
 
   This is not a common thing to do, but can come in useful, you never know.
-  */
+ */
  console.log('\'object_sides\' Returns:');
  space();
 
- //declaring an object, giving it the name 'object_sides' and initializing its value with four properties
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declaring an object, giving it the name 'object_sides' and initializing its value with four properties
+
  var object_sides = {
                         //naming four properties, holding 'double'-data-types and 'setting' their values
                         property_left: 1.5,
@@ -3192,17 +3622,18 @@ space();
                         property_bottom:2.2
                     };
 
- //line calls the "object_sides"-object's "property_left"-property's held-value, to the console-window
+ // line calls the "object_sides"-object's "property_left"-property's held-value, to the console-window
 
- console.log(object_sides.property_left); //1.5
+ console.log(object_sides.property_left); // 1.5
  space();
 
- //line Deletes property 'left', not just its value.
+ // line Deletes property 'left', not just its value
+
  delete object_sides.property_left;
 
- //line calls the "object_sides"-object's "property_left"-property's held-value(which no longer exists, to the console
+ // line calls the "object_sides"-object's "property_left"-property's held-value(which no longer exists, to the console
 
- console.log(object_sides.property_left); //undefined
+ console.log(object_sides.property_left); // undefined
  space();
 
  /*
@@ -3217,33 +3648,37 @@ space();
   Where as in the second case, the property is no longer present and the 'in'-keyword will return false.
  */
 
-  //Properties whose names are not valid variable names or valid numbers have to be quoted.
+ // *** Properties whose names are not valid 'variable-names' or valid 'numbers' have to be quoted!!! ***
 
- console.log("left" in object_sides); //false
+ console.log("left" in object_sides); // false
  space();
 
- console.log("right" in object_sides); //true
+ console.log("right" in object_sides); // true
  spacer();
 
- //------------------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------------------------------------
+
  console.log('Array \'typeof\'-keyword Return:');
  space();
+
  /*
-  Arrays, are types of objects specialized for storing sequences
-  of things.
+  Arrays, are types of objects specialized for storing sequences of things.
 
   If you evaluate typeof [1, 2], this produces "object".
 
   You can view arrays, as objects with all their properties labeled in consecutive numbers,
   in a straight row, of any given length.
-
   */
-
- var nums = [1,2];
-
- console.log('An array is an ' + typeof nums +'-type.'); //An array is an object-type.
- spacer();
  //---------------------------------------------------------------------------------------------------------------------
+
+ // declaring an Array-variable and initializing its value to [1,2]
+ var array_nums = [1,2];
+
+ console.log('An array is an ' + typeof array_nums +'-type.'); // An array is an object-type.
+ spacer();
+
+ //---------------------------------------------------------------------------------------------------------------------
+
  console.log('\'Mutability-Concept\' Returns:');
  space();
  /*
@@ -3270,41 +3705,48 @@ space();
   Consider the following code:
   */
 
- //declaring an object, giving it the name 'object_a' and initializing a newly held-value(a 'mutable'-property,
- //named 'switch'), with its own newly initialized-value of 'On'
+ // declaring an object, giving it the name 'object_a' and initializing a newly held-value(a 'mutable'-property,
+ // named 'switch'), with its own newly initialized-value of 'On'
+
  var object_a = {property_switch: 'On'};
 
- //declaring an object, giving it the name 'object_b' and initializing it's value to 'object_a'
+ // declaring an object, giving it the name 'object_b' and initializing it's value to 'object_a'
+
  var object_b = object_a;
 
-  //declaring an object, giving it the name 'object_c' and initializing a newly held-value(a 'mutable'-property,
-  //named 'switch'), with its own newly initialized-value of 'On'
+ // declaring an object, giving it the name 'object_c' and initializing a newly held-value(a 'mutable'-property,
+ // named 'switch'), with its own newly initialized-value of 'On'
+
  var object_c = {property_switch: 'On'};
 
- console.log(object_a == object_b); //true
+ console.log(object_a == object_b); // true
  space();
 
- console.log(object_a == object_c); //false
+ console.log(object_a == object_c); // false
  space();
 
  //changes the property-value of 'object_a' to 'Off', using the dot-'.' symbol, followed by the property-name,
  //in order to access its value
+
  object_a.property_switch = 'Off';
 
- //line calls a 'object_b' property value, which refers to the same physical bits as 'object_a', returning the same value
+ // calls a 'object_b' property value, which refers to the same physical bits as 'object_a', returning the same value
 
- console.log(object_b.property_switch); //Off
+ console.log(object_b.property_switch); // Off
  space();
 
- //changes the property-value of 'object_b' to 'Back On',
- //using square-brackets[], wrapped around a 'string'-representation of the property-name, to access its value
- //Think of it like calling an Array's index value but instead of a 'number' for it's label(name), it's a 'string'
+ // changes the property-value of 'object_b' to 'Back On',
+ // using square-brackets[], wrapped around a 'string'-representation of the property-name, to access its value
+ // Think of it like calling an Array's index value but instead of a 'number' for it's label(name), it's a 'string'
+
  object_b["property_switch"] = 'Back On';
 
- //line calls a 'object_a' property value, which refers to the same physical bits as 'object_b', returning the same value
+ // calls a 'object_a' property value, which refers to the same physical bits as 'object_b', returning the same value
 
- console.log(object_a.property_switch); //Back On
+ console.log(object_a.property_switch); // Back On
  spacer();
+
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   Allergy Analysis Application:
 
@@ -3322,48 +3764,59 @@ space();
   That 'Object' wil then be stored in the allergy-journal(Array-of-Objects).
   The following, is a sample representation of the 'allergy’-journal, as an Array-of-Objects.
   */
- //---------------------------------------------------------------------------------------------------------------------
 
  console.log('Sample Allergy-Journal Returns:\n');
 
- //declaring array(our journal) and initializing its 1st three index-values(days) to three objects(daily log-entries)
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declaring array(our journal) and initializing its 1st three index-values(days) to three objects(daily log-entries)
+
  var array_allergyJournalSample =
 
-     [//bracket signifies the beginning of the array
+     [// bracket signifies the beginning of the array
 
-         {//curly-brace signifies the beginning of the object
+         {// curly-brace signifies the beginning of the object
 
-             //declaring property and initialing its value to an array(of events)
-             property_event: ["work","touched tree","pizza","running","television"], //comma used to separate properties
+             // declaring property and initialing its value to an array(of events)
 
-             //declaring property and initialing its value to a 'boolean'-data-type(allergic reaction)
+             property_event: ["work","touched tree","pizza","running","television"],// comma used to separate properties
+
+             // declaring property and initialing its value to a 'boolean'-data-type(allergic reaction)
+
              property_reaction: false
 
-         },//curly-brace signifies the ending of the object, comma used to separate array-indexes
+         },// curly-brace signifies the ending of the object, comma used to separate array-indexes
 
-         {//curly-brace signifies the beginning of the object
+         {// curly-brace signifies the beginning of the object
 
-             //declaring property and initialing its value to an array(of events)
-             property_event: ["work","lasagna","touched tree","brush teeth"], //comma used to separate properties
+             // declaring property and initialing its value to an array(of events)
 
-             //declaring property and initialing its value to a 'boolean'-data-type(allergic reaction)
+             property_event: ["work","lasagna","touched tree","brush teeth"], // <- comma used to separate properties
+
+             // declaring property and initialing its value to a 'boolean'-data-type(allergic reaction)
+
              property_reaction: false
 
-         },//curly-brace signifies the ending of the object, comma used to separate array-indexes
+         },// curly-brace signifies the ending of the object, comma used to separate array-indexes
 
-         {//curly-brace signifies the beginning of the object
+         {// curly-brace signifies the beginning of the object
 
-             //declaring property and initialing its value to an array(of events)
-             property_event: ["weekend","cycling","break","peanuts","beer"], //comma used to separate properties
+             // declaring property and initialing its value to an array(of events)
 
-             //declaring property and initialing its value to a 'boolean'-data-type(allergic reaction)
+             property_event: ["weekend","cycling","break","peanuts","beer"], // <- comma used to separate properties
+
+             // declaring property and initialing its value to a 'boolean'-data-type(allergic reaction)
+
              property_reaction: true
-         }
-     ];//bracket signifies the beginning of the array, colon signifies the end of the variable-declaration
+         }// curly-brace signifies the ending of the object
 
- //line writes journal's entries to the console-window
+     ];// bracket signifies the beginning of the array, colon signifies the end of the variable-declaration
+
+ // line writes journal's entries to the console-window
+
  console.log(array_allergyJournalSample);
  spacer();
+
   /*
   Instead of going into the above variable-declaration, holding our journal's data,
   and manually writing in a new log-entry every day.
@@ -3372,25 +3825,32 @@ space();
 
   Below is a function that will take in an array-of-events and a boolean-data-type,
   indicating if an allergic reaction took place that day, for its parameters
-  */
+ */
+ //---------------------------------------------------------------------------------------------------------------------
 
  //declaring function                    //parameters
+
  function addEntryToSampleJournal(array_events, boolean_reaction)
  {
-     //line uses one of an Array-object's many immutable property-methods named 'push()',
-     //to append its argument, to the calling array, which holds the daily log-entries
+     // line uses one of an Array-object's many immutable property-methods named 'push()',
+     // to append its argument, to the calling array, which holds the daily log-entries
+
      array_allergyJournalSample.push({property_events: array_events, property_reaction: boolean_reaction});
  }
 
- //calling function to add events and reaction-status to sample-journal, passing an Array and Boolean as its arguments
+ // calling function to add events and reaction-status to sample-journal, passing an Array and Boolean as its arguments
+
  addEntryToSampleJournal(["work","ice cream","brushed teeth"],false);
 
- //line writes journal's entries to the console-window
+ // line writes journal's entries to the console-window
+
  console.log(array_allergyJournalSample);
  spacer();
+
  //---------------------------------------------------------------------------------------------------------------------
 
- //declaring array(our official journal) and initializing its index-values(days) to objects(daily log-entries)
+ // declaring array(our official journal) and initializing its index-values(days) to objects(daily log-entries)
+
  var array_allergyJournal =
      [
          {
@@ -3399,9 +3859,18 @@ space();
          },
          {"property_events":["bread","pudding","brushed teeth","weekend","touched tree"],"property_reaction":false},
          {"property_events":["carrot","nachos","brushed teeth","cycling","weekend"],"property_reaction":false},
-         {"property_events":["brussel sprouts","ice cream","brushed teeth","computer","weekend"],"property_reaction":false},
-         {"property_events":["potatoes","candy","brushed teeth","exercise","weekend","dentist"],"property_reaction":false},
-         {"property_events":["brussel sprouts","pudding","brushed teeth","running","weekend"],"property_reaction":false},
+         {
+             "property_events":["brussel sprouts","ice cream","brushed teeth","computer","weekend"],
+             "property_reaction":false
+         },
+         {
+             "property_events":["potatoes","candy","brushed teeth","exercise","weekend","dentist"],
+             "property_reaction":false
+         },
+         {
+             "property_events":["brussel sprouts","pudding","brushed teeth","running","weekend"],
+             "property_reaction":false
+         },
          {"property_events":["pizza","brushed teeth","computer","work","touched tree"],"property_reaction":false},
          {"property_events":["bread","beer","brushed teeth","cycling","work"],"property_reaction":false},
          {"property_events":["cauliflower","brushed teeth","work"],"property_reaction":false},
@@ -3451,7 +3920,10 @@ space();
          {"property_events":["carrot","nachos","brushed teeth","exercise","work"],"property_reaction":false},
          {"property_events":["pizza","peanuts","brushed teeth","television","weekend"],"property_reaction":false},
          {"property_events":["lasagna","brushed teeth","cycling","weekend"],"property_reaction":false},
-         {"property_events":["cauliflower","peanuts","brushed teeth","computer","work","touched tree"],"property_reaction":false},
+         {
+             "property_events":["cauliflower","peanuts","brushed teeth","computer","work","touched tree"],
+             "property_reaction":false
+         },
          {"property_events":["lettuce","brushed teeth","television","work"],"property_reaction":false},
          {"property_events":["potatoes","brushed teeth","computer","work"],"property_reaction":false},
          {"property_events":["bread","candy","work"],"property_reaction":false},
@@ -3487,8 +3959,10 @@ space();
          {"property_events":["bread","brushed teeth","television","weekend"],"property_reaction":false},
          {"property_events":["cauliflower","peanuts","brushed teeth","weekend"],"property_reaction":false}
  ];
+
  //---------------------------------------------------------------------------------------------------------------------
  console.log('Official Allergy-Journal Returns:\n');
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   Correlation is a measure of dependence between variables
   (“variables” in the statistical sense, not the JavaScript sense).
@@ -3500,7 +3974,7 @@ space();
   Where as a correlation of 1(one) indicates that the
   two variables are 'perfectly related'(if you know one, you also know the other).
 
-  On the opposite end of the spectrum, a correlation of -1(Negative one) also means the variables are 'perfectly related'
+  On the opposite end of the spectrum, a correlation of -1(Negative one) also means variables are 'perfectly related'
   However they are opposites(when one is true, the other is false).
 
   For binary (0 = false/off and 1 = true/on) variables, the 'phi-coefficient' (φ) provides a good
@@ -3520,90 +3994,109 @@ space();
   no pizza, tran =     4 instances
   pizza, no tran =     9 instances
   pizza, tran =        1 instances
-  //----------------------------------------------------------------------------------------------------------------------
+
+ //---------------------------------------------------------------------------------------------------------------------
 
   The 'phi-coefficient':
                         // square-root
   φ = (++ * --) - (+- * -+) / srt(++ + +-) * (-- + -+) * ( ++ + -+) * (-- + +-)
 
   Below is a function with the 'phi-coefficient' being operation within its body.
-  */
-  //function declaration, allowing an Array to pass through its parameter
-  function phi(array_table)
-  {
-      /*
-       The 'phi-coefficient' can be computed using the following formula:
+ */
+ //---------------------------------------------------------------------------------------------------------------------
 
-       where variable-x refers to the 1st 'paired of signs' value
-       and variable-y refers to the 2nd value of the pair. where values: '+' equals true and '-' equals false
+ // function declaration, allowing an Array to pass through its parameter
 
-       table:
-       array_table[0] = variable-x(allergic-reaction) is false & variable(event) is false --
-       array_table[1] = variable-x(allergic-reaction) is false & variable(event) is true  -+
-       array_table[2] = variable-x(allergic-reaction) is true & variable(event) is false  +-
-       array_table[3] = variable-x(allergic-reaction) is true & variable(event) is true   ++
-       */
-      //            ++               --               +-               -+        / =  divided by
+ function phi(array_table)
+ {
+     /*
+      The 'phi-coefficient' can be computed using the following formula:
+
+      where variable-x refers to the 1st 'paired of signs' value
+      and variable-y refers to the 2nd value of the pair. where values: '+' equals true and '-' equals false
+
+      table:
+      array_table[0] = variable-x(allergic-reaction) is false & variable(event) is false --
+      array_table[1] = variable-x(allergic-reaction) is false & variable(event) is true  -+
+      array_table[2] = variable-x(allergic-reaction) is true & variable(event) is false  +-
+      array_table[3] = variable-x(allergic-reaction) is true & variable(event) is true   ++
+     */
+ //                 ++               --               +-               -+        / =  divided by
       return (array_table[3] * array_table[0] - array_table[2] * array_table[1]) /
-          //Object-property    +-               ++                 --               -+        * = multiplied by
+
+ //    Object-property     +-               ++                 --               -+        * = multiplied by
           Math.sqrt((array_table[2] + array_table[3]) * (array_table[0] + array_table[1]) *
-              //                   -+               ++                 --               +-
+
+ //                  -+               ++                 --               +-
               (array_table[1] + array_table[3]) * (array_table[0] + array_table[2]));
-  }
+ }
 
-  //line calls the phi-function's return, to the console-window
-  //(using pizza's correlation-results to allergic-reaction as its argument)
-  //               -- -+ +- ++
-  console.log(phi([76, 9, 4, 1])); //0.06859943405700354
-  space();
-  /*
-   As previously stated, the journal holds 90 days of log-entries.
+ // line calls the phi-function's return, to the console-window
+ // (using pizza's correlation-results to allergic-reaction as its argument)
 
-   It is stored in the array_allergyJournal-variable.
+ //               -- -+ +- ++
+ console.log(phi([76, 9, 4, 1])); // 0.06859943405700354
+ space();
 
-   To extract the table(array holding our four possible outcome-values) for a specific 'event' from this 'journal', we
-   must loop over all the daily journal-entries and tally up how many days the event
-   occurs in relation to allergy-reaction.
-   */
+ //---------------------------------------------------------------------------------------------------------------------
+ /*
+  As previously stated, the journal holds 90 days of log-entries.
 
-  //function to search an individual journal entry's 'event'-property(array), for an instance of 'event'(index of array)
+  It is stored in the array_allergyJournal-variable.
+
+  To extract the table(array holding our four possible outcome-values) for a specific 'event' from this 'journal', we
+  must loop over all the daily journal-entries and tally up how many days the event
+  occurs in relation to allergy-reaction.
+ */
+
+  //function searches an individual journal entry's 'event'-property(array), for an instance of 'event'(index of array)
+
   function hasEvent(string_event,object_journalEntry)
   {
       //line returns the index-number of the 'event' in the object_journalEntry's 'event'-property(an array of 'events')
-      //matching this function's 'string_event'-argument if found, or -1 if not found.
+      //matching this function's 'string_event'-argument if found, or -1 if not found
+
       return object_journalEntry.property_events.indexOf(string_event) != -1;
   }
 
   // function to create the 'table'-array, which contains four indexes(place-holders for the outcomes of(--,-+,+-,++))
   // the function's return is used as the argument for the 'phi coefficient'-function's parameter, to ascertain
   // the probability that the event 'causes' allergic-reaction(1.0) or 'counters' the allergic-reaction(-1.0)
+
   function allergyOutcomeTableFor(string_event, array_journal)
   {
-      // declaring and initializing an Array-object.
+      // declaring and initializing an Array-object
+
       var array_allergyTable = [0,0,0,0];
 
       // A loop to run through the allergy-journal, which holds 90 daily log-entries, of the events that had taken
       // place each day and if an allergic-reaction occurred(true or false)
+
       for (var int_index = 0; int_index < array_journal.length; int_index++)
       {
           // to declare and initialize an object, to store an individual log-entry["day"]
+
           var object_journalEntry = array_journal[int_index];
 
           // to declare an integer-valued data-type, used as the 'marker' to select
-          // which of the array_allergyTable's indexes to increase by 1.
+          // which of the array_allergyTable's indexes to increase by 1
+
           var int_tableIndex = 0;
 
           // branching statements that uses the 'hasEvent'-function we just created, passing the 'event' in question
           // and a daily log-entry of the allergy-journal as arguments to its parameters
 
           // conditional-statement executes if event is found(return from 'hasEvent'-function is not -1)
+
           if (hasEvent(string_event,object_journalEntry))
           {
               // if event is found, marker moves from array_allergyTable[0] to array_allergyTable[1]
+
               int_tableIndex += 1;
           }
 
           // conditional-statement executes if allergic-reaction is found(call to property returns true)
+
           if (object_journalEntry.property_reaction)
           {
               // if event is found, marker moves from array_allergyTable[0] to array_allergyTable[2],
@@ -3611,30 +4104,33 @@ space();
 
               // if event is found, marker moves from array_allergyTable[1] to array_allergyTable[3],
               // ***when the previous if-statement DOES execute before the loop's focus reaches this line
+
               int_tableIndex += 2;
           }
 
           // for each loop iteration, a single tally mark is added to the index of the array_allergyTable,
-          // with the same value as the marker's value.
+          // with the same value as the marker's value
+
           array_allergyTable[int_tableIndex] += 1;
       }
 
       // Once loop is complete the array-object named 'array_allergyTable'
       // is returned to the function call
+
       return array_allergyTable;
   }
 
   // line calls the allergyOutcomeTableFor-function's return, to the console-window
   // (passing the string-'pizza' and the array_allergyJournal as its arguments)
 
-  console.log(allergyOutcomeTableFor("pizza",array_allergyJournal)); //[ 76, 9, 4, 1 ]
+  console.log(allergyOutcomeTableFor("pizza",array_allergyJournal)); // [ 76, 9, 4, 1 ]
   space();
 
   // line calls the phi-function's return, to the console-window
   // (passing the allergyOutcomeTableFor-function's return as its argument,
   // which in turn is passing the string-'pizza' and the array_allergyJournal as its arguments)
 
-  console.log(phi(allergyOutcomeTableFor("pizza",array_allergyJournal))); //0.06859943405700345
+  console.log(phi(allergyOutcomeTableFor("pizza",array_allergyJournal))); // 0.06859943405700345
   /*
    We now have the tools we need to compute individual correlations.
 
@@ -3643,10 +4139,12 @@ space();
 
    In the following section of this writing, you will be shown how to store these correlations once they are computed?
   */
+ //---------------------------------------------------------------------------------------------------------------------
  spacer();
  console.log('\t\t\t\t\t\t\t\t\t*** Objects as maps ***');
  console.log('********************************************************************************************************');
  space();
+ //---------------------------------------------------------------------------------------------------------------------
   /*
   We could wrap this lookup process in a function, but we would be writing more code,
   and the computer would be doing more work than necessary.
@@ -3659,14 +4157,19 @@ space();
 
  console.log('\'object_correlationMap Returns:\n');
 
+ //---------------------------------------------------------------------------------------------------------------------
+
  // declaring an empty object named,"object_correlationMap"
+
  var object_correlationMap = {};
 
  // declaring a function which takes in the 'event' and its 'correlation' to the allergic reaction as its parameters
+
  function storeCorrelationInstance(string_event, double_coefficient)
  {
   // line declares an 'object_correlationMap'-property, with the name held by the 'string_event'-argument and
   // initializing its value to the 'double_coefficient'-argument
+
    object_correlationMap[string_event] = double_coefficient;
  }
 
@@ -3676,22 +4179,24 @@ space();
  // line calls the allergyOutcomeTableFor-function's return, to the console-window
  // (passing the string-'pizza' and the array_allergyJournal as its arguments)
 
- console.log(allergyOutcomeTableFor("touched tree",array_allergyJournal)); //[ 76, 9, 5, 0 ]
+ console.log(allergyOutcomeTableFor("touched tree",array_allergyJournal)); // [ 76, 9, 5, 0 ]
  space();
 
  // line calls the phi-function's return, to the console-window
  // (passing the allergyOutcomeTableFor-function's return as its argument,
  // which in turn is passing the string-'pizza' and the array_allergyJournal as its arguments)
 
- console.log(phi(allergyOutcomeTableFor("touched tree",array_allergyJournal))); //-0.08084520834544433
+ console.log(phi(allergyOutcomeTableFor("touched tree",array_allergyJournal))); // -0.08084520834544433
  spacer();
 
  // line calls the storeCorrelation-function using the 'pizza'-event and its 'correlation'-value to the allergic
  // reaction as its arguments
+
  storeCorrelationInstance("pizza", 0.069);
 
  // line calls the storeCorrelation-function using the 'touched tree'-event and its 'correlation'-value to the allergic
  // reaction as its arguments
+
  storeCorrelationInstance("touched tree", -0.081);
 
  // using the 'in'-keyword to check it the 'property' named 'pizza' currently exists in the 'object_correlationMap'
@@ -3716,17 +4221,25 @@ space();
 
   It looks a little like a normal for loop but distinguishes itself by the use of the 'in'-keyword.
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
- // 'for'-loop will execute on each enumerable-property by using the 'in'-keyword,
+ // for-loop will execute on each enumerable-property by using the 'in'-keyword,
  // which directs the loop-execution within the 'object_correlationMap'
+
  for(var property_event in object_correlationMap)
  {
      // line write each return's 'event'-name and their held value to the console window
+
      console.log("The correlation for '" + property_event + "' is " + object_correlationMap[property_event]);
  }
+
  spacer();
 
+ //---------------------------------------------------------------------------------------------------------------------
+
  console.log('The Final Analysis: \'All Events and Their Corresponding Allergy-reaction\'\n');
+
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   The Final Analysis:
 
@@ -3739,32 +4252,38 @@ space();
   Whenever we run across an event-type that isn’t currently in the 'object_EventToAllergyCorrelations' a
   'function' will compute its correlation-coefficient and add it to the object as a property value.
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
  // declaring a function to store correlations between the 'events' and the 'allergy-reaction', with a parameter that
  // accepts an 'Array' to pass through its parameter
+
  function storeCorrelations(array_journal)
  {
      // declaring an empty object, named object_allergyCorrelation
+
      var object_allergyCorrelation = {};
 
      // for-loop will execute each time the loop's 'int_index'-value is less than the array_journal's length
      // (remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
-     // the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes.
+     // the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes
+
      for(var int_outerIndex = 0; int_outerIndex < array_journal.length; int_outerIndex ++)
      {
          // declaring an array and initializing its value to the 'property_events'-value, of the array_journal
          // entry-number which matches the loop's int_index-value
+
          var array_events = array_journal[int_outerIndex].property_events;
 
          // for-loop will execute each time the loop's 'int_index'-value is less than the array_events's length
          // (remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
-         // the last expression of the loop(int_index ++), increases the index-value by 1 after each iteration
-         // completes.
+         // the last expression of the loop(int_index ++), increases the index-value by 1 after each loop-iteration
+
          for (var int_innerIndex = 0; int_innerIndex < array_events.length; int_innerIndex++)
          {
 
              // declaring a string and initializing its value to the 'array_events' index-value matching the loop's
              // int_index-value
+
              var string_event = array_events[int_innerIndex];
 
              // declaring a if-conditional statement that prevents multiple logs
@@ -3772,11 +4291,13 @@ space();
              // the exclamation-mark is used as a 'not'-operator to the preceding expression, which is using the
              // 'in'-keyword to search for the 'string_event'-argument in the current
              // object_allergyCorrelation.properties
+
              if (!(string_event in object_allergyCorrelation))
              {
                  // line declares a property with the name of the string_event's held-value and initializes the
                  // properties held-value to the phi-function's return, while passing the 'sting_event' and the
                  // 'array_journal' as its arguments
+
                  object_allergyCorrelation[string_event] = phi(allergyOutcomeTableFor(string_event, array_journal));
              }
 
@@ -3785,19 +4306,23 @@ space();
      }// end of outer-loop
 
      // line returns object_allergyCorrelation's held-value to the function's caller
+
      return object_allergyCorrelation;
  }
 
 
  // declaring a variable and initializing its held-value to the 'storeCorrelations'-function's return, which is
  // passing the 'array_allergyJournal' as its argument
+
  var object_allergyCorrelationMap = storeCorrelations(array_allergyJournal);
 
  // 'for'-loop will execute on each enumerable-property by using the 'in'-keyword,
  // which directs the loop-execution within the 'object_allergyCorrelationMap'
+
  for(var property_event in object_allergyCorrelationMap)
  {
      // line writes return's 'property_event'-name and its held value to the console window
+
      console.log(property_event + ": " + object_allergyCorrelationMap[property_event]);
  }
  spacer();
@@ -3812,21 +4337,25 @@ space();
   Below, a 'for'-loop will be used to filter the results, to return only correlation-coefficients
 
   which are greater than 0.1 or less than -0.1:
-  */
+ */
 
- // 'for'-loop will execute on each enumerable-property in an object by using the 'in'-keyword,
+ // for-loop will execute on each enumerable-property in an object by using the 'in'-keyword,
  // which directs the loop-execution to within the 'object_allergyCorrelationMap'
+
  for(var property_event in object_allergyCorrelationMap)
  {
      // declares a variable named,'double_correlationCoefficient' and initializes its value, to the value held by the
      // 'object_allergyCorrelationMap'-property-name, currently held in the loop-iteration's 'property_event'-variable
+
      var double_correlationCoefficient = object_allergyCorrelationMap[property_event];
 
      // 'if'-statement executes when the coefficient is greater than(>) 0.1 or(||) less than(<) -0.1
+
      if(double_correlationCoefficient > 0.1 || double_correlationCoefficient < -0.1)
      {
          // line writes 'property_event'-name and their held value, stored within the 'double_correlationCoefficient',
          // to the console window
+
          console.log(property_event + ": " + double_correlationCoefficient);
      }
  }// end of 'for'-loop
@@ -3843,12 +4372,15 @@ space();
   each of the journal's daily-log-entries that hold the event named 'peanuts' but does not hold the event named,
   'brushed-teeth'(using the hasEvent()-function), in its 'property_event'-property(array)
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
- // A loop to run through the allergy-journal, which holds 90 daily log-entries, of the events that had taken place
+ // for-loop runs through the allergy-journal, which holds 90 daily log-entries, of the events that had taken place
  // each day and if an allergic-reaction occurred(true or false)
+
  for(var int_index = 0; int_index < array_allergyJournal.length; int_index++)
  {
-     // to declare and initialize an object, to store an individual log-entry["day"]
+     // declares and initialize an object, to store an individual log-entry["day"]
+
      var object_journalEntry = array_allergyJournal[int_index];
 
      // 'if'-statement executes when the 'object_journalEntry' Has 'peanuts' but Dose not(!) have 'brushed teeth'
@@ -3872,30 +4404,31 @@ space();
      }
  }
  spacer();
+
  //---------------------------------------------------------------------------------------------------------------------
 
- //line writes the returned correlation-coefficient produced by the 'phi()'-function, using the table(array) returned by
- //the 'allergyOutcomeTableFor()'-function, which uses the arguments of the 'peanuts in teeth'-event and the
- //'array_allergyJournal'-(array-of-objects), as its parameter's arguments
+ // calls the returned correlation-coefficient produced by the 'phi()'-function, using the table(array) returned by
+ // the 'allergyOutcomeTableFor()'-function, which uses the arguments of the 'peanuts in teeth'-event and the
+ // 'array_allergyJournal'-(array-of-objects), as its parameter's arguments
 
  console.log(phi(allergyOutcomeTableFor("peanuts in teeth", array_allergyJournal))); // 1.0
  space();
 
- //line writes the returned correlation-coefficient produced by the 'phi()'-function, using the table(array) returned by
- //the 'allergyOutcomeTableFor()'-function, which uses the arguments of the 'same event as peanuts in teeth'-event and
+ // calls the returned correlation-coefficient produced by the 'phi()'-function, using the table(array) returned by
+ // the 'allergyOutcomeTableFor()'-function, which uses the arguments of the 'same event as peanuts in teeth'-event and
  // the 'array_allergyJournal'-(array-of-objects), as its parameter's arguments
 
  console.log(phi(allergyOutcomeTableFor("same event as peanuts in teeth", array_allergyJournal))); // 1.0
- spacer();
 
- //There you have it the returned correlation-coefficient, the allergic-reaction occurs precisely when the person
- //we are keeping a journal of, eats peanuts and fails to brush his teeth.
+
+ // There you have it the returned correlation-coefficient, the allergic-reaction occurs precisely when the person
+ // we are keeping a journal of, eats peanuts and fails to brush his teeth.
 
  //---------------------------------------------------------------------------------------------------------------------
 
  spacer();
  console.log('\t\t\t\t\t\t\t\t\t*** More Generally Useful \'Array-Methods\' ***');
- console.log('********************************************************************************************************');
+ console.log('*******************************************************************************************************');
  space();
  /*
   We saw the push()-method and pop()-method, which added and removed elements at the 'end' of
@@ -3911,16 +4444,21 @@ space();
   Array.shift() removes and returns the beginning of an Array
 
   We will use these methods in the example below, to add and remove 'tasks' from a to-do list, held by an Array
-  */
+ */
+ //---------------------------------------------------------------------------------------------------------------------
  console.log('push, pop, unshift, shift Method Returns:\n');
+ //---------------------------------------------------------------------------------------------------------------------
 
  // declares an array named 'toDoList' and initializing its value to 'empty'
+
  var toDoList = [];
 
 // declaring a function with a parameter, which takes a 'task' as its argument
+
  function  rememberToDo(string_task)
  {
      // the Array.push()-method adds the task to the bottom(last-index) of the to-do list(array)
+
      toDoList.push(string_task);
  }
 
@@ -3928,15 +4466,19 @@ space();
  // arguments to the function's parameter
 
  rememberToDo("brush teeth"); // stored in the Array's 1st index
+
  rememberToDo("shower");      // stored in the Array's 2nd index
+
  rememberToDo("eat");         // stored in the Array's 3rd index
 
  //---------------------------------------------------------------------------------------------------------------------
 
  // declaring a function with no parameter
+
  function whatIsNext()
  {
      // the Array.shift()-method removes and returns the task from the top(1st index) of the to-do list(array)
+
      return toDoList.shift();
  }
 
@@ -3953,13 +4495,16 @@ space();
  //---------------------------------------------------------------------------------------------------------------------
 
  // declaring a function with a parameter, which takes a 'task' as its argument
+
  function urgentToDo(task)
  {
      // adds the task to the top(1st index) of the to-do list(array)
+
      toDoList.unshift(task);
  }
 
  // line calls the 'urgentToDo()'-function holding the task,'Call Z' as argument to the function's parameter
+
  urgentToDo("Call Z");
 
  // line removes the value held in the 1st Array-index and returns it to the call to the console-window
@@ -3975,10 +4520,10 @@ space();
   the list.
 
   The urgentlyToDo()-function also adds a task but adds it to the front instead of the back of the list.
-  */
-  //--------------------------------------------------------------------------------------------------------------------
+ */
+ //---------------------------------------------------------------------------------------------------------------------
  console.log('indexOf, lastIndexOf, slice, concat Method Returns:\n');
-
+ //---------------------------------------------------------------------------------------------------------------------
  /*
   The Array.indexOf()-method has a siblings called Array.lastIndexOf(), which starts searching
   for a given element from the end of the Array instead of from the beginning.
@@ -3988,9 +4533,11 @@ space();
   */
 
  // declaring an Array-variable and initializing its value to five strings
+
  var array_words = ["the","cat","in","the","hat"];
 
  // declaring an Array-variable and initializing its value to five integers
+
  var array_numbers = [9,8,9,6,9];
 
  // using Array.indexOf()-method on the array_words, to return the index-number which holds the value 'dog'
@@ -4036,6 +4583,7 @@ space();
  // starting search from the from the end of the array
 
  // the call to the method returns '4' to the console-window because the value 'the' is found in 'array_numbers[4]'
+
  console.log(array_numbers.lastIndexOf(9)); // 4
  space();
  /*
@@ -4049,8 +4597,10 @@ space();
 
   Strings have a String.slice()-method, which has a similar effect.
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
  // initializing Array-variable to the value of, six integers
+
  array_numbers = [5,6,7,8,9,10];
 
  // calling the array_number's Array.slice()-method with the number-1 as its 1st argument('start-index') and the
@@ -4061,6 +4611,7 @@ space();
 
  // calling the array_number's Array.slice()-method with the number-2 as its only argument('start-index'),
  // returning the Array's index[2] through the end index[5] vales to the console-window
+
  console.log(array_numbers.slice(2)); // [ 7, 8, 9, 10 ]
  space();
  /*
@@ -4071,106 +4622,178 @@ space();
   It takes an Array and an index-number as its parameter's arguments, and it returns a new
   Array that is a 'copy' of the original Array with the element at the given index removed.
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
  // declaring an Array and initializing its value to, five sentence-fragments
+
  var array_sentenceFragments = ["Is this","the very","last","first","time?"];
 
- // declaring a function which takes an Array and and Array's index-number as arguments to its parameter
- function  Remove(array_strings,int_index)
+ // declaring a function named 'remove' which takes an Array and and Array's index-number as arguments to its parameter
+
+ function  remove(array_strings, int_index)
  {
+     // line calls the return from the Array.slice()-method: The array-strings[0](1st index-value) value and each
+     // index's value that follows it, up to the index before the argument's int_index's variable-value
+
+     // it then uses the Array.concat()-method, linking its return of the Array.slice()-method argument it holds:
+
+     // the value held by the index directly after the,'array-strings[int_index]'(argument index-value) value and each
+     // index's value that follows it
 
      return array_strings.slice(0, int_index).concat(array_strings.slice(int_index + 1));
  }
- //sentence
 
- console.log(Remove(array_sentenceFragments,2)); // [ 'Is this', 'the very', 'first', 'time?' ]
+ // line calls the remove()-function's return, which passes the 'array_sentenceFragments'-variable and the number-'2'
+ // as its arguments, to the console-window
+
+ console.log(remove(array_sentenceFragments,2)); // [ 'Is this', 'the very', 'first', 'time?' ]
  space();
 
- console.log(Remove(array_sentenceFragments,3)); // [ 'Is this', 'the very', 'last', 'time?' ]
+ // line calls the remove-function, which passes the 'array_sentenceFragments'-variable and the number-'2' as its
+ // arguments, to the console-window
+
+ // line calls the remove()-function's return, which passes the 'array_sentenceFragments'-variable and the number-'3'
+ // as its arguments, to the console-window
+
+ console.log(remove(array_sentenceFragments,3)); // [ 'Is this', 'the very', 'last', 'time?' ]
+
+
+ //---------------------------------------------------------------------------------------------------------------------
+ spacer();
+ console.log('\t\t\t\t\t\t\t\t\t*** Strings and Their \'Properties\' ***');
+ console.log('********************************************************************************************************');
  space();
-
-
  /*
-                         Strings and their properties
-  We can read properties like length and toUpperCase from string values. But
-  if you try to add a new property, it doesn’t stick.
+  We can use properties like String.length() and String.toUpperCase() from String-values.
+
+  However, notice the code below, if you try to add a new property to a string-variable, it doesn’t stick!
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
- var aString = "Hello buddy";
+ // line declares a named,'string_sentence' and initializes its value to,'Hello Buddy'
 
- aString.myProperty = "value";
+ var string_sentence = "Hello buddy";
 
- console.log(aString.myProperty); // undefined
- space();
- /*
-  Values of type string, number, and Boolean are not objects, and though
-  the language doesn’t complain if you try to set new properties on them,
-  it doesn’t actually store those properties. The values are immutable and
-  cannot be changed.
-  */
- /*
-  HOWEVER!!! These types DO have some built-in properties. Every string value
-  has a number of methods. The most useful ones are probably slice and
-  indexOf, which resemble the arrayNums methods of the same propertyName.
-  */
+ // declaring a String.property and initializing its value to,'This won't stick'
 
- var fruitString = "coconutso";
+ string_sentence.property_one = "This won't stick!";
 
- console.log(fruitString.slice(4,7)); // nut
- space();
+ // line calls the string_sentence.property_one's held value
 
- console.log(fruitString.slice(0,4)); // Coco
- space();
-
- console.log(fruitString.indexOf("o")); // 1
- space();
-
- console.log(fruitString.lastIndexOf("o")); // 8
- space();
-
- console.log(fruitString.indexOf("o",2)); // 3
+ console.log(string_sentence.property_one); // undefined
  space();
 
  /*
-  One difference is that a string’s indexOf can take a string containing more
-  than one character, whereas the corresponding arrayNums method looks only
+  Data-type values such as String, Integer, and Boolean are not Objects!!!
+
+  Though the program-code doesn’t break if you try to set new properties on them,
+  it doesn’t actually store those properties.
+
+  The data-types are 'immutable' and cannot be changed!!!
+
+  HOWEVER!!! These data-types DO have some built-in 'immutable'-properties.
+
+  Every data-type-variable has a number of methods. The most useful 'immutable'-properties held by a String-variable are
+  probably String.slice() and String.indexOf(), which resemble the Array methods of the same name.
+ */
+
+ // declaring an String-variable and initializing its value to,'coconut top'
+
+ var string_fruit = "coconut top";
+
+ // calling the string_fruit's String.slice()-method with the number-4 as its 1st argument('start-index') and the
+ // number-7 as its 2nd argument('end-index'), returning the Strings's index[4] through index[6] vales to the console
+
+ console.log(string_fruit.slice(4,7)); // nut
+ space();
+
+ // calling the array_number's Array.slice()-method with the number-0 as its 1st argument('start-index') and the
+ // number-4 as its 2nd argument('end-index'), returning the String's index[0] and index[3] vales to the console-window
+
+ console.log(string_fruit.slice(0,4)); // Coco
+ space();
+
+ // using String.indexOf()-method on the string_fruit, to return the 1st index-number which holds the value-'o',
+ // starting search from the beginning of the array
+
+ // the call to the method, returns '1' to the console-window because the value-'o' is found in 'string_fruit[1]'
+ console.log(string_fruit.indexOf("o")); // 1
+ space();
+
+ // using the String.lastIndexOf()-method on the string_fruit, to return the last index-number which holds the value
+ // '0', starting search from the from the end of the array
+
+ // the call to the method returns '4' to the console-window because the value 'the' is found in 'array_numbers[4]'
+ console.log(string_fruit.lastIndexOf("o")); // 9
+ space();
+
+ // using String.indexOf()-method on the string_fruit while utilizing the optional-parameter, passing the value 'o'
+ // as its 1st argument, the 2nd argument-'2', will cause search to start from the 'string_fruit[2](3rd index-number)
+ // of the array,
+
+ // the call to the method, returns '3' to the console-window because the value 'o' is found in 'array_numbers[3]'
+
+ console.log(string_fruit.indexOf("o",2)); // 3
+ space();
+
+ /*
+  One difference between the Array.indexOf() and the String.indexOf() is that the String's property can take a string
+  containing more than one 'char'-data-type(index-value), whereas the corresponding Array.indexOf()-method looks only
   for a single element.
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
- var numListString = "One, two, three!";
+ // declaring an String-variable and initializing its value to,'One, two, three!'
 
- console.log(numListString.indexOf("ee")); //13
+ var string_numbers = "One, two, three!";
+
+ // using the String.lastIndexOf()-method on the string_numbers-variable, to return the 1st of the index-numbers which
+ // holds the values 'ee'
+
+ // the call to the method returns '13' to the console-window because the beginning(1st) char of the 'ee'-string, is
+ // found in 'array_numbers[13]'
+
+ console.log(string_numbers.indexOf("ee")); // 13
  space();
  /*
-  The trim method removes whitespace (spaces, newlines, tabs, and similar
-  characters) from the start and end of a string.
+  The String.trim()-method removes 'whitespace'(spaces, tabs, and similar characters)
+  from the start and end of a string.
   */
+ //---------------------------------------------------------------------------------------------------------------------
 
- var dirtyString ="\tAsk yourself, do I feel lucky? Well do you, punk?!\n";
+ // declaring an String-variable and initializing its value to, a String-value'
 
- console.log(dirtyString);
- space();
+ var string_dirtyHarry ="\tAsk yourself, do I feel lucky? \nWell do you, punk?!";
 
- console.log(dirtyString.trim());
- space();
+ // calling the string_dirtyHarry-variable's value, to the console window
+
+ console.log(string_dirtyHarry); //    Ask yourself, do I feel lucky?
+ space();                        //Well do you, punk?!
+
+ // calling the string_dirtyHarry-variable's value, to the console window, while using the String.trim()-method
+
+ console.log(string_dirtyHarry.trim()); //Ask yourself, do I feel lucky?   <-  '/t'- indention removed from return
+ space();                               //Well do you, punk?!
+
  /*
-  We have already seen the string type’s 'length' property. Accessing the
-  individual characters in a string can be done with the 'charAt' method but
-  also by simply reading numeric properties, like you’d do for an arrayNums.
+  Accessing the individual chars(characters) like 'c' in the String-variable below, can be done with the String.charAt()
+  but also by simply calling the 'mutable' numeric-property(index), like you’d do for an Array.
   */
 
- var alphaString = "abc";
+ // declaring an String-variable and initializing its value to,'abc'
 
- console.log(alphaString.length); // 3
+ var string_alpha = "abc";
+
+ console.log(string_alpha.length); // 3
  space();
 
- console.log(alphaString.indexOf("a")); // 0   ***LOOK
+ console.log(string_alpha.indexOf("a")); // 0   ***LOOK
  space();
 
- console.log(alphaString.charAt(0)); // a      ***LOOK
+ console.log(string_alpha.charAt(0)); // a      ***LOOK
  space();
 
- console.log(alphaString[0]); // a
+ console.log(string_alpha[0]); // a
  space();
 
  /*
@@ -4209,7 +4832,7 @@ space();
   arrayNums. But this object, unfortunately, does not have any arrayNums methods
   (like slice or indexOf), so it is a little harder to use than a real arrayNums.
   */
- ArgumentCounter("Alpha", 2, NoArguments(), alphaString, array_sentenceFragments );
+ ArgumentCounter("Alpha", 2, NoArguments(), string_alpha, array_sentenceFragments );
 
  function  ArgumentCounter()
  {
