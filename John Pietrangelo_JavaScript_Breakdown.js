@@ -3554,9 +3554,11 @@
 
  console.log('\'object_day1\' Returns:');
  space();
+
  //---------------------------------------------------------------------------------------------------------------------
 
  // declaring an object, giving it the name 'object_day1' and initializing its value with two properties
+
  var object_day1 =
      {
         // naming a property which holds a 'Boolean'-data-type and 'setting' its value
@@ -3615,7 +3617,7 @@
  // declaring an object, giving it the name 'object_sides' and initializing its value with four properties
 
  var object_sides = {
-                        //naming four properties, holding 'double'-data-types and 'setting' their values
+                        // naming four properties, holding 'double'-data-types and 'setting' their values
                         property_left: 1.5,
                         property_right: 1.5,
                         property_top: 2.2,
@@ -3631,7 +3633,8 @@
 
  delete object_sides.property_left;
 
- // line calls the "object_sides"-object's "property_left"-property's held-value(which no longer exists, to the console
+ // calls "object_sides"-object's, "property_left"-property's held-value(property no longer exists, to the
+ // console
 
  console.log(object_sides.property_left); // undefined
  space();
@@ -3643,9 +3646,9 @@
   There is a difference between setting a property's-value to 'undefined' and deleting the property itself.
 
   In the first case, the object still has the property(holding no value)
-  but when using the 'in'-keyword on it, will return true.
+  but when using the 'in'-keyword on it, the return is 'true'.
 
-  Where as in the second case, the property is no longer present and the 'in'-keyword will return false.
+  Where as in the second case, the property is no longer present and the 'in'-keyword returns 'false'.
  */
 
  // *** Properties whose names are not valid 'variable-names' or valid 'numbers' have to be quoted!!! ***
@@ -4361,6 +4364,7 @@
  }// end of 'for'-loop
 
  spacer();
+
  //---------------------------------------------------------------------------------------------------------------------
  /*
   There are two factors whose correlations are clearly stronger than the rest.
@@ -4422,7 +4426,7 @@
 
 
  // There you have it the returned correlation-coefficient, the allergic-reaction occurs precisely when the person
- // we are keeping a journal of, eats peanuts and fails to brush his teeth.
+ // we are keeping a journal of, eats peanuts and fails to brush his/her teeth.
 
  //---------------------------------------------------------------------------------------------------------------------
 
@@ -4431,11 +4435,11 @@
  console.log('*******************************************************************************************************');
  space();
  /*
-  We saw the push()-method and pop()-method, which added and removed elements at the 'end' of
+  We saw the Array.push()-method and Array.pop()-method, which added and removed elements at the 'end' of
   an Array in a earlier section, within this JavaScript Breakdown.
 
-  The corresponding methods for adding and removing elements at the 'beginning' of an Array are the unshift()-method
-  and the shift()-method'.
+  The corresponding methods for adding and removing elements at the 'beginning' of an Array are the
+  Array.unshift()-method and the Array.shift()-method'.
 
   Array.push() adds to the ending of an Array
   Array.unshift() adds to the beginning of an Array
@@ -4451,7 +4455,7 @@
 
  // declares an array named 'toDoList' and initializing its value to 'empty'
 
- var toDoList = [];
+ var array_toDoList = [];
 
 // declaring a function with a parameter, which takes a 'task' as its argument
 
@@ -4459,7 +4463,7 @@
  {
      // the Array.push()-method adds the task to the bottom(last-index) of the to-do list(array)
 
-     toDoList.push(string_task);
+     array_toDoList.push(string_task);
  }
 
  // three lines calling the 'rememberToDo()'-function holding three different tasks,'brush teeth','shower' and 'eat', as
@@ -4477,9 +4481,9 @@
 
  function whatIsNext()
  {
-     // the Array.shift()-method removes and returns the task from the top(1st index) of the to-do list(array)
+     // the Array.shift()-method removes and returns the task from the 1st index(array_toDoList[0]) of the to-do list
 
-     return toDoList.shift();
+     return array_toDoList.shift();
  }
 
  // line removes the value held in the 1st Array-index and returns it to the call to the console-window
@@ -4498,9 +4502,9 @@
 
  function urgentToDo(task)
  {
-     // adds the task to the top(1st index) of the to-do list(array)
+     // adds the task to the 1st index(array_toDoList[0]) of the to-do list
 
-     toDoList.unshift(task);
+     array_toDoList.unshift(task);
  }
 
  // line calls the 'urgentToDo()'-function holding the task,'Call Z' as argument to the function's parameter
@@ -4509,7 +4513,7 @@
 
  // line removes the value held in the 1st Array-index and returns it to the call to the console-window
 
- console.log(whatIsNext()); // Call Z (Not, 'eat')
+ console.log(whatIsNext()); // Call Z        ->(Not, 'eat')
  spacer();
 
  /*
@@ -4522,7 +4526,9 @@
   The urgentlyToDo()-function also adds a task but adds it to the front instead of the back of the list.
  */
  //---------------------------------------------------------------------------------------------------------------------
+
  console.log('indexOf, lastIndexOf, slice, concat Method Returns:\n');
+
  //---------------------------------------------------------------------------------------------------------------------
  /*
   The Array.indexOf()-method has a siblings called Array.lastIndexOf(), which starts searching
@@ -4599,7 +4605,7 @@
   */
  //---------------------------------------------------------------------------------------------------------------------
 
- // initializing Array-variable to the value of, six integers
+ // initializing Array-variable to the value of, six integers (variable was already declared in a previous section)
 
  array_numbers = [5,6,7,8,9,10];
 
@@ -4717,6 +4723,7 @@
  // starting search from the beginning of the array
 
  // the call to the method, returns '1' to the console-window because the value-'o' is found in 'string_fruit[1]'
+
  console.log(string_fruit.indexOf("o")); // 1
  space();
 
@@ -4724,6 +4731,7 @@
  // '0', starting search from the from the end of the array
 
  // the call to the method returns '4' to the console-window because the value 'the' is found in 'array_numbers[4]'
+
  console.log(string_fruit.lastIndexOf("o")); // 9
  space();
 
@@ -4755,25 +4763,27 @@
 
  console.log(string_numbers.indexOf("ee")); // 13
  space();
+
  /*
   The String.trim()-method removes 'whitespace'(spaces, tabs, and similar characters)
   from the start and end of a string.
   */
+
  //---------------------------------------------------------------------------------------------------------------------
 
  // declaring an String-variable and initializing its value to, a String-value'
 
- var string_dirtyHarry ="\tAsk yourself, do I feel lucky? \nWell do you, punk?!";
+ var string_dirtyHarry = "\tAsk yourself, do I feel lucky? \nWell do you, punk?!";
 
  // calling the string_dirtyHarry-variable's value, to the console window
 
- console.log(string_dirtyHarry); //    Ask yourself, do I feel lucky?
- space();                        //Well do you, punk?!
+ console.log(string_dirtyHarry); //     Ask yourself, do I feel lucky?
+ space();                        // Well do you, punk?!
 
  // calling the string_dirtyHarry-variable's value, to the console window, while using the String.trim()-method
 
- console.log(string_dirtyHarry.trim()); //Ask yourself, do I feel lucky?   <-  '/t'- indention removed from return
- space();                               //Well do you, punk?!
+ console.log(string_dirtyHarry.trim()); // Ask yourself, do I feel lucky?   <-  '/t'- indention removed from return
+ space();                               // Well do you, punk?!
 
  /*
   Accessing the individual chars(characters) like 'c' in the String-variable below, can be done with the String.charAt()
@@ -4784,62 +4794,95 @@
 
  var string_alpha = "abc";
 
+ // calling the length-value of the 'string_alpa'-variable
+
  console.log(string_alpha.length); // 3
  space();
 
- console.log(string_alpha.indexOf("a")); // 0   ***LOOK
+ // calling the 1st index-number, of the 'string_alpha'-variable, which holds the character(char) 'a', to the console
+
+ console.log(string_alpha.indexOf("a")); // 0
  space();
 
- console.log(string_alpha.charAt(0)); // a      ***LOOK
+ // calling the 1st character-value, held in the 'string_alpha'-variable
+
+ console.log(string_alpha.charAt(0)); // a
  space();
+
+ // calling the 1st character-value, held in the 'string_alpha'-variable
 
  console.log(string_alpha[0]); // a
  space();
 
- /*
-                         *** The arguments object ***
+ //---------------------------------------------------------------------------------------------------------------------
 
-  Whenever a function is called, a special variable named arguments is added
-  to the environment in which the function body runs. This variable refers
-  to an object that holds all of the arguments passed to the function.
-  Remember that in JavaScript you are allowed to pass more (or fewer)
-  arguments to a function than the number of parameters the function
-  itself declares.
-  */
- Arguments();  // this is ok.
+ spacer();
+ console.log('\t\t\t\t\t\t\t\t\t*** The Argument Object ***');
+ console.log('*******************************************************************************************************');
  space();
 
- NoArguments(1,2,3); // this is ok.
- space();
+ /*---------------------------------------------------------------------------------------------------------------------
 
- function Arguments(a,b,c)
+  Whenever a function is called, special variables named arguments are added(passed)
+  to the environment in which the function's body runs.
+
+  These variables refer to an object that holds all of the arguments passed to the function.
+  In JavaScript, you are allowed to pass more(or fewer) arguments to a function than the number of
+  parameters the function itself declares.
+ */
+ //---------------------------------------------------------------------------------------------------------------------
+
+ // declaring a function named 'arguments', which takes three integers as the arguments to its parameter
+
+                           // parameters
+ function arguments(int_small, int__medium, int_large)
  {
+     // calls the string,'this is ok.' to the console-window
+
      console.log("this is ok.");
  }
 
- function NoArguments()
+ // declaring a function named 'noArguments', which takes zero arguments to its parameter
+
+                     // empty parameter
+ function noArguments()
  {
-     console.log("this is ok.");
+     // calls the string,'this is also ok.' to the console-window
+
+     console.log("this is also ok.");
  }
 
+ // calling the Arguments-function, without passing any arguments through its parameter
 
- /*
-  The 'arguments' object has a 'length' property that tells us the 'number of
-  arguments' that were really passed to the function. It also has a property
-  for each argument, named '0, 1, 2,' and so on.
+ arguments();  // this is ok.
+ space();
 
-  If that sounds a lot like an arrayNums to you, you’re right, it is a lot like an
-  arrayNums. But this object, unfortunately, does not have any arrayNums methods
-  (like slice or indexOf), so it is a little harder to use than a real arrayNums.
-  */
- ArgumentCounter("Alpha", 2, NoArguments(), string_alpha, array_sentenceFragments );
+ // calling the noArguments-function, while passing the 3 integer arguments through its parameter
 
- function  ArgumentCounter()
+ noArguments(1,2,3); // this is ok.
+ space();
+
+ /*---------------------------------------------------------------------------------------------------------------------
+
+  The 'argument'-Object has a 'length' property that tells the programmer the 'number of arguments' that were
+  actually passed to the function. It also has a property(index) for each argument, named '0, 1, 2,' and so on.
+
+  If that sounds a lot like an Array to you, you’re right, it is a lot like an Array.
+
+  However the 'argument-object', does not have any Array-methods(like slice or indexOf), so it is a little harder
+  to use than an Array.
+ */
+
+ // declaring a function named 'argumentCounter', which takes zero arguments to its parameter
+
+ function  argumentCounter()
  {
      console.log("You gave me", arguments.length, "arguments."); // You gave me 5 arguments.
+
      console.log("You gave me " + arguments.length + " arguments."); // You gave me 5 arguments.
  }
 
+ argumentCounter("Alpha", 2, noArguments(), string_alpha, array_sentenceFragments );  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  space();
 
  /*
