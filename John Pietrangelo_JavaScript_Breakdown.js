@@ -4817,7 +4817,7 @@
  //---------------------------------------------------------------------------------------------------------------------
 
  spacer();
- console.log('\t\t\t\t\t\t\t\t\t*** The Argument Object ***');
+ console.log('\t\t\t\t\t\t\t\t\t*** The Arguments Object ***');
  console.log('*******************************************************************************************************');
  space();
 
@@ -4859,46 +4859,53 @@
 
  // calling the noArguments-function, while passing the 3 integer arguments through its parameter
 
- noArguments(1,2,3); // this is ok.
- space();
+ noArguments(1,2,3); // this is also ok.
 
  /*---------------------------------------------------------------------------------------------------------------------
 
-  The 'argument'-Object has a 'length' property that tells the programmer the 'number of arguments' that were
-  actually passed to the function. It also has a property(index) for each argument, named '0, 1, 2,' and so on.
+  The 'arguments'-Object has a 'length' property that tells the programmer the 'number of arguments' that were
+  actually passed to the function. It also has a property(index) for each argument, named,'0, 1, 2' and so on.
 
-  If that sounds a lot like an Array to you, you’re right, it is a lot like an Array.
+  If that sounds a lot like an Array, you’re right, it is a lot like an Array.
 
-  However the 'argument-object', does not have any Array-methods(like slice or indexOf), so it is a little harder
-  to use than an Array.
+  However the 'arguments-Object', does not have any Array-methods(like Array.slice() or Array,indexOf()), so it is a
+  little harder to use than an Array.
  */
 
  // declaring a function named 'argumentCounter', which takes zero arguments to its parameter
 
  function  argumentCounter()
  {
-     console.log("You gave me", arguments.length, "arguments."); // You gave me 5 arguments.
+     // calls the 3 arguments passed to the console.log(),(string, property's return-value, string) to console-widow
 
-     console.log("You gave me " + arguments.length + " arguments."); // You gave me 5 arguments.
+     console.log("You gave me", arguments.length, "arguments.\n");
+
+     // calls the 1 arguments passed to the console.log(),(string concatenated with property's return-value, which
+     // is concatenated with the string following it) to the console-window
+
+     console.log("You gave me " + arguments.length + " arguments.");
  }
 
- argumentCounter("Alpha", 2, noArguments(), string_alpha, array_sentenceFragments );  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- space();
+ argumentCounter("Alpha", 2, space(), string_alpha, array_sentenceFragments);  // You gave me 5 arguments.
+ spacer();
+                                                                                // You gave me 5 arguments.
+ /*---------------------------------------------------------------------------------------------------------------------
+  Some functions/methods can take any number of arguments, like console.log().
+  These typically loop over the values in their arguments object.
 
- /*
-  Some functions can take any number of arguments, like console.log.
-  These typically loop over the values in their arguments object. They can
-  be used to create very pleasant interfaces. For example, remember how
-  we created the entries to Jacques’ journal?
-  */
+  They can be used to create very pleasant interfaces. For example, remember how
+  we created the entries to the allergy-journal? The example below will refresh your memory.
+ ---------------------------------------------------------------------------------------------------------------------*/
 
- AddJournalEntry(["work","gym","sleep"],false);
+ // declaring a function to add the 'events' and the 'allergy-reaction' of a individual day, to the allergy-journal,
+ // with a parameter that expects an 'Array' of events and a 'Boolean' to represent the allergic-reaction
 
- function AddJournalEntry(array_events,boolean_reaction)
+ function AddJournalEntry(array_events,boolean_reaction)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  {
      array_allergyJournal.push({property_events: array_events, property_reaction: boolean_reaction} );
  }
 
+ AddJournalEntry(["work","gym","sleep"],false);
 
  space();
  /*
