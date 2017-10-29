@@ -6,8 +6,12 @@ written by John Joseph Pietrangelo III
 
 This repository holds a book I am writing on the OOP language, JavaScript.
 
+One can cut-and-paste the code in this repository's .js file into their IDE of choice
+(I wrote this book using JetBrain's Web-Storm, which is a free IDE for students*** ) 
+to debug (walk step by step through the processing of the operations) 
+all code held within, while reading the explanation on what is taking place, simultaneously.
+
 I used a popular book on the subject titled 'Eloquent JavaScript', as the template for my book, 'A JavaScript Breakdown'.
-(One can find a .PDF file, of the complete 'Eloquent JavaScript' book, in this repository)
 
 A JavaScript Breakdown, is an interactive book, which aims to allow a novice, to the subject-matter of computer programming, 
 the ability to follow along, while decreasing the difficulty of understanding the concepts and operations of the application(code) examples.
@@ -18,10 +22,6 @@ to allow for a higher level of comprehension by the reader.
 Many operation returns are written to the console-window, to view their output.
 
 All lines of code returning output to the console-window, have a comment following them with that same output.
-
-One can cut-and-paste the code in this repository's .js file into their IDE of choice
-(I wrote this book using JetBrain's Web-Storm) to debug (walk step by step through the processing of the operations) 
-all code held within, while reading the explanation on what is taking place, simultaneously.
 
 This is a work in progress.  I hope this helps someone.  I have put allot of time and effort into it.
 
