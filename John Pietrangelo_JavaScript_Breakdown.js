@@ -3167,7 +3167,7 @@
      if(char_letter2 != undefined)
      {
          // for-loop executes each time the loop's 'int_index'-value is less than or equal to the string_word's length
-         // (remember, we always start the count at 0, to match the 1st index value of the string(array of chars))
+         // (remember, one will usually start the count at 0, to match the 1st index-value of String(array of chars))
          // last expression of the loop(int_index ++), increases the index-value by 1 after each iteration completes
 
          for (var int_index = 0; int_index < string_word.length; int_index++)
@@ -4379,11 +4379,14 @@
  //---------------------------------------------------------------------------------------------------------------------
 
  // for-loop runs through the allergy-journal, which holds 90 daily log-entries, of the events that had taken place
- // each day and if an allergic-reaction occurred(true or false)
+ // each day and if an allergic-reaction occurred(true or false) starting at array_allergyJournal[0] and continues
+ // its iteration through the length of the journal
 
- for(var int_index = 0; int_index < array_allergyJournal.length; int_index++)
+ // declares index-variable and initializes value to 0; loop-code executes though the 'length of journal;
+
+ for(var int_index = 0; int_index < array_allergyJournal.length; int_index++) // adds 1 to index-value when loop ends
  {
-     // declares and initialize an object, to store an individual log-entry["day"]
+     // declares and initialize an object, to store an individual log-entry["day"] coinciding with index-value
 
      var object_journalEntry = array_allergyJournal[int_index];
 
@@ -4886,85 +4889,111 @@
      console.log("You gave me " + arguments.length + " arguments.");
  }
 
+ // calling the argumentCounter()-function while passing a literal-String, Integer, function(), variable-String and
+ // an Array through its parameter, as Arguments.
+
  argumentCounter("Alpha", 2, space(), string_alpha, array_sentenceFragments);  // You gave me 5 arguments.
  spacer();
                                                                                 // You gave me 5 arguments.
+
  /*---------------------------------------------------------------------------------------------------------------------
+
   Some functions/methods can take any number of arguments, like console.log().
   These typically loop over the values in their arguments object.
 
   They can be used to create very pleasant interfaces. For example, remember how
   we created the entries to the allergy-journal? The example below will refresh your memory.
+
  ---------------------------------------------------------------------------------------------------------------------*/
 
- // declaring a function to add the 'events' and the 'allergy-reaction' of a individual day, to the allergy-journal,
+ // declaring a function to add the 'events' and the 'allergy-reaction' of an individual day, to the allergy-journal,
  // with a parameter that expects an 'Array' of events and a 'Boolean' to represent the allergic-reaction
 
- function AddJournalEntry(array_events,boolean_reaction)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ function addJournalEntry(array_events, boolean_reaction)
  {
+     // using the Array.push()-method to add the parameter's Object-argument to the bottom(last index) of
+     // 'array_allergyJournal'
+
      array_allergyJournal.push({property_events: array_events, property_reaction: boolean_reaction} );
  }
 
- AddJournalEntry(["work","gym","sleep"],false);
+ // calling the 'addJournalEntry()'-function. passing an Array of events and Boolean-value through its parameter, as
+ // arguments
 
+ addJournalEntry(["work","gym","sleep"],false);
  space();
- /*
-  Since he is going to be calling this function a lot, we could create an
-  alternative that is easier to call.
-  */
 
  /*
-  This version reads its first argument (squirrel) in the normal way and
-  then goes over the rest of the arguments (the loop starts at index 1,
-  skipping the first) to gather them into an arrayNums.
-  */
- AddEntryToJournal(false, "sleep", "beans", "running");
+  Since this function will be called upon often, we could create an alternative function that is easier to call.
+  The following version reads its first argument(the allergy reaction) in the normal way and then goes over the rest of
+  the arguments (starting at arguments[1], after the 1st index, arguments[0]) storing them into an Array.
+ */
 
- function AddEntryToJournal(boolean_reaction)
+ // declaring a function to add the 'allergy-reaction' and the 'events' of an individual day, to the
+ // allergy-journal, with a parameter that expects a 'Boolean'-value representing the reaction, to pass through it
+
+ function addEntryToJournal(boolean_reaction)
  {
+     // declaring an object with two properties.  The 1st property's value is initialized to an empty array.
+     // The 2nd property's value is initialized to the parameter's argument(held in the 'boolean_reaction'-variable)
+
      var object_journalEntry = {property_events: [], property_reaction: boolean_reaction};
+
+     // for-loop will execute each time the loop's 'int_index'-value is less than the array_events's length
+     // (we start the count at 1, to match the 2nd index value of the Arguments-object(array of arguments))
+     // the last expression of the loop(int_index ++), increases the index-value by 1 after each loop-iteration
 
      for(var int_index = 1; int_index < arguments.length; int_index++)
      {
+         // adds the argument coinciding with the index-value, to the object_journalEntry(declared and initializes
+         // with each loop-iteration)
+
          object_journalEntry.property_events.push(arguments[int_index]);
      }
+
+     // adds the object_journalEntry to the array_allergyJournal
+
      array_allergyJournal.push(object_journalEntry);
  }
+
+ // calling addEntryToJournal()-function, passing a Boolean-value representing allergy-reaction as 1st argument and
+ // three String-values, representing the events of the day, through its parameter
+ addEntryToJournal(false, "sleep", "beans", "running");
+
+ // calling journal-content to console to verify the entry was added to the allergy-journal
+ console.log(array_allergyJournal);
+ space();
 
  /*
                                      The Math object
 
-  As we’ve seen, Math is a grab-bag of number-related utility functions,
-  such as Math.max (maximum), Math.min (minimum), and Math.sqrt (square
-  root).
+  As we’ve seen, Math-Object is a collection of number-related utility functions, such as Math.max (maximum),
+  Math.min (minimum), and Math.sqrt (square-root).
 
-  The Math object is used simply as a container to group a bunch of related functionality.
+  The Math-Object is used simply as a container to group a bunch of related functionalities.
 
-  There is only one Math object, and it is almost never useful as a value.
+  There is only one Math-Object, and it is almost never useful as a value.
 
-  Rather, it provides a namespace so that all these functions
-  and values do not have to be global variables.
+  Rather, it provides a namespace so that all these functions and values do not have to be global variables.
 
   Having too many global variables “pollutes” the namespace.
 
   The more names that have been taken, the more likely you are to accidentally overwrite the value of some variable.
 
-  For example, it’s possible that you’ll want to propertyName something 'max', in one of your programs.
+  For example, it’s possible that you’ll want to name something 'max', in one of your programs.
 
-  Since JavaScript’s built-in 'max' function is tucked safely inside the 'Math' object,
-  we don’t have to worry about overwriting it.
+  Since JavaScript’s built-in 'max' function is tucked safely inside the 'Math' object, a programmer dose not have to
+  worry about overwriting it.
 
-  Many languages will stop you, or at least warn you, when you are
-  defining a variable with a propertyName that is already taken. ***JavaScript does neither, so be careful.***
+  Many languages will stop you, or at least warn you, when you are defining a variable with a name that is
+  already taken.
 
-                         *** If you need to do trigonometry, Math can help. ***
+  ***JavaScript does neither, so be careful.****** If you need to do trigonometry, Math can help. ***
 
-  It contains cos (cosine), sin (sine), and tan (tangent), as well as their
-  inverse functions, acos, asin, and atan, respectively.
+  It contains cos (cosine), sin (sine), and tan (tangent), as well as their inverse functions, acos, asin, and atan.
 
-  The number 'pi' or at least the closest approximation that fits in a JavaScript number—is
-  available as Math.PI. (There is an old programming tradition of writing the names of constant values in all caps.)
-
+  The number 'Pi' or at least the closest approximation that fits in a JavaScript number—is
+  available as Math.PI. (There is an programming 'Best Practice' of writing the names of constant values in all caps.)
   */
  console.log(randomPointOnACircle(2)); // { x: -1.3065238835706443, y: 1.5142639603647317 }
 
