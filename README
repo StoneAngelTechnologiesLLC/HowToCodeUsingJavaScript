@@ -10,6 +10,11 @@ This repository holds a book I am writing, on the subject of JavaScript, an OOP(
 Use an IDE to debug (walk step by step through the processing of the operations) 
 all code held within, while reading the explanation on what is taking place, simultaneously.
 
+One can cut-and-paste the code in this repository's .js file into their IDE of choice
+(I wrote this book using JetBrain's Web-Storm, which is a free IDE for students*** ) 
+to debug (walk step by step through the processing of the operations) 
+all code held within, while reading the explanation on what is taking place, simultaneously.
+
 I used a popular book on the subject titled 'Eloquent JavaScript', as the template for my book, 'A JavaScript Breakdown'.
 
 A JavaScript Breakdown, is an interactive book, which aims to allow a reader of the subject-matter, 
